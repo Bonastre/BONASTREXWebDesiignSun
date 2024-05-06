@@ -1,0 +1,53 @@
+ <div class="visibledevice">
+  <video preload="yes" style="pointer-events: none;" width="100%" height="90%" loading="lazy" autoplay loop muted playsinline poster={{ section.settings.poster_mobile }}>     
+    <source class="visibledevice" src={{ section.settings.src_mobile }} type="video/mp4">
+  </video>
+</div>
+
+<div class="visibledesktop">
+  <video style="pointer-events: none;" width="100%" height="90%" loading="lazy" autoplay loop muted playsinline poster={{ section.settings.poster_large }}>     
+    <source class="visibledesktop" src={{ section.settings.src_large }} type="video/mp4" > 
+  </video>
+</div>
+
+{% stylesheet %}
+  .visibledevice {display:none;}
+  .visibledesktop {display:display;}
+@media (max-width : 415px) {
+    .visibledevice {display:block;}
+    .visibledesktop {display:none;}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "slidervideo",
+  "settings": [
+    {
+      "type":"text",
+      "label":"URL vidéo large",
+      "id":"src_large"
+    },
+    {
+      "type":"text",
+      "label":"Placeholder vidéo large",
+      "id":"poster_large"
+    },
+    {
+      "type":"text",
+      "label":"URL vidéo mobile",
+      "id":"src_mobile"
+    },
+    {
+      "type":"text",
+      "label":"Placeholder vidéo mobile",
+      "id":"poster_mobile"
+    }
+  ],
+  "presets": [
+    {
+      "name": "slidervideo",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

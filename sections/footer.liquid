@@ -1,0 +1,54 @@
+<footer id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="footer" class="Footer" role="contentinfo">
+  <ul>
+         <li class="mobile-currency">
+          {%- include 'bold-currency-picker-mount', openDirection: 'down' -%}
+        </li>
+    <li><a href="#shopify-section-popup" class="open-newsletter">Newsletter</a></li>
+    {%- for block in section.blocks -%}
+      {% include 'locale' %}
+        
+        {% if locale == 'fr' %}
+          {% assign title = block.settings.title_fr %}
+        {% else %}
+          {% assign title = block.settings.title_en %}
+        {% endif %}
+      <li>
+        <a href="{{ block.settings.url }}" {% if block.settings.externalLink %}target="_blank"{% endif %}>{{ title }}</a></li>
+    {%- endfor -%}
+  </ul>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "class": "shopify-section--footer",
+  "blocks": [
+    {
+      "type": "links",
+      "name": "Links",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title_fr",
+          "label": "Title fr"
+        },
+        {
+          "type": "text",
+          "id": "title_en",
+          "label": "Title En"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Lien"
+        },
+        {
+          "type": "checkbox",
+          "id": "externalLink",
+          "label": "Lien Externe"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
