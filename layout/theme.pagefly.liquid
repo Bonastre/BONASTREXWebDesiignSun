@@ -9,7 +9,8 @@
  {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
 {{ locksmith_initializations }}
 {% render 'pagefly-head' %}
-	<script src="{{ 'jquery.min.js' | asset_url }}" ></script>
+    {{ 'jquery.min.js' | asset_url | preload_tag: as: 'script' }}
+	<script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
   
     
                 <!-- Global site tag (gtag.js) - Google Ads: 10872887895 -->
@@ -160,7 +161,6 @@ pintrk('page');
  
     {% include 'cm-head' %}
     {{ content_for_header }}
-
     <link rel="stylesheet" href="{{ 'theme.min.css' | asset_url }}" />
 
     <script>
