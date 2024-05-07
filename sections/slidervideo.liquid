@@ -10,13 +10,14 @@
   </video>
 </div>
 
-{% stylesheet %}
+<style>
   .visibledevice {display:none;}
   .visibledesktop {display:display;}
 @media (max-width : 415px) {
     .visibledevice {display:block;}
     .visibledesktop {display:none;}
-{% endstylesheet %}
+}
+</style>
 
 {% schema %}
 {
