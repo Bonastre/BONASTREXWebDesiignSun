@@ -9,7 +9,7 @@
 {%- endunless -%}
 {% comment %} Start Tapita Meta Data {% endcomment %}
 {%- assign pageType = request.page_type -%}
-{%- if pageType == 'product' or pageType == 'collection' or pageType == 'blog' or pageType == 'article' or pageType == 'list-collections' -%}
+{%- if pageType == 'product' or pageType == 'collection' or pageType == 'article' or pageType == 'list-collections' -%}
   {%- if pageType == 'product' -%}
     {%- assign templateType = 'products' -%}
   {%- endif -%}
@@ -18,7 +18,7 @@
         {%- assign templateType = 'collections' -%}
     {%- endif -%}
   {%- endif -%}
-  {%- if pageType == 'article' or pageType == 'blog' -%}
+  {%- if pageType == 'article' -%}
     {%- assign templateType = 'articles' -%}
   {%- endif -%}
   {%- if templateType and shop.metafields.tapita-seo-schema and shop.metafields.tapita-seo-schema.tapita-meta-array -%}
@@ -119,6 +119,7 @@
     {%- for aicustom_tcontent in aicustom_tcontents -%}
       {%- assign handle_with_language = aicustom_tcontent.handle | prepend: aicustom_tcontent.language -%}
       {%- assign handle_with_language = handle_with_language | prepend: "/" -%}
+      {%- assign request_path_with_slash = request.path | append: "/" -%}
       {%- assign tptmetamatched = false -%}
       {%- if aicustom_tcontent.handle == current_product_handle and request.page_type == "product" -%}
         {%- assign tptmetamatched = true -%}
@@ -126,7 +127,7 @@
         {%- assign tptmetamatched = true -%}
       {%- elsif aicustom_tcontent.handle == current_page_handle -%}
         {%- assign tptmetamatched = true -%}
-      {%- elsif aicustom_tcontent.handle == request.path or handle_with_language == request.path  -%}
+      {%- elsif aicustom_tcontent.handle == request.path or handle_with_language == request.path or handle_with_language == request_path_with_slash -%}
         {%- assign tptmetamatched = true -%}
       {%- endif -%}
       {%- if tptmetamatched -%}
