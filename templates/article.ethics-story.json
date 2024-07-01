@@ -10,12 +10,15 @@
 {
   "sections": {
     "main": {
-      "type": "main-blog",
+      "type": "article-ethics-story",
       "settings": {
-        "show_rss": false,
-        "show_tags": false,
-        "show_featured_article": false,
-        "show_category": false
+        "show_article_image": true,
+        "show_date": false,
+        "show_category": false,
+        "show_author": false,
+        "show_share_buttons": false,
+        "show_prev_next": false,
+        "article_bg_color": "#fbfbf6"
       }
     },
     "shop-now": {
@@ -42,33 +45,10 @@
         "show_vendor": false,
         "show_color_swatch": false
       }
-    },
-    "1651213470e8ba6609": {
-      "type": "blog-posts",
-      "blocks": {
-        "165121347048e6b3eb-0": {
-          "type": "blog",
-          "settings": {
-            "blog": "news"
-          }
-        }
-      },
-      "block_order": [
-        "165121347048e6b3eb-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "subheading": "",
-        "title": "Blog posts",
-        "show_category": false,
-        "button_link": "",
-        "button_text": "View all articles"
-      }
     }
   },
   "order": [
     "main",
-    "shop-now",
-    "1651213470e8ba6609"
+    "shop-now"
   ]
 }

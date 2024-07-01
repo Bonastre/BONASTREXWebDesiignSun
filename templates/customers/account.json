@@ -12,14 +12,20 @@
     "main": {
       "type": "main-customers-account",
       "blocks": {
-        "orders": {
-          "type": "orders",
+        "header": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "order_list": {
+          "type": "order_list",
           "settings": {
           }
         }
       },
       "block_order": [
-        "orders"
+        "header",
+        "order_list"
       ],
       "settings": {
       }

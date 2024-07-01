@@ -26,30 +26,12 @@
           "type": "share_buttons",
           "settings": {
           }
-        },
-        "variant_selector": {
-          "type": "variant_selector",
-          "settings": {
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "product_meta",
         "description",
-        "share_buttons",
-        "variant_selector",
-        "quantity_selector",
-        "buy_buttons"
+        "share_buttons"
       ],
       "settings": {
       }

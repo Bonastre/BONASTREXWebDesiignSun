@@ -1,0 +1,112 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "stockist",
+      "blocks": {
+        "d9940c2e-cd40-4660-b174-4acddfc56885": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "",
+            "col_1_list_en": "PRINTEMPS, PARIS\nUPPER SHOES, PARIS\nUPPER SHOES, LYON\nQUATRE HEURES ONZE, BORDEAUX",
+            "col_2_title_en": "CARIBBEAN",
+            "col_2_list_en": "PASHA ST BARTH, SAINT BARTHELEMY"
+          }
+        },
+        "e27b6103-e69b-4f90-b180-5924290bb8ef": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "GREECE",
+            "col_1_list_en": "JOIN CLOTHES, ATHENS",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
+        },
+        "9e88cc48-450c-4029-b7c7-ed8234ac1b29": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "LEBANON",
+            "col_1_list_en": "TRUNK CONCEPT STORE, BEIRUT",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
+        },
+        "4c5378bc-2c8b-40ab-ae9b-e77b8ce7e61c": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "CHINA",
+            "col_1_list_en": "LANE CRAWFORD, BEJING\nLANE CRAWFORD, SHANGHAI\nLANE CRAWFORD, CHENGDU\nLANE CRAWFORD, SICHUAN\nLANE CRAWFORD, TIANJIN",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
+        },
+        "4f1f808f-9732-4e0f-b34e-0be30f1ac111": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "SOUTH KOREA",
+            "col_1_list_en": "11:55 LOTTE WORLD TOWER, SEOUL",
+            "col_2_title_en": "HONG KONG",
+            "col_2_list_en": "LANE CRAWFORD, TSIM SHA TSUI\nLANE CRAWFORD, KWAI CHUNG\nLANE CRAWFORD, LANTAU"
+          }
+        },
+        "64beb4c9-7e5e-448c-bafc-771909dccca3": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "TAIWAN",
+            "col_1_list_en": "GATHER CRAFTS, TAIPEI 6\nFEDE, TAICHUNG CITY",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
+        },
+        "d2a72099-31f2-4c4b-be30-60856ede56ec": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "JAPAN",
+            "col_1_list_en": "DES PRES, MARUNOUCHI, TOKYO\nDES PRES, SAPPORO, HOKKAIDO\nTOMORROWLAND FLAGSHIPSTORE, SHIBUYA, TOKYO \nTOMORROWLAND ISETAN SHINJUKU STORE, SHINJUKU, TOKYO\nTHE STORE TOMORROWLAND, HANKYU DEPARTEMENT STORE, TOKYO\nBEAUTRIUM, MITO, IBARAKI \nINSIDE MY GLASS DOOR, HONMACHI, OSAKA\nSUMER \/PAL VERSION, UMEDA, OSAKA\nCHIC RADICAL\/ANDY HOUSE,KYOTO",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
+        },
+        "1095c553-e1f2-4c77-b267-26e74c5ea4e6": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "UNITED KINGDOM",
+            "col_1_list_en": "THE BUSINESS FASHION, LEICESTER",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
+        }
+      },
+      "block_order": [
+        "d9940c2e-cd40-4660-b174-4acddfc56885",
+        "e27b6103-e69b-4f90-b180-5924290bb8ef",
+        "9e88cc48-450c-4029-b7c7-ed8234ac1b29",
+        "4c5378bc-2c8b-40ab-ae9b-e77b8ce7e61c",
+        "4f1f808f-9732-4e0f-b34e-0be30f1ac111",
+        "64beb4c9-7e5e-448c-bafc-771909dccca3",
+        "d2a72099-31f2-4c4b-be30-60856ede56ec",
+        "1095c553-e1f2-4c77-b267-26e74c5ea4e6"
+      ],
+      "settings": {
+        "title_en": "Stockists",
+        "location_title_en": "",
+        "location_address_en": "<b> FLAGSHIP BONASTRE <\/b>",
+        "location_image": "shopify:\/\/shop_images\/image_196.jpg",
+        "location_info_en": "10 RUE DU PERCHE, PARIS 3\nMON - SAT 10:00 18:00\n+33 1 42 78 99 10",
+        "footer_title_en": "ONLINE",
+        "footer_info_en": "MRPORTER.COM\n\nsmallable.com"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
