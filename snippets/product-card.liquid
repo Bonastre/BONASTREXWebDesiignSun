@@ -154,7 +154,7 @@ Supported variables
           {% assign temp_tag = tags | strip | remove:' '%}
           {% if temp_tag contains 'Group_'%}
               {% assign linked_collection = collections[temp_tag] %}
-              {{ linked_collection | json }}
+
           {% endif %}
       {% endfor %}
 
@@ -167,6 +167,7 @@ Supported variables
           {%- comment %}</locksmith:3af6>{% endcomment -%}
           {% assign color_name = blank %}
           {% for tags in item.tags %}
+              {{ tags | json }}
           {% assign temp_tag = tags | strip | remove:' '%}
           {% if temp_tag contains 'color_' %}
           {% assign color_name = temp_tag | remove: 'color_' | append: ".png" %}
