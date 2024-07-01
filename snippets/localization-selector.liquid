@@ -38,7 +38,7 @@ Supported variables
           <span>{{ localization.country.currency.iso_code }} {% if localization.country.currency.symbol %}{{ localization.country.currency.symbol }}{%- endif -%}</span>
         {%- endif -%}
 
-        {%- render 'icon' with 'chevron-down' -%}
+        {%- render 'icon' with 'chevron-right' -%}
       </button>
 
       <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }} color-scheme color-scheme--dialog">
