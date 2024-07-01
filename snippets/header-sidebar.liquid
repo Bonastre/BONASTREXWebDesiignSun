@@ -107,12 +107,13 @@ therefore using a different structure for the Shadow DOM template
             {%- endif -%}
           </div>
         {%- endif -%}
+          {%- if section.settings.show_social_media -%}
+              {% render 'social-media', layout: 'list' %}
+          {%- endif -%}
       </div>
     {%- endif -%}
 
-      {%- if section.settings.show_social_media -%}
-              {% render 'social-media', layout: 'list' %}
-      {%- endif -%}
+
   </div>
 
   {%- comment -%}Panel 2 holds all the second levels{%- endcomment -%}
