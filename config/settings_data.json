@@ -179,7 +179,7 @@
           "links_BxLHjy": {
             "type": "links",
             "settings": {
-              "menu": "footer",
+              "menu": "footer-menu-2",
               "show_menu_title": true,
               "menu_title": ""
             }
