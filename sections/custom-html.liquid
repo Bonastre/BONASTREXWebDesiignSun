@@ -12,15 +12,15 @@
       </header>
     {%- endif -%}
 
-    <div class="Liquid">
-      {{ section.settings.liquid }}
+    <div class="Rte" style="text-align: center">
+      {{ section.settings.html }}
     </div>
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "Custom Liquid",
+  "name": "Custom HTML",
   "class": "shopify-section--bordered",
   "settings": [
     {
@@ -33,20 +33,19 @@
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Your Liquid"
+      "default": "Your HTML"
     },
     {
-      "type": "liquid",
-      "id": "liquid",
-      "label": "Liquid",
-      "info": "Add app snippets or other Liquid code to create advanced customizations.",
-      "default": "<p>Write your own custom Liquid content.</p>"
+      "type": "html",
+      "id": "html",
+      "label": "HTML content",
+      "default": "<p>Write your own custom HTML content.</p>"
     }
   ],
   "presets": [
     {
       "category": "Advanced",
-      "name": "Custom Liquid",
+      "name": "Custom HTML",
       "settings": {}
     }
   ]
