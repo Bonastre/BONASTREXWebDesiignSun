@@ -109,7 +109,12 @@ therefore using a different structure for the Shadow DOM template
         {%- endif -%}
       </div>
     {%- endif -%}
-      
+
+      {%- if section.settings.show_social_media -%}
+          {%- capture social_media -%}
+              {% render 'social-media', class: 'SidebarMenu__Social', spacing: 'fill' %}
+          {%- endcapture -%}
+      {%- endif -%}
   </div>
 
   {%- comment -%}Panel 2 holds all the second levels{%- endcomment -%}
