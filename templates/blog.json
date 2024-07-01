@@ -12,63 +12,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "show_rss": false,
-        "show_tags": false,
-        "show_featured_article": false,
-        "show_category": false
-      }
-    },
-    "shop-now": {
-      "type": "shop-now",
-      "blocks": {
-        "quote": {
-          "type": "quote",
-          "settings": {
-            "content": "<p>You can use this element to add a quote, content...<\/p>",
-            "author": ""
-          }
-        }
-      },
-      "block_order": [
-        "quote"
-      ],
-      "disabled": true,
-      "settings": {
-        "show_section": false,
-        "title": "Shop now",
-        "collection": "",
-        "grid_items_count": 6,
-        "show_product_info": true,
-        "show_vendor": false,
-        "show_color_swatch": false
-      }
-    },
-    "1651213470e8ba6609": {
-      "type": "blog-posts",
-      "blocks": {
-        "165121347048e6b3eb-0": {
-          "type": "blog",
-          "settings": {
-            "blog": "news"
-          }
-        }
-      },
-      "block_order": [
-        "165121347048e6b3eb-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "subheading": "",
-        "title": "Blog posts",
-        "show_category": false,
-        "button_link": "",
-        "button_text": "View all articles"
       }
     }
   },
   "order": [
-    "main",
-    "shop-now",
-    "1651213470e8ba6609"
+    "main"
   ]
 }
