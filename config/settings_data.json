@@ -1,490 +1,241 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
-    "heading_color": "#1c1b1b",
-    "text_color": "#1c1b1b",
-    "text_light_color": "#6a6a6a",
-    "link_color": "#6a6a6a",
-    "background": "#fbfbf6",
-    "light_background": "#ffffff",
-    "product_on_sale_color": "#f94c43",
-    "button_background": "#1c1b1b",
-    "button_text_color": "#ffffff",
-    "header_background": "#ffffff",
-    "header_heading_color": "#1c1b1b",
-    "header_light_color": "#6a6a6a",
-    "footer_background": "#fafafa",
-    "footer_heading_color": "#1c1b1b",
-    "footer_text_color": "#6a6a6a",
-    "navigation_background": "#1c1b1b",
-    "navigation_text_color": "#ffffff",
-    "newsletter_popup_background": "#1c1b1b",
-    "newsletter_popup_text_color": "#ffffff",
-    "secondary_elements_background": "#1c1b1b",
-    "secondary_elements_text_color": "#ffffff",
-    "heading_font": "futura_n4",
-    "heading_size": "small",
-    "uppercase_heading": true,
-    "text_font": "futura_n3",
-    "base_text_font_size": 13,
-    "show_page_transition": false,
-    "show_button_transition": true,
-    "show_image_zooming": false,
-    "show_element_staggering": false,
-    "search_mode": "product,article",
-    "product_show_price_on_hover": true,
-    "product_show_secondary_image": true,
-    "product_info_alignment": "center",
-    "product_image_size": "tall",
-    "product_list_horizontal_spacing": "extra_small",
-    "product_list_vertical_spacing": "extra_small",
-    "cart_type": "drawer",
-    "cart_enable_notes": false,
-    "cart_show_free_shipping_threshold": false,
-    "cart_free_shipping_threshold": "",
-    "social_facebook": "https:\/\/www.facebook.com\/BONASTRE-222499097761551\/",
-    "social_twitter": "",
-    "social_pinterest": "https:\/\/www.pinterest.fr\/bonastreparis\/",
-    "social_instagram": "https:\/\/www.instagram.com\/bonastreparis\/?hl=fr",
-    "social_vimeo": "",
-    "social_tumblr": "",
-    "social_youtube": "",
-    "social_linkedin": "https:\/\/www.linkedin.com\/company\/bonastre-paris",
-    "social_snapchat": "",
-    "social_fancy": "",
-    "favicon": "shopify:\/\/shop_images\/Fav_Icon_Site_Bonastre_1.png",
-    "checkout_header_image": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/logo_bonastre_png.png",
-    "checkout_logo_position": "center",
-    "checkout_logo_size": "small",
-    "checkout_body_background_image": "",
-    "checkout_body_background_color": "#fbfbf6",
-    "checkout_input_background_color_mode": "transparent",
-    "checkout_sidebar_background_image": "",
-    "checkout_sidebar_background_color": "#fbfbf6",
-    "checkout_heading_font": "Lato",
-    "checkout_body_font": "Lato",
-    "checkout_accent_color": "#6e7274",
-    "checkout_button_color": "#0a0a0a",
-    "checkout_error_color": "#e32c2b",
-    "sections": {
-      "main-cart": {
-        "type": "main-cart",
+    "section_vertical_spacing": "md",
+    "product_rating_color": "#1c1c1c",
+    "product_on_sale_accent": "#e32c2b",
+    "product_sold_out_badge_background": "#efefef",
+    "product_custom_badge_background": "#1c1c1c",
+    "success_color": "#307a07",
+    "warning_color": "#ed8a00",
+    "error_color": "#cb2b2b",
+    "heading_font": "univers_next_n4",
+    "heading_letter_spacing": 18,
+    "text_font": "univers_next_n4",
+    "text_font_size_desktop": 14,
+    "button_letter_spacing": 18,
+    "color_schemes": {
+      "scheme-1": {
         "settings": {
-          "show_shipping_estimator": false,
-          "shipping_estimator_default_country": "",
-          "reassurance_section_shipping_title_fr": "Livraison",
-          "reassurance_section_shipping_title_en": "Delivery",
-          "reassurance_free_shipping_title_fr": "Livraison gratuite",
-          "reassurance_free_shipping_title_en": "Free worldwide shipping",
-          "reassurance_free_shipping_info_fr": "• Europe: 1 - 3 jours ouvrés\n• Monde: 2 - 5 jours ouvrés",
-          "reassurance_free_shipping_info_en": "• Europe: 1 - 3 working days\n• World: 2 - 5 working days",
-          "reassurance_section_customer_title_fr": "Service client",
-          "reassurance_section_customer_title_en": "Customer service",
-          "reassurance_phone": "+33 (0)1 42 78 99 10",
-          "reassurance_email_info": "contact@bonastre.net",
-          "reassurance_customer_info_fr": "Lundi au vendredi : 11h - 19h",
-          "reassurance_customer_info_en": "Monday to friday: 11h - 19h",
-          "reassurance_section_payment_title_fr": "Paiement",
-          "reassurance_section_payment_title_en": "Payment methods",
-          "reassurance_secured_payment_title_fr": "<b>Paiement sécurisé<\/b>",
-          "reassurance_secured_payment_title_en": "<b>Secured payment<\/b>"
+          "background": "#efefef",
+          "text_color": "#1c1c1c",
+          "primary_button_background": "#1c1c1c",
+          "primary_button_text_color": "#ffffff",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#1c1c1c"
         }
       },
-      "popup": {
-        "type": "popup",
+      "scheme-2": {
         "settings": {
-          "show_popup": true,
-          "show_only_on_index": false,
-          "show_only_for_visitors": true,
-          "show_only_once": false,
-          "title": "",
-          "content": "<p>Sign up below and be the first to hear about new collections, special events <strong>and enjoy 10% off your first order<\/strong><\/p>",
-          "show_newsletter": true,
-          "apparition_delay": 3
+          "background": "#ffffff",
+          "text_color": "#1c1c1c",
+          "primary_button_background": "#1c1c1c",
+          "primary_button_text_color": "#ffffff",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#1c1c1c"
         }
       },
-      "sidebar-menu": {
-        "type": "sidebar-menu",
+      "scheme-3": {
         "settings": {
-          "primary_menu": "menu-en",
-          "secondary_menu": "",
-          "show_social_media": true
-        }
-      },
-      "announcement": {
-        "type": "announcement",
-        "settings": {
-          "enable_bar": true,
-          "home_page_only": false,
-          "background": "#fcfbf6",
-          "text_color": "#1c1b1b",
-          "content": "NEW IN : BON-BON ATLANTIC BLUE : Free shipping over 300€",
-          "link": "shopify:\/\/products\/bon-bon-bag-atlantique"
-        }
-      },
-      "header": {
-        "type": "header",
-        "settings": {
-          "use_sticky_header": true,
-          "logo": "shopify:\/\/shop_images\/logo_bonastre_png.png",
-          "logo_max_width": 310,
-          "mobile_logo_max_width": 90,
-          "show_currency_selector": true,
-          "show_locale_selector": true,
-          "navigation_style": "inline",
-          "show_icons": true,
-          "enable_transparent_header": true,
-          "enable_transparent_header_collection": false,
-          "show_transparent_header_border": false,
-          "transparent_text_color": "#ffffff"
-        }
-      },
-      "footer": {
-        "type": "footer",
-        "blocks": {
-          "fe845d8c-f9c3-41f4-b28e-95e9bcbd046e": {
-            "type": "links",
-            "settings": {
-              "title_fr": "Boutiques",
-              "title_en": "Stockists",
-              "url": "shopify:\/\/pages\/les-points-de-ventes",
-              "externalLink": false
-            }
-          },
-          "d8dfbe10-2f66-4767-9aec-06bb6cd9733b": {
-            "type": "links",
-            "settings": {
-              "title_fr": "livraison & retour",
-              "title_en": "delivery & return",
-              "url": "shopify:\/\/pages\/livraison-et-retour",
-              "externalLink": false
-            }
-          },
-          "7641c440-bd6a-4654-a0fb-6ca475e1627e": {
-            "type": "links",
-            "settings": {
-              "title_fr": "CGV",
-              "title_en": "gsc",
-              "url": "shopify:\/\/pages\/conditions-generales-de-vente",
-              "externalLink": false
-            }
-          },
-          "bfaba97e-5cf3-4183-9965-d559cb9c177e": {
-            "type": "links",
-            "settings": {
-              "title_fr": "mentions légales",
-              "title_en": "legal area",
-              "url": "shopify:\/\/pages\/mentions-legales",
-              "externalLink": false
-            }
-          },
-          "59c42b12-ad4d-4a5f-8d6e-ff641e12bc56": {
-            "type": "links",
-            "settings": {
-              "title_fr": "contact",
-              "title_en": "contact",
-              "url": "shopify:\/\/pages\/nous-contacter",
-              "externalLink": false
-            }
-          },
-          "6831648d-3d78-4929-b146-f89237e84da8": {
-            "type": "links",
-            "settings": {
-              "title_fr": "Entretien",
-              "title_en": "Product care",
-              "url": "shopify:\/\/pages\/product-care",
-              "externalLink": false
-            }
-          },
-          "269f733f-a7ad-435d-bb7e-131d7a362892": {
-            "type": "links",
-            "settings": {
-              "title_fr": "Instagram",
-              "title_en": "Instagram",
-              "url": "https:\/\/www.instagram.com\/bonastreparis\/",
-              "externalLink": true
-            }
-          }
-        },
-        "block_order": [
-          "fe845d8c-f9c3-41f4-b28e-95e9bcbd046e",
-          "d8dfbe10-2f66-4767-9aec-06bb6cd9733b",
-          "7641c440-bd6a-4654-a0fb-6ca475e1627e",
-          "bfaba97e-5cf3-4183-9965-d559cb9c177e",
-          "59c42b12-ad4d-4a5f-8d6e-ff641e12bc56",
-          "6831648d-3d78-4929-b146-f89237e84da8",
-          "269f733f-a7ad-435d-bb7e-131d7a362892"
-        ],
-        "settings": {
-        }
-      },
-      "recently-viewed-products": {
-        "type": "recently-viewed-products",
-        "settings": {
-          "title": "Recently viewed",
-          "show_product_info": false,
-          "show_vendor": false,
-          "show_color_swatch": false
-        }
-      },
-      "product-recommendations": {
-        "type": "product-recommendations",
-        "settings": {
-          "heading": "You may also like",
-          "show_product_info": true,
-          "show_vendor": false,
-          "show_color_swatch": false
-        }
-      },
-      "shop-now": {
-        "type": "shop-now",
-        "settings": {
-          "show_section": false,
-          "title": "Shop now",
-          "collection": "",
-          "grid_items_count": 6,
-          "show_product_info": false,
-          "show_vendor": false,
-          "show_color_swatch": false
-        }
-      },
-      "1611312227abafe424": {
-        "type": "text-with-image",
-        "settings": {
-          "subheading": "",
-          "title": "THE PARISIAN FLAGSHIP",
-          "image": "shopify:\/\/shop_images\/BOUTIQUE_BONASTRE.jpg",
-          "image_position": "right",
-          "content": "<p>Discover our parisian store situated in the Marais, a typical 17th century building with a façade of plaster colonnades and traditional wooden front. 10, rue du Perche, Paris 3.<\/p>",
-          "link_text": "view more",
-          "link_url": "https:\/\/www.bonastre.net\/blogs\/news\/the-parisian-flagship"
-        }
-      },
-      "1611676499ada6d1c9": {
-        "type": "featured-collections",
-        "blocks": {
-          "13db6436-dedf-43aa-aefe-cc9837be3797": {
-            "type": "collection",
-            "settings": {
-              "collection": "collection-bon-bon",
-              "title": "",
-              "grid_items_count": 4,
-              "button_text": "View all products"
-            }
-          }
-        },
-        "block_order": [
-          "13db6436-dedf-43aa-aefe-cc9837be3797"
-        ],
-        "disabled": true,
-        "settings": {
-          "title": "",
-          "layout_mode": "grid",
-          "show_product_info": true,
-          "show_vendor": false,
-          "show_color_swatch": false,
-          "grid_mobile_items_per_row": "2",
-          "grid_desktop_items_per_row": 4
-        }
-      },
-      "1614164216743d500b": {
-        "type": "text-with-image",
-        "settings": {
-          "subheading": "",
-          "title": "THE TADAO LINE",
-          "image": "shopify:\/\/shop_images\/FZRF.jpg",
-          "image_position": "right",
-          "content": "<p>How is a signature line born? What makes a bag a timeless design? <\/p><p>It is a mix of design, inspiration, craft, noble material, modern vision but also a beautiful story that goes with it. We want to tell you this story …<\/p>",
-          "link_text": "Discover the Tadao Line story",
-          "link_url": "https:\/\/www.bonastre.net\/collections\/tadao-collection"
-        }
-      },
-      "1619010195bf752fb2": {
-        "type": "slideshow",
-        "blocks": {
-          "1619010195bf752fb2-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/2BONASTRE_LANZA_GIRL_27_2.jpg",
-              "mobile_image": "shopify:\/\/shop_images\/91.jpg",
-              "apply_overlay": false,
-              "content_position": "middleCenter",
-              "subheading": "",
-              "title": "",
-              "button_1_text": "",
-              "button_1_link": "shopify:\/\/collections\/aro-collection",
-              "button_2_text": "",
-              "button_2_link": "shopify:\/\/collections\/aro-collection"
-            }
-          }
-        },
-        "block_order": [
-          "1619010195bf752fb2-0"
-        ],
-        "settings": {
-          "show_fullscreen": true,
-          "show_arrow": true,
-          "autoplay": false,
-          "cycle_speed": 5,
+          "background": "#1c1c1c",
           "text_color": "#ffffff",
-          "button_color": "#363636",
-          "button_background": "#ffffff"
+          "primary_button_background": "#ffffff",
+          "primary_button_text_color": "#1c1c1c",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#1c1c1c"
         }
       },
-      "16190107301dd7e7f6": {
-        "type": "featured-collections",
-        "blocks": {
-          "1619010730dd4ff64b-0": {
-            "type": "collection",
-            "settings": {
-              "collection": "aro-collection",
-              "title": "",
-              "grid_items_count": 4,
-              "button_text": "View all the ARO collection"
-            }
-          }
-        },
-        "block_order": [
-          "1619010730dd4ff64b-0"
-        ],
+      "scheme-4": {
         "settings": {
-          "title": "",
-          "layout_mode": "grid",
-          "show_product_info": true,
-          "show_vendor": false,
-          "show_color_swatch": false,
-          "grid_mobile_items_per_row": "2",
-          "grid_desktop_items_per_row": 4
-        }
-      },
-      "1619013030de18ca8e": {
-        "type": "text-with-image",
-        "settings": {
-          "subheading": "",
-          "title": "FOR BAG GOURMETS ONLY!",
-          "image": "shopify:\/\/shop_images\/vuvu.jpg",
-          "image_position": "left",
-          "content": "<p><strong>BON-BON<\/strong> is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>",
-          "link_text": "Discover the BON-BON Collection",
-          "link_url": "https:\/\/www.bonastre.net\/collections\/collection-bon-bon"
-        }
-      },
-      "16469951886af69bed": {
-        "type": "newsletter",
-        "disabled": true,
-        "settings": {
-          "section_size": "small",
-          "text_color": "#000000",
-          "button_color": "#fbfbf6",
-          "subheading": "",
-          "title": "",
-          "content": "<p>Sign up below and be the first to hear about new collections and special events<\/p>"
-        }
-      },
-      "16493336470bd6c3d4": {
-        "type": "slideshow",
-        "blocks": {
-          "16493336470bd6c3d4-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Lanzarote_Menu_2.jpg",
-              "mobile_image": "shopify:\/\/shop_images\/jbijbi.jpg",
-              "apply_overlay": false,
-              "content_position": "bottomLeft",
-              "subheading": "",
-              "title": "",
-              "button_1_text": "",
-              "button_1_link": "shopify:\/\/blogs\/news\/ss22",
-              "button_2_text": "",
-              "button_2_link": "shopify:\/\/blogs\/news\/ss22"
-            }
-          }
-        },
-        "block_order": [
-          "16493336470bd6c3d4-0"
-        ],
-        "settings": {
-          "show_fullscreen": false,
-          "show_arrow": false,
-          "autoplay": true,
-          "cycle_speed": 5,
+          "background": "rgba(0,0,0,0)",
           "text_color": "#ffffff",
-          "button_color": "#363636",
-          "button_background": "#ffffff"
-        }
-      },
-      "1649333668304d3ac4": {
-        "type": "slideshow",
-        "blocks": {
-          "1649333668304d3ac4-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Lanzarote_menu_1.jpg",
-              "mobile_image": "shopify:\/\/shop_images\/czczr.jpg",
-              "apply_overlay": false,
-              "content_position": "bottomLeft",
-              "subheading": "",
-              "title": "",
-              "button_1_text": "",
-              "button_1_link": "",
-              "button_2_text": "",
-              "button_2_link": ""
-            }
-          }
-        },
-        "block_order": [
-          "1649333668304d3ac4-0"
-        ],
-        "settings": {
-          "show_fullscreen": false,
-          "show_arrow": false,
-          "autoplay": true,
-          "cycle_speed": 5,
-          "text_color": "#ffffff",
-          "button_color": "#363636",
-          "button_background": "#ffffff"
-        }
-      },
-      "blog-template": {
-        "type": "blog-template",
-        "settings": {
-          "show_rss": false,
-          "show_tags": false,
-          "show_featured_article": true,
-          "show_category": false
-        }
-      },
-      "main-customers-register": {
-        "type": "main-customers-register",
-        "settings": {
-        }
-      },
-      "main-customers-login": {
-        "type": "main-customers-login",
-        "settings": {
-        }
-      }
-    },
-    "content_for_index": [
-      "1619010195bf752fb2",
-      "16190107301dd7e7f6",
-      "1649333668304d3ac4",
-      "1614164216743d500b",
-      "1619013030de18ca8e",
-      "16493336470bd6c3d4",
-      "1611676499ada6d1c9",
-      "1611312227abafe424",
-      "16469951886af69bed"
-    ],
-    "blocks": {
-      "13951170544780599758": {
-        "type": "shopify:\/\/apps\/tapita-seo-speed\/blocks\/app-embed\/cd37ca7a-40ad-4fdc-afd3-768701482209",
-        "disabled": false,
-        "settings": {
+          "primary_button_background": "#ffffff",
+          "primary_button_text_color": "#1c1c1c",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#1c1c1c"
         }
       }
     }
   },
   "presets": {
+    "Allure": {
+      "section_vertical_spacing": "md",
+      "heading_font": "univers_next_n4",
+      "heading_letter_spacing": 18,
+      "text_font": "univers_next_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18,
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#efefef",
+            "text_color": "#1c1c1c",
+            "primary_button_background": "#1c1c1c",
+            "primary_button_text_color": "#ffffff",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-2": {
+          "settings": {
+            "background": "#ffffff",
+            "text_color": "#1c1c1c",
+            "primary_button_background": "#1c1c1c",
+            "primary_button_text_color": "#ffffff",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-3": {
+          "settings": {
+            "background": "#1c1c1c",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-4": {
+          "settings": {
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        }
+      },
+      "success_color": "#307a07",
+      "warning_color": "#ed8a00",
+      "error_color": "#cb2b2b",
+      "product_rating_color": "#1c1c1c",
+      "product_on_sale_accent": "#e32c2b",
+      "product_sold_out_badge_background": "#efefef",
+      "product_custom_badge_background": "#1c1c1c"
+    },
+    "Couture": {
+      "section_vertical_spacing": "md",
+      "heading_font": "futura_n4",
+      "heading_letter_spacing": 18,
+      "text_font": "century_gothic_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18,
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#ffffff",
+            "text_color": "#5c5c5c",
+            "primary_button_background": "#5c5c5c",
+            "primary_button_text_color": "#ffffff",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-2": {
+          "settings": {
+            "background": "#f3f3f3",
+            "text_color": "#5c5c5c",
+            "primary_button_background": "#5c5c5c",
+            "primary_button_text_color": "#ffffff",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#5c5c5c"
+          }
+        },
+        "scheme-3": {
+          "settings": {
+            "background": "#1c1c1c",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-4": {
+          "settings": {
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        }
+      },
+      "success_color": "#307a07",
+      "warning_color": "#ed8a00",
+      "error_color": "#cb2b2b",
+      "product_rating_color": "#1c1c1c",
+      "product_on_sale_accent": "#e32c2b",
+      "product_sold_out_badge_background": "#efefef",
+      "product_custom_badge_background": "#1c1c1c"
+    },
+    "Vogue": {
+      "section_vertical_spacing": "xs",
+      "heading_font": "din_neuzeit_grotesk_n3",
+      "heading_letter_spacing": 18,
+      "text_font": "futura_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18,
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#ffffff",
+            "text_color": "#303030",
+            "primary_button_background": "#f5db8b",
+            "primary_button_text_color": "#303030",
+            "circle_button_background": "#1c1c1c",
+            "circle_button_icon": "#f5db8b"
+          }
+        },
+        "scheme-2": {
+          "settings": {
+            "background": "#ffffff",
+            "text_color": "#303030",
+            "primary_button_background": "#f5db8b",
+            "primary_button_text_color": "#303030",
+            "circle_button_background": "#1c1c1c",
+            "circle_button_icon": "#f5db8b"
+          }
+        },
+        "scheme-3": {
+          "settings": {
+            "background": "#1c1c1c",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        },
+        "scheme-4": {
+          "settings": {
+            "background": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "primary_button_background": "#ffffff",
+            "primary_button_text_color": "#1c1c1c",
+            "circle_button_background": "#ffffff",
+            "circle_button_icon": "#1c1c1c"
+          }
+        }
+      },
+      "success_color": "#307a07",
+      "warning_color": "#ed8a00",
+      "error_color": "#cb2b2b",
+      "product_rating_color": "#1c1c1c",
+      "product_on_sale_accent": "#e32c2b",
+      "product_sold_out_badge_background": "#efefef",
+      "product_custom_badge_background": "#1c1c1c"
+    }
   }
 }
