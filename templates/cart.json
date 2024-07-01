@@ -1,1 +1,21 @@
-{"sections":{"main":{"type":"main-cart","settings":{"show_shipping_estimator":true,"shipping_estimator_default_country":"United States","reassurance_section_shipping_title_fr":"Livraison","reassurance_section_shipping_title_en":"Delivery","reassurance_free_shipping_title_fr":"Livraison gratuite","reassurance_free_shipping_title_en":"Free worldwide shipping","reassurance_free_shipping_info_fr":"• Europe: 1 - 3 jours ouvrés\n• Monde: 2 - 5 jours ouvrés","reassurance_free_shipping_info_en":"• Europe: 1 - 3 working days\n• World: 2 - 5 working days","reassurance_section_customer_title_fr":"Service client","reassurance_section_customer_title_en":"Customer service","reassurance_phone":"+33 (0)1 42 78 99 10","reassurance_email_info":"contact@bonastre.net","reassurance_customer_info_fr":"Lundi au vendredi : 11h - 19h","reassurance_customer_info_en":"Monday to friday: 11h - 19h","reassurance_section_payment_title_fr":"Paiement","reassurance_section_payment_title_en":"Payment methods","reassurance_secured_payment_title_fr":"<b>Paiement sécurisé<\/b>","reassurance_secured_payment_title_en":"<b>Secured payment<\/b>","france_taxes_warning":"Orders are shipped from France, local taxes may apply."}},"recently-viewed-products":{"type":"recently-viewed-products","settings":{"show_section":true,"title":"Recently viewed","show_product_info":true,"show_vendor":false,"show_color_swatch":false}}},"order":["main","recently-viewed-products"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
