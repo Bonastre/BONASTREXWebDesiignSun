@@ -1,1 +1,21 @@
-{"sections":{"newsletter_mTDBCQ":{"type":"newsletter","disabled":true,"settings":{"section_size":"small","image":"shopify:\/\/shop_images\/creccvvv_08b07e30-3c9d-4f2b-9b04-8447ad37c657.jpg","text_color":"#ffffff","button_color":"#000000","subheading":"","title":"Newsletter","content":""}},"main":{"type":"main-not-found","settings":{}}},"order":["newsletter_mTDBCQ","main"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-not-found",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
