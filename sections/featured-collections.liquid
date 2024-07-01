@@ -1,190 +1,148 @@
-{%- if section.settings.layout_mode == 'carousel' -%}
-  {%- capture flickity_options -%}
-  {
-    "prevNextButtons": true,
-    "pageDots": false,
-    "wrapAround": false,
-    "contain": true,
-    "cellAlign": "center",
-    "watchCSS": true,
-    "dragThreshold": 8,
-    "groupCells": true,
-    "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
-  }
-  {%- endcapture -%}
-{%- endif -%}
+{%- if section.blocks.size > 0 -%}
+  <style>
+    #shopify-section-{{ section.id }} {
+      --product-list-items-per-row: {{ section.settings.products_per_row_mobile | times: 1 }};
+      --product-list-horizontal-spacing-factor: {{ section.settings.horizontal_spacing_factor }};
+      --product-list-vertical-spacing-factor: {{ section.settings.vertical_spacing_factor }};
+    }
 
-{%- capture section_settings -%}
-{
-  "layout": {{ section.settings.layout_mode | json }}
-}
-{%- endcapture -%}
+    @media screen and (min-width: 700px) {
+      #shopify-section-{{ section.id }} {
+        --product-list-items-per-row: {{ section.settings.products_per_row_desktop }};
+      }
+    }
+  </style>
 
-<section class="Section Section--spacingNormal" data-section-id="{{ section.id }}" data-section-type="featured-collections" data-settings='{{ section_settings }}'>
-  <header class="SectionHeader SectionHeader--center">
-    <div class="Container">
-    {%- if section.settings.title != blank -%}
-      <h3 class="SectionHeader__SubHeading Heading u-h6">{{ section.settings.title | escape }}</h3>
-       {%- endif -%}
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    <div class="container">
+      {%- assign wrapper_carousel_id = 'featured-collections-carousel-' | append: section.id -%}
 
-    {%- if section.blocks.size > 1 -%}
-      <div class="SectionHeader__TabList TabList" role="tablist">
-        {%- for block in section.blocks -%}
-          {%- assign collection = collections[block.settings.collection] -%}
-
-          <button class="Heading u-h1 TabList__Item {% if forloop.first %}is-active{% endif %}" data-action="toggle-tab" aria-controls="block-{{ block.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" role="tab">
-            {%- if collection != empty -%}
-              {{- block.settings.title | default: collection.title -}}
-            {%- else -%}
-              {{- 'home_page.onboarding.collection_title' | t -}}
-            {%- endif -%}
-          </button>
-        {%- endfor -%}
-      </div>
-    {%- else -%}
-      {%- assign collection = collections[section.blocks.first.settings.collection] -%}
-
-      {%- if collection != empty -%}
-        <h2 class="SectionHeader__Heading Heading u-h1"></h2>
-      {%- else -%}
-        <h2 class="SectionHeader__Heading Heading u-h1"></h2>
-      {%- endif -%}
-    {%- endif -%}
-    </div>
-  </header>
-
-  {%- for block in section.blocks -%}
-    {%- assign collection = collections[block.settings.collection] -%}
-
-    <div class="TabPanel" id="block-{{ block.id }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" role="tabpanel" {{ block.shopify_attributes }}>
-      <div class="ProductListWrapper">
-        {%- if collection != empty -%}
-          {%- assign item_count = block.settings.grid_items_count -%}
-
-          {%- if collection.products_count < block.settings.grid_items_count -%}
-            {%- assign item_count = collection.products_count -%}
+      <div class="section-stack">
+        <div class="v-stack justify-self-center gap-4 text-center sm:gap-5">
+          {%- if section.settings.subheading != blank -%}
+            <p class="h6 text-center">{{- section.settings.subheading -}}</p>
           {%- endif -%}
 
-          {%- if section.settings.layout_mode == 'grid' -%}
-            <div class="ProductList ProductList--grid ProductList--removeMargin Grid" data-mobile-count="{{ section.settings.grid_mobile_items_per_row }}" data-desktop-count="{{ section.settings.grid_desktop_items_per_row }}">
-              {%- for product in collection.products limit: block.settings.grid_items_count -%}
-                {%- comment %}<locksmith:51d9>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:51d9>{% endcomment -%}
-                <div class="Grid__Cell 1/{{ section.settings.grid_mobile_items_per_row }}--phone 1/2--tablet 1/{{ section.settings.grid_desktop_items_per_row }}--lap-and-up">
-                  {%- render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: true -%}
-                </div>
+          {%- if section.blocks.size > 1 -%}
+            <carousel-navigation align-selected class="featured-collections-navigation scroll-area bleed" aria-controls="{{ wrapper_carousel_id }}">
+              {%- for block in section.blocks -%}
+                <button class="h2" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                  {{- block.settings.title | default: block.settings.collection.title | default: 'Collection' -}}
+                </button>
               {%- endfor -%}
-            </div>
+            </carousel-navigation>
           {%- else -%}
-            <div class="ProductList ProductList--carousel Carousel" data-flickity-config='{{ flickity_options }}'>
-              {%- for product in collection.products limit: block.settings.grid_items_count -%}
-                {%- comment %}<locksmith:4127>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:4127>{% endcomment -%}
-                <div class="Carousel__Cell">
-                  {%- render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: true -%}
-                </div>
-              {%- endfor -%}
-            </div>
+            <h2 class="h2">{{ section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
           {%- endif -%}
-        {%- else -%}
-          {%- comment -%}If collection is not set, we use placeholder content for all three layout mode{%- endcomment -%}
-
-          {%- capture products_placeholder -%}
-            {%- for i in (1..block.settings.grid_items_count) -%}
-              <div class="{% if section.settings.layout_mode == 'grid' %}Grid__Cell 1/{{ section.settings.grid_mobile_items_per_row }}--phone 1/2--tablet-and-up 1/{{ section.settings.grid_desktop_items_per_row }}--lap-and-up{% else %}Carousel__Cell{% endif %}">
-                {% capture placeholder_index %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-                {%- render 'product-item-placeholder', placeholder_index: placeholder_index -%}
-              </div>
-            {%- endfor -%}
-          {%- endcapture -%}
-
-          {%- if section.settings.layout_mode == 'grid' -%}
-            <div class="ProductList ProductList--grid ProductList--removeMargin Grid" data-mobile-count="{{ section.settings.grid_mobile_items_per_row }}" data-desktop-count="{{ section.settings.grid_desktop_items_per_row }}">
-              {{ products_placeholder }}
-            </div>
-          {%- else -%}
-            <div class="ProductList ProductList--carousel Carousel" data-flickity-config='{{ flickity_options }}'>
-              {{ products_placeholder }}
-            </div>
-          {%- endif -%}
-        {%- endif -%}
-      </div>
-
-      {%- if block.settings.button_text != blank -%}
-        <div class="Container">
-          <div class="SectionFooter">
-            <a href="{{ collection.url }}" class="Button Button--primary">{{ block.settings.button_text | escape }}</a>
-          </div>
         </div>
-      {%- endif -%}
-    </div>
-  {%- endfor -%}
-</section>
 
-{%- capture hack -%}
-{%- comment -%}This is just an ugly hack to make those variables appear as part of the theme editor in the General Settings{%- endcomment -%}
-{% if section.settings.layout_mode == 'grid' %}{{ settings.product_list_horizontal_spacing }},{{ settings.product_list_vertical_spacing }}{% endif %}
-{%- endcapture -%}
+        <featured-collections-carousel id="{{ wrapper_carousel_id }}" class="featured-collections-carousel">
+          {%- for block in section.blocks -%}
+            <div class="featured-collections-carousel__item {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }}>
+              {%- capture product_list -%}
+                {%- assign should_reveal = false -%}
+
+                {%- if settings.stagger_products_apparition and forloop.first -%}
+                  {%- assign should_reveal = true -%}
+                {%- endif -%}
+
+                {%- for product in block.settings.collection.products limit: block.settings.products_count -%}
+                  {%- render 'product-card', product: product, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information, block: block -%}
+                {%- else -%}
+                  {%- for i in (1..block.settings.products_count) -%}
+                    {%- render 'product-card-placeholder', reveal: should_reveal, loop_index: forloop.index0, hide_product_information: section.settings.hide_product_information -%}
+                  {%- endfor -%}
+                {%- endfor -%}
+              {%- endcapture -%}
+
+              {%- if section.settings.stack_products -%}
+                <product-list class="product-list {% if section.settings.hide_product_information %}product-list--compact{% endif %} justify-center">
+                  {{- product_list -}}
+                </product-list>
+              {%- else -%}
+                {%- assign product_carousel_id = 'featured-collections-product-list-carousel-' | append: block.id -%}
+
+                <product-list class="floating-controls-container floating-controls-container--inside floating-controls-container--on-hover">
+                  <carousel-prev-button class="floating-controls-container__control" aria-controls="{{ product_carousel_id }}">
+                    <button type="button" class="prev-next-button prev-next-button--prev circle-button hover:animate-icon-inline" disabled>
+                      <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
+                      {%- render 'icon' with 'arrow-left', direction_aware: true -%}
+                    </button>
+                  </carousel-prev-button>
+
+                  <scroll-carousel id="{{ product_carousel_id }}" group-cells allow-drag class="product-list {% if section.settings.hide_product_information %}product-list--compact{% endif %} product-list--carousel scroll-area bleed md:unbleed">
+                    {{- product_list -}}
+                  </scroll-carousel>
+                  
+                  <carousel-next-button class="floating-controls-container__control" aria-controls="{{ product_carousel_id }}">
+                    <button type="button" class="prev-next-button prev-next-button--next circle-button hover:animate-icon-inline">
+                      <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
+                      {%- render 'icon' with 'arrow-right', direction_aware: true -%}
+                    </button>
+                  </carousel-next-button>
+                </product-list>
+              {%- endif -%}
+
+              {%- if block.settings.link_text != blank -%}
+                {%- assign button_link = block.settings.link_url | default: block.settings.collection.url | default: '#' -%}
+
+                <div class="justify-self-center">
+                  {%- render 'button', href: button_link, content: block.settings.link_text -%}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </featured-collections-carousel>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
 
 {% schema %}
 {
-  "name": "Collection without title",
-  "class": "shopify-section--bordered",
-  "max_blocks": 2,
+  "name": "t:sections.featured_collections.name",
+  "class": "shopify-section--featured-collections",
+  "tag": "section",
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["header", "custom.overlay"]
+  },
+  "max_blocks": 5,
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Sub-heading",
-      "default": "Featured collection"
-    },
-    {
-      "type": "select",
-      "id": "layout_mode",
-      "label": "Layout",
-      "options": [
-        {
-          "value": "grid",
-          "label": "Grid"
-        },
-        {
-          "value": "carousel",
-          "label": "Carousel"
-        }
-      ],
-      "default": "grid"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
     },
     {
       "type": "checkbox",
-      "id": "show_product_info",
-      "label": "Show product info",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
       "default": true
     },
     {
       "type": "checkbox",
-      "id": "show_vendor",
-      "label": "Show vendor",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "show_color_swatch",
-      "label": "Show color swatch",
-      "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch).",
-      "default": false
+      "id": "hide_product_information",
+      "label": "t:global.product_list.hide_product_information",
+      "info": "t:global.product_list.hide_product_information_info"
     },
     {
       "type": "header",
-      "content": "Grid",
-      "info": "Those settings apply only if the layout mode is set to grid."
+      "content": "t:global.product_list.product_list_category"
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_products",
+      "label": "t:global.product_list.stack_products",
+      "default": false
     },
     {
       "type": "select",
-      "id": "grid_mobile_items_per_row",
-      "label": "Products per row (mobile)",
+      "id": "products_per_row_mobile",
+      "label": "t:global.product_list.products_per_row_mobile",
       "options": [
         {
           "value": "1",
@@ -199,52 +157,89 @@
     },
     {
       "type": "range",
+      "id": "products_per_row_desktop",
       "min": 2,
-      "max": 4,
-      "id": "grid_desktop_items_per_row",
-      "label": "Products per row (desktop)",
+      "max": 6,
+      "label": "t:global.product_list.products_per_row_desktop",
+      "info": "t:global.product_list.products_per_row_desktop_info",
       "default": 4
+    },
+    {
+      "type": "header",
+      "content": "t:global.product_list.spacing_category",
+      "info": "t:global.product_list.spacing_category_info"
+    },
+    {
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.1,
+      "id": "horizontal_spacing_factor",
+      "label": "Horizontal spacing factor",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.1,
+      "id": "vertical_spacing_factor",
+      "label": "Vertical spacing factor",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "t:global.section.header_category"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "t:global.text.subheading",
+      "default": "Featured collection"
     }
   ],
   "blocks": [
     {
       "type": "collection",
-      "name": "Collection",
+      "name": "t:sections.featured_collections.blocks.collection.name",
       "settings": [
         {
           "type": "collection",
           "id": "collection",
-          "label": "Collection"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Heading",
-          "info": "If none is set, collection title is used."
+          "label": "t:sections.featured_collections.blocks.collection.collection"
         },
         {
           "type": "range",
-          "id": "grid_items_count",
+          "id": "products_count",
           "min": 2,
           "max": 50,
-          "step": 1,
-          "label": "Products to show",
+          "label": "t:global.product_list.products_to_show",
           "default": 8
         },
         {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "t:global.text.heading",
+          "info": "t:sections.featured_collections.blocks.collection.title_info"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "t:global.text.link_url",
+          "info": "t:sections.featured_collections.blocks.collection.default_link_url"
+        },
+        {
           "type": "text",
-          "id": "button_text",
-          "label": "Button text",
-          "default": "View all products"
+          "id": "link_text",
+          "label": "t:global.text.link_text",
+          "default": "View all"
         }
       ]
     }
   ],
   "presets": [
     {
-      "category": "Collection",
-      "name": "Collection without title",
-      "settings": {},
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
       "blocks": [
         {
           "type": "collection"

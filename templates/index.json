@@ -1,1 +1,233 @@
-{"sections":{"166471726189ba4ef1":{"type":"slidervideo","settings":{"src_large":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/55b230ff27d94c0cb23cc118564ea225.mp4","poster_large":"","src_mobile":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af312ad0ae5647768e8c7f903716bb4f.mp4","poster_mobile":""}},"slideshow":{"type":"slideshow","blocks":{"slide-0":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Jo_Bon_Bon.png","mobile_image":"shopify:\/\/shop_images\/Jo_Bon_Bon_Port.png","apply_overlay":false,"content_position":"bottomLeft","subheading":"","title":"","button_1_text":"","button_1_link":"https:\/\/www.bonastre.net\/collections\/aro-collection","button_2_text":"","button_2_link":"https:\/\/www.bonastre.net\/collections\/aro-collection"}},"slide-1":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Computer_website_Bonastre_video_1-2.gif","mobile_image":"shopify:\/\/shop_images\/27.png","apply_overlay":false,"content_position":"bottomLeft","subheading":"","title":"","button_1_text":"","button_1_link":"","button_2_text":"","button_2_link":""}}},"block_order":["slide-0","slide-1"],"disabled":true,"settings":{"show_fullscreen":true,"show_arrow":false,"autoplay":true,"cycle_speed":5,"text_color":"#ffffff","button_color":"#363636","button_background":"#ffffff"}},"featured-collections":{"type":"featured-collections","blocks":{"featured-collection-0":{"type":"collection","settings":{"collection":"phantom-collection","title":"","grid_items_count":4,"button_text":"DISCOVER the Phantom collection"}}},"block_order":["featured-collection-0"],"disabled":true,"settings":{"title":"","layout_mode":"grid","show_product_info":true,"show_vendor":false,"show_color_swatch":false,"grid_mobile_items_per_row":"2","grid_desktop_items_per_row":4}},"61bc2e2c-2bad-490b-a9d6-02f7d65b1a01":{"type":"featured-collections","blocks":{"6ca55b6d-d9bb-4c87-bfb7-3a3ad36e1532":{"type":"collection","settings":{"collection":"lovni-bags","title":"","grid_items_count":4,"button_text":"DISCOVER LOVNI BAG"}}},"block_order":["6ca55b6d-d9bb-4c87-bfb7-3a3ad36e1532"],"settings":{"title":"","layout_mode":"grid","show_product_info":true,"show_vendor":false,"show_color_swatch":false,"grid_mobile_items_per_row":"2","grid_desktop_items_per_row":4}},"c2d0489e-c207-4dbf-abfb-c10ca484048f":{"type":"collection-list","blocks":{"template--15841154302105__c2d0489e-c207-4dbf-abfb-c10ca484048f-1669808630d23beb73-0":{"type":"collection","settings":{"collection":"","image":"shopify:\/\/shop_images\/V1BLANC.jpg","image_alignment":"center center","content_position":"bottomCenter","subheading":"","title":"","button_text":"GIFTS FOR HER","button_link":"https:\/\/www.bonastre.net\/collections\/gifts-for-her","apply_overlay":false}},"template--15841154302105__c2d0489e-c207-4dbf-abfb-c10ca484048f-1669808630d23beb73-1":{"type":"collection","settings":{"collection":"","image":"shopify:\/\/shop_images\/Sans_titre-2.jpg","image_alignment":"center center","content_position":"bottomCenter","subheading":"","title":"","button_text":"GIFTS FOR HIM","button_link":"https:\/\/www.bonastre.net\/collections\/gifts-for-him","apply_overlay":false}}},"block_order":["template--15841154302105__c2d0489e-c207-4dbf-abfb-c10ca484048f-1669808630d23beb73-0","template--15841154302105__c2d0489e-c207-4dbf-abfb-c10ca484048f-1669808630d23beb73-1"],"disabled":true,"settings":{"image_size":"small","add_spacing":true,"expand_collection":true,"stack_on_mobile":true,"text_color":"#ffffff","button_color":"#363636"}},"16511567502a6d6127":{"type":"slideshow","blocks":{"1651156750b181783b-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Lanzarote_menu_1.jpg","apply_overlay":false,"content_position":"bottomLeft","subheading":"","title":"","button_1_text":"","button_1_link":"","button_2_text":"","button_2_link":""}}},"block_order":["1651156750b181783b-0"],"disabled":true,"settings":{"show_fullscreen":false,"show_arrow":false,"autoplay":true,"cycle_speed":5,"text_color":"#ffffff","button_color":"#363636","button_background":"#ffffff"}},"16539906215945153b":{"type":"image-with-text-overlay","settings":{"section_size":"normal","image":"shopify:\/\/shop_images\/Lanzarote_menu_1_1800x_298a04c0-88c7-479b-b0fe-22549aabaa0d.jpg","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0,"subheading":"","title":"","content":""}},"collection-list":{"type":"collection-list","blocks":{"collection-0":{"type":"collection","settings":{"collection":"","image_alignment":"center center","content_position":"bottomLeft","subheading":"Sub-heading","title":"Collection name","button_text":"View products","button_link":"","apply_overlay":true}},"collection-1":{"type":"collection","settings":{"collection":"","image_alignment":"center center","content_position":"bottomLeft","subheading":"Sub-heading","title":"Collection name","button_text":"View products","button_link":"","apply_overlay":true}},"collection-2":{"type":"collection","settings":{"collection":"","image_alignment":"center center","content_position":"bottomLeft","subheading":"Sub-heading","title":"Collection name","button_text":"View products","button_link":"","apply_overlay":true}}},"block_order":["collection-0","collection-1","collection-2"],"disabled":true,"settings":{"image_size":"normal","add_spacing":true,"expand_collection":false,"stack_on_mobile":true,"text_color":"#ffffff","button_color":"#363636"}},"16511568378468981e":{"type":"text-with-image","settings":{"subheading":"","title":"THE DOME LINE","image":"shopify:\/\/shop_images\/H2_fed43c79-483a-4c9c-80c8-50d889390243.jpg","image_position":"right","content":"<p>How is a signature line born? What makes a bag a timeless design? <\/p><p>It is a mix of design, inspiration, craft, noble material, modern vision but also a beautiful story that goes with it. We want to tell you this story …<\/p>","link_text":"Discover the DOME Collection","link_url":"shopify:\/\/collections\/dome-line"}},"16511569694adcf5ad":{"type":"text-with-image","settings":{"subheading":"","title":"FOR BAG GOURMETS ONLY!","image":"shopify:\/\/shop_images\/BONASTRE-LANZA-BOY-1-CMYK-Crop-_2.png","image_position":"left","content":"<p><strong>BON-BON<\/strong> is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>","link_text":"Discover the BON-BON Collection","link_url":"https:\/\/www.bonastre.net\/collections\/collection-bon-bon"}},"1651157044c2743785":{"type":"slideshow","blocks":{"165115704437b6da14-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Lanzarote_Menu_2.jpg","apply_overlay":false,"content_position":"bottomLeft","subheading":"","title":"","button_1_text":"","button_1_link":"","button_2_text":"","button_2_link":""}}},"block_order":["165115704437b6da14-0"],"disabled":true,"settings":{"show_fullscreen":false,"show_arrow":false,"autoplay":true,"cycle_speed":5,"text_color":"#ffffff","button_color":"#363636","button_background":"#ffffff"}},"165400116877bae918":{"type":"image-with-text-overlay","settings":{"section_size":"normal","image":"shopify:\/\/shop_images\/testAA.jpg","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0,"subheading":"","title":"","content":""}},"featured-product":{"type":"featured-product","blocks":{"product-meta":{"type":"product_meta","settings":{"show_vendor":true,"show_sku":false,"show_product_rating":false,"show_taxes_included":false}},"share-buttons":{"type":"share_buttons","settings":{}},"variant-selector":{"type":"variant_selector","settings":{"selector_mode":"dropdown","show_color_swatch":false,"show_color_carousel":false,"size_chart":""}},"buy-buttons":{"type":"buy_buttons","settings":{"show_price_in_button":false,"show_payment_button":true}}},"block_order":["product-meta","share-buttons","variant-selector","buy-buttons"],"disabled":true,"settings":{"subheading":"","title":"Featured product","show_headings_on_mobile":true,"product":""}},"timeline":{"type":"timeline","blocks":{"item-0":{"type":"item","settings":{"apply_overlay":true,"title":"2000","subheading":"Sub-heading","heading":"Heading","content":"<p>Add your own custom content to give more information about your store, availability details...<\/p>"}},"item-1":{"type":"item","settings":{"apply_overlay":true,"title":"2001","subheading":"Sub-heading","heading":"Heading","content":"<p>Add your own custom content to give more information about your store, availability details...<\/p>"}},"item-2":{"type":"item","settings":{"apply_overlay":true,"title":"2002","subheading":"Sub-heading","heading":"Heading","content":"<p>Add your own custom content to give more information about your store, availability details...<\/p>"}}},"block_order":["item-0","item-1","item-2"],"disabled":true,"settings":{"text_color":"#ffffff"}},"blog-posts":{"type":"blog-posts","blocks":{"blog-0":{"type":"blog","settings":{"blog":"news"}}},"block_order":["blog-0"],"disabled":true,"settings":{"subheading":"","title":"Featured article","show_category":false,"button_link":"","button_text":"View all articles"}},"shop-the-look":{"type":"shop-the-look","blocks":{"look-0":{"type":"look","settings":{"dot_style":"light","product_1":"","product_1_horizontal_position":30,"product_1_vertical_position":40,"product_2":"","product_2_horizontal_position":45,"product_2_vertical_position":65,"product_3":"","product_3_horizontal_position":70,"product_3_vertical_position":50}},"look-1":{"type":"look","settings":{"dot_style":"light","product_1":"","product_1_horizontal_position":25,"product_1_vertical_position":45,"product_2":"","product_2_horizontal_position":55,"product_2_vertical_position":30,"product_3":"","product_3_horizontal_position":65,"product_3_vertical_position":60}}},"block_order":["look-0","look-1"],"disabled":true,"settings":{"subheading":"Shop","title":"Our looks","show_mobile_product_info":false}},"16511571757ee43096":{"type":"text-with-image","settings":{"subheading":"","title":"THE PARISIAN FLAGSHIP","image":"shopify:\/\/shop_images\/BOUTIQUE_BONASTRE.jpg","image_position":"right","content":"<p>Discover our parisian store situated in the Marais, a typical 17th century building with a façade of plaster colonnades and traditional wooden front. 10, rue du Perche, Paris 3.<\/p>","link_text":"view more","link_url":"https:\/\/www.bonastre.net\/blogs\/news\/the-parisian-flagship"}}},"order":["166471726189ba4ef1","slideshow","featured-collections","61bc2e2c-2bad-490b-a9d6-02f7d65b1a01","c2d0489e-c207-4dbf-abfb-c10ca484048f","16511567502a6d6127","16539906215945153b","collection-list","16511568378468981e","16511569694adcf5ad","1651157044c2743785","165400116877bae918","featured-product","timeline","blog-posts","shop-the-look","16511571757ee43096"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-1": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "slide-2": {
+          "type": "image",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "slide-1",
+        "slide-2"
+      ],
+      "settings": {
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "collection-1"
+      ],
+      "settings": {
+      }
+    },
+    "multi-column": {
+      "type": "multi-column",
+      "blocks": {
+        "column-1": {
+          "type": "image_with_text",
+          "settings": {
+          }
+        },
+        "column-2": {
+          "type": "image_with_text",
+          "settings": {
+          }
+        },
+        "column-3": {
+          "type": "image_with_text",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3"
+      ],
+      "settings": {
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+          }
+        },
+        "collection-4": {
+          "type": "collection",
+          "settings": {
+          }
+        },
+        "collection-5": {
+          "type": "collection",
+          "settings": {
+          }
+        },
+        "collection-6": {
+          "type": "collection",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3",
+        "collection-4",
+        "collection-5",
+        "collection-6"
+      ],
+      "settings": {
+      }
+    },
+    "before-after": {
+      "type": "before-after",
+      "blocks": {
+        "before": {
+          "type": "before",
+          "settings": {
+          }
+        },
+        "after": {
+          "type": "after",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "before",
+        "after"
+      ],
+      "settings": {
+      }
+    },
+    "image-with-text-scroll": {
+      "type": "images-with-text-scroll",
+      "blocks": {
+        "item-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "#1",
+            "content": "<p>Welcome your customers to your store by sharing temporary offers or explaining to them what your products are about.<\/p>"
+          }
+        },
+        "item-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "#2",
+            "content": "<p>Create trust with your customers by explaining the story of your brand. Share your values or what is important to you.<\/p>"
+          }
+        },
+        "item-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "#3",
+            "content": "<p>Share information about your product with your customers. Describe a product, and share info about your production process...<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3"
+      ],
+      "settings": {
+      }
+    },
+    "multiple-media-with-text": {
+      "type": "multiple-media-with-text",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2"
+      ],
+      "settings": {
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+      }
+    },
+    "shop-the-look": {
+      "type": "shop-the-look",
+      "blocks": {
+        "look-1": {
+          "type": "look",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "look-1"
+      ],
+      "settings": {
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "featured-collections",
+    "multi-column",
+    "collection-list",
+    "before-after",
+    "image-with-text-scroll",
+    "multiple-media-with-text",
+    "newsletter",
+    "shop-the-look",
+    "blog-posts"
+  ]
+}
