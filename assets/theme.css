@@ -3148,7 +3148,7 @@ tr[onclick]:hover {
 }
 
 .localization-toggle[aria-expanded="true"] > svg {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 .country-flag {

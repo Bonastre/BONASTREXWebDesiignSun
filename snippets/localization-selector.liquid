@@ -38,7 +38,7 @@ Supported variables
           <span>{{ localization.country.currency.iso_code }} {% if localization.country.currency.symbol %}{{ localization.country.currency.symbol }}{%- endif -%}</span>
         {%- endif -%}
 
-        {%- render 'icon' with 'chevron-right' -%}
+        {%- render 'icon' with 'chevron-down' -%}
       </button>
 
       <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }} color-scheme color-scheme--dialog">
@@ -76,7 +76,7 @@ Supported variables
     <div class="relative">
       <button type="button" class="localization-toggle heading text-xxs link-faded" aria-controls="{{ localization_popover_id }}" aria-expanded="false">
         {{- localization.language.endonym_name | capitalize -}}
-        {%- render 'icon' with 'chevron-right' -%}
+        {%- render 'icon' with 'chevron-down' -%}
       </button>
 
       <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }} color-scheme color-scheme--dialog">
