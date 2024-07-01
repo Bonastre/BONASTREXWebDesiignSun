@@ -1,4 +1,18 @@
 <footer id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="footer" class="Footer" role="contentinfo">
+  {%- for block in section.blocks -%}
+  {%- capture block_content -%}
+  {%- case block.type -%}
+    
+
+
+
+  {%- endcase -%}
+  {%- endcapture -%}
+
+  {%- endfor -%}
+
+
+
   <ul>
          <li class="mobile-currency">
           {%- include 'bold-currency-picker-mount', openDirection: 'down' -%}
