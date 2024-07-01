@@ -2,6 +2,7 @@
   {%- for block in section.blocks -%}
   {%- capture block_content -%}
   {%- case block.type -%}
+  {%- when 'links' -%}
     {%- when 'newsletter' -%}
     <div class="v-stack gap-4 sm:gap-5">
       {%- if block.settings.title != blank -%}
