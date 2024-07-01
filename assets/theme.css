@@ -3652,7 +3652,7 @@ product-rerender {
 }
 
 .announcement-bar a {
-  background: unset;
+  background: unset !important;
 }
 .announcement-bar__carousel {
   flex-grow: 1;
