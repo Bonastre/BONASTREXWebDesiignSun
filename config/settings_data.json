@@ -22,6 +22,8 @@
     "text_font": "futura_n3",
     "text_font_size_desktop": 14,
     "button_letter_spacing": 18,
+    "cart_type": "drawer",
+    "cart_icon": "shopping_bag_sharp",
     "content_for_index": [
 
     ],
