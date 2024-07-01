@@ -10,8 +10,9 @@
 {
   "sections": {
     "main": {
-      "type": "main-customers-login",
+      "type": "main-list-collections",
       "settings": {
+        "collections_to_show": "selected"
       }
     }
   },
