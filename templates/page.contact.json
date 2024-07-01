@@ -1,1 +1,28 @@
-{"sections":{"main":{"type":"main-contact","disabled":true,"settings":{}},"16530459059f18bc62":{"type":"text-with-image","settings":{"subheading":"","title":"contact","image":"shopify:\/\/shop_images\/image_196.jpg","image_position":"right","content":"<p><a href=\"mailto:contact@bonastre.net\">CONTACT@BONASTRE.NET<\/a><\/p><p><strong>THE FLAGSHIP<\/strong><\/p><p>10 RUE DU PERCHE<br\/>PARIS 03<\/p><p>MON - SUN 11:30 19:00<br\/>+33 1 42 78 99 10<\/p>","link_text":"","link_url":""}}},"order":["main","16530459059f18bc62"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "contact-form": {
+      "type": "contact",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact-form"
+  ]
+}
