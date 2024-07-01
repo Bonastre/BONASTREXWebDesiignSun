@@ -3083,6 +3083,9 @@ tr[onclick]:hover {
 .icon-wishlist {
   fill: #ffffff;
 }
+.header .icon-wishlist {
+  fill: rgb(var(--text-color));
+}
 
 .group[aria-expanded="true"] .icon.group-expanded\:rotate {
   transform: rotateZ(180deg);
