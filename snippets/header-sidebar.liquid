@@ -38,11 +38,7 @@ therefore using a different structure for the Shadow DOM template
         {%- if menu.levels > 0 -%}
           <slot name="collapsible-panel"></slot>
         {%- endif -%}
-          {%- if section.settings.show_social_media -%}
-              {%- capture social_media -%}
-                  {% render 'social-media', class: 'SidebarMenu__Social', spacing: 'fill' %}
-              {%- endcapture -%}
-          {%- endif -%}
+
       </div>
     </div>
   </div>
@@ -113,6 +109,7 @@ therefore using a different structure for the Shadow DOM template
         {%- endif -%}
       </div>
     {%- endif -%}
+      
   </div>
 
   {%- comment -%}Panel 2 holds all the second levels{%- endcomment -%}
