@@ -12,8 +12,28 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "product_meta": {
-          "type": "product_meta",
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {
+          }
+        },
+        "separator": {
+          "type": "separator",
           "settings": {
           }
         },
@@ -22,13 +42,8 @@
           "settings": {
           }
         },
-        "share_buttons": {
-          "type": "share_buttons",
-          "settings": {
-          }
-        },
-        "variant_selector": {
-          "type": "variant_selector",
+        "variant_picker": {
+          "type": "variant_picker",
           "settings": {
           }
         },
@@ -41,33 +56,41 @@
           "type": "buy_buttons",
           "settings": {
           }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "settings": {
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "product_meta",
+        "vendor",
+        "title",
+        "price",
+        "payment_terms",
+        "separator",
         "description",
-        "share_buttons",
-        "variant_selector",
+        "variant_picker",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "complementary_products"
       ],
       "settings": {
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-      }
-    },
-    "recently-viewed-products": {
-      "type": "recently-viewed-products",
+    "related-products": {
+      "type": "related-products",
       "settings": {
       }
     }
   },
   "order": [
     "main",
-    "product-recommendations",
-    "recently-viewed-products"
+    "related-products"
   ]
 }
