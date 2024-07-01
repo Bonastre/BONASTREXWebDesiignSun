@@ -3,6 +3,23 @@
   {%- capture block_content -%}
   {%- case block.type -%}
   {%- when 'links' -%}
+    {%- assign menu = block.settings.menu -%}
+
+    {%- if menu != blank and menu.links.size > 0 -%}
+      <div class="v-stack gap-4 sm:gap-5">
+        {%- if block.settings.show_menu_title != blank -%}
+          <p class="h6">{{ block.settings.menu_title | default: menu.title }}</p>
+        {%- endif -%}
+
+        <ul class="v-stack gap-2.5 unstyled-list" role="list">
+          {%- for link in menu.links -%}
+            <li>
+              <a href="{{ link.url }}" class="link-faded">{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
     {%- when 'newsletter' -%}
     <div class="v-stack gap-4 sm:gap-5">
       {%- if block.settings.title != blank -%}
@@ -26,7 +43,7 @@
 
 
 
-  <ul>
+  {% comment %}<ul>
          <li class="mobile-currency">
           {%- include 'bold-currency-picker-mount', openDirection: 'down' -%}
         </li>
@@ -42,7 +59,7 @@
       <li>
         <a href="{{ block.settings.url }}" {% if block.settings.externalLink %}target="_blank"{% endif %}>{{ title }}</a></li>
     {%- endfor -%}
-  </ul>
+  </ul>{% endcomment %}
 </footer>
 
 {% schema %}
