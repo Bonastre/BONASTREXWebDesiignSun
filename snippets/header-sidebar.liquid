@@ -111,7 +111,7 @@ therefore using a different structure for the Shadow DOM template
     {%- endif -%}
 
       {%- if section.settings.show_social_media -%}
-              {% render 'social-media', class: 'SidebarMenu__Social', spacing: 'fill' %}
+              {% render 'social-media', layout: 'list' %}
       {%- endif -%}
   </div>
 
