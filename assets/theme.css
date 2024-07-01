@@ -3083,7 +3083,7 @@ tr[onclick]:hover {
 .icon-wishlist {
   fill: #ffffff;
 }
-.header .icon-wishlist {
+.header:hover .icon-wishlist {
   fill: rgb(var(--text-color));
 }
 
@@ -3148,7 +3148,7 @@ tr[onclick]:hover {
 }
 
 .localization-toggle[aria-expanded="true"] > svg {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 .country-flag {
