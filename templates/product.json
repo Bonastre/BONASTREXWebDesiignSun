@@ -12,13 +12,29 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "product_meta": {
-          "type": "product_meta",
+        "vendor": {
+          "type": "vendor",
           "settings": {
-            "show_vendor": false,
-            "show_sku": false,
-            "show_product_rating": false,
-            "show_taxes_included": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {
           }
         },
         "description": {
@@ -26,98 +42,55 @@
           "settings": {
           }
         },
-        "share_buttons": {
-          "type": "share_buttons",
+        "variant_picker": {
+          "type": "variant_picker",
           "settings": {
-          }
-        },
-        "variant_selector": {
-          "type": "variant_selector",
-          "settings": {
-            "selector_mode": "dropdown",
-            "show_color_swatch": true,
-            "show_color_carousel": false,
-            "size_chart": ""
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {
-            "show_label": false
-          }
-        },
-        "07416d17-5f9e-4dfd-a82b-30eaa2142b67": {
-          "type": "shopify:\/\/apps\/back-in-stock-restock-alerts\/blocks\/app-block\/bfa6a8c4-24e2-411a-9396-e35031b33f34",
-          "disabled": true,
-          "settings": {
-            "caption": "Email when available",
-            "font_size": 16,
-            "color": "#ffffff",
-            "background_color": "#000000",
-            "margin_top": 10,
-            "margin_bottom": 10,
-            "classes": "button button--full-width",
-            "style": "text-decoration:none"
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_price_in_button": false,
-            "show_payment_button": false
           }
         },
-        "196d3fa8-9e8c-4194-b0ea-e24ed2816692": {
-          "type": "liquid",
+        "pickup_availability": {
+          "type": "pickup_availability",
           "settings": {
-            "liquid": ""
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "settings": {
           }
         }
       },
       "block_order": [
-        "product_meta",
+        "vendor",
+        "title",
+        "price",
+        "payment_terms",
+        "separator",
         "description",
-        "share_buttons",
-        "variant_selector",
+        "variant_picker",
         "quantity_selector",
-        "07416d17-5f9e-4dfd-a82b-30eaa2142b67",
         "buy_buttons",
-        "196d3fa8-9e8c-4194-b0ea-e24ed2816692"
+        "complementary_products"
       ],
       "settings": {
-        "image_size": "small",
-        "stack_images": true,
-        "show_thumbnails": false,
-        "enable_image_zoom": true,
-        "enable_video_looping": false
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
+    "related-products": {
+      "type": "related-products",
       "settings": {
-        "show_product_recommendations": true,
-        "heading": "You may also like",
-        "show_product_info": true,
-        "show_vendor": false,
-        "show_color_swatch": false
-      }
-    },
-    "recently-viewed-products": {
-      "type": "recently-viewed-products",
-      "disabled": true,
-      "settings": {
-        "show_section": true,
-        "title": "Recently viewed",
-        "show_product_info": true,
-        "show_vendor": false,
-        "show_color_swatch": false
       }
     }
   },
   "order": [
     "main",
-    "product-recommendations",
-    "recently-viewed-products"
+    "related-products"
   ]
 }
