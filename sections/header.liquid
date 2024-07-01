@@ -205,10 +205,7 @@
 
       {%- if show_country_selector or show_locale_selector -%}
         <div class="localization-selectors md-max:hidden">
-
-          {% render 'weglot_switcher' %}
-          {% render 'weglot_hreftags' %}
-
+          
           {%- if show_locale_selector -%}
             {%- render 'localization-selector', type: 'locale', placement: 'bottom-end', id_prefix: 'header-nav' -%}
           {%- endif -%}
