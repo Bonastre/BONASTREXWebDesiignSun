@@ -255,6 +255,20 @@
         </a>
       {%- endif -%}
 
+
+      {%- if section.settings.enable_wishlist -%}
+        <a href="{{ routes.search_url }}" aria-controls="header-search-{{ section.id }}">
+          <span class="sr-only">{{ 'header.general.open_search' | t }}</span>
+
+          {%- if section.settings.show_icons -%}
+            {%- render 'icon' with 'search', class: 'header__nav-icon' -%}
+          {%- else -%}
+            <span class="md:hidden">{%- render 'icon' with 'search', class: 'header__nav-icon' -%}</span>
+            <span class="h6 link-faded md-max:hidden">{{ 'header.general.search' | t }}</span>
+          {%- endif -%}
+        </a>
+      {%- endif -%}
+
       <a href="{{ routes.cart_url }}" class="relative" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %} data-no-instant>
         <span class="sr-only">{{ 'header.general.open_cart' | t }}</span>
 
