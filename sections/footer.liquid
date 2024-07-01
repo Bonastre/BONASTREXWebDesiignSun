@@ -97,13 +97,14 @@
   {%- endcase -%}
   {%- endcapture -%}
 
-  {%- endfor -%}
+
 
   {%- if block_content != blank -%}
     <div class="footer__block footer__block--{{ block.type }}" {{ block.shopify_attributes }}>
       {{- block_content -}}
     </div>
   {%- endif -%}
+  {%- endfor -%}
 
 
 
