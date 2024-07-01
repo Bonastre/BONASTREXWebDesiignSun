@@ -256,7 +256,13 @@
       {%- endif -%}
 
 
-      
+      {%- if section.settings.enable_wishlist -%}
+        <a href="{{ routes.root_url }}{% if routes.root_url .size > 1 %}/{%endif%}pages/wishlist" aria-label="{{ 'header.navigation.wishlist' | t }}">
+          {%- if section.settings.show_icons -%}
+            {%- render 'icon' with 'wishlist', class: 'header__nav-icon' -%}
+          {%- endif -%}
+        </a>
+      {%- endif -%}
 
       <a href="{{ routes.cart_url }}" class="relative" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %} data-no-instant>
         <span class="sr-only">{{ 'header.general.open_cart' | t }}</span>
