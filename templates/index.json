@@ -62,11 +62,11 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "products_count": 8,
+            "collection": "lovni-bags",
+            "products_count": 4,
             "title": "",
-            "link_url": "",
-            "link_text": "View all"
+            "link_url": "shopify:\/\/collections\/lovni-bags",
+            "link_text": "DISCOVER LOVNI BAG"
           }
         }
       },
@@ -77,12 +77,12 @@
         "color_scheme": "",
         "separate_section_with_border": true,
         "hide_product_information": false,
-        "stack_products": false,
+        "stack_products": true,
         "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
+        "products_per_row_desktop": 2,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "Featured collection"
+        "subheading": ""
       }
     },
     "multi-column": {
