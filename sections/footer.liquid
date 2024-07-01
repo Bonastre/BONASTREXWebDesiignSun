@@ -99,6 +99,12 @@
 
   {%- endfor -%}
 
+  {%- if block_content != blank -%}
+    <div class="footer__block footer__block--{{ block.type }}" {{ block.shopify_attributes }}>
+      {{- block_content -}}
+    </div>
+  {%- endif -%}
+
 
 
   {% comment %}<ul>
@@ -124,6 +130,7 @@
 {
   "name": "Footer",
   "class": "shopify-section--footer",
+  "max_blocks": 6,
   "blocks": [
     {
       "type": "image",
