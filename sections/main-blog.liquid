@@ -1,183 +1,157 @@
-{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
-
-<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme }} color-scheme--bg-{{ color_scheme_hash }}">
+<div id="section-{{ section.id }}" class="Section" data-section-id="{{ section.id }}" data-section-type="article-list">
   {%- if blog.articles_count == 0 -%}
-    <div class="container container--xs">
-      <div class="empty-state">
-        <div class="prose">
-          <h1 class="h4">{{ blog.title }}</h1>
-          <p>{{ 'blog.general.empty_blog' | t }}</p>
-
-          {%- assign button_content = 'blog.general.back_to_home' | t -%}
-          {%- render 'button', content: button_content, href: routes.root_url -%}
-        </div>
+    <div class="EmptyState">
+      <div class="Container">
+        <h1 class="EmptyState__Title Heading u-h5">{{ 'blog.general.no_articles' | t: blog_title: blog.title }}</h1>
+        <a href="{{ routes.root_url }}" class="EmptyState__Action Button Button--primary">{{ 'blog.general.empty_button' | t }}</a>
       </div>
     </div>
   {%- else -%}
-    <div class="container container--lg">
-      <div class="section-stack">
-        {%- if section.settings.show_blog_title or section.settings.show_tags and blog.tags.size > 0 -%}
-          <div class="v-stack gap-5">
-            {%- if section.settings.show_blog_title -%}
-              <div class="section-header justify-self-center text-center">
-                <div class="h-stack justify-center gap-4">
-                  <h1 class="h2">{{ blog.title }}</h1>
+    <div class="Blog">
+      <div class="Container">
+        <header class="PageHeader">
+          <div class="SectionHeader SectionHeader--center">
+            <h1 class="SectionHeader__Heading Heading u-h1">
+              {{- blog.title -}}
 
-                  {%- if section.settings.show_rss_feed -%}
-                    <a href="{{ blog.url }}.atom" class="link-faded">
-                      <span class="sr-only">{{ 'general.accessibility.rss_feed' | t }}</span>
-                      {%- render 'icon' with 'rss', width: 12 -%}
-                    </a>
-                  {%- endif -%}
-                </div>
-              </div>
-            {%- endif -%}
+              {%- if section.settings.show_rss -%}
+                <a href="{{ blog.url }}.atom" target="_blank" class="Blog__RssLink Link Link--secondary">{% render 'icon' with 'rss' %}</a>
+              {%- endif -%}
+            </h1>
 
-            {%- if section.settings.show_tags and blog.tags.size > 0 -%}
-              <ul class="blog-tags unstyled-list" role="list">
-                <li {% if current_tags.size > 0 %}class="link-faded"{% endif %}>
-                  <a href="{{ blog.url }}">{{- 'blog.general.all_posts' | t -}}</a>
+            {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
+              <ul class="Blog__TagList HorizontalList HorizontalList--spacingExtraLoose">
+                <li class="HorizontalList__Item">
+                  <a href="/blogs/{{ blog.handle }}" class="Heading Link Link--primary Text--subdued u-h8 {% if current_tags == blank %}is-active{% endif %}">{{ 'blog.general.all_tag' | t }}</a>
                 </li>
 
                 {%- for tag in blog.all_tags -%}
-                  {%- if current_tags contains tag -%}
-                    <li>{{- tag | link_to_remove_tag: tag -}}</li>
-                  {%- else -%}
-                    <li class="link-faded">{{- tag | link_to_tag: tag -}}</li>
-                  {%- endif -%}
+                  <li class="HorizontalList__Item">
+                    <a href="/blogs/{{ blog.handle }}/tagged/{{ tag | handle }}" class="Heading Link Link--primary Text--subdued u-h8 {% if current_tags contains tag %}is-active{% endif %}">{{ tag }}</a>
+                  </li>
                 {%- endfor -%}
               </ul>
             {%- endif -%}
           </div>
+        </header>
+
+        {%- if section.settings.show_featured_article and current_tags == blank -%}
+          {%- assign articles_per_page = 13 -%}
+        {%- else -%}
+          {%- assign articles_per_page = 12 -%}
         {%- endif -%}
 
-        <div class="v-stack gap-8 sm:gap-12">
-          {%- paginate blog.articles by section.settings.posts_per_page -%}
-            <blog-posts class="blog-post-list" {% if settings.stagger_blog_posts_apparition %}reveal-on-scroll="true"{% endif %}>
-              {%- capture sizes -%}(max-width: 699px) 95vw, (max-width: 1149px) calc(100vw / 2), calc((80rem - (5rem * ({{ section.settings.blog.articles_count | default: 3 | at_most: 3 }} - 1))) / 3){%- endcapture -%}
+        {%- paginate blog.articles by articles_per_page -%}
+          {% assign is_first_article_featured = false %}
 
+          {%- if section.settings.show_featured_article and current_tags == blank and blog.articles.first.image -%}
+            {%- assign is_first_article_featured = true -%}
+          {%- endif -%}
+
+          <div class="ArticleListWrapper">
+            <div class="ArticleList {% if is_first_article_featured %}ArticleList--withFeatured{% endif %} Grid Grid--m">
               {%- for article in blog.articles -%}
-                {%- if section.settings.feature_first_blog_post and forloop.first -%}
-                  <div class="featured-blog-post color-scheme color-scheme--{{ section.settings.featured_blog_post_color_scheme.id }} group">
-                    <a href="{{ article.url }}" class="content-over-media content-over-media--xs">
-                      {%- capture featured_blog_post_sizes -%}(max-width: 1149px) 95vw, 1260px{%- endcapture -%}
+                {%- if is_first_article_featured and forloop.first -%}
+                  <div class="Grid__Cell hidden-phone">
+                    <div class="FlexboxIeFix">
+                      <div class="ImageHero ImageHero--small" style="background: url({{ article.image | img_url: '1x1', format: 'jpg' }})">
+                        <div class="ImageHero__ImageWrapper">
+                          <div class="ImageHero__Image Image--lazyLoad Image--zoomOut"
+                               data-optimumx="1.4"
+                               data-bgset="{{ article.image | img_url: mobile_size, crop: 'center' }} 750w, {{ article.image | img_url: '1000x' }} 1000w, {{ article.image | img_url: '1500x' }} 1500w">
+                          </div>
 
-                      {%- if article.image != blank -%}
-                        {{- article.image | image_url: width: article.image.width | image_tag: sizes: featured_blog_post_sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200', class: 'zoom-image group-hover:zoom' -}}
-                      {%- endif -%}
+                          <noscript>
+                            <div class="ImageHero__Image" style="background-image: url({{ article.image | img_url: '1000x' }})"></div>
+                          </noscript>
+                        </div>
 
-                      <div class="prose place-self-end-start">
-                        <h2 class="h2">
-                          {%- if article -%}
-                            {{ article.title }}
-                          {%- else -%}
-                            {{- 'general.on_boarding.blog_post_title' | t -}}
-                          {%- endif -%}
-                        </h2>
+                        <div class="ImageHero__TextContent">
+                          <header class="SectionHeader">
+                            {%- if section.settings.show_category and article.tags != empty -%}
+                              <span class="SectionHeader__SubHeading Heading u-h6">{{ article.tags.first }}</span>
+                            {%- endif -%}
 
-                        {%- assign button_content = 'blog.general.read_more' | t -%}
-                        {%- render 'button', type: 'button', content: button_content, background: section.settings.featured_blog_post_button_background, text_color: section.settings.featured_blog_post_button_text_color -%}
+                            <h2 class="SectionHeader__Heading Heading u-h1">
+                              <a href="{{ article.url }}">{{ article.title }}</a>
+                            </h2>
+
+                            <div class="SectionHeader__ButtonWrapper">
+                              <a href="{{ article.url }}" class="Button Button--primary">{{ 'blog.article.read_more' | t }}</a>
+                            </div>
+                          </header>
+                        </div>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 {%- endif -%}
 
-                {%- render 'blog-post-card', article: article, blog: blog, show_category: section.settings.show_category, show_date: section.settings.show_date, show_excerpt: section.settings.show_excerpt, show_read_more: section.settings.show_read_more, sizes: sizes, position: forloop.index -%}
+                <div class="Grid__Cell {% if is_first_article_featured and forloop.first %}hidden-tablet-and-up{% else %}1/2--tablet 1/3--lap-and-up{% endif %}">
+                  {%- render 'article-item', article: article -%}
+                </div>
               {%- endfor -%}
-            </blog-posts>
+            </div>
+          </div>
 
-            {%- render 'pagination', paginate: paginate -%}
-          {%- endpaginate -%}
-        </div>
+          {%- render 'pagination', paginate: paginate -%}
+        {%- endpaginate -%}
       </div>
     </div>
   {%- endif -%}
 </div>
 
+<style>
+  #section-{{ section.id }} .ImageHero,
+  #section-{{ section.id }} .ImageHero .Heading {
+    color: #ffffff;
+  }
+
+  #section-{{ section.id }} .ImageHero .Button {
+    color: #1c1c1c;
+    border-color: #ffffff;
+  }
+
+  #section-{{ section.id }} .ImageHero .Button::before {
+    background-color: #ffffff;
+  }
+
+  {%- if settings.show_button_transition -%}
+    @media (-moz-touch-enabled: 0), (hover: hover) {
+      #section-{{ section.id }} .ImageHero .Button:hover {
+        color: #ffffff;
+      }
+    }
+  {%- endif -%}
+</style>
+
 {% schema %}
 {
-  "name": "t:sections.main_blog.name",
-  "class": "shopify-section--main-blog",
-  "tag": "section",
+  "name": "Blog page",
   "settings": [
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:global.colors.scheme",
-      "default": "scheme-1"
-    },
-    {
       "type": "checkbox",
-      "id": "show_blog_title",
-      "label": "t:sections.main_blog.show_blog_title",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_rss_feed",
-      "label": "t:sections.main_blog.show_rss",
+      "id": "show_rss",
+      "label": "Show RSS",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "show_tags",
-      "label": "t:sections.main_blog.show_tags",
-      "default": true
-    },
-    {
-      "type": "range",
-      "id": "posts_per_page",
-      "label": "t:sections.main_blog.blog_posts_per_page",
-      "min": 3,
-      "max": 50,
-      "step": 1,
-      "default": 10
-    },
-    {
-      "type": "header",
-      "content": "t:sections.main_blog.featured_blog_post_category",
-      "info": "t:sections.main_blog.featured_blog_post_category_info"
-    },
-    {
-      "type": "checkbox",
-      "id": "feature_first_blog_post",
-      "label": "t:sections.main_blog.feature_first_blog_post",
-      "default": true
-    },
-    {
-      "type": "color_scheme",
-      "id": "featured_blog_post_color_scheme",
-      "label": "t:global.colors.scheme",
-      "default": "scheme-4"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.main_blog.card_category"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_category",
-      "label": "t:global.blog.show_category",
-      "info": "t:global.blog.show_category_info",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_date",
-      "label": "t:global.blog.show_date",
+      "label": "Show filters",
       "default": false
     },
     {
       "type": "checkbox",
-      "id": "show_excerpt",
-      "label": "t:global.blog.show_excerpt",
+      "id": "show_featured_article",
+      "label": "Show featured article",
       "default": true
     },
     {
       "type": "checkbox",
-      "id": "show_read_more",
-      "label": "t:global.blog.show_read_more",
-      "default": true
+      "id": "show_category",
+      "label": "Show article category",
+      "info": "The first article's tag is used as the main category.",
+      "default": false
     }
   ]
 }
