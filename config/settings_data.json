@@ -171,7 +171,7 @@
           "links_QEpmQD": {
             "type": "links",
             "settings": {
-              "menu": "footer",
+              "menu": "footer-menu-1",
               "show_menu_title": false,
               "menu_title": ""
             }
