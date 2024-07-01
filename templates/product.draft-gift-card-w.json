@@ -35,14 +35,13 @@
           "type": "variant_selector",
           "settings": {
             "selector_mode": "dropdown",
-            "show_color_swatch": true,
+            "show_color_swatch": false,
             "show_color_carousel": false,
             "size_chart": ""
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {
             "show_label": false
           }
