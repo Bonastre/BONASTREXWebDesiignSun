@@ -155,7 +155,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/logo_bonastre_png.png",
-              "image_width": 150,
+              "image_width": 300,
               "link": "https:\/\/www.bonastre.ne"
             }
           },
