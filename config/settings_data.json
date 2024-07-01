@@ -151,78 +151,36 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "fe845d8c-f9c3-41f4-b28e-95e9bcbd046e": {
-            "type": "links",
+          "image_igk7c4": {
+            "type": "image",
             "settings": {
-              "title_fr": "Boutiques",
-              "title_en": "Stockists",
-              "url": "shopify:\/\/pages\/les-points-de-ventes",
-              "externalLink": false
+              "image": "shopify:\/\/shop_images\/logo_bonastre_png.png",
+              "image_width": 150,
+              "link": "https:\/\/www.bonastre.ne"
             }
           },
-          "d8dfbe10-2f66-4767-9aec-06bb6cd9733b": {
-            "type": "links",
+          "newsletter_xgt6e8": {
+            "type": "newsletter",
             "settings": {
-              "title_fr": "livraison & retour",
-              "title_en": "delivery & return",
-              "url": "shopify:\/\/pages\/livraison-et-retour",
-              "externalLink": false
+              "title": "Newsletter",
+              "content": "<p>Sign up to our newsletter to receive exclusive offers.<\/p>",
+              "button_background": "",
+              "button_text_color": ""
             }
           },
-          "7641c440-bd6a-4654-a0fb-6ca475e1627e": {
+          "links_QEpmQD": {
             "type": "links",
             "settings": {
-              "title_fr": "CGV",
-              "title_en": "gsc",
-              "url": "shopify:\/\/pages\/conditions-generales-de-vente",
-              "externalLink": false
-            }
-          },
-          "bfaba97e-5cf3-4183-9965-d559cb9c177e": {
-            "type": "links",
-            "settings": {
-              "title_fr": "mentions légales",
-              "title_en": "legal area",
-              "url": "shopify:\/\/pages\/mentions-legales",
-              "externalLink": false
-            }
-          },
-          "59c42b12-ad4d-4a5f-8d6e-ff641e12bc56": {
-            "type": "links",
-            "settings": {
-              "title_fr": "contact",
-              "title_en": "contact",
-              "url": "shopify:\/\/pages\/nous-contacter",
-              "externalLink": false
-            }
-          },
-          "6831648d-3d78-4929-b146-f89237e84da8": {
-            "type": "links",
-            "settings": {
-              "title_fr": "Entretien",
-              "title_en": "Product care",
-              "url": "shopify:\/\/pages\/product-care",
-              "externalLink": false
-            }
-          },
-          "269f733f-a7ad-435d-bb7e-131d7a362892": {
-            "type": "links",
-            "settings": {
-              "title_fr": "Instagram",
-              "title_en": "Instagram",
-              "url": "https:\/\/www.instagram.com\/bonastreparis\/",
-              "externalLink": true
+              "menu": "footer",
+              "show_menu_title": false,
+              "menu_title": ""
             }
           }
         },
         "block_order": [
-          "fe845d8c-f9c3-41f4-b28e-95e9bcbd046e",
-          "d8dfbe10-2f66-4767-9aec-06bb6cd9733b",
-          "7641c440-bd6a-4654-a0fb-6ca475e1627e",
-          "bfaba97e-5cf3-4183-9965-d559cb9c177e",
-          "59c42b12-ad4d-4a5f-8d6e-ff641e12bc56",
-          "6831648d-3d78-4929-b146-f89237e84da8",
-          "269f733f-a7ad-435d-bb7e-131d7a362892"
+          "image_igk7c4",
+          "newsletter_xgt6e8",
+          "links_QEpmQD"
         ],
         "settings": {
         }
