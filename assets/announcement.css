@@ -1,0 +1,21 @@
+.AnnouncementBar {
+    position: relative;
+    text-align: center;
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 10px));
+    z-index: 1;
+}
+
+.AnnouncementBar__Wrapper {
+    padding: 12px 15px;
+}
+
+.AnnouncementBar__Content {
+    color: inherit;
+    margin: 0;
+}
+
+@media screen and (min-width: 681px) {
+    .AnnouncementBar {
+        font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 11px));
+    }
+}
