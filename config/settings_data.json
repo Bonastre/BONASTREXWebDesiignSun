@@ -175,12 +175,21 @@
               "show_menu_title": false,
               "menu_title": ""
             }
+          },
+          "links_BxLHjy": {
+            "type": "links",
+            "settings": {
+              "menu": "footer",
+              "show_menu_title": true,
+              "menu_title": ""
+            }
           }
         },
         "block_order": [
           "image_igk7c4",
           "newsletter_xgt6e8",
-          "links_QEpmQD"
+          "links_QEpmQD",
+          "links_BxLHjy"
         ],
         "settings": {
         }
