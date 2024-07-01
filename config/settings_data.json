@@ -163,7 +163,7 @@
             "type": "newsletter",
             "settings": {
               "title": "Newsletter",
-              "content": "<p>Sign up to our newsletter to receive exclusive offers.<\/p>",
+              "content": "<p>Subscribe to follow all the news from BONASTRE.<\/p>",
               "button_background": "",
               "button_text_color": ""
             }
