@@ -4,14 +4,15 @@
 {%- assign pinterest_image = article.image | img_url: '750x' | prepend: 'https:' -%}
 
 {% comment %}
-La balise style ci-dessous permet la selection de la couleur du background 
-{% endcomment %}
+La balise style permet de choisir la couleur du background de la page
 
+{% endcomment %}
 <style>
   :root {
     --background: {{ section.settings.article_bg_color }} !important;
   }
 </style>
+
 <article class="Article" data-section-id="{{ section.id }}" data-section-type="article">
   <aside class="ArticleToolbar hidden-phone">
     <div class="ArticleToolbar__Left">
@@ -59,7 +60,7 @@ La balise style ci-dessous permet la selection de la couleur du background
     </div>
   {%- endif -%}
 
-  <div class="Article__Wrapper Background__Wrapper">
+  <div class="Article__Wrapper__Ethics">
     <div class="Article__Content">
       <header class="Article__Header">
         {%- capture article_meta -%}
@@ -78,10 +79,8 @@ La balise style ci-dessous permet la selection de la couleur du background
           </div>
         {%- endif -%}
 
-		{%- if section.settings.show_title -%}
-        <h1 class="Article__Title Heading u-h1"> {{ article.title }} </h1>
-      {%- endif -%}
-              </header>
+        <h1 class="Article__Title Heading u-h1">{{ article.title }}</h1>
+      </header>
 
       <div class="Article__Body Rte">
         {{ article.content }}
@@ -243,12 +242,6 @@ La balise style ci-dessous permet la selection de la couleur du background
       "type": "checkbox",
       "id": "show_date",
       "label": "Show article date",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_title",
-      "label": "Show article title",
       "default": true
     },
     {
