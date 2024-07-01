@@ -162,8 +162,8 @@ Supported variables
       {% assign g_color_name = blank %}
       {%- capture color_item -%}
           {% for item in linked_collection.products %}
-
           {%- comment %}<locksmith:3af6>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: linked_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
           {%- comment %}</locksmith:3af6>{% endcomment -%}
           {% assign color_name = blank %}
           {% for tags in item.tags %}
