@@ -1,62 +1,204 @@
-<div class="Segment">
-  <div class="Segment__Title Segment__Title--flexed">
-    {%- if search.types contains 'product' -%}
-      <span class="Heading Text--subdued u-h7">{{ 'search.general.results_count' | t: count: search.results_count }}</span>
-    {%- else -%}
-      {%- if search.types contains 'article' and search.types contains 'page' -%}
-        <span class="Heading Text--subdued u-h7">{{ 'search.general.pages_and_articles' | t }}</span>
-        {%- elsif search.types contains 'article' -%}
-        <span class="Heading Text--subdued u-h7">{{ 'search.general.articles' | t }}</span>
-      {%- else -%}
-        <span class="Heading Text--subdued u-h7">{{ 'search.general.pages' | t }}</span>
+{%- comment -%}
+----------------------------------------------------------------------------------------------------------------------
+PREDICTIVE SEARCH
+----------------------------------------------------------------------------------------------------------------------
+
+This section is rendered by the <predictive-search> component, that renders the content of the search. It is used, for
+instance, by the header search.
+
+This component uses the predictive search (if available) or fallback to standard search if nothing is visible.
+
+********************************************
+Supported variables
+********************************************
+
+Nothing
+{%- endcomment -%}
+
+{%- if predictive_search.performed -%}
+  {%- assign results_count = 0 -%}
+
+  {%- for resource in predictive_search.resources -%}
+    {%- assign results_count = results_count | plus: resource.last.size -%}
+  {%- endfor -%}
+
+  {%- if results_count > 0 -%}
+    <div class="predictive-search__results {% if predictive_search.resources.queries.size > 0 %}predictive-search__results--with-suggestions{% endif %}">
+      {%- if predictive_search.resources.queries.size > 0 -%}
+        <div class="predictive-search__resource-item">
+          <div class="v-stack gap-6 sm:gap-8">
+            <p class="predictive-search__category h6 text-subdued">{{ 'search.general.suggestions' | t }}</p>
+
+            <div class="predictive-search__suggestions scroll-area bleed md:unbleed">
+              {%- render 'predictive-search-result-item' for predictive_search.resources.queries as query, type: 'query' -%}
+            </div>
+          </div>
+        </div>
       {%- endif -%}
-    {%- endif -%}
 
-    {%- if search.results_count > 0 -%}
-      <a class="Heading Link Link--secondary u-h7" href="{{ routes.search_url }}?q={{ search.terms }}&type={{ search.types | join: ',' }}">{{ 'search.general.view_all' | t }}</a>
-    {%- endif -%}
-  </div>
+      <x-tabs class="predictive-search__tabs content-tabs">
+        <template shadowrootmode="open">
+          <style>
+            .scrollable::-webkit-scrollbar {
+              display: none;
+            }
+          </style>
 
-  <div class="Segment__Content">
-    {%- if search.results_count == 0 -%}
-      <p>{{ 'search.general.no_results' | t }}</p>
-    {%- else -%}
-      {%- if search.types contains 'product' -%}
-        {%- if settings.search_mode == 'product' -%}
-          {%- assign results_count = 4 -%}
-        {%- else -%}
-          {%- assign results_count = 3 -%}
+          <div part="tab-list-scrollable" class="scrollable">
+            <slot role="tablist" part="tab-list" name="title"></slot>
+          </div>
+
+          <slot part="tab-panels" name="content"></slot>
+        </template>
+
+        {%- if predictive_search.resources.products.size > 0 -%}
+          <button type="button" class="h6" role="tab" slot="title">{{ 'search.general.products' | t }}</button>
+
+          <div class="predictive-search__resource-item" role="tabpanel" slot="content" {% cycle 'result_tab': '', 'hidden', 'hidden', 'hidden' %}>
+            {%- if predictive_search.resources.queries.size > 0 -%}
+              {%- assign products_count = 4 -%}
+            {%- else -%}
+              {%- assign products_count = 5 -%}
+            {%- endif -%}
+
+            {%- assign product_results = predictive_search.resources.products | slice: 0, products_count -%}
+
+            <div class="v-stack gap-8 sm:gap-12">
+              <div class="predictive-search__products" style="--product-list-items-per-row: {{ products_count }}">
+                {%- render 'predictive-search-result-item' for product_results as product, type: 'product' -%}
+              </div>
+
+              <div class="justify-self-start sm:justify-self-center">
+                {%- assign button_content = 'search.general.view_all_results' | t -%}
+                {%- render 'button', type: 'submit', form: 'predictive-search-form', content: button_content -%}
+              </div>
+            </div>
+          </div>
         {%- endif -%}
 
-        <div class="Grid Grid--xl">
-          {%- for result in search.results limit: results_count -%}
-            {%- comment %}<locksmith:9b05>{% endcomment -%}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: result, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:9b05>{% endcomment -%}
-            {%- comment -%}The inline onclick is a bit hacky, but it's easier on mobile to have the full line clickable{%- endcomment -%}
-            <div class="Grid__Cell 1/{{ results_count }}--tablet-and-up" onclick="window.location.href = '{{ result.url }}'">
-              {%- render 'product-item', product: result, show_labels: false, show_product_info: true, show_vendor: false -%}
+        {%- if predictive_search.resources.collections.size > 0 -%}
+          <button type="button" class="h6" role="tab" slot="title">{{ 'search.general.collections' | t }}</button>
+
+          <div class="predictive-search__resource-item" role="tabpanel" slot="content" {% cycle 'result_tab': '', 'hidden', 'hidden', 'hidden' %}>
+            {%- if predictive_search.resources.queries.size > 0 -%}
+              {%- assign collections_count = 4 -%}
+            {%- else -%}
+              {%- assign collections_count = 5 -%}
+            {%- endif -%}
+
+            {%- assign collection_results = predictive_search.resources.collections | slice: 0, collections_count -%}
+
+            <div class="predictive-search__collections" style="--collection-list-items-per-row: {{ collections_count }}">
+              {%- render 'predictive-search-result-item' for collection_results as collection, type: 'collection' -%}
             </div>
-          {%- endfor -%}
-        </div>
-      {%- else -%}
-        <ul class="Linklist">
-          {%- for result in search.results limit: 6 -%}
-            {%- comment %}<locksmith:2b1b>{% endcomment -%}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: result, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:2b1b>{% endcomment -%}
-            <li class="Linklist__Item">
-              <a href="{{ result.url }}" class="Link Link--secondary">{{ result.title }}</a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
-    {%- endif -%}
-  </div>
-</div>
+          </div>
+        {%- endif -%}
+
+        {%- if predictive_search.resources.articles.size > 0 -%}
+          <button type="button" class="h6" role="tab" slot="title">{{ 'search.general.posts' | t }}</button>
+
+          <div class="predictive-search__resource-item" role="tabpanel" slot="content" {% cycle 'result_tab': '', 'hidden', 'hidden', 'hidden' %}>
+            {%- if predictive_search.resources.queries.size > 0 -%}
+              {%- assign articles_count = 3 -%}
+            {%- else -%}
+              {%- assign articles_count = 4 -%}
+            {%- endif -%}
+
+            {%- assign article_results = predictive_search.resources.articles | slice: 0, articles_count -%}
+
+            <div class="predictive-search__blog-posts" style="--blog-post-list-items-per-row: {{ articles_count }}">
+              {%- render 'predictive-search-result-item' for article_results as article, type: 'article' -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if predictive_search.resources.pages.size > 0 -%}
+          <button type="button" class="h6" role="tab" slot="title">{{ 'search.general.pages' | t }}</button>
+
+          <div class="predictive-search__resource-item" role="tabpanel" slot="content" {% cycle 'result_tab': '', 'hidden', 'hidden', 'hidden' %}>
+            <div class="predictive-search__pages v-stack justify-items-start gap-3">
+              {%- render 'predictive-search-result-item' for predictive_search.resources.pages as page, type: 'page' -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </x-tabs>
+    </div>
+  {%- else -%}
+    <p class="predictive-search__no-results text-lg">{{ 'search.general.no_results' | t }}</p>
+  {%- endif -%}
+{%- elsif search.performed -%}
+  {%- if search.results_count > 0 -%}
+    <div class="predictive-search__results">
+      <x-tabs class="predictive-search__tabs content-tabs">
+        <template shadowrootmode="open">
+          <style>
+            .scrollable::-webkit-scrollbar {
+              display: none;
+            }
+          </style>
+
+          <div part="tab-list-scrollable" class="scrollable">
+            <slot role="tablist" part="tab-list" name="title"></slot>
+          </div>
+
+          <slot part="tab-panels" name="content"></slot>
+        </template>
+
+        {%- assign product_results = search.results | where: 'object_type', 'product' -%}
+        {%- assign article_results = search.results | where: 'object_type', 'article' -%}
+        {%- assign page_results = search.results | where: 'object_type', 'page' -%}
+
+        {%- if product_results.size > 0 -%}
+          <button type="button" class="h6" role="tab" slot="title">{{ 'search.general.products' | t }}</button>
+
+          <div class="predictive-search__resource-item" role="tabpanel" slot="content" {% cycle 'result_tab': '', 'hidden', 'hidden', 'hidden' %}>
+            {%- assign products_count = 5 -%}
+            {%- assign product_results = product_results | slice: 0, products_count -%}
+
+            <div class="v-stack gap-8 sm:gap-12">
+              <div class="predictive-search__products" style="--product-list-items-per-row: {{ products_count }}">
+                {%- render 'predictive-search-result-item' for product_results as product, type: 'product' -%}
+              </div>
+
+              <div class="justify-self-start sm:justify-self-center">
+                {%- assign button_content = 'search.general.view_all_results' | t -%}
+                {%- render 'button', type: 'submit', form: 'predictive-search-form', content: button_content -%}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if article_results.size > 0 -%}
+          <button type="button" class="h6" role="tab" slot="title">{{ 'search.general.posts' | t }}</button>
+
+          <div class="predictive-search__resource-item" role="tabpanel" slot="content" {% cycle 'result_tab': '', 'hidden', 'hidden', 'hidden' %}>
+            {%- assign articles_count = 4 -%}
+            {%- assign article_results = article_results | slice: 0, articles_count -%}
+
+            <div class="predictive-search__blog-posts" style="--blog-post-list-items-per-row: {{ articles_count }}">
+              {%- render 'predictive-search-result-item' for article_results as article, type: 'article' -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if page_results.size > 0 -%}
+          <button type="button" class="h6" role="tab" slot="title">{{ 'search.general.pages' | t }}</button>
+
+          <div class="predictive-search__resource-item" role="tabpanel" slot="content" {% cycle 'result_tab': '', 'hidden', 'hidden', 'hidden' %}>
+            <div class="predictive-search__pages v-stack justify-items-start gap-3">
+              {%- render 'predictive-search-result-item' for predictive_search.resources.pages as page, type: 'page' -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </x-tabs>
+    </div>
+  {%- else -%}
+    <p class="predictive-search__no-results text-lg">{{ 'search.general.no_results' | t }}</p>
+  {%- endif -%}
+{%- endif -%}
 
 {% schema %}
 {
-  "name": "Predictive search"
+  "name": "t:sections.predictive_search.predictive_search"
 }
 {% endschema %}
