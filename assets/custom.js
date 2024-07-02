@@ -1,15 +1,6 @@
-// Function to get the wishlist from customer tags or localStorage
-function getWishlist() {
-  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-  if (wishlist === null) {
-    wishlist = [];
-  }
-  return wishlist;
-}
-
 // Add to Wishlist Function
 function addToWishlist(productId) {
-  let wishlist = getWishlist();
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
   if (productId && !wishlist.includes(productId)) {
     console.log(wishlist);
     wishlist.push(productId);
