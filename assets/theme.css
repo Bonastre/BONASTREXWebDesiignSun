@@ -7805,6 +7805,15 @@ ul {
 .count-wishlist {
   margin: 1px 0px 0px 4px;
 }
+
+.wishlist {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  inset-block-start: .25rem;
+  inset-inline-start: .25rem;
+}
 .wishlist .icon-star-product-fill {
   display: none;
 }
