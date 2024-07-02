@@ -12,5 +12,6 @@
         url: "{{ product.url }}",
         image: "{{ product.featured_image | img_url: 'medium' }}"
     };
+    console.log(allProducts);
     {% endfor %}
 </script>
