@@ -9,6 +9,12 @@
     #shopify-section-{{ section.id }} {
       --image-with-text-content-max-width: {% if section.settings.content_width == 'sm' %}430px{% elsif section.settings.content_width == 'md' %}780px{% else %}100%{% endif %};
     }
+     {%- for block in section.blocks -%}
+    .{{ block.settings.heading_tag }} {
+      text-align: {{ block.settings.heading_position }};
+    }
+
+     {% endfor %}
   </style>
 
   {%- comment -%}
