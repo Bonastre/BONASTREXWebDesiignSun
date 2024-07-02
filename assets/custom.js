@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   jQuery(".js-store-lists-add-wishlist").click(function () {
-    console.log("hello");
     setTimeout(() => {
       if (theme.customer) {
         const app_obj = {
