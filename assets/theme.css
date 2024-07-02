@@ -7727,10 +7727,10 @@ ul {
   transition: all 0.35s ease-in-out;
   background: #ebeae9;
 }
-.ProductItem__Linked .product-title:hover {
+.ProductItem__Linked:hover {
   display: none;
 }
-.ProductItem__Linked .product-title:hover ~ .ProductItem__ColorSwatchItems {
+.ProductItem__Linked:hover .ProductItem__ColorSwatchItems {
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
