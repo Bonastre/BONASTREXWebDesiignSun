@@ -7709,6 +7709,10 @@ ul {
   overflow: hidden;
 }
 
+
+.ProductItem__ColorSwatchItems {
+  display: none;
+}
 .ProductItem__Colors {
   display: flex;
   align-items: center;
