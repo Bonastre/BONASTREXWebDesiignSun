@@ -7725,7 +7725,7 @@ ul {
 .ProductItem__Linked .product-title:hover {
   display: none;
 }
-.ProductItem__Linked .product-title:hover .ProductItem__ColorSwatchItems {
+.ProductItem__Linked .product-title:hover > .ProductItem__ColorSwatchItems {
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
