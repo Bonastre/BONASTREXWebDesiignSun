@@ -7805,3 +7805,12 @@ ul {
 .count-wishlist {
   margin: 1px 0px 0px 4px;
 }
+.wishlist .icon-star-product-fill {
+  display: none;
+}
+.wishlist.active .icon-star-product-fill {
+  display: block;
+}
+.wishlist.active .icon-star-product {
+  display: none;
+}
