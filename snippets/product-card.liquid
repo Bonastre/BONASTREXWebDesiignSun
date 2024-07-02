@@ -55,7 +55,21 @@ Supported variables
 
 <product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
     {% if settings.enable-wishlist %}
-        <button type="button" class="wishlist-button" data-product-id="{{ product.id }}">Add to Wishlist</button>
+        <button type="button" aria-label="Add to wishlist" class="" button-wishlist data-product-handle="{{ product.handle }}">
+            <style scoped>
+                .icon {
+                    fill: transparent;
+                    stroke: #000000;
+                    transition: fill 0.3s ease;
+                }
+
+                .active .icon {
+                    fill: red;
+                    stroke: #000000;
+                }
+            </style>
+            {%- render 'icon-heart' -%}
+        </button>
     {% endif %}
   {%- comment -%}
   --------------------------------------------------------------------------------------------------------------------
