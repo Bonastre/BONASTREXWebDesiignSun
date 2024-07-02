@@ -622,6 +622,12 @@
       },
       {
         "type": "checkbox",
+        "id": "show_linked_products",
+        "label": "Show linked products",
+        "default": true
+      },
+      {
+        "type": "checkbox",
         "id": "show_sold_out_badge",
         "label": "t:theme_settings.product_card.show_sold_out_badge",
         "default": true
