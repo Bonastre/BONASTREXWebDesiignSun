@@ -101,113 +101,42 @@
         "overlay_opacity": 30
       }
     },
-    "multiple-media-with-text": {
-      "type": "multiple-media-with-text",
+    "image_with_text_pwE7Pr": {
+      "type": "image-with-text",
       "blocks": {
-        "image-1": {
-          "type": "image",
+        "subheading_Ecwqfp": {
+          "type": "subheading",
           "settings": {
-            "rotation": 0
+            "text": "THE DOME LINE"
           }
         },
-        "image-2": {
-          "type": "image",
+        "richtext_pBFbHG": {
+          "type": "richtext",
           "settings": {
-            "rotation": 0
+            "content": "<p>How is a signature line born? What makes a bag a timeless design?<\/p><p>It is a mix of design, inspiration, craft, noble material, modern vision but also a beautiful story that goes with it. We want to tell you this story …<\/p>"
+          }
+        },
+        "link_LQmUtP": {
+          "type": "link",
+          "settings": {
+            "text": "Discover the DOME Collection",
+            "url": "https:\/\/www.bonastre.net\/collections\/dome-line"
           }
         }
       },
       "block_order": [
-        "image-1",
-        "image-2"
+        "subheading_Ecwqfp",
+        "richtext_pBFbHG",
+        "link_LQmUtP"
       ],
       "settings": {
         "color_scheme": "",
+        "separate_section_with_border": false,
+        "image": "shopify:\/\/shop_images\/H2_fed43c79-483a-4c9c-80c8-50d889390243.jpg",
         "reveal_on_scroll": true,
-        "separate_section_with_border": true,
-        "media_position_desktop": "before_text",
-        "media_position_mobile": "before_text",
-        "media_layout": "overlap",
-        "media_alignment": "center",
-        "media_alignment_offset": 0,
-        "media_mobile_alignment_offset": 0,
-        "text_alignment": "center",
-        "subheading": "About",
-        "title": "Showcase your product",
-        "content": "<p>Write some content about your products, collections or brand. Use image or video to create an impactful layout.<\/p>",
-        "button_1_text": "",
-        "button_1_link": "",
-        "button_1_style": "solid",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_2_style": "solid"
-      }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "image_size": "auto",
-        "subheading": "Keep me updated",
-        "title": "Newsletter",
-        "content": "<p>A short sentence describing what someone will receive by subscribing.<\/p>",
-        "button_text": "Subscribe",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
-    },
-    "shop-the-look": {
-      "type": "shop-the-look",
-      "blocks": {
-        "look-1": {
-          "type": "look",
-          "settings": {
-            "hot_spots_background": "#ffffff",
-            "product_1": "",
-            "product_1_horizontal_position": 55,
-            "product_1_vertical_position": 30,
-            "product_2": "",
-            "product_2_horizontal_position": 25,
-            "product_2_vertical_position": 40,
-            "product_3": "",
-            "product_3_horizontal_position": 65,
-            "product_3_vertical_position": 60,
-            "product_4": "",
-            "product_4_horizontal_position": 85,
-            "product_4_vertical_position": 85
-          }
-        }
-      },
-      "block_order": [
-        "look-1"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "subheading": "",
-        "title": "Shop the look",
-        "content": "",
-        "popover_title": "Shop the look"
-      }
-    },
-    "blog-posts": {
-      "type": "blog-posts",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "blog": "",
-        "posts_count": 3,
-        "stack_on_mobile": false,
-        "show_category": true,
-        "show_date": false,
-        "show_excerpt": true,
-        "show_read_more": true,
-        "subheading": "",
-        "title": "Blog posts",
-        "content": "",
-        "button_link": "",
-        "button_text": "View all"
+        "image_position": "end",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
       }
     }
   },
@@ -215,9 +144,6 @@
     "slideshow",
     "featured-collections",
     "image_with_text_overlay_EVNbLe",
-    "multiple-media-with-text",
-    "newsletter",
-    "shop-the-look",
-    "blog-posts"
+    "image_with_text_pwE7Pr"
   ]
 }
