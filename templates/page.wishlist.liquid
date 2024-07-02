@@ -3,15 +3,3 @@
 <div class="page-width">
     {% render 'wishlist' %}
 </div>
-<script>
-    window.allProducts = {};
-    {% for product in all_products %}
-    window.allProducts["{{ product.id }}"] = {
-        id: "{{ product.id }}",
-        title: "{{ product.title }}",
-        url: "{{ product.url }}",
-        image: "{{ product.featured_image | img_url: 'medium' }}"
-    };
-    console.log(allProducts);
-    {% endfor %}
-</script>

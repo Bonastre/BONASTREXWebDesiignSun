@@ -87,6 +87,18 @@
     endif
   %}
 
+  <script>
+    window.allProducts = {};
+    {% for product in all_products %}
+    window.allProducts["{{ product.id }}"] = {
+      id: "{{ product.id }}",
+      title: "{{ product.title }}",
+      url: "{{ product.url }}",
+      image: "{{ product.featured_image | img_url: 'medium' }}"
+    };
+    {% endfor %}
+  </script>
+
   <body class="{{ features_class }} color-scheme color-scheme--{{ settings.default_color_scheme.id }}">
 
     {%- render 'shadow-dom-templates' -%}
