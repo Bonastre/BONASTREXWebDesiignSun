@@ -2169,7 +2169,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   gap: 1.25rem;
   display: grid;
   position: relative;
-  background: rgb(var(--background));
+  background: rgb(var(--card-product-background));
 }
 
 .product-card__figure {
