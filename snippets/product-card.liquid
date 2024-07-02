@@ -182,11 +182,14 @@ Supported variables
                 <a href="/products/{{ item.handle }}" class="ProductItem__Color__Colors {% if product.id == item.id %} color-selected{% endif %}" style="background-image: url({{ color_name | file_url }})"></a>
               {% endfor %}
           {%- endcapture -%}
-          <div class="ProductItem__ColorSwatchItem">
-              <div class="ProductItem__ColorSwatchItem__label" style="display: none">Color: {{ g_color_name }}</div>
-              <div class="ProductItem__Colors">
-                  {{ color_item }}
+          <div class="ProductItem__ColorSwatchItems">
+              <div class="ProductItem__ColorSwatchItem">
+                  <div class="ProductItem__ColorSwatchItem__label" style="display: none">Color: {{ g_color_name }}</div>
+                  <div class="ProductItem__Colors">
+                      {{ color_item }}
+                  </div>
               </div>
+              {%- render 'price-list', product: product, context: 'card' -%}
           </div>
           {% endif %}
       {% endif %}
