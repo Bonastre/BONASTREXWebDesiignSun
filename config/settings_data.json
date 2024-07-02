@@ -44,9 +44,10 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#efefef",
+          "background": "#fbfbf6",
           "background_gradient": "",
           "text_color": "#1c1c1c",
+          "card_product_background": "#ffffff",
           "primary_button_background": "#1c1c1c",
           "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
@@ -58,6 +59,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text_color": "#1c1c1c",
+          "card_product_background": "#ffffff",
           "primary_button_background": "#1c1c1c",
           "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
@@ -69,6 +71,7 @@
           "background": "#1c1c1c",
           "background_gradient": "",
           "text_color": "#ffffff",
+          "card_product_background": "#ffffff",
           "primary_button_background": "#ffffff",
           "primary_button_text_color": "#1c1c1c",
           "circle_button_background": "#ffffff",
@@ -80,6 +83,7 @@
           "background": "rgba(0,0,0,0)",
           "background_gradient": "",
           "text_color": "#ffffff",
+          "card_product_background": "#ffffff",
           "primary_button_background": "#ffffff",
           "primary_button_text_color": "#1c1c1c",
           "circle_button_background": "#ffffff",
