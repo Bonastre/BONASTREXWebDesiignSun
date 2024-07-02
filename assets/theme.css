@@ -7710,10 +7710,14 @@ ul {
 }
 
 .ProductItem__Linked .product-title{
-  
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s ease-in-out;
 }
 .ProductItem__ColorSwatchItems {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
 }
 .ProductItem__Colors {
   display: flex;
