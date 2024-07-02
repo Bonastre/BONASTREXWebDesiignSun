@@ -1,1 +1,25 @@
-<div id="wishlist-content"></div>
+
+<div class="recently-title">
+    <h2 class="title inline-richtext h2 scroll-trigger animate--slide-in"><b>Wishlist</b></h2>
+</div>
+
+{% assign wishlist = customer.tags | split: ',' %}
+{% if wishlist == null or wishlist == empty %}
+    {% assign wishlist = "" %}
+{% endif %}
+{% if wishlist == empty %}
+    <p>Your wishlist is empty.</p>
+{% else %}
+    {% for product_id in wishlist %}
+        {% assign product = all_products[product_id] %}
+        {% if product %}
+            <div class="wishlist-item">
+                <a href="{{ product.url }}">{{ product.title }}</a>
+            </div>
+        {% else %}
+            <p>Product not found.</p>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+
