@@ -10,8 +10,8 @@ function getWishlist() {
 // Add to Wishlist Function
 function addToWishlist(productId) {
   let wishlist = getWishlist();
-
   if (productId && !wishlist.includes(productId)) {
+    console.log(productId);
     wishlist.push(productId);
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
     alert("Added to wishlist!");
