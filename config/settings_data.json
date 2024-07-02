@@ -23,6 +23,7 @@
     "text_font_size_desktop": 14,
     "button_letter_spacing": 18,
     "product_color_display": "hide",
+    "show_linked_products": true,
     "cart_type": "drawer",
     "cart_icon": "shopping_bag_sharp",
     "social_facebook": "https:\/\/www.facebook.com\/BONASTRE-222499097761551\/",
