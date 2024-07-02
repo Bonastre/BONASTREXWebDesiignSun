@@ -33,8 +33,8 @@ function removeFromWishlist(productId) {
   }
 }
 
-// Clear Wishlist Function
-function clearWishlist() {
-  localStorage.removeItem("wishlist");
-  alert("Your wishlist has been cleared.");
+const wishlist = getWishlist(); // Get the wishlist
+
+if (wishlist.length > 0) {
+  // If there are items in the wishlist, show the button
 }
