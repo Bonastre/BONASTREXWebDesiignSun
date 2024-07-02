@@ -92,7 +92,7 @@ Supported variables
               {%- endif -%}
 
               <button type="submit" name="locale_code" class="popover__value-option" role="option" value="{{ language.iso_code }}" aria-selected="{% if is_selected %}true{% else %}false{% endif %}">
-                {{- language.endonym_name | capitalize -}}
+                {{- language.iso_code | capitalize -}}
               </button>
             {%- endfor -%}
           </x-listbox>
