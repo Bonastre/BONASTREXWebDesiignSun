@@ -32,9 +32,3 @@ function removeFromWishlist(productId) {
     alert("This item is not in your wishlist.");
   }
 }
-
-const wishlist = getWishlist(); // Get the wishlist
-
-if (wishlist.length > 0) {
-  // If there are items in the wishlist, show the button
-}
