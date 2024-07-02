@@ -7709,8 +7709,8 @@ ul {
   overflow: hidden;
 }
 
-.ProductItem__Linked {
-
+.ProductItem__Linked .product-title{
+  
 }
 .ProductItem__ColorSwatchItems {
   display: none;
