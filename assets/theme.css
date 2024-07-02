@@ -7710,7 +7710,6 @@ ul {
 }
 
 .ProductItem__Linked .product-title {
-  opacity: 0;
   transform: translateY(10px);
   transition: all 0.35s ease-in-out;
   background: #ebeae9;
