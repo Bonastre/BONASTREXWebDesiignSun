@@ -97,6 +97,7 @@
       image: "{{ product.featured_image | img_url: 'medium' }}"
     };
     {% endfor %}
+    console.log('allProducts:', window.allProducts); // Debugging line
   </script>
 
   <body class="{{ features_class }} color-scheme color-scheme--{{ settings.default_color_scheme.id }}">
