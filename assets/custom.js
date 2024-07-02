@@ -24,7 +24,53 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
+  const $wishlistContainer = jQuery("#wishlist-container");
   const wishlistItems = JSON.parse(localStorage.getItem("wishlist-guest"));
+  console.log(wishlistItems);
+  if ($wishlistContainer.length) {
+    let products = "";
+
+    if (wishlistItems) {
+      var date = new Date();
+      var components = [
+        date.getYear(),
+        date.getMonth(),
+        date.getDate(),
+        date.getHours(),
+        date.getMinutes(),
+        date.getSeconds(),
+        date.getMilliseconds(),
+      ];
+
+      for (var t = 0; t < wishlistItems.length; t++) {
+        const product = wishlistItems[t];
+        const key = Object.keys(product);
+
+        if (key.length > 0) {
+          products += product[key[0]] + ",";
+        }
+      }
+
+      products = products.slice(0, -1);
+
+      $wishlistContainer.load(
+        window.routes.rootUrl +
+          (window.routes.rootUrl.length > 1 ? "/" : "") +
+          "pages/wishlist-ajax" +
+          "?products=" +
+          products +
+          "&type=" +
+          components.join(""),
+      );
+
+      $wishlistContainer.on("click", ".js-store-lists-add-wishlist", () => {
+        setTimeout(() => {
+          window.location.reload();
+        }, 600);
+      });
+    }
+  }
+
   if (!jQuery(".wishlist-user").length) {
     jQuery(".count-wishlist").html(
       "(" + (wishlistItems == null ? 0 : wishlistItems.length) + ")",
