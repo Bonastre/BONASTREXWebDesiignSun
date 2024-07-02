@@ -47,6 +47,7 @@ function displayWishlist() {
     let wishlistContent = "";
     wishlist.forEach(function (productId) {
       let product = window.allProducts[productId];
+      console.log(product);
       if (product) {
         wishlistContent += `<div class="wishlist-item">
                     <a href="${product.url}">${product.title}</a>
