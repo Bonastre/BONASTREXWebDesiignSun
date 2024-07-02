@@ -7709,13 +7709,18 @@ ul {
   overflow: hidden;
 }
 
-.ProductItem__Linked .product-title{
+.ProductItem__Linked .product-title {
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.35s ease-in-out;
   background: #ebeae9;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .ProductItem__ColorSwatchItems {
+  opacity: 1;
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
