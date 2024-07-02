@@ -148,42 +148,47 @@ Supported variables
       </div>
     {%- endif -%}
 
-      {% assign linked_collection = blank %}
+      {% assign show_linked_products = settings.show_linked_products %}
 
-      {% for tags in product.tags %}
-          {% assign temp_tag = tags | strip | remove:' '%}
-          {% if temp_tag contains 'Group_'%}
-              {% assign linked_collection = collections[temp_tag] %}
+      {% if show_linked_products %}
 
-          {% endif %}
-      {% endfor %}
+          {% assign linked_collection = blank %}
 
-      {% if linked_collection and linked_collection.products.size > 0%}
-      {% assign g_color_name = blank %}
-      {%- capture color_item -%}
-          {% for item in linked_collection.products %}
-            {%- comment %}<locksmith:3af6>{% endcomment -%}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: linked_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:3af6>{% endcomment -%}
-              {% assign color_name = blank %}
-                  {% for tags in item.tags %}
-                      {% assign temp_tag = tags | strip | remove:' '%}
-                      {% if temp_tag contains 'color_' %}
-                      {% assign color_name = temp_tag | remove: 'color_' | append: ".png" %}
-                      {% endif %}
-                  {% endfor %}
-              {% if product.id == item.id %}
-                 {% assign g_color_name = color_name | remove: ".png" %}
+          {% for tags in product.tags %}
+              {% assign temp_tag = tags | strip | remove:' '%}
+              {% if temp_tag contains 'Group_'%}
+                  {% assign linked_collection = collections[temp_tag] %}
+
               {% endif %}
-            <a href="/products/{{ item.handle }}" class="ProductItem__Color__Colors {% if product.id == item.id %} color-selected{% endif %}" style="background-image: url({{ color_name | file_url }})"></a>
           {% endfor %}
-      {%- endcapture -%}
-      <div class="ProductItem__ColorSwatchItem">
-          <div class="ProductItem__ColorSwatchItem__label" style="display: none">Color: {{ g_color_name }}</div>
-          <div class="ProductItem__Colors">
-              {{ color_item }}
+
+          {% if linked_collection and linked_collection.products.size > 0%}
+          {% assign g_color_name = blank %}
+          {%- capture color_item -%}
+              {% for item in linked_collection.products %}
+                {%- comment %}<locksmith:3af6>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: linked_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                  {%- comment %}</locksmith:3af6>{% endcomment -%}
+                  {% assign color_name = blank %}
+                      {% for tags in item.tags %}
+                          {% assign temp_tag = tags | strip | remove:' '%}
+                          {% if temp_tag contains 'color_' %}
+                          {% assign color_name = temp_tag | remove: 'color_' | append: ".png" %}
+                          {% endif %}
+                      {% endfor %}
+                  {% if product.id == item.id %}
+                     {% assign g_color_name = color_name | remove: ".png" %}
+                  {% endif %}
+                <a href="/products/{{ item.handle }}" class="ProductItem__Color__Colors {% if product.id == item.id %} color-selected{% endif %}" style="background-image: url({{ color_name | file_url }})"></a>
+              {% endfor %}
+          {%- endcapture -%}
+          <div class="ProductItem__ColorSwatchItem">
+              <div class="ProductItem__ColorSwatchItem__label" style="display: none">Color: {{ g_color_name }}</div>
+              <div class="ProductItem__Colors">
+                  {{ color_item }}
+              </div>
           </div>
-      </div>
+          {% endif %}
       {% endif %}
 
     {%- if show_swatches and settings.product_color_display != 'hide' -%}
