@@ -76,7 +76,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
-        "hide_product_information": false,
+        "hide_product_information": true,
         "stack_products": true,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
