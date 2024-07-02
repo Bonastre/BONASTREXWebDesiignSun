@@ -80,6 +80,7 @@ const setupButtons = (buttons) => {
       button.classList.add(BUTTON_ACTIVE_CLASS);
     button.addEventListener("click", () => {
       updateWishlist(productHandle);
+      alert("Product added to wishlist!");
       button.classList.toggle(BUTTON_ACTIVE_CLASS);
     });
   });
