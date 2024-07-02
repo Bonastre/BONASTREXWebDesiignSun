@@ -108,7 +108,8 @@
           "type": "heading",
           "settings": {
             "text": "THE DOME LINE",
-            "heading_tag": "h5"
+            "heading_tag": "h5",
+            "heading_position": "center"
           }
         },
         "richtext_pBFbHG": {
@@ -146,28 +147,29 @@
         "heading_CNqgUN": {
           "type": "heading",
           "settings": {
-            "text": "Heading",
-            "heading_tag": "h1"
-          }
-        },
-        "heading_BRNFmJ": {
-          "type": "heading",
-          "settings": {
-            "text": "Image with text",
-            "heading_tag": "h1"
+            "text": "FOR BAG GOURMETS ONLY!",
+            "heading_tag": "h5",
+            "heading_position": "center"
           }
         },
         "richtext_8TYyYJ": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+            "content": "<p><strong>BON-BON<\/strong> is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>"
+          }
+        },
+        "link_F8WzLd": {
+          "type": "link",
+          "settings": {
+            "text": "Discover the BON-BON Collection",
+            "url": "https:\/\/www.bonastre.net\/collections\/collection-bon-bon"
           }
         }
       },
       "block_order": [
         "heading_CNqgUN",
-        "heading_BRNFmJ",
-        "richtext_8TYyYJ"
+        "richtext_8TYyYJ",
+        "link_F8WzLd"
       ],
       "settings": {
         "color_scheme": "",
