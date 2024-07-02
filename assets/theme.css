@@ -7710,8 +7710,8 @@ ul {
   overflow: hidden;
 }
 
-.shopify-section--featured-collections {
-  
+.shopify-section--featured-collections .product-card__image {
+  object-fit: cover;
 }
 
 .ProductItem__Linked {
