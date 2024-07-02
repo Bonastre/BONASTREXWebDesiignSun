@@ -7714,6 +7714,10 @@ ul {
   object-fit: cover;
 }
 
+.shopify-section--featured-collections .product-card__quick-add-button {
+  display: none;
+}
+
 .ProductItem__Linked {
   width: 100%;
   min-height: 50px;
