@@ -183,9 +183,10 @@
       const wishlistData = JSON.parse(localStorage.getItem('wishlist')) || [];
 
       // Set the initial button text based on whether the product is in the wishlist or not
-      const wishlistButton = document.querySelector('.wishlist_button'); // Use querySelector instead of getElementsByClassName
+      const wishlistButtons = document.querySelectorAll('.wishlist_button'); // Use querySelector instead of getElementsByClassName
       const productTitle = "{{ product.title }}";
 
+      wishlistButtons.forEach
       if (wishlistButton) {
         const isAlreadyInWishlist = wishlistData.some(item => item.productTitle === productTitle);
         wishlistButton.innerHTML = isAlreadyInWishlist ? `<svg class="heart-filled" width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
