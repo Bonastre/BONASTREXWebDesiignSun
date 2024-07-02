@@ -7713,6 +7713,7 @@ ul {
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.35s ease-in-out;
+  background: #ebeae9;
 }
 .ProductItem__ColorSwatchItems {
   display: flex;
