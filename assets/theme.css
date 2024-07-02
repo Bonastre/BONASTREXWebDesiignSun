@@ -7708,3 +7708,9 @@ ul {
   display: -webkit-box;
   overflow: hidden;
 }
+
+.ProductItem__Colors {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
