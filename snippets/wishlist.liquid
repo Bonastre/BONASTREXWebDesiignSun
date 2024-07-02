@@ -1,9 +1,12 @@
-
+<script>
+    const wishlist = getWishlist();
+</script>
 <div class="recently-title">
     <h2 class="title inline-richtext h2 scroll-trigger animate--slide-in"><b>Wishlist</b></h2>
 </div>
-{{ customer | json }}
-{% assign wishlist = customer.tags | split: ',' %}
+
+{% assign wishlist = wishlist %}
+{{ wishlist | json }}
 {% if wishlist == null or wishlist == empty %}
     {% assign wishlist = "" %}
 {% endif %}
