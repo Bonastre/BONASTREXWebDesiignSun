@@ -24,6 +24,12 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
+  if (!jQuery(".wishlist-user").length) {
+    jQuery(".count-wishlist").html(
+      "(" + (wishlistItems == null ? 0 : wishlistItems.length) + ")",
+    );
+  }
+
   jQuery(".js-store-lists-add-wishlist").click(function () {
     console.log("hello");
     setTimeout(() => {
