@@ -82,8 +82,9 @@ const setupButtons = (buttons) => {
     const iconStarProductFill = this.querySelector(".icon-star-product-fill");
     button.addEventListener("click", () => {
       updateWishlist(productHandle);
-      iconStarProduct.classList.toggle(BUTTON_ACTIVE_CLASS);
-      iconStarProductFill.classList.toggle(BUTTON_ACTIVE_CLASS);
+      iconStarProduct.style.display = "none";
+      iconStarProductFill.style.display = "block";
+
       button.classList.toggle(BUTTON_ACTIVE_CLASS);
     });
   });
