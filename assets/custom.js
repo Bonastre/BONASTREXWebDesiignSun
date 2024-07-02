@@ -12,7 +12,7 @@ function addToWishlist(productId) {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
     alert("Added to wishlist!");
   } else {
-    removeFromWishlist();
+    removeFromWishlist(productId);
   }
 }
 
