@@ -7760,3 +7760,48 @@ ul {
   height: 18px;
   padding: 2px;
 }
+/* ------------------------------------------------------------ *\
+  Favorite wishlist
+\* ------------------------------------------------------------ */
+.favorite-card {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 2;
+}
+
+.icon-star {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-image: url('./star.svg?v=2');
+}
+
+.icon-star-product {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-image: url('./star-product.svg?v=2');
+}
+
+.icon-star-white {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-image: url('./star-white.svg?v=2');
+}
+
+.icon-star-product-fill {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-image: url('./star-fill-product.svg?v=2');
+}
+
+.count-wishlist {
+  margin: 1px 0px 0px 4px;
+}
