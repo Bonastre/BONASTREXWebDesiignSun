@@ -14,16 +14,38 @@
     "cart-drawer": {
       "type": "cart-drawer",
       "settings": {
+        "color_scheme": "",
+        "show_cart_note": true,
+        "show_shipping_text": true,
+        "show_view_cart_button": false,
+        "show_checkout_button": true,
+        "show_price_in_checkout_button": true,
+        "cross_sell_products": [
+
+        ],
+        "cross_sell_title": "Complete with",
+        "cross_sell_stack_products": false
       }
     },
     "newsletter-popup": {
       "type": "newsletter-popup",
       "settings": {
+        "color_scheme": "",
+        "apparition_delay": 3,
+        "show_only_on_index": false,
+        "hide_for_account_holders": false,
+        "show_only_once": true,
+        "title": "",
+        "content": "Sign up below and be the first to hear about new collections, special events <strong>and enjoy 10% off your first order<\/strong>",
+        "button_text": "Subscribe"
       }
     },
     "privacy-banner": {
       "type": "privacy-banner",
       "settings": {
+        "color_scheme": "",
+        "title": "🍪 Cookie policy",
+        "content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.<\/p>"
       }
     }
   },
