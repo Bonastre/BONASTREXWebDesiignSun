@@ -7721,9 +7721,16 @@ ul {
 }
 .ProductItem__ColorSwatchItems {
   opacity: 1;
+  transition: all 0.35s ease-in-out;
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.ProductItem__Linked .product-title:hover .ProductItem__ColorSwatchItems {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 .ProductItem__Colors {
   display: flex;
