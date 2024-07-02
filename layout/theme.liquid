@@ -117,6 +117,18 @@
       {%- if request.page_type != 'password' -%}
         {%- sections 'footer-group' -%}
       {%- endif -%}
+
+      <script>
+        window.allProducts = {};
+        {% for product in all_products %}
+        window.allProducts["{{ product.id }}"] = {
+          id: "{{ product.id }}",
+          title: "{{ product.title }}",
+          url: "{{ product.url }}",
+          image: "{{ product.featured_image | img_url: 'medium' }}"
+        };
+        {% endfor %}
+      </script>
     </main>
   </body>
 </html>
