@@ -117,7 +117,7 @@
           {
             "type": "color",
             "id": "card_product_background",
-            "label": "t:global.colors.background",
+            "label": "t:theme_settings.colors.card_product_background",
             "default": "#ffffff"
           },
           {
