@@ -7709,6 +7709,10 @@ ul {
   overflow: hidden;
 }
 
+.ProductItem__Linked {
+  width: 100%;
+  min-height: ;
+}
 .ProductItem__Linked .product-title {
   transform: translateY(10px);
   transition: all 0.35s ease-in-out;
