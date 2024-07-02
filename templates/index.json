@@ -185,7 +185,7 @@
       "type": "image-with-text-overlay",
       "settings": {
         "color_scheme": "",
-        "image_size": "sm",
+        "image_size": "md",
         "image": "shopify:\/\/shop_images\/testAA.jpg",
         "allow_transparent_header": false,
         "reveal_on_scroll": true,
@@ -196,6 +196,45 @@
         "overlay_color": "#000000",
         "overlay_opacity": 30
       }
+    },
+    "image_with_text_E7FqVN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rcmFCz": {
+          "type": "heading",
+          "settings": {
+            "text": "THE PARISIAN FLAGSHIP",
+            "heading_tag": "h5",
+            "heading_position": "center"
+          }
+        },
+        "richtext_BprNKV": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Discover our parisian store situated in the Marais, a typical 17th century building with a façade of plaster colonnades and traditional wooden front. 10, rue du Perche, Paris 3.<\/p>"
+          }
+        },
+        "link_ExYkb8": {
+          "type": "link",
+          "settings": {
+            "text": "view more",
+            "url": "https:\/\/www.bonastre.net\/blogs\/news\/the-parisian-flagship"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rcmFCz",
+        "richtext_BprNKV",
+        "link_ExYkb8"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
     }
   },
   "order": [
@@ -204,6 +243,7 @@
     "image_with_text_overlay_EVNbLe",
     "image_with_text_pwE7Pr",
     "image_with_text_dcgFkm",
-    "image_with_text_overlay_gE49bT"
+    "image_with_text_overlay_gE49bT",
+    "image_with_text_E7FqVN"
   ]
 }
