@@ -7727,7 +7727,7 @@ ul {
   transition: all 0.35s ease-in-out;
   background: #ebeae9;
 }
-.ProductItem__Linked:hover {
+.ProductItem__Linked:hover .product-title  {
   display: none;
 }
 .ProductItem__Linked:hover .ProductItem__ColorSwatchItems {
