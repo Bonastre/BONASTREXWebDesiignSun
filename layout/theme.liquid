@@ -65,20 +65,7 @@
     <script type="module" src="{{ 'vendor.min.js' | asset_url }}"></script>
     <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer></script>
-
-    <script>
-      window.allProducts = {};
-      {% for product in all_products %}
-      window.allProducts["{{ product.id }}"] = {
-        id: "{{ product.id }}",
-        title: "{{ product.title }}",
-        url: "{{ product.url }}",
-        image: "{{ product.featured_image | img_url: 'medium' }}"
-      };
-      {% endfor %}
-      console.log('allProducts:', window.allProducts); // Debugging line
-    </script>
-
+    
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
