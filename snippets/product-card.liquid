@@ -45,6 +45,14 @@ Supported variables
   endif
 -%}
 
+{% assign show_linked_products = settings.show_linked_products %}
+{%- liquid
+ if show_linked_products
+        assign show_badges = true
+    endif
+%}
+
+
 <product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
   {%- comment -%}
   --------------------------------------------------------------------------------------------------------------------
@@ -147,8 +155,6 @@ Supported variables
         {%- endif -%}
       </div>
     {%- endif -%}
-
-      {% assign show_linked_products = settings.show_linked_products %}
 
       {% if show_linked_products %}
 
