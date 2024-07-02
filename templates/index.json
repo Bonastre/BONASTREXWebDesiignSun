@@ -17,7 +17,7 @@
           "settings": {
             "video": "shopify:\/\/files\/videos\/RING_CROSSBODY_TERRA_16_9_compressed_good.mp4",
             "mobile_video": "shopify:\/\/files\/videos\/RING_CROSSBODY_TERRA_9_16_compressed_good.mp4",
-            "allow_sound": true,
+            "allow_sound": false,
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
