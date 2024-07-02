@@ -104,10 +104,11 @@
     "image_with_text_pwE7Pr": {
       "type": "image-with-text",
       "blocks": {
-        "subheading_Ecwqfp": {
-          "type": "subheading",
+        "heading_eaiKXf": {
+          "type": "heading",
           "settings": {
-            "text": "THE DOME LINE"
+            "text": "THE DOME LINE",
+            "heading_tag": "h4"
           }
         },
         "richtext_pBFbHG": {
@@ -125,7 +126,7 @@
         }
       },
       "block_order": [
-        "subheading_Ecwqfp",
+        "heading_eaiKXf",
         "richtext_pBFbHG",
         "link_LQmUtP"
       ],
