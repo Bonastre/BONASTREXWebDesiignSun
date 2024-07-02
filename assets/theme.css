@@ -7718,18 +7718,19 @@ ul {
   align-items: center;
 }
 .ProductItem__ColorSwatchItems {
-  opacity: 1;
+  display: none;
   transition: all 0.35s ease-in-out;
+  background: #ebeae9;
+}
+.ProductItem__Linked .product-title:hover {
+  display: none;
+}
+.ProductItem__Linked .product-title:hover .ProductItem__ColorSwatchItems {
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
   align-items: center;
   justify-content: space-between;
-  background: #ebeae9;
-}
-.ProductItem__Linked .product-title:hover .ProductItem__ColorSwatchItems {
-  opacity: 0;
-  transform: translateY(-10px);
 }
 .ProductItem__Colors {
   display: flex;
