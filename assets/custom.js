@@ -11,7 +11,7 @@ function getWishlist() {
 function addToWishlist(productId) {
   let wishlist = getWishlist();
   if (productId && !wishlist.includes(productId)) {
-    console.log(productId);
+    console.log(wishlist);
     wishlist.push(productId);
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
     alert("Added to wishlist!");
