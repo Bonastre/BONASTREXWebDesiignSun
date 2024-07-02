@@ -78,9 +78,12 @@ const setupButtons = (buttons) => {
       );
     if (wishlistContains(productHandle))
       button.classList.add(BUTTON_ACTIVE_CLASS);
+    const iconStarProduct = this.querySelector(".icon-star-product");
+    const iconStarProductFill = this.querySelector(".icon-star-product-fill");
     button.addEventListener("click", () => {
       updateWishlist(productHandle);
-      alert("Product added to wishlist!");
+      iconStarProduct.classList.toggle(BUTTON_ACTIVE_CLASS);
+      iconStarProductFill.classList.toggle(BUTTON_ACTIVE_CLASS);
       button.classList.toggle(BUTTON_ACTIVE_CLASS);
     });
   });
