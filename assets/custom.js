@@ -1,9 +1,7 @@
 // Function to get the wishlist from customer tags or localStorage
 function getWishlist() {
   let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-  if (wishlist === null) {
-    wishlist = [];
-  }
+
   return wishlist;
 }
 
