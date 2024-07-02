@@ -139,12 +139,52 @@
         "content_width": "sm",
         "remove_vertical_spacing": true
       }
+    },
+    "image_with_text_dcgFkm": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_CNqgUN": {
+          "type": "heading",
+          "settings": {
+            "text": "Heading",
+            "heading_tag": "h1"
+          }
+        },
+        "heading_BRNFmJ": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_8TYyYJ": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CNqgUN",
+        "heading_BRNFmJ",
+        "richtext_8TYyYJ"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify:\/\/shop_images\/BONASTRE-LANZA-BOY-1-CMYK-Crop-_2.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
     }
   },
   "order": [
     "slideshow",
     "featured-collections",
     "image_with_text_overlay_EVNbLe",
-    "image_with_text_pwE7Pr"
+    "image_with_text_pwE7Pr",
+    "image_with_text_dcgFkm"
   ]
 }
