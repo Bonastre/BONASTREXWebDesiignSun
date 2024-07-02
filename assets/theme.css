@@ -7712,8 +7712,7 @@ ul {
 .ProductItem__Linked .product-title {
   transform: translateY(10px);
   transition: all 0.35s ease-in-out;
-  background: #ebeae9;
-  padding: 12px 16px;
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7726,6 +7725,7 @@ ul {
   gap: .5rem;
   align-items: center;
   justify-content: space-between;
+  background: #ebeae9;
 }
 .ProductItem__Linked .product-title:hover .ProductItem__ColorSwatchItems {
   opacity: 0;
