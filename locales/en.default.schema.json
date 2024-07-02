@@ -299,6 +299,7 @@
       "warning_color": "Warning",
       "error_color": "Error",
       "button_category": "Button",
+      "card_product_background": "Card Product Background",
       "button_icon_category": "Button with icon",
       "button_icon_category_info": "Applies to circled buttons such as navigation or close buttons.",
       "modal_category": "Modal\/drawer",

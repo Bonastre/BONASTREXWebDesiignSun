@@ -112,6 +112,16 @@
           },
           {
             "type": "header",
+            "content": "t:theme_settings.colors.card_product_background"
+          },
+          {
+            "type": "color",
+            "id": "card_product_background",
+            "label": "t:global.colors.background",
+            "default": "#ffffff"
+          },
+          {
+            "type": "header",
             "content": "t:theme_settings.colors.button_category"
           },
           {

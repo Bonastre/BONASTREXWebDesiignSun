@@ -299,6 +299,7 @@
       "warning_color": "Warning",
       "error_color": "Erreur",
       "button_category": "Bouton",
+      "card_product_background": "",
       "button_icon_category": "Bouton avec icone",
       "button_icon_category_info": "S'applique aux boutons arrondis comme les boutons de navigation ou de fermeture.",
       "modal_category": "Modales\/panneaux déroulants",
