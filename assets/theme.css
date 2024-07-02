@@ -7715,5 +7715,7 @@ ul {
   gap: .5rem;
 }
 .ProductItem__Color__Colors  {
-  
+  width: 18px;
+  height: 18px;
+  padding: 2px;
 }
