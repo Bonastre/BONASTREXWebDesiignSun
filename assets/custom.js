@@ -24,6 +24,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
+  const wishlistItems = JSON.parse(localStorage.getItem("wishlist-guest"));
   if (!jQuery(".wishlist-user").length) {
     jQuery(".count-wishlist").html(
       "(" + (wishlistItems == null ? 0 : wishlistItems.length) + ")",
