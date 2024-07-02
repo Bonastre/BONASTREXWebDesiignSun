@@ -7711,7 +7711,7 @@ ul {
 
 .ProductItem__Linked {
   width: 100%;
-  min-height: ;
+  min-height: 50px;
 }
 .ProductItem__Linked .product-title {
   transform: translateY(10px);
