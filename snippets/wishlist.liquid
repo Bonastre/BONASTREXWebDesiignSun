@@ -2,6 +2,7 @@
 <div class="recently-title">
     <h2 class="title inline-richtext h2 scroll-trigger animate--slide-in"><b>Wishlist</b></h2>
 </div>
+{{ wishlist | json }}
 {% for product_id in wishlist %}
     {% assign product = all_products[product_id] %}
     <div class="wishlist-item">
