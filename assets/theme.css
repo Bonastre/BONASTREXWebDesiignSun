@@ -7760,3 +7760,21 @@ ul {
   height: 18px;
   padding: 2px;
 }
+.wishlist-button {
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.wishlist-page {
+  padding: 20px;
+}
+
+#wishlist-items {
+  margin-top: 20px;
+}
+
+#wishlist-items div {
+  margin-bottom: 10px;
+}
