@@ -23,3 +23,7 @@ function removeFromWishlist(productId) {
     alert("This item is not in your wishlist.");
   }
 }
+function clearWishlist() {
+  localStorage.removeItem("wishlist");
+  alert("Your wishlist has been cleared.");
+}
