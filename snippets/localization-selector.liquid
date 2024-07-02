@@ -75,7 +75,7 @@ Supported variables
 
     <div class="relative">
       <button type="button" class="localization-toggle heading text-xxs link-faded" aria-controls="{{ localization_popover_id }}" aria-expanded="false">
-        {{- localization.language.endonym_name | capitalize -}}
+        {{- localization.language.iso_code | capitalize -}}
         {%- render 'icon' with 'chevron-down' -%}
       </button>
 
