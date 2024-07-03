@@ -7879,3 +7879,8 @@ ul {
 .wishlist__grid .v-stack {
   display: none;
 }
+.wishlist-empty-message {
+  margin: 0 auto;
+
+  text-align: center;
+}
