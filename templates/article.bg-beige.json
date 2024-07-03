@@ -12,7 +12,8 @@
     "main": {
       "type": "main-article",
       "settings": {
-        "color_scheme": "scheme-30c2d622-038b-417a-8f5b-75817662c082",
+        "color_scheme": "scheme-1",
+        "article_bg_color": "#FFFFFF",
         "show_image": false,
         "enable_parallax": true,
         "image_size": "medium",
