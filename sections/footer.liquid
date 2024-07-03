@@ -163,7 +163,7 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-        {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
+        {%- if section.settings.show_copyright -%}
           <p class="heading text-subdued text-xxs">© {{ 'now' | date: '%Y' }} - {{ shop.name }} {{ powered_by_link }}</p>
         {%- endif -%}
         {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
@@ -208,6 +208,12 @@
       "type": "checkbox",
       "id": "show_payment_icons",
       "label": "t:sections.footer.show_payment_icons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "label": "Show copyright",
       "default": true
     },
     {
