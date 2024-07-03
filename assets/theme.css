@@ -7868,7 +7868,7 @@ ul {
   display: none;
 }
 
-.wishlist__grid {
+.wishlist__grid.active {
   margin-top: 50px;
   margin-bottom: 50px;
   display: grid;
