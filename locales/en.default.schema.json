@@ -194,6 +194,7 @@
       "hide_product_information_collection_info": "Create an immersive image-first experience by hiding product information. Product information is always hidden when compact mode is selected."
     },
     "blog": {
+      "show_title": "Show title",
       "show_excerpt": "Show excerpt",
       "show_date": "Show date",
       "show_author": "Show author",

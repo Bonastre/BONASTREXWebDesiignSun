@@ -194,6 +194,7 @@
       "hide_product_information_collection_info": "Créez une experience immersive basée sur les images en cachant les informations produit. Les informations produit sont toujours cachées lorsque le mode d'affiche compact est sélectionné."
     },
     "blog": {
+      "show_title": "Show title",
       "show_excerpt": "Afficher l'extrait",
       "show_date": "Afficher la date",
       "show_author": "Afficher l'auteur",
