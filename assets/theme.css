@@ -4458,8 +4458,8 @@ product-rerender {
   justify-content: center;
   max-width: 30rem;
 }
-.footer__block--newsletter {
-  
+.footer__block--newsletter .prose {
+  font-size: 11px;
 }
 @media screen and (min-width: 700px) {
   .footer__block-list {
