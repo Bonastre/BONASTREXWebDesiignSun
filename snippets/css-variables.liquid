@@ -203,6 +203,9 @@ note that this may have impact on different places.
     --warning-text: {{ settings.warning_color.rgb }};
     --error-background: {{ error_background.rgb }};
     --error-text: {{ settings.error_color.rgb }};
+
+    /* Article color */
+    --article-wrapper-background: {{ section.settings.article_bg_color.rgb }}
   }
 
   {%- for color_scheme in settings.color_schemes -%}
@@ -218,7 +221,6 @@ note that this may have impact on different places.
       --background-without-opacity: {{ color_scheme.settings.background.rgb }};
       --background-gradient: {{ color_scheme.settings.background_gradient }};
       --card-product-background: {{ color_scheme.settings.card_product_background.rgb }};
-      --article-wrapper-background: {{ section.settings.article_bg_color.rgb }}
 
       {%- if color_scheme.settings.background_gradient != blank -%}
         --border-color: {{ color_scheme.settings.text_color.rgb }} / 0.15;
