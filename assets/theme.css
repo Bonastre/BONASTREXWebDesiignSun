@@ -7869,6 +7869,7 @@ ul {
 }
 
 .wishlist__grid {
+  margin-top: ;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: row;
