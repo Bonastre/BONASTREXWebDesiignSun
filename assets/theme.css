@@ -7858,13 +7858,13 @@ ul {
   right: .25rem;
   z-index: 9;
 }
-.wishlist .icon-star-product-fill {
+.wishlist-button .icon-star-product-fill {
   display: none;
 }
-.wishlist.active .icon-star-product-fill {
+.wishlist-button.active .icon-star-product-fill {
   display: block;
 }
-.wishlist.active .icon-star-product {
+.wishlist-button.active .icon-star-product {
   display: none;
 }
 
