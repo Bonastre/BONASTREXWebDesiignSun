@@ -14,14 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "image_6EpfyX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/logo_bonastre_png.png",
-            "image_width": 300,
-            "link": "https:\/\/www.bonastre.net\/"
-          }
-        },
         "newsletter": {
           "type": "newsletter",
           "settings": {
@@ -49,13 +41,14 @@
         }
       },
       "block_order": [
-        "image_6EpfyX",
         "newsletter",
         "links",
         "links_NBRrei"
       ],
       "settings": {
         "color_scheme": "",
+        "image_logo": "shopify:\/\/shop_images\/logo_bonastre_png.png",
+        "link_logo": "https:\/\/www.bonastre.net\/",
         "separate_section_with_border": false,
         "show_social_media": false,
         "show_payment_icons": false,
