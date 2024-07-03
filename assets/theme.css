@@ -4469,18 +4469,18 @@ product-rerender {
 .footer__block--newsletter input[type="email"] ~ .floating-label {
   display: none;
 }
-.footer__block--newsletter input[type="checkbox"] ~ .floating-label {
+.footer__block--newsletter input[type="radio"] ~ .floating-label {
   position: relative;
   inset-block-start: unset;
   inset-inline-start: unset;
   transform: unset;
   opacity: 1;
 }
-.footer__block--newsletter .form-control-checkbox {
+.footer__block--newsletter .form-control-radio {
   display: flex;
   align-items: center;
 }
-.footer__block--newsletter .form-control-checkbox input[type="checkbox"] {
+.footer__block--newsletter .form-control-radio input {
   border-radius: 50%;
   inset-block-start: unset;
 }
