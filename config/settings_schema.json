@@ -744,10 +744,6 @@
     "name":"Wishlist",
     "settings":[
       {
-        "type":"header",
-        "content":"Wishlist"
-      },
-      {
         "type":"checkbox",
         "id":"enable-wishlist",
         "label": "Enable Wishlist",
