@@ -205,7 +205,8 @@ note that this may have impact on different places.
     --error-text: {{ settings.error_color.rgb }};
 
     /* Article color */
-    --article-wrapper-background: {{ section.settings.article_bg_color.rgb }}
+  {%- assign article_background_wrapper = section.settings.article_bg_color | color_brightness -%}
+    --article-wrapper-background: {{ settings.article_background_wrapper.rgb }}
   }
 
   {%- for color_scheme in settings.color_schemes -%}
