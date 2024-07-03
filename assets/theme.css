@@ -7876,6 +7876,6 @@ ul {
   grid-auto-flow: row;
   gap: 1rem;
 }
-.wishlist__grid {
-  
+.wishlist__grid .v-stack {
+  display: none;
 }
