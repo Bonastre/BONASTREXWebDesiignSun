@@ -3084,6 +3084,9 @@ tr[onclick]:hover {
 .icon-wishlist-header {
   fill: #ffffff;
 }
+.icon-wishlist {
+  fill: i;
+}
 .header.color-scheme--scheme-2.is-solid .icon-wishlist-header {
   fill: rgb(var(--text-color));
 }
