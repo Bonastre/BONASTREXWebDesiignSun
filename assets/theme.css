@@ -3840,7 +3840,7 @@ product-rerender {
 
 .article__toolbar {
   visibility: hidden;
-  z-index: 1;
+  z-index: 9;
   width: 100vw;
   padding-block: 1rem;
   transition: transform .2s, visibility .2s, inset-block-start .15s ease-in-out;
