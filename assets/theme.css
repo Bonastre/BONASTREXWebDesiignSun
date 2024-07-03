@@ -7867,3 +7867,10 @@ ul {
 .wishlist.active .icon-star-product {
   display: none;
 }
+
+.wishlist__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row;
+  gap: 1rem;
+}
