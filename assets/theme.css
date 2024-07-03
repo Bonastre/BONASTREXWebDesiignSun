@@ -7868,8 +7868,8 @@ ul {
   display: none;
 }
 .wishlist__grid {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 250px;
+  margin-bottom: 250px;
 }
 .wishlist__grid.active {
   margin-top: 50px;
