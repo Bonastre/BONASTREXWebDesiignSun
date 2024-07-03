@@ -4472,6 +4472,13 @@ product-rerender {
 .footer__block--newsletter input[type="checkbox"] ~ .floating-label {
   position: relative;
 }
+.footer__block--newsletter .form-control-checkbox {
+  display: flex;
+  align-items: center;
+}
+.footer__block--newsletter .form-control-checkbox input[type="checkbox"] {
+  border-radius: 50%;
+}
 @media screen and (min-width: 700px) {
   .footer__block-list {
     justify-content: var(--footer-content-justify-items);
