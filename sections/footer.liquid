@@ -9,6 +9,14 @@
 <div class="footer color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
   <div class="container">
     <div class="footer__inner">
+      {%- if section.settings.image_logo != blank -%}
+
+        {%- if section.settings.link_logo != blank -%}
+          <a href="{{ section.settings.link_logo }}">
+            {{- section.settings.image_logo | image_url: width: section.settings.image_logo.width | class: 'footer-logo' -}}
+          </a>
+        {%- endif -%}
+      {%- endif -%}
       {%- comment -%}
       ------------------------------------------------------------------------------------------------------------------
       FOOTER BLOCKS (MAIN CONTENT)
@@ -198,7 +206,7 @@
     },
     {
       "type": "url",
-      "id": "link",
+      "id": "link_logo",
       "label": "t:global.text.link"
     },
     {
