@@ -3,7 +3,7 @@
     --article-image-height: {% if section.settings.image_size == 'auto' %}auto{% elsif section.settings.image_size == 'small' %}min(300px, 30vmax){% elsif section.settings.image_size == 'medium' %}min(500px, 45vmax){% else %}min(700px, 60vmax){% endif %}
   }
   .article__wrapper {
-    
+    background: {{ section }};
   }
   .article__wrapper .h1 {
     text-align: {{ section.settings.header_position }};
