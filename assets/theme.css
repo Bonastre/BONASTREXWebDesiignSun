@@ -7853,7 +7853,7 @@ ul {
   width: 100%;
   top: .25rem;
   right: .25rem;
-  z-index: 99999;
+  z-index: 9;
 }
 .wishlist .icon-star-product-fill {
   display: none;
