@@ -14,11 +14,19 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_6EpfyX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo_bonastre_png.png",
+            "image_width": 300,
+            "link": "https:\/\/www.bonastre.net\/"
+          }
+        },
         "newsletter": {
           "type": "newsletter",
           "settings": {
             "title": "Newsletter",
-            "content": "<p>Sign up to our newsletter to receive exclusive offers.<\/p>",
+            "content": "<p>Subscribe to follow all the news from BONASTRE.<\/p>",
             "button_background": "",
             "button_text_color": ""
           }
@@ -26,34 +34,35 @@
         "links": {
           "type": "links",
           "settings": {
-            "menu": "footer",
-            "show_menu_title": true,
+            "menu": "footer-menu-1",
+            "show_menu_title": false,
             "menu_title": ""
           }
         },
-        "text": {
-          "type": "text",
+        "links_NBRrei": {
+          "type": "links",
           "settings": {
-            "title": "About",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>",
-            "enable_follow_on_shop": true
+            "menu": "footer-menu-2",
+            "show_menu_title": false,
+            "menu_title": ""
           }
         }
       },
       "block_order": [
+        "image_6EpfyX",
         "newsletter",
         "links",
-        "text"
+        "links_NBRrei"
       ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
-        "show_social_media": true,
-        "show_payment_icons": true,
-        "show_country_selector": true,
-        "show_country_name": true,
-        "show_country_flag": true,
-        "show_locale_selector": true
+        "show_social_media": false,
+        "show_payment_icons": false,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "show_locale_selector": false
       }
     }
   },
