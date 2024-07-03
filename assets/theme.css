@@ -4463,7 +4463,8 @@ product-rerender {
 }
 .footer__block--newsletter input[type="email"] {
   border-width: unset;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgb(var(--border-color));
+
 }
 @media screen and (min-width: 700px) {
   .footer__block-list {
