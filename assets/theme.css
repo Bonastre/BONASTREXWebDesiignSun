@@ -4480,7 +4480,12 @@ product-rerender {
   display: flex;
   align-items: center;
   gap: 3px;
-  left: -20px;
+  left: -17px;
+}
+@media screen and (max-width: 992px) {
+  .footer__block--newsletter .form-control-radio {
+    left: 0;
+  }
 }
 .footer__block--newsletter .form-control-radio input[type="checkbox"] {
   border-radius: 50%;
