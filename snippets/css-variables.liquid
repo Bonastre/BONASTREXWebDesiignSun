@@ -206,7 +206,7 @@ note that this may have impact on different places.
 
     /* Article color */
   {%- assign article_background_wrapper = section.settings.article_bg_color | color_brightness -%}
-    --article-wrapper-background: {{ settings.article_background_wrapper.rgb }}
+    --article-wrapper-background: {{ article_background_wrapper.rgb }}
   }
 
   {%- for color_scheme in settings.color_schemes -%}
