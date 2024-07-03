@@ -12,7 +12,7 @@
     "main": {
       "type": "main-article",
       "settings": {
-        "section_bg_color": "#FBFBF6",
+        "section_bg_color": "#FFFFFF",
         "article_bg_color": "#FFFFFF",
         "show_image": false,
         "enable_parallax": true,
