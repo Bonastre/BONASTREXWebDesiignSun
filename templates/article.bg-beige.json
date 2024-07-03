@@ -18,6 +18,7 @@
         "image_size": "medium",
         "content_width": "xs",
         "header_position": "center",
+        "show_title": false,
         "show_date": false,
         "show_category": false,
         "show_author": false,
