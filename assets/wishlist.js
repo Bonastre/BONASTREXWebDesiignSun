@@ -2,11 +2,13 @@ const LOCAL_STORAGE_WISHLIST_KEY = "shopify-wishlist";
 const LOCAL_STORAGE_DELIMITER = ",";
 const BUTTON_ACTIVE_CLASS = "active";
 const GRID_LOADED_CLASS = "loaded";
+const EMPTY_WISHLIST_MESSAGE = "No products in wishlist";
 
 const selectors = {
   button: "[button-wishlist]",
   grid: "[grid-wishlist]",
   productCard: ".product-card",
+  emptyMessage: ".wishlist-empty-message",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -56,6 +58,13 @@ const fetchProductCardHTML = (handle) => {
 
 const setupGrid = async (grid) => {
   const wishlist = getWishlist();
+  if (wishlist.length === 0) {
+    grid.innerHTML = `<p class="${selectors.emptyMessage.slice(
+      1,
+    )}">${EMPTY_WISHLIST_MESSAGE}</p>`;
+    grid.classList.add(GRID_LOADED_CLASS);
+    return;
+  }
   const requests = wishlist.map(fetchProductCardHTML);
   const responses = await Promise.all(requests);
   const wishlistProductCards = responses.join("");
