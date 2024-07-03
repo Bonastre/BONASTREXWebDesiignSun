@@ -163,9 +163,9 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-
-        <p class="heading text-subdued text-xxs">© {{ 'now' | date: '%Y' }} - {{ shop.name }} {{ powered_by_link }}</p>
-
+        {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
+          <p class="heading text-subdued text-xxs">© {{ 'now' | date: '%Y' }} - {{ shop.name }} {{ powered_by_link }}</p>
+        {%- endif -%}
         {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
           <div class="payment-methods">
             {%- for type in shop.enabled_payment_types -%}
