@@ -10,8 +10,9 @@
   <div class="container">
     <div class="footer__inner">
       {%- if section.settings.image_logo != blank and section.settings.link_logo != blank -%}
+        {%- assign sizes = '(max-width: 699px) 100vw, 50vw' -%}
           <a href="{{ section.settings.link_logo }}">
-            {{- section.settings.image_logo | image_url: width: section.settings.image_logo.width | class: 'footer-logo' -}}
+            {{- section.settings.image_logo | image_url: width: section.settings.image_logo | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' | class: 'footer-logo' -}}
           </a>
       {%- endif -%}
       {%- comment -%}
