@@ -258,7 +258,7 @@
 
 
       {%- if section.settings.enable_wishlist -%}
-        {% if template.name == "index" %}
+        {% if template.name != "index" %}
           {% assign icon-class = icon-wishlist-header %}
         {% else %}
           {% assign icon-class = icon-wishlist %}
