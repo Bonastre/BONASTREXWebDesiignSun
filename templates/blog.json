@@ -17,7 +17,7 @@
         "show_rss_feed": false,
         "show_tags": false,
         "posts_per_page": 10,
-        "feature_first_blog_post": true,
+        "feature_first_blog_post": false,
         "featured_blog_post_color_scheme": "",
         "show_category": false,
         "show_date": false,
