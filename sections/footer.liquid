@@ -102,7 +102,7 @@
                         <input type="hidden" name="contact[tags]" value="newsletter">
 
                         {%- assign input_label = '*email address' -%}
-                        {%- render 'input', name: 'contact[email]', label: input_label, type: 'email', required: true, autocomplete: 'email', enterkeyhint: 'send' -%}
+                        {%- render 'input', name: 'contact[email]', label: input_label, type: 'email', required: true, autocomplete: '*email address', enterkeyhint: 'send' -%}
 
 
                         {%- render 'input', class: 'checkbox', type: 'checkbox', name: 'contact[terms]', label: 'I have read and accept the terms and conditions.', required: true -%}
