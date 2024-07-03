@@ -2,6 +2,9 @@
   #shopify-section-{{ section.id }} {
     --article-image-height: {% if section.settings.image_size == 'auto' %}auto{% elsif section.settings.image_size == 'small' %}min(300px, 30vmax){% elsif section.settings.image_size == 'medium' %}min(500px, 45vmax){% else %}min(700px, 60vmax){% endif %}
   }
+  .article-bg {
+    background: {{ section.settings.section_bg_color }};
+  }
   .article__wrapper {
     background: {{ section.settings.article_bg_color }};
   }
@@ -13,7 +16,7 @@
 
 {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-<div class="article color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
+<div class="article article-bg color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   {%- if section.settings.show_sticky_bar -%}
     <article-toolbar class="article__toolbar color-scheme color-scheme--{{ section.settings.toolbar_color_scheme.id }} sm-max:hidden">
       <div class="container">
