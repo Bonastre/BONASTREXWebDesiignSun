@@ -3,7 +3,7 @@ const LOCAL_STORAGE_DELIMITER = ",";
 const BUTTON_ACTIVE_CLASS = "active";
 const GRID_LOADED_CLASS = "loaded";
 const GRID_ACTIVE_CLASS = "active";
-const EMPTY_WISHLIST_MESSAGE = "No products in wishlist";
+const EMPTY_WISHLIST_MESSAGE = "No products";
 
 const selectors = {
   button: "[button-wishlist]",
