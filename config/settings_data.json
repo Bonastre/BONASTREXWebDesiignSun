@@ -91,6 +91,18 @@
           "circle_button_background": "#ffffff",
           "circle_button_icon": "#1c1c1c"
         }
+      },
+      "scheme-30c2d622-038b-417a-8f5b-75817662c082": {
+        "settings": {
+          "background": "#fbfbf6",
+          "background_gradient": "",
+          "text_color": "#1c1c1c",
+          "card_product_background": "#fbfbf6",
+          "primary_button_background": "#1c1c1c",
+          "primary_button_text_color": "#ffffff",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#1c1c1c"
+        }
       }
     }
   },
