@@ -4479,6 +4479,8 @@ product-rerender {
 .footer__block--newsletter .form-control-radio {
   display: flex;
   align-items: center;
+  gap: 3px;
+  left: -20px;
 }
 .footer__block--newsletter .form-control-radio input[type="checkbox"] {
   border-radius: 50%;
