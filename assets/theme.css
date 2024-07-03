@@ -4487,13 +4487,12 @@ product-rerender {
     left: 0;
   }
 }
-.footer__block--newsletter .form-control-radio input[type="checkbox"] {
-  border-radius: 50%;
-  inset-block-start: unset;
-}
-input[type='radio'] {
+
+.footer__block--newsletter .form-control-radio input[type='radio'] {
   accent-color: #232323;
 }
+
+.footer__block--links .
 @media screen and (min-width: 700px) {
   .footer__block-list {
     justify-content: var(--footer-content-justify-items);
