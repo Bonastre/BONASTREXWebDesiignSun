@@ -3081,13 +3081,13 @@ tr[onclick]:hover {
   display: block;
 }
 
-.icon-wishlist {
+.icon-wishlist-header {
   fill: #ffffff;
 }
-.header.color-scheme--scheme-2.is-solid .icon-wishlist {
+.header.color-scheme--scheme-2.is-solid .icon-wishlist-header {
   fill: rgb(var(--text-color));
 }
-.header:hover .icon-wishlist {
+.header:hover .icon-wishlist-header {
   fill: rgb(var(--text-color));
 }
 

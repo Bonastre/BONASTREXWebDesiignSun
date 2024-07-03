@@ -258,8 +258,9 @@
 
 
       {%- if section.settings.enable_wishlist -%}
-        {{ template.name | json }}
         {% if template.name == "index" %}
+          {% assign icon-class = icon-wishlist-header %}
+        {% else %}
           {% assign icon-class = icon-wishlist %}
         {% endif %}
         <a href="{{ routes.root_url }}{% if routes.root_url .size > 1 %}/{%endif%}pages/wishlist" aria-label="{{ 'header.navigation.wishlist' | t }}">
