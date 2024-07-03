@@ -13,7 +13,7 @@
       "type": "main-blog",
       "settings": {
         "color_scheme": "",
-        "show_blog_title": true,
+        "show_blog_title": false,
         "show_rss_feed": false,
         "show_tags": false,
         "posts_per_page": 10,
