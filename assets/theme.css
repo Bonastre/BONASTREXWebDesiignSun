@@ -4458,7 +4458,9 @@ product-rerender {
   justify-content: center;
   max-width: 30rem;
 }
-
+.footer__block--newsletter {
+  
+}
 @media screen and (min-width: 700px) {
   .footer__block-list {
     justify-content: var(--footer-content-justify-items);
