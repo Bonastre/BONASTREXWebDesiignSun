@@ -64,6 +64,11 @@
 
                 {%- when 'links' -%}
                   {%- assign menu = block.settings.menu -%}
+                {%- if menu.size > 1 -%}
+                  <div class="footer__links-block">
+                    hello
+                  </div>
+                {%- endif -%}
 
                   {%- if menu != blank and menu.links.size > 0 -%}
                     <div class="v-stack gap-4 sm:gap-5">
