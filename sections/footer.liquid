@@ -80,6 +80,8 @@
                       </ul>
                     </div>
                   {%- endif -%}
+                {%- when 'space' -%}
+                <div class="space"></div>
 
                 {%- when 'newsletter' -%}
                   <div class="v-stack gap-4 sm:gap-4">
@@ -268,6 +270,10 @@
     }
   ],
   "blocks": [
+    {
+      "type": "space",
+      "name": "Space"
+    },
     {
       "type": "image",
       "name": "t:sections.footer.blocks.image.name",
