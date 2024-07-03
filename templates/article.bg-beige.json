@@ -13,7 +13,7 @@
       "type": "main-article",
       "settings": {
         "color_scheme": "scheme-1",
-        "article_bg_color": "#FFFFFF",
+        "article_bg_color": "#fbfbf6",
         "show_image": false,
         "enable_parallax": true,
         "image_size": "medium",
