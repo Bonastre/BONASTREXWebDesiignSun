@@ -53,7 +53,7 @@ Supported variables
 {%- if type == 'hidden' -%}
   <input type="hidden" name="{{ name }}" value="{{ value }}">
 {%- else -%}
-  <div class="form-control" {{ block.shopify_attributes }}>
+  <div class="form-control form-control-{{ name }}" {{ block.shopify_attributes }}>
     {%- if label != blank and show_label_as_block -%}
       <label for="{{ id }}">{{ label }}</label>
     {%- endif -%}
