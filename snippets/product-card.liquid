@@ -64,7 +64,7 @@ Supported variables
   {%- if product.media.size > 0 -%}
     <div class="product-card__figure">
         {% if settings.enable-wishlist %}
-            <button type="button" aria-label="Add to wishlist" class="wishlist" button-wishlist data-product-handle="{{ product.handle }}">
+            <button type="button" aria-label="Add to wishlist" class="wishlist-button" button-wishlist data-product-handle="{{ product.handle }}">
                 <span class="icon-star-product"></span>
                 <span class="icon-star-product-fill" data-button-content="added"></span>
             </button>
