@@ -4462,7 +4462,8 @@ product-rerender {
   font-size: 11px;
 }
 .footer__block--newsletter input[type="email"] {
-  font-size: 11px;
+  border-width: unset;
+  border-bottom: 1px solid;
 }
 @media screen and (min-width: 700px) {
   .footer__block-list {
