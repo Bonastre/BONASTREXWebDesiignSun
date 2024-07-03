@@ -7752,7 +7752,7 @@ ul {
   overflow: hidden;
 }
 
-.shopify-section--featured-collections .product-card__image {
+.product-card__image {
   object-fit: cover;
 }
 
