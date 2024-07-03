@@ -4441,7 +4441,12 @@ product-rerender {
   row-gap: min(var(--section-vertical-spacing), 3rem);
   display: grid;
 }
-
+@media (min-width: 992px) {
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+  }
+}
 .footer__block-list {
   justify-content: start;
   align-items: start;
