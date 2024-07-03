@@ -4466,7 +4466,7 @@ product-rerender {
   border: unset;
   border-bottom: 1px solid rgb(var(--border-color));
 }
-.footer__block--newsletter .floating-label {
+.footer__block--newsletter input[type="email"] ~ .floating-label {
   display: none;
 }
 @media screen and (min-width: 700px) {
