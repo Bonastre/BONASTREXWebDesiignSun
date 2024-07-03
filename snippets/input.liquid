@@ -61,7 +61,7 @@ Supported variables
     {%- if multiline != blank -%}
       <textarea id="{{ id }}" class="textarea" name="{{ name }}" {% unless show_label_as_block %}placeholder="{{ label | escape }}"{% endunless %} rows="{{ multiline }}" {{ optional_attributes }}>{{- value -}}</textarea>
     {%- else -%}
-      <input id="{{ id }}" class="input" type="{{ type | default: 'text' }}" {% if type == 'email' or type == 'tel' %}dir="ltr"{% endif %} name="{{ name }}" {% unless show_label_as_block %}placeholder="{{ label | escape }}"{% endunless %} {{ optional_attributes }}>
+      <input id="{{ id }}" class="{{ class | default: 'input' }}" type="{{ type | default: 'text' }}" {% if type == 'email' or type == 'tel' %}dir="ltr"{% endif %} name="{{ name }}" {% unless show_label_as_block %}placeholder="{{ label | escape }}"{% endunless %} {{ optional_attributes }}>
     {%- endif -%}
 
     {%- if show_max_characters_count and maxlength > 0 -%}
