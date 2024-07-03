@@ -12,11 +12,11 @@
     "main": {
       "type": "main-article",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "show_image": true,
         "enable_parallax": true,
         "image_size": "medium",
-        "content_width": "xs",
+        "content_width": "sm",
         "show_date": false,
         "show_category": false,
         "show_author": false,

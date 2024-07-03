@@ -58,7 +58,7 @@
     </div>
   {%- endif -%}
 
-  <div class="article__wrapper container--{{ section.settings.content_width }}">
+  <div class="article__wrapper container--{{ section.settings.content_width }} container_text--{{ section.settings.text_position }}">
     <div class="v-stack gap-10 sm:gap-16">
       <div class="v-stack gap-8 sm:gap-12">
         <div class="v-stack gap-4.5">
@@ -265,6 +265,26 @@
         }
       ],
       "default": "xs"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "t:global.position.content_position",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:global.position.left"
+        },
+        {
+          "value": "center",
+          "label": "t:global.position.center"
+        },
+        {
+          "value": "end",
+          "label": "t:global.position.right"
+        }
+      ],
+      "default": "center"
     },
     {
       "type": "checkbox",
