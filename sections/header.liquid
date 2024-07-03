@@ -259,13 +259,13 @@
 
       {%- if section.settings.enable_wishlist -%}
         {% if template.name != "index" %}
-          {% assign icon-class = icon-wishlist-header %}
+          {% assign icon_class = icon-wishlist-header %}
         {% else %}
-          {% assign icon-class = icon-wishlist %}
+          {% assign icon_class = icon-wishlist %}
         {% endif %}
         <a href="{{ routes.root_url }}{% if routes.root_url .size > 1 %}/{%endif%}pages/wishlist" aria-label="{{ 'header.navigation.wishlist' | t }}">
           {%- if section.settings.show_icons -%}
-            {%- render 'icon' with 'wishlist', class: icon-class -%}
+            {%- render 'icon' with 'wishlist', class: icon_class -%}
           {%- endif -%}
         </a>
       {%- endif -%}
