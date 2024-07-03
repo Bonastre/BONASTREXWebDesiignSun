@@ -23,6 +23,11 @@
             "button_text_color": ""
           }
         },
+        "space_qJ4LGw": {
+          "type": "space",
+          "settings": {
+          }
+        },
         "links": {
           "type": "links",
           "settings": {
@@ -42,6 +47,7 @@
       },
       "block_order": [
         "newsletter",
+        "space_qJ4LGw",
         "links",
         "links_NBRrei"
       ],
