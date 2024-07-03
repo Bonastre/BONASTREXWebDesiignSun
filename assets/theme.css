@@ -4492,7 +4492,9 @@ product-rerender {
   accent-color: #232323;
 }
 
-.footer__block--links .
+.footer__block--links .link-faded {
+  text-transform: uppercase;
+}
 @media screen and (min-width: 700px) {
   .footer__block-list {
     justify-content: var(--footer-content-justify-items);
