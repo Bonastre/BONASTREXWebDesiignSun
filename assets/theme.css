@@ -4506,6 +4506,9 @@ product-rerender {
   font-size: 11px;
   line-height: 100%;
 }
+.footer__block-list li {
+  line-height: 100%;
+}
 @media screen and (min-width: 700px) {
   .footer__block-list {
     justify-content: var(--footer-content-justify-items);
