@@ -7996,6 +7996,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.shopify-section--main-product .product-info__block-item .prose {
-  
+.shopify-section--main-product .product-info__block-item .prose span {
+  margin-top: unset;
+  margin-bottom: unset;
 }
