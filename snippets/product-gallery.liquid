@@ -32,7 +32,7 @@ Supported variables
 
   @media screen and (min-width: 1000px) {
     #shopify-section-{{ section.id }} {
-      {%- if desktop_layout == 'carousel_thumbnails_left' or desktop_layout == 'grid' -%}
+      {%- if desktop_layout == 'carousel_thumbnails_left' or desktop_layout == 'grid' or desktop_layout == 'dots_left'-%}
         /* Thumbnails on the left */
         --product-gallery-flex-direction: row-reverse;
         --product-gallery-thumbnail-list-grid-auto-flow: row;
@@ -42,7 +42,7 @@ Supported variables
         {%- endif -%}
       {%- endif -%}
 
-      {%- if desktop_layout contains 'grid' -%}
+      {%- if desktop_layout contains 'grid' or desktop_layout == 'dots_left' -%}
         --product-gallery-carousel-grid: auto-flow dense / {% if desktop_layout == 'grid' %}auto{% else %}repeat(2, minmax(0, 1fr)){% endif %};
         --product-gallery-carousel-scroll-snap-type: none;
         --product-gallery-carousel-gap: {{ section.settings.desktop_media_grid_gap }}px;
@@ -234,8 +234,7 @@ only way to do it on Shopify right now.
           {%- if product != blank -%}
             {%- for media in product.media -%}
               <button type="button" class="product-gallery__thumbnail" {% if filtered_indexes contains media.position %}hidden{% endif %} data-media-type="{{ media.media_type }}" data-media-position="{{ media.position }}" data-media-id="{{ media.id }}" aria-current="{% if media == default_media %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
-                {{- media | image_url: width: media.preview_image.width | image_tag: sizes: '56px', widths: '56,112,168', class: 'object-contain' -}}
-
+                  *
                 {%- unless media.media_type == 'image' -%}
                   <div class="product-gallery__media-badge">
                     {%- if media.media_type == 'model' -%}
