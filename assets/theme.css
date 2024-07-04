@@ -7975,6 +7975,6 @@ ul {
 }
 
 .Product__SlideshowNavDot[aria-current=true] {
-  border-color: var(--heading-color);
-  background: var(--heading-color);
+  border-color: #1c1b1b;
+  background: #1c1b1b;
 }
