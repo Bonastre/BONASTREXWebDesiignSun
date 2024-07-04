@@ -14,11 +14,9 @@ const selectors = {
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(function () {
-    const buttons = document.querySelector(".wishlist-button");
-    console.log(buttons);
+    initButtons();
+    initGrid();
   }, 2000);
-  initButtons();
-  initGrid();
 });
 
 document.addEventListener("shopify-wishlist:updated", (event) => {
