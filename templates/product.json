@@ -60,22 +60,6 @@
             "selector_style": "swatch"
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "hide_sold_out_variants": false,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -106,8 +90,6 @@
         "description",
         "share_buttons_7TU7Ax",
         "product_variations_PztPfQ",
-        "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "complementary_products"
       ],
