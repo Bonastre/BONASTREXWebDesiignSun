@@ -7982,7 +7982,7 @@ ul {
   Custom product info
 \* ------------------------------------------------------------ */
 .shopify-section--main-product .product-info__block-item {
-  margin-bottom: 40px;
+  margin-bottom: unset;
 }
 .shopify-section--main-product .product-info__block-item .product-title {
   font-family: Futura LT;
@@ -7992,4 +7992,5 @@ ul {
   letter-spacing: normal;
   text-transform: uppercase;
   line-height: 100%;
+  margin-bottom: 30px;
 }
