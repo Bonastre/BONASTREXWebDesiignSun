@@ -7883,6 +7883,7 @@ ul {
   grid-auto-flow: row;
   gap: 1rem;
 }
+.wishlist__grid .v-stack
 .wishlist__grid .v-stack {
   display: none;
 }
