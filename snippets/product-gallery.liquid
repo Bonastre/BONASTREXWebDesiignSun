@@ -235,15 +235,6 @@ only way to do it on Shopify right now.
             {%- for media in product.media -%}
               <button type="button" class="product-gallery__thumbnail" {% if filtered_indexes contains media.position %}hidden{% endif %} data-media-type="{{ media.media_type }}" data-media-position="{{ media.position }}" data-media-id="{{ media.id }}" aria-current="{% if media == default_media %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
                   *
-                {%- unless media.media_type == 'image' -%}
-                  <div class="product-gallery__media-badge">
-                    {%- if media.media_type == 'model' -%}
-                      {%- render 'icon' with 'media-model-badge', width: 12 -%}
-                    {%- else -%}
-                      {%- render 'icon' with 'media-video-badge', width: 12 -%}
-                    {%- endif -%}
-                  </div>
-                {% endunless %}
               </button>
             {%- endfor -%}
           {%- else -%}
