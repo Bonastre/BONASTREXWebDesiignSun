@@ -7957,3 +7957,24 @@ ul {
   display: initial;
 }
 
+/* ------------------------------------------------------------ *\
+  Dots
+\* ------------------------------------------------------------ */
+.Product__SlideshowNavDot {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  border: 2px solid var(--border-color);
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.Product__SlideshowNavDot:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.Product__SlideshowNavDot.is-selected {
+  border-color: var(--heading-color);
+  background: var(--heading-color);
+}
