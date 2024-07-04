@@ -325,7 +325,7 @@ Supported variables
                         {% endfor %}
                     {%- endcapture -%}
                     <div class="ProductItem__Linked">
-                        <div class="ProductItem__ColorSwatchItem__label">Color: {{ g_color_name }}</div>
+                        <div class="ProductItem__ColorSwatchItem__label">Color: {{ g_color_name | upcase }}</div>
                         <div class="ProductItem__ColorSwatchItems-product">
                             <div class="ProductItem__ColorSwatchItem">
                                 <div class="ProductItem__Colors">
