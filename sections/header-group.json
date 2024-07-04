@@ -46,7 +46,7 @@
         "logo_mobile_max_width": 90,
         "menu": "main-menu",
         "sidebar_menu": "",
-        "show_social_media": false,
+        "show_social_media": true,
         "menu_open_trigger": "hover",
         "enable_search": true,
         "enable_wishlist": true,
