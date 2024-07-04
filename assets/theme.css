@@ -4467,6 +4467,7 @@ product-rerender {
 }
 .footer__block--newsletter .prose {
   font-size: 11px;
+  color: rgb(var(--text-color));
 }
 .footer__block--newsletter input[type="email"] {
   padding: unset;
