@@ -4502,6 +4502,9 @@ product-rerender {
 .footer__block--links .link-faded {
   text-transform: uppercase;
   color: rgb(var(--text-color));
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 100%;
 }
 @media screen and (min-width: 700px) {
   .footer__block-list {
