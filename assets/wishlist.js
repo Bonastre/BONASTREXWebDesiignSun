@@ -104,6 +104,7 @@ const initGrid = () => {
 
 const initButtons = () => {
   const buttons = document.querySelectorAll(selectors.button) || [];
+  console.log(buttons);
   if (buttons.length) setupButtons(buttons);
   else return;
   const event = new CustomEvent("shopify-wishlist:init-buttons", {
