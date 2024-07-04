@@ -227,7 +227,7 @@ Supported variables
             {%- endif -%}
 
           {%- when 'product_variations' -%}
-            {%- liquid
+            {% comment %}{%- liquid
               assign contains_product = false
 
               for product_variation in block.settings.products
@@ -285,7 +285,61 @@ Supported variables
                   </div>
                 </div>
               </div>
-            {%- endif -%}
+            {%- endif -%}{% endcomment %}
+            {% assign show_linked_products = settings.show_linked_products %}
+            {%- liquid
+                if show_linked_products
+                    assign show_badges = true
+                endif
+            %}
+            {% if show_linked_products %}
+
+                {% assign linked_collection = blank %}
+
+                {% for tags in product.tags %}
+                    {% assign temp_tag = tags | strip | remove:' '%}
+                    {% if temp_tag contains 'Group_'%}
+                        {% assign linked_collection = collections[temp_tag] %}
+
+                    {% endif %}
+                {% endfor %}
+
+                {% if linked_collection and linked_collection.products.size > 0%}
+                    {% assign g_color_name = blank %}
+                    {%- capture color_item -%}
+                        {% for item in linked_collection.products %}
+                            {%- comment %}<locksmith:3af6>{% endcomment -%}
+                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: linked_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                            {%- comment %}</locksmith:3af6>{% endcomment -%}
+                            {% assign color_name = blank %}
+                            {% for tags in item.tags %}
+                                {% assign temp_tag = tags | strip | remove:' '%}
+                                {% if temp_tag contains 'color_' %}
+                                    {% assign color_name = temp_tag | remove: 'color_' | append: ".png" %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if product.id == item.id %}
+                                {% assign g_color_name = color_name | remove: ".png" %}
+                            {% endif %}
+                            <a href="/products/{{ item.handle }}" class="ProductItem__Color__Colors {% if product.id == item.id %} color-selected{% endif %}" style="background-image: url({{ color_name | file_url }})"></a>
+                        {% endfor %}
+                    {%- endcapture -%}
+                    <div class="ProductItem__Linked">
+                        <a href="{{ product.url }}" class="product-title {% if text_class != blank %}{{ text_class }}{% endif %} {% if settings.product_title_max_lines > 0 %}line-clamp{% endif %}" {% if settings.product_title_max_lines > 0 %}style="--line-clamp-count: {{ settings.product_title_max_lines }}"{% endif %} data-instant>
+                            {{- product.title -}}
+                        </a>
+                        <div class="ProductItem__ColorSwatchItems">
+                            <div class="ProductItem__ColorSwatchItem">
+                                <div class="ProductItem__ColorSwatchItem__label" style="display: none">Color: {{ g_color_name }}</div>
+                                <div class="ProductItem__Colors">
+                                    {{ color_item }}
+                                </div>
+                            </div>
+                            {%- render 'price-list', product: product, context: 'card' -%}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
 
           {%- when 'line_item_property' -%}
             {%- if block.settings.label != blank -%}
