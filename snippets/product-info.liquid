@@ -540,6 +540,11 @@ Supported variables
     {%- endform -%}
   {%- endunless -%}
 
+    {% if settings.enable-wishlist %}
+        <button type="button" aria-label="Add to wishlist" class="wishlist-button" button-wishlist data-product-handle="{{ product.handle }}">
+        </button>
+    {% endif %}
+
 
     <div class="tabs">
         {% assign product_tab_description = product.metafields.custom_fields["description"] %}
