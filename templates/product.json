@@ -30,7 +30,7 @@
             "show_taxes_notice": false
           }
         },
-        "separator": {
+        "separator_GhcKBd": {
           "type": "separator",
           "settings": {
           }
@@ -88,7 +88,7 @@
         "vendor",
         "title",
         "price",
-        "separator",
+        "separator_GhcKBd",
         "description",
         "share_buttons_7TU7Ax",
         "variant_picker",
