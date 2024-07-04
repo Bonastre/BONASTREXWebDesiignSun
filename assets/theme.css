@@ -8030,14 +8030,9 @@ ul {
   object-fit: cover;
 }
 .shopify-section--main-blog .blog-post-card__info {
-  font-size: 13px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
   justify-content: center;
 }
-.shopify-section--main-blog .blog-post-card__info h4{
+.shopify-section--main-blog .blog-post-card__info .h4{
   font-size: 13px;
   letter-spacing: .2em;
-  text-transform: uppercase;
-  justify-content: center;
 }
