@@ -234,7 +234,7 @@ only way to do it on Shopify right now.
           {%- if product != blank -%}
             {%- for media in product.media -%}
               <button type="button" class="product-gallery__thumbnail Product__SlideshowNavDot" {% if filtered_indexes contains media.position %}hidden{% endif %} data-media-type="{{ media.media_type }}" data-media-position="{{ media.position }}" data-media-id="{{ media.id }}" aria-current="{% if media == default_media %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
-                  *
+
               </button>
             {%- endfor -%}
           {%- endif -%}
