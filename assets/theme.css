@@ -8014,3 +8014,7 @@ ul {
   margin-top: unset;
   margin-bottom: unset;
 }
+.shopify-section--main-product .product-info__block-item .share-buttons {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
