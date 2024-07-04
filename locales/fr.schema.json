@@ -1137,7 +1137,7 @@
         },
         "product_variations": {
           "name": "Variations produit",
-          "instructions": "Utilisez des metafields pour relier des produits entre eux. [En savoir plus](https:\/\/prestige-theme.helpscoutdocs.com\/article\/426-product-variations-linked-products)",
+          "instructions": "Ce bloc est activé dans les paramètres du thème",
           "option_name": "Nom de l'option",
           "option_name_placeholder": "Couleur",
           "option_value_metafield": "Metafield de la valeur de l'option",
