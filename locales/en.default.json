@@ -149,6 +149,14 @@
       "low_stock_with_quantity_count": {
         "one": "Only {{count}} unit left",
         "other": "Only {{count}} units left"
+      },
+      "tabs": {
+        "title1": "Details",
+        "title2": "Care",
+        "reviews": "Reviews"
+      },
+      "buy_it_with": {
+        "title": "Buy it with"
       }
     },
     "store_availability": {
