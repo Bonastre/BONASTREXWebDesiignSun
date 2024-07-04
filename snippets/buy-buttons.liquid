@@ -88,7 +88,12 @@ Supported variables
 
           {%- render 'button', content: button_content, type: 'submit', disabled: button_disabled, style: atc_button_style, background: atc_button_background, text_color: atc_button_text_color, stretch: true -%}
 
-          {%- if show_payment_button -%}
+            {% if settings.enable-wishlist %}
+                <button type="button" aria-label="Add to wishlist" class="wishlist-button" button-wishlist data-product-handle="{{ product.handle }}">
+                </button>
+            {% endif %}
+            
+            {%- if show_payment_button -%}
             {{- form | payment_button -}}
 
             <style>
