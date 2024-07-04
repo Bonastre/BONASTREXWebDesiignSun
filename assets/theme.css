@@ -7974,7 +7974,7 @@ ul {
   margin-bottom: 12px;
 }
 
-.Product__SlideshowNavDot.is-selected {
+.Product__SlideshowNavDot[aria-current=true] {
   border-color: var(--heading-color);
   background: var(--heading-color);
 }
