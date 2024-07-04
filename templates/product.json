@@ -47,6 +47,19 @@
           "settings": {
           }
         },
+        "product_variations_PztPfQ": {
+          "type": "product_variations",
+          "settings": {
+            "option_name": "",
+            "option_value_metafield": "",
+            "products": [
+              "airbag_m",
+              "airbag_s-2",
+              "bon-bon-taupe-zip-puller"
+            ],
+            "selector_style": "swatch"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "disabled": true,
@@ -92,6 +105,7 @@
         "separator_GhcKBd",
         "description",
         "share_buttons_7TU7Ax",
+        "product_variations_PztPfQ",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
