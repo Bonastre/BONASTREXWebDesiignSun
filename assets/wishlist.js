@@ -150,6 +150,7 @@ const resetWishlist = () => {
   return setWishlist([]);
 };
 
+// Wish list button from product page
 const wishListButtonProduct = document.querySelector(
   ".wishlist-button-product",
 );
