@@ -223,7 +223,7 @@ only way to do it on Shopify right now.
       endif
     -%}
 
-    {%- if show_dots_desktop or show_thumbnails_desktop -%}
+    {%- if show_dots_desktop -%}
       <safe-sticky class="product-gallery__thumbnail-list {% unless show_thumbnails_mobile %}hidden{% endunless %} {% unless show_thumbnails_desktop %}md:hidden{% else %}md:block{% endunless %}">
         <product-gallery-navigation align-selected aria-controls="{{ product_gallery_carousel_id }}" class="product-gallery__thumbnail-scroller bleed md:unbleed">
           {%- if product != blank -%}
