@@ -7970,10 +7970,6 @@ ul {
   transition: all 0.2s ease-in-out;
 }
 
-.Product__SlideshowNavDot:not(:last-child) {
-  margin-bottom: 12px;
-}
-
 .Product__SlideshowNavDot[aria-current=true] {
   border-color: #1c1b1b;
   background: #1c1b1b;
