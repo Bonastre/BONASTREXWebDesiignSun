@@ -8026,6 +8026,6 @@ ul {
   Custom blog image
 \* ------------------------------------------------------------ */
 .shopify-section--main-blog .blog-post-card img {
-  max-height: 330px;
+  max-height: 200px;
   object-fit: cover;
 }
