@@ -13,7 +13,7 @@ const selectors = {
 };
 
 const buttons = document.querySelectorAll(selectors.button) || [];
-console.log(selectors.button);
+console.log(buttons);
 
 document.addEventListener("DOMContentLoaded", () => {
   initButtons();
