@@ -7913,7 +7913,7 @@ ul {
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
-  font-family: "Futura LT";
+  transition: all .3s ease-in-out;
 }
 .tabs .tabsNav .tabsNavBtn:before {
   content: "+";
@@ -7938,7 +7938,6 @@ ul {
   align-items: center;
   justify-content: space-between;
   font-size: 13px;
-  font-family: "Futura LT";
   width: 100%;
   border: none;
   outline: none;
@@ -7951,7 +7950,6 @@ ul {
 }
 .tabs .tabsContent .tabsItem {
   font-size: 13px;
-  font-family: "Futura LT";
   font-weight: 300;
 }
 .tabs .tabsContent .tabsActive {
