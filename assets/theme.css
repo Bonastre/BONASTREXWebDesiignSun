@@ -7983,6 +7983,7 @@ ul {
 \* ------------------------------------------------------------ */
 .shopify-section--main-product .product-info__block-item {
   margin-bottom: unset;
+  margin-top: unset;
 }
 .shopify-section--main-product .product-info__block-item .product-title {
   font-family: Futura LT;
