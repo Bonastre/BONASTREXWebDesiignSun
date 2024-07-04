@@ -11,7 +11,7 @@ const selectors = {
   productCard: ".product-card",
   emptyMessage: ".wishlist-empty-message",
 };
-console.log(selectors);
+
 document.addEventListener("DOMContentLoaded", () => {
   initButtons();
   initGrid();
