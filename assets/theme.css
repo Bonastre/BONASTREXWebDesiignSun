@@ -7812,6 +7812,12 @@ ul {
   border-radius: 100%;
   border: 1px solid #000000;
 }
+.ProductItem__Color__Colors.color-selected:before {
+  width: 22px;
+  height: 22px;
+  top: -2px;
+  left: -2px;
+}
 /* ------------------------------------------------------------ *\
   Favorite wishlist
 \* ------------------------------------------------------------ */
