@@ -153,11 +153,15 @@ const resetWishlist = () => {
 const wishListButtonProduct = document.querySelector(
   ".wishlist-button-product",
 );
+let wishListButtonProductActive =
+  wishListButtonProduct.classList.contains("active");
+
+if (wishListButtonProductActive) {
+  wishListButtonProduct.html = "Remove from wishlist";
+}
 
 if (wishListButtonProduct) {
   wishListButtonProduct.addEventListener("click", () => {
-    let wishListButtonProductActive =
-      wishListButtonProduct.classList.contains("active");
     if (wishListButtonProductActive) {
       wishListButtonProductActive.html = "Remove from wishlist";
     } else {
