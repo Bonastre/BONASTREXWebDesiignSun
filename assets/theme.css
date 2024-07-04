@@ -8020,5 +8020,9 @@ ul {
 }
 
 .shopify-section--main-product .product-info__block-item .ProductItem__ColorSwatchItem__label {
-
+  margin-bottom: 30px;
 }
+/* ------------------------------------------------------------ *\
+  Custom blog image
+\* ------------------------------------------------------------ */
+.shopify-section--main-blog
