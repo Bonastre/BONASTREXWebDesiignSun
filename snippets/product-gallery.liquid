@@ -237,14 +237,6 @@ only way to do it on Shopify right now.
                   *
               </button>
             {%- endfor -%}
-          {%- else -%}
-            {%- for i in (1..3) -%}
-              {%- capture placeholder_name -%}product-{% cycle '1', '2', '3', '4', '5' %}{%- endcapture -%}
-
-              <button type="button" class="product-gallery__thumbnail" aria-current="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
-                {{- placeholder_name | placeholder_svg_tag: 'placeholder object-contain' -}}
-              </button>
-            {%- endfor -%}
           {%- endif -%}
         </product-gallery-navigation>
       </safe-sticky>
