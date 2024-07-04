@@ -223,6 +223,38 @@ only way to do it on Shopify right now.
       endif
     -%}
 
+    {%- if show_dots_desktop or show_thumbnails_desktop -%}
+      <safe-sticky class="product-gallery__thumbnail-list {% unless show_thumbnails_mobile %}hidden{% endunless %} {% unless show_thumbnails_desktop %}md:hidden{% else %}md:block{% endunless %}">
+        <product-gallery-navigation align-selected aria-controls="{{ product_gallery_carousel_id }}" class="product-gallery__thumbnail-scroller bleed md:unbleed">
+          {%- if product != blank -%}
+            {%- for media in product.media -%}
+              <button type="button" class="product-gallery__thumbnail" {% if filtered_indexes contains media.position %}hidden{% endif %} data-media-type="{{ media.media_type }}" data-media-position="{{ media.position }}" data-media-id="{{ media.id }}" aria-current="{% if media == default_media %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
+                {{- media | image_url: width: media.preview_image.width | image_tag: sizes: '56px', widths: '56,112,168', class: 'object-contain' -}}
+
+                {%- unless media.media_type == 'image' -%}
+                  <div class="product-gallery__media-badge">
+                    {%- if media.media_type == 'model' -%}
+                      {%- render 'icon' with 'media-model-badge', width: 12 -%}
+                    {%- else -%}
+                      {%- render 'icon' with 'media-video-badge', width: 12 -%}
+                    {%- endif -%}
+                  </div>
+                {% endunless %}
+              </button>
+            {%- endfor -%}
+          {%- else -%}
+            {%- for i in (1..3) -%}
+              {%- capture placeholder_name -%}product-{% cycle '1', '2', '3', '4', '5' %}{%- endcapture -%}
+
+              <button type="button" class="product-gallery__thumbnail" aria-current="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
+                {{- placeholder_name | placeholder_svg_tag: 'placeholder object-contain' -}}
+              </button>
+            {%- endfor -%}
+          {%- endif -%}
+        </product-gallery-navigation>
+      </safe-sticky>
+    {%- endif -%}
+
     {%- if show_thumbnails_mobile or show_thumbnails_desktop -%}
       <safe-sticky class="product-gallery__thumbnail-list {% unless show_thumbnails_mobile %}hidden{% endunless %} {% unless show_thumbnails_desktop %}md:hidden{% else %}md:block{% endunless %}">
         <product-gallery-navigation align-selected aria-controls="{{ product_gallery_carousel_id }}" class="product-gallery__thumbnail-scroller bleed md:unbleed">
