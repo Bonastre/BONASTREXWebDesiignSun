@@ -7861,6 +7861,9 @@ ul {
   width: 100%;
   z-index: 9;
 }
+.wishlist-button-product {
+   margin-top: 10px;
+}
 .wishlist-button .icon-star-product-fill {
   display: none;
 }
