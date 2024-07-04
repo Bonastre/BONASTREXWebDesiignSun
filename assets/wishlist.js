@@ -12,6 +12,9 @@ const selectors = {
   emptyMessage: ".wishlist-empty-message",
 };
 
+const buttons = document.querySelectorAll(selectors.button) || [];
+console.log(selectors.button);
+
 document.addEventListener("DOMContentLoaded", () => {
   initButtons();
   initGrid();
