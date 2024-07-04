@@ -1137,7 +1137,7 @@
         },
         "product_variations": {
           "name": "Product variations",
-          "instructions": "Use metafields to easily setup product variations. [Learn more](https:\/\/prestige-theme.helpscoutdocs.com\/article\/426-product-variations-linked-products)",
+          "instructions": "This block enable on Theme settings",
           "option_name": "Option name",
           "option_name_placeholder": "Color",
           "option_value_metafield": "Option value metafield",
