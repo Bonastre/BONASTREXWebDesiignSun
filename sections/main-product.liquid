@@ -150,6 +150,17 @@
 
         {%- render 'button', content: button_content, style: button_style, type: 'submit', form: product_form_id, disabled: button_disabled -%}
       </buy-buttons>
+
+      <buy-buttons class="buy-buttons">
+        {% if settings.enable-wishlist %}
+          <button type="button" aria-label="Add to wishlist" class="wishlist-button" button-wishlist data-product-handle="{{ product.handle }}">
+            <span class="icon-star-product"></span>
+            <span class="icon-star-product-fill" data-button-content="added"></span>
+          </button>
+        {% endif %}
+      </buy-buttons>
+
+
     </product-sticky-bar>
   </product-rerender>
 {%- endif -%}
