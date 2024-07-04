@@ -43,7 +43,7 @@ Supported variables
       {%- endif -%}
 
       {%- if desktop_layout contains 'grid' or desktop_layout == 'dots_left' -%}
-        --product-gallery-carousel-grid: auto-flow dense / {% if desktop_layout == 'grid' %}auto{% else %}repeat(2, minmax(0, 1fr)){% endif %};
+        --product-gallery-carousel-grid: auto-flow dense / {% if desktop_layout == 'grid' or desktop_layout == 'dots_left' %}auto{% else %}repeat(2, minmax(0, 1fr)){% endif %};
         --product-gallery-carousel-scroll-snap-type: none;
         --product-gallery-carousel-gap: {{ section.settings.desktop_media_grid_gap }}px;
       {%- endif -%}
