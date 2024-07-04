@@ -153,19 +153,26 @@ const resetWishlist = () => {
 const wishListButtonProduct = document.querySelector(
   ".wishlist-button-product",
 );
-let wishListButtonProductActive =
-  wishListButtonProduct.classList.contains("active");
-
-if (wishListButtonProductActive) {
-  wishListButtonProduct.html = "Remove from wishlist";
-}
 
 if (wishListButtonProduct) {
+  let wishListButtonProductActive =
+    wishListButtonProduct.classList.contains("active");
+
+  // Set initial text based on the active state
+  wishListButtonProduct.innerHTML = wishListButtonProductActive
+    ? "Remove from wishlist"
+    : "Add to wishlist";
+
   wishListButtonProduct.addEventListener("click", () => {
+    wishListButtonProductActive = !wishListButtonProductActive;
+
     if (wishListButtonProductActive) {
-      wishListButtonProductActive.html = "Remove from wishlist";
+      wishListButtonProduct.innerHTML = "Remove from wishlist";
     } else {
-      wishListButtonProduct.html = "Add to wishlist";
+      wishListButtonProduct.innerHTML = "Add to wishlist";
     }
+
+    // Toggle the 'active' class
+    wishListButtonProduct.classList.toggle("active");
   });
 }
