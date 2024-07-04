@@ -149,3 +149,18 @@ const wishlistContains = (handle) => {
 const resetWishlist = () => {
   return setWishlist([]);
 };
+
+const wishListButtonProduct = document.querySelector(
+  ".wishlist-button-product",
+);
+
+if (wishListButtonProduct) {
+  wishListButtonProduct.addEventListener("click", () => {
+    let wishListButtonProductActive =
+      wishListButtonProduct.classList.contains("active");
+    if (wishListButtonProductActive) {
+      wishListButtonProductActive.html = "Remove from wishlist";
+    } else {
+    }
+  });
+}
