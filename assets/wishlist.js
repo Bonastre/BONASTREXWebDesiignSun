@@ -12,7 +12,7 @@ const selectors = {
   emptyMessage: ".wishlist-empty-message",
 };
 
-const buttons = document.querySelectorAll(".wishlist-button");
+const buttons = document.querySelector(".wishlist-button");
 console.log(buttons);
 
 document.addEventListener("DOMContentLoaded", () => {
