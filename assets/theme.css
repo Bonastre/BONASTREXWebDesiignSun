@@ -7853,13 +7853,11 @@ ul {
 }
 
 .wishlist-button {
-  position: relative;
+  padding: .25rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  top: .25rem;
-  right: .25rem;
   z-index: 9;
 }
 .wishlist-button .icon-star-product-fill {
