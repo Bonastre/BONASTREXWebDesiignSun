@@ -149,10 +149,11 @@
         -%}
 
         {%- render 'button', content: button_content, style: button_style, type: 'submit', form: product_form_id, disabled: button_disabled -%}
+        {% if settings.enable-wishlist %}
+          <button type="button" aria-label="Add to wishlist" class="wishlist-button" button-wishlist data-product-handle="{{ product.handle }}">
+          </button>
+        {% endif %}
       </buy-buttons>
-           
-
-
     </product-sticky-bar>
   </product-rerender>
 {%- endif -%}
