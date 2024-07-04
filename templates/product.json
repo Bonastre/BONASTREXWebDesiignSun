@@ -30,11 +30,6 @@
             "show_taxes_notice": false
           }
         },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {
-          }
-        },
         "separator": {
           "type": "separator",
           "settings": {
@@ -93,7 +88,6 @@
         "vendor",
         "title",
         "price",
-        "payment_terms",
         "separator",
         "description",
         "share_buttons_7TU7Ax",
