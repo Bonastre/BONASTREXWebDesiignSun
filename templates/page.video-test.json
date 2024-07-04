@@ -289,6 +289,27 @@
         "background": "#000000",
         "controls_color": "#ffffff"
       }
+    },
+    "rich_text_HYeHJM": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_EYtQKe": {
+          "type": "subheading",
+          "settings": {
+            "text": "FOLDER PHONE"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_EYtQKe"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
     }
   },
   "order": [
@@ -300,6 +321,7 @@
     "rich_text_nRUPLa",
     "slideshow_bTWMzd",
     "rich_text_rdnGCz",
-    "slideshow_kn83kJ"
+    "slideshow_kn83kJ",
+    "rich_text_HYeHJM"
   ]
 }
