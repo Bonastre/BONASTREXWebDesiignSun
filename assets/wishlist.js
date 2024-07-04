@@ -171,8 +171,5 @@ if (wishListButtonProduct) {
     } else {
       wishListButtonProduct.innerHTML = "Add to wishlist";
     }
-
-    // Toggle the 'active' class
-    //wishListButtonProduct.classList.toggle("active");
   });
 }
