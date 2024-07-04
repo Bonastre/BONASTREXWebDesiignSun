@@ -91,6 +91,7 @@ const setupButtons = (buttons) => {
     if (wishlistContains(productHandle))
       button.classList.add(BUTTON_ACTIVE_CLASS);
     button.addEventListener("click", () => {
+      console.log("[Shopify Wishlist] Updating wishlist...");
       updateWishlist(productHandle);
       button.classList.toggle(BUTTON_ACTIVE_CLASS);
     });
