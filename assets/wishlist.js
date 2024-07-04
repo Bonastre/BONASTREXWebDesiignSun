@@ -12,10 +12,11 @@ const selectors = {
   emptyMessage: ".wishlist-empty-message",
 };
 
-const buttons = document.querySelector(".wishlist-button");
-console.log(buttons);
-
 document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(function () {
+    const buttons = document.querySelector(".wishlist-button");
+    console.log(buttons);
+  }, 2000);
   initButtons();
   initGrid();
 });
