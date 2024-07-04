@@ -69,6 +69,25 @@
       }
     </style>
 
+    <style>
+      #widgetIframe {
+        z-index: 2147483647;
+        position: fixed;
+        bottom: 0;
+        left:0;
+        width: 75px;
+        height: 75px;
+      }
+    </style>
+    <script>window.addEventListener('touchstart', {});
+      function resizeListener() {
+        document.getElementById('widgetIframe').style.height = 100% - (window.outerHeight - window.innerHeight);
+        document.getElementById('widgetIframe').className = "iframeIos";
+      }
+      window.addEventListener("resize", resizeListener);
+
+    </script>
+
     {%- if request.page_type == 'gift_card' -%}
       <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     {%- endif -%}
