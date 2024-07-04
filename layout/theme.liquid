@@ -34,6 +34,41 @@
     {%- render 'css-variables' -%}
     {%- render 'js-variables' -%}
 
+    <style>
+      @font-face {
+        font-family: 'Futura LT';
+        src: url({{ 'FuturaLT-ExtraBold.eot' | asset_url }});
+        src: url({{ 'FuturaLT-ExtraBold.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+        url({{ 'FuturaLT-ExtraBold.woff2' | asset_url }}) format('woff2'),
+        url({{ 'FuturaLT-ExtraBold.woff' | asset_url }}) format('woff'),
+        url({{ 'FuturaLT-ExtraBold.ttf' | asset_url }}) format('truetype');
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Futura LT';
+        src: url({{ 'FuturaLT-Medium.eot' | asset_url }});
+        src: url({{ 'FuturaLT-Medium.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+        url({{ 'FuturaLT-Medium.woff2' | asset_url }}) format('woff2'),
+        url({{ 'FuturaLT-Medium.woff' | asset_url }}) format('woff'),
+        url({{ 'FuturaLT-Medium.ttf' | asset_url }}) format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Futura LT';
+        src: url({{ 'FuturaLT-Light.eot' | asset_url }});
+        src: url({{ 'FuturaLT-Light.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+        url({{ 'FuturaLT-Light.woff' | asset_url }}) format('woff'),
+        url({{ 'FuturaLT-Light.ttf' | asset_url }}) format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
     {%- if request.page_type == 'gift_card' -%}
       <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     {%- endif -%}
