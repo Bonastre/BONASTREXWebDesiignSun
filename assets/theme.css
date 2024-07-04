@@ -4501,7 +4501,8 @@ product-rerender {
 
 .footer__block--links .link-faded {
   text-transform: uppercase;
-color: }
+  color: rgb(var(--text-color));
+}
 @media screen and (min-width: 700px) {
   .footer__block-list {
     justify-content: var(--footer-content-justify-items);
