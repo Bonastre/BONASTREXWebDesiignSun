@@ -173,6 +173,6 @@ if (wishListButtonProduct) {
     }
 
     // Toggle the 'active' class
-    wishListButtonProduct.classList.toggle("active");
+    //wishListButtonProduct.classList.toggle("active");
   });
 }
