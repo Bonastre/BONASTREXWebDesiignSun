@@ -161,6 +161,7 @@ if (wishListButtonProduct) {
     if (wishListButtonProductActive) {
       wishListButtonProductActive.html = "Remove from wishlist";
     } else {
+      wishListButtonProduct.html = "Add to wishlist";
     }
   });
 }
