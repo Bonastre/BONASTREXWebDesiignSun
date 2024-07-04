@@ -7965,7 +7965,7 @@ ul {
   height: 10px;
   width: 10px;
   border-radius: 100%;
-  border: 2px solid var(--border-color);
+  border: 2px solid #1c1b1b;
   background: transparent;
   transition: all 0.2s ease-in-out;
 }
