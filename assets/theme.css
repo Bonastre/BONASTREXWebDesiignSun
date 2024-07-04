@@ -7853,6 +7853,7 @@ ul {
 }
 
 .wishlist-button {
+  position: relative;
   padding: .25rem;
   display: flex;
   align-items: center;
