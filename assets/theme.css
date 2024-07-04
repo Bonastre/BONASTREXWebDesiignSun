@@ -7981,4 +7981,6 @@ ul {
 /* ------------------------------------------------------------ *\
   Custom product info
 \* ------------------------------------------------------------ */
-.shopify-section--main-product 
+.shopify-section--main-product .product-info__block-item .product-title {
+  
+}
