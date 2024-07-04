@@ -13,10 +13,10 @@ const selectors = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(function () {
-    initButtons();
-    initGrid();
-  }, 1500);
+  //setTimeout(function () {
+  initButtons();
+  initGrid();
+  //}, 1500);
 });
 
 document.addEventListener("shopify-wishlist:updated", (event) => {
