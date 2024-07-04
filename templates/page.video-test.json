@@ -38,10 +38,128 @@
         "text_position": "center",
         "remove_vertical_spacing": false
       }
+    },
+    "slideshow_7q8EhA": {
+      "type": "slideshow",
+      "blocks": {
+        "video_tjmYmk": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/RING_CROSSBODY_TERRA_16_9_WOTEXT_f2a14564-ca4f-4770-9d5e-d8ff8ef70428.mp4",
+            "mobile_video": "shopify:\/\/files\/videos\/RING_CROSSBODY_TERRA_9_16_WOTEXT_ee4022ba-7177-4ae4-8fda-912a2ee6867f.mp4",
+            "allow_sound": true,
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "video_tjmYmk"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    },
+    "rich_text_H7pX8N": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_9FyKHw": {
+          "type": "subheading",
+          "settings": {
+            "text": "RING CROSSBODY"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_9FyKHw"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "slideshow_jMindb": {
+      "type": "slideshow",
+      "blocks": {
+        "video_znAAeC": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/BONBON_CORDS_TAUPE_16_9_WOTEXT.mp4",
+            "mobile_video": "shopify:\/\/files\/videos\/BONBON_CORDS_TAUPE_9_16_WOTEXT.mp4",
+            "allow_sound": true,
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "video_znAAeC"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_edtWQH"
+    "rich_text_edtWQH",
+    "slideshow_7q8EhA",
+    "rich_text_H7pX8N",
+    "slideshow_jMindb"
   ]
 }
