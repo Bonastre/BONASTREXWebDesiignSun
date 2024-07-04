@@ -7806,6 +7806,12 @@ ul {
   height: 18px;
   padding: 2px;
 }
+.ProductItem__Color__Colors.color-selected:before {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  border: 1px solid #000000;
+}
 /* ------------------------------------------------------------ *\
   Favorite wishlist
 \* ------------------------------------------------------------ */
