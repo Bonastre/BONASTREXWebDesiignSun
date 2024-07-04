@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(function () {
     initButtons();
     initGrid();
-  }, 2000);
+  }, 1500);
 });
 
 document.addEventListener("shopify-wishlist:updated", (event) => {
