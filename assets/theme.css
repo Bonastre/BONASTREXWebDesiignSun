@@ -8029,3 +8029,6 @@ ul {
   max-height: 200px;
   object-fit: cover;
 }
+.shopify-section--main-blog .blog-post-card__info {
+  justify-content: center;
+}
