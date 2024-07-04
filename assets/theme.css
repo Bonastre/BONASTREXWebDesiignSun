@@ -7894,3 +7894,67 @@ ul {
   width: 100%;
   letter-spacing: .2em;
 }
+
+/* ------------------------------------------------------------ *\
+  Tab
+\* ------------------------------------------------------------ */
+.tabs .tabsNav {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 640px) {
+  .tabs .tabsNav {
+    padding: 0 24px;
+  }
+}
+.tabs .tabsNav .tabsNavBtn {
+  padding: 10px 5px;
+  border-radius: 3px 3px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Futura LT";
+}
+.tabs .tabsNav .tabsNavBtn:before {
+  content: "+";
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.tabs .tabsNav .tabsActive.tabsNavBtn:before {
+  content: "-";
+}
+.tabs .tabsNav .tabsNavBtn:hover {
+  opacity: 0.85;
+}
+.tabs .tabsNav .tabsActive {
+  display: initial;
+}
+.tabs .tabsNav .tabsActive:hover {
+  opacity: 1;
+}
+.tabs .tabsContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-family: "Futura LT";
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.tabs .tabsContent .tabsItem {
+  display: none;
+  border-radius: 0 0 6px 6px;
+  width: 100%;
+  padding: 20px;
+}
+.tabs .tabsContent .tabsItem {
+  font-size: 13px;
+  font-family: "Futura LT";
+  font-weight: 300;
+}
+.tabs .tabsContent .tabsActive {
+  background: #ffffff;
+  display: initial;
+}
