@@ -7982,8 +7982,9 @@ ul {
   Custom product info
 \* ------------------------------------------------------------ */
 .shopify-section--main-product .product-info__block-item .product-title {
-  font-size: 32px !important;
+  font-size: 32px;
   font-weight: 800;
   text-align: left;
-  letter-spacing: normal !important;
+  letter-spacing: normal;
+  text-transform: uppercase;
 }
