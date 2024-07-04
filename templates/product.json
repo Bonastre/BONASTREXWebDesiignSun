@@ -47,6 +47,11 @@
             "show_below_gallery": false
           }
         },
+        "share_buttons_7TU7Ax": {
+          "type": "share_buttons",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -91,6 +96,7 @@
         "payment_terms",
         "separator",
         "description",
+        "share_buttons_7TU7Ax",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
