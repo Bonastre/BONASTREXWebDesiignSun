@@ -101,24 +101,27 @@
             {%- endfor -%}
           </div>
         {%- endif -%}
+
+        <div class="tabs">
+          {% assign product_tab_description = product.metafields.custom_fields["description"] %}
+          {% assign product_tab_delivery = product.metafields.custom_fields["delivery"] %}
+          <div class="tabsNav">
+            <button class="tabsNavBtn tabsActive" type="button" data-tab="#tab-description">{{ 'product.tabs.title1' | t }}</button>
+            <button class="tabsNavBtn" type="button" data-tab="#tab-livraison">{{ 'product.tabs.title2' | t }}</button>
+          </div>
+          <div class="tabsContent">
+            <div class="tabsItem tabsActive" id="tab-description">
+              <p>{{ product_tab_description }}</p>
+            </div>
+            <div class="tabsItem" id="tab-livraison">
+              <p>{{ product_tab_delivery }}</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="tabs">
-        {% assign product_tab_description = product.metafields.custom_fields["description"] %}
-        {% assign product_tab_delivery = product.metafields.custom_fields["delivery"] %}
-        <div class="tabsNav">
-          <button class="tabsNavBtn tabsActive" type="button" data-tab="#tab-description">{{ 'product.tabs.title1' | t }}</button>
-          <button class="tabsNavBtn" type="button" data-tab="#tab-livraison">{{ 'product.tabs.title2' | t }}</button>
-        </div>
-        <div class="tabsContent">
-          <div class="tabsItem tabsActive" id="tab-description">
-            <p>{{ product_tab_description }}</p>
-          </div>
-          <div class="tabsItem" id="tab-livraison">
-            <p>{{ product_tab_delivery }}</p>
-          </div>
-        </div>
-      </div>
+
     </product-rerender>
   </div>
 </div>
