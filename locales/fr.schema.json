@@ -1057,7 +1057,8 @@
         "grid_2x_highlighted": "Grille (2 par ligne + 1ère agrandie)",
         "carousel_thumbnails_left": "Vignettes à gauche (carousel)",
         "carousel_thumbnails_bottom": "Vignettes en bas (carousel)",
-        "carousel_dots": "Points (carousel)"
+        "carousel_dots": "Points (carousel)",
+        "dots_left": "Points left"
       },
       "desktop_media_grid_gap": "Espacement entre chaque image (desktop)",
       "mobile_controls": "Contrôles sur mobile",
