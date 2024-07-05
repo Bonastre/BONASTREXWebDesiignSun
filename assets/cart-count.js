@@ -2,7 +2,6 @@
 function updateCartCount() {
   $.getJSON("/cart.js", function (cart) {
     let itemCount = cart.item_count;
-    console.log(itemCount);
     $("#cart-count").text(itemCount);
   });
 }
