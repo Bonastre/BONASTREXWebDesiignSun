@@ -1,13 +1,12 @@
 // Function to update the cart count
+function updateCartCount() {
+  $.getJSON("/cart.js", function (cart) {
+    var itemCount = cart.item_count;
+    $("#cart-count").text(itemCount);
+  });
+}
 // Initialize and set event listeners
 $(document).ready(function () {
-  function updateCartCount() {
-    $.getJSON("/cart.js", function (cart) {
-      var itemCount = cart.item_count;
-      $("#cart-count").text(itemCount);
-    });
-  }
-
   // Update the cart count on page load
   updateCartCount();
 
