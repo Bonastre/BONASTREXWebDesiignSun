@@ -12,7 +12,7 @@ $(document).ready(function () {
   updateCartCount();
 
   // Add an event listener to update the cart count when items are added to the cart
-  $(document).on("click", ".buy-buttons ", function (e) {
+  $(document).on("click", ".buy-buttons .button", function (e) {
     e.preventDefault();
     var $this = $(this);
     var formData = {
