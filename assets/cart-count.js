@@ -5,6 +5,8 @@ $(document).ready(function () {
       const textElement = $("#cart-item-text");
       const text = itemCount === 1 ? "item is" : "items are";
 
+      console.log(itemCount);
+
       const dynamicText = itemCount + " " + text + " in your cart";
 
       textElement.text(dynamicText);
