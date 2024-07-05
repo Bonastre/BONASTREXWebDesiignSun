@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
   let buttons = document.querySelectorAll(".buy-buttons");
-  buttons.forEach().on("click", function () {
+  buttons.forEach((e) => e.on("click", function () {
     let parent = e.target.closest(".shopify-product-form");
     let productId = parent.querySelector("input[name=product-id]").value;
 
