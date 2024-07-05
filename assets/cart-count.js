@@ -1,6 +1,5 @@
 jQuery(document).ready(function ($) {
   let buttons = document.querySelectorAll(".buy-buttons");
-
   buttons.forEach().on("click", function () {
     var obj = $(this);
     $.ajax({
@@ -21,10 +20,12 @@ jQuery(document).ready(function ($) {
             let total = cart.item_count;
             $(".cart-item-count").html(total);
           },
+
+          error: function (xhr, status, error) {
+            console.log(error);
+          },
         });
       },
-    });
-  });
 });
 
 /*
