@@ -22,12 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       const parent = e.target.closest(".shopify-product-form");
-      console.log(parent);
-      const nextElement = e.target.nextElementSibling;
 
-      console.log(nextElement);
-
-      const variantId = 8678454690135;
+      const variantId = parent.querySelector("input[name='id']").value;
       console.log(variantId);
       const formData = {
         items: [
