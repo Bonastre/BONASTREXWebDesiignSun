@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add event listener to add-to-cart buttons
   document.querySelectorAll(".buy-buttons").forEach((button) => {
-    console.log(button);
     button.addEventListener("click", (e) => {
       e.preventDefault();
+      console.log(button);
       const variantId = document.querySelector(
         "input [name='product-id']",
       ).value;
