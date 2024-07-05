@@ -5,6 +5,8 @@ function updateCartCount() {
     $("#cart-count").text(itemCount);
   });
 }
+
+let selectedProducts = {};
 // Initialize and set event listeners
 $(document).ready(function () {
   // Update the cart count on page load
