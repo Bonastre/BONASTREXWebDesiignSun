@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Update the cart count on page load
   updateCartCount();
 
-  const buttons = document.querySelectorAll(".buy-buttons .button");
-  console.log(buttons);
+  const button = document.querySelectorAll(".buy-buttons .button.w-full");
+  console.log(button);
   // Add event listener to add-to-cart buttons
   document.querySelectorAll(".buy-buttons .button").forEach((button) => {
     button.addEventListener("click", (e) => {
