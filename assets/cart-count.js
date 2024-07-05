@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const variantId = "8678454690135";
+      const variantId = 8678454690135;
       console.log(variantId);
       const formData = {
         items: [
