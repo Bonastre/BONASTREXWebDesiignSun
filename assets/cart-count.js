@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const variantId = document.querySelectorAll("input [name='product-id']");
+      const variantId = "8678454690135";
       console.log(variantId);
       const formData = {
         items: [
