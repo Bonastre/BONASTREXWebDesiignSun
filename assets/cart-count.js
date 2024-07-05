@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
         .then((response) => {
           return response.json();
+          console.log("Response:", response);
         })
         .catch((error) => {
           console.error("Error:", error);
