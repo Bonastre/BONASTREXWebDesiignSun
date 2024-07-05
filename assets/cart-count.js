@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const myCart = window.Shopify && window.Shopify.Checkout && window.Shopify.Checkout.Cart;
+      const myCart =
+        window.Shopify &&
+        window.Shopify.Checkout &&
+        window.Shopify.Checkout.Cart;
 
       const parent = e.target.closest(".shopify-product-form");
 
@@ -41,54 +44,51 @@ document.addEventListener("DOMContentLoaded", () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
-      })
-          .then((res) => {
-            if (res.status === 400) {
-              alert('Please select a quantity');
-            }
-            return res.json();
-          });
+      }).then((res) => {
+        if (res.status === 400) {
+          alert("Please select a quantity");
+        }
+        return res.json();
+      });
 
-
-      const config = fetchConfig('javascript');
-      config.headers['X-Requested-With'] = 'XMLHttpRequest';
-      delete config.headers['Content-Type'];
+      const config = fetchConfig("javascript");
+      config.headers["X-Requested-With"] = "XMLHttpRequest";
+      delete config.headers["Content-Type"];
 
       // Create FormData
       const formData = new FormData();
-      formData.append('id', variantId);
-      formData.append('quantity', 1);
+      formData.append("id", variantId);
+      formData.append("quantity", 1);
       if (myCart) {
         formData.append(
-            'sections',
-            myCart.getSectionsToRender().map((section) => section.id)
+          "sections",
+          myCart.getSectionsToRender().map((section) => section.id),
         );
-        formData.append('sections_url', window.location.pathname);
+        formData.append("sections_url", window.location.pathname);
       }
 
       config.body = formData;
 
       fetch(`${routes.cart_add_url}`, config)
-          .then((response) => response.json())
-          .then((response) => {
-            if (response.status) {
-              console.error('Error:', response.description);
-              return;
-            } else if (!myCart) {
-              window.location = window.routes.cart_url;
-              return;
-            }
+        .then((response) => response.json())
+        .then((response) => {
+          if (response.status) {
+            console.error("Error:", response.description);
+            return;
+          } else if (!myCart) {
+            window.location = window.routes.cart_url;
+            return;
+          }
 
-            myCart.renderContents(response);
-            myCart.classList.remove('is-empty');
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });
+          myCart.renderContents(response);
+          myCart.classList.remove("is-empty");
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
 
-
-      const res = await fetch("/cart.json");
-      const cart = await res.json();
+      const res = fetch("/cart.json");
+      const cart = res.json();
 
       document.querySelectorAll(".cart-count-bubble").forEach((el) => {
         el.textContent = cart.item_count;
