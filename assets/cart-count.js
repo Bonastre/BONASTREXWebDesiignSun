@@ -38,10 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const variantId = parent.querySelector("input[name='product-id']").value;
 
       const routes = window.routes;
-      const formData = {
-        id: variantId,
-        quantity: 1,
-      };
+
+      // Create FormData
+      const formData = new FormData();
+      formData.append("id", lastProductId);
+      formData.append("quantity", lastProductQuantity);
       const requestBody = {
         items: formData,
       };
