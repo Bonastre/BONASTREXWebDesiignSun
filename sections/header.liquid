@@ -281,9 +281,9 @@
             <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
             </cart-dot>
 
-          {% if cart.item_count > 0 %}
+
               <span class="cart-count">{{ cart.item_count }}</span>
-            {% endif %}
+            
         </a>
 
 {% comment %}      <a href="{{ routes.cart_url }}" class="relative" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %} data-no-instant>
