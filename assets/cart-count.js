@@ -31,6 +31,8 @@ $(document).ready(function () {
       quantity: data.quantity,
     }));
 
+    console.log(productData);
+
     $.ajax({
       type: "POST",
       url: "/cart/add.js",
@@ -40,7 +42,7 @@ $(document).ready(function () {
         updateCartCount();
         alert("Item added to cart!");
       },
-      error: function () {
+      error: function (xhr, status, error) {
         console.error("Error adding to cart:", xhr, status, error);
         alert("There was an error adding the item to the cart.");
       },
