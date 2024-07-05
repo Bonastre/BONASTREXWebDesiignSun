@@ -24,6 +24,11 @@ $(document).ready(function () {
       ],
     };
 
+    const productData = Object.values(selectedProducts).map((formData) => ({
+      id: data.id,
+      quantity: data.quantity,
+    }));
+
     $.ajax({
       type: "POST",
       url: "/cart/add.js",
