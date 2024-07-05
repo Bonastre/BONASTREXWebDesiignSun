@@ -25,12 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const variantId = parent.querySelector("input[name='product-id']").value;
       const formData = {
-        items: [
-          {
-            id: variantId,
-            quantity: 1,
-          },
-        ],
+        id: variantId,
+        quantity: 1,
       };
 
       fetch("/cart/add.js", {
