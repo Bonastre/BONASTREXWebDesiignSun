@@ -4,13 +4,15 @@ jQuery(document).ready(function ($) {
     let parent = e.target.closest(".shopify-product-form");
     let input = parent.querySelector('input[name="id"]');
 
+    console.log(input);
+
     var obj = $(this);
     $.ajax({
       type: "POST",
       url: "/cart/add.js",
       data: {
         quantity: 1,
-        id: $(this).attr("data-variant"),
+        id: input,
       },
       dataType: "json",
       success: function (data) {
