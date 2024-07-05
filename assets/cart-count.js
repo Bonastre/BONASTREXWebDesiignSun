@@ -20,10 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".buy-buttons").forEach((button) => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
+
+      const variantId = nextSibling.getAttribute("value");
       console.log(button);
-      const variantId = document.querySelector(
-        "input [name='product-id']",
-      ).value;
       const formData = {
         items: [
           {
