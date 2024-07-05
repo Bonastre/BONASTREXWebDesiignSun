@@ -1,7 +1,8 @@
 // Function to update the cart count
 function updateCartCount() {
   $.getJSON("/cart.js", function (cart) {
-    var itemCount = cart.item_count;
+    let itemCount = cart.item_count;
+    console.log(itemCount);
     $("#cart-count").text(itemCount);
   });
 }
@@ -13,10 +14,9 @@ $(document).ready(function () {
   // Add an event listener to update the cart count when items are added to the cart
   $(document).on("click", ".buy-buttons .button", function (e) {
     e.preventDefault();
-    var $this = $(this);
+    let $this = $(this);
     let id = $('input[name="product-id"]').val();
-    console.log(id);
-    var formData = {
+    let formData = {
       items: [
         {
           id: id,
