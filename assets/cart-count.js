@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
         id: variantId,
         quantity: 1,
       };
+      const requestBody = {
+        items: formData,
+      };
 
       fetch("/cart/add.js", {
         method: "POST",
@@ -35,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(requestBody),
       })
         .then((response) => {
           if (!response.ok) {
