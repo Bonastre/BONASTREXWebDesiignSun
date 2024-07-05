@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".buy-buttons button").forEach((button) => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
-      const variantId = e.target.getAttribute("data-variant-id");
+      const variantId = document.querySelector("input [name='id']").value;
       const formData = {
         items: [
           {
