@@ -16,7 +16,7 @@ $(document).ready(function () {
     e.preventDefault();
     var $this = $(this);
     let id = $('input[name="product-id"]').val();
-    log(id);
+    console.log(id);
     var formData = {
       items: [
         {
