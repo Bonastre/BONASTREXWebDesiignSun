@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      
+
 
       const parent = e.target.closest(".shopify-product-form");
 
