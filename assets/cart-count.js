@@ -42,13 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
       })
         .then((response) => {
           updateCartCount();
-          return response.json();
+
           if (
             window.themeVariables.settings.cartType === "page" ||
             window.themeVariables.settings.pageType === "cart"
           ) {
             return (window.location.href = `${Shopify.routes.root}cart`);
           }
+          return response.json();
         })
         .catch((error) => {
           console.error("Error:", error);
