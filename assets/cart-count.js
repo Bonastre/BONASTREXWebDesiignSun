@@ -24,6 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
       const parent = e.target.closest(".shopify-product-form");
 
       const variantId = parent.querySelector("input[name='product-id']").value;
+
+      let formData = {
+        items: [
+          {
+            id: variantId,
+            quantity: 1,
+          },
+        ],
+      };
+      fetch(window.Shopify.routes.root + "cart/add.js", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     });
   });
 });
