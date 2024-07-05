@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
       let productId;
       let quantity;
 
+      console.log(myCart)
+
       const parent = e.target.closest(".shopify-product-form");
 
       const variantId = parent.querySelector("input[name='product-id']").value;
