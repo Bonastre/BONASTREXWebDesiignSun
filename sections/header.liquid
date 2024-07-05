@@ -281,7 +281,12 @@
         {%- endif -%}
 
         <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
-          {{ cart.item_count }}
+          {% if cart.item_count > 1 %}
+              <div class="product__count">
+                {{ cart.item_count }}
+              </div>
+          {% endif %}
+
         </cart-dot>
       </a>
     </nav>
