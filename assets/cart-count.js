@@ -2,6 +2,8 @@ jQuery(document).ready(function ($) {
   let buttons = document.querySelectorAll(".buy-buttons");
   buttons.forEach().on("click", function () {
     let parent = e.target.closest(".shopify-product-form");
+    let variant-id = parent.querySelector("input[name=variant]").value;
+
     var obj = $(this);
     $.ajax({
       type: "POST",
