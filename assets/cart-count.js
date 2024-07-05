@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
 
   // Add event listener to add-to-cart buttons
-  document.querySelectorAll(".add-to-cart").forEach((button) => {
+  document.querySelectorAll(".buy-buttons button").forEach((button) => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
       const variantId = e.target.getAttribute("data-variant-id");
