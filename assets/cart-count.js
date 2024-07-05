@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const parent = e.target.closest(".shopify-product-form");
 
-      const variantId = parent.querySelector("input[name='product-id']").value;
+      const variantId = parent.querySelector("input[name='id']").value;
 
       let formData = {
         items: [
