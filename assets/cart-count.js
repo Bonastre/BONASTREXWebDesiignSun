@@ -1,5 +1,7 @@
-$(function () {
-  $(".varients-item").on("click", function () {
+jQuery(document).ready(function ($) {
+  let buttons = document.querySelectorAll(".buy-buttons");
+
+  buttons.forEach().on("click", function () {
     var obj = $(this);
     $.ajax({
       type: "POST",
