@@ -20,12 +20,10 @@ jQuery(document).ready(function ($) {
             let total = cart.item_count;
             $(".cart-item-count").html(total);
           },
-
-          error: function (xhr, status, error) {
-            console.log(error);
-          },
         });
       },
+    });
+  });
 });
 
 /*
