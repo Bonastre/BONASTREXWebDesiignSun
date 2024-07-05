@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".buy-buttons button").forEach((button) => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
-      const variantId = document.querySelector("input [name='id']").value;
+      const variantId = document.querySelector(
+        "input [name='product-id']",
+      ).value;
       const formData = {
         items: [
           {
@@ -15,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         ],
       };
+
+      console.log(formData);
 
       fetch("/cart/add.js", {
         method: "POST",
