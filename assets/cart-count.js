@@ -18,12 +18,8 @@ $(document).ready(function () {
     let $this = $(this);
     let id = $('input[name="product-id"]').val();
     let formData = {
-      items: [
-        {
-          id: id,
-          quantity: 1,
-        },
-      ],
+      id: id,
+      quantity: 1,
     };
 
     const productData = Object.values(selectedProducts).map((formData) => ({
