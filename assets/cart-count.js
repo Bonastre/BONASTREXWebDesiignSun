@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
+      const parent = e.target.closest(".shopify-product-form");
+      console.log(parent);
       const nextElement = e.target.nextElementSibling;
 
       console.log(nextElement);
