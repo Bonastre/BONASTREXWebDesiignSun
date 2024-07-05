@@ -1,5 +1,3 @@
-
-
 function updateCartCount() {
   fetch("/cart.js")
     .then((response) => response.json())
@@ -26,6 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const parent = e.target.closest(".shopify-product-form");
 
       const variantId = parent.querySelector("input[name='product-id']").value;
-      
+    });
   });
 });
