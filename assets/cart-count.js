@@ -26,6 +26,10 @@ function fetchConfig(type = "json") {
   return config;
 }
 
+const routes = {
+  cart_add_url: "/cart/add.js",
+  cart_url: "/cart",
+};
 document.addEventListener("DOMContentLoaded", () => {
   // Update the cart count on page load
   updateCartCount();
