@@ -1,33 +1,30 @@
 jQuery(document).ready(function ($) {
-  let buttons = $(".buy-buttons");
-  buttons.each(function () {
-    $(this).on("click", function (e) {
-      let parent = e.target.closest(".shopify-product-form");
-      let productId = parent.querySelector("input[name=product-id]").value;
+  let buttons = document.querySelectorAll(".buy-buttons");
+  buttons.forEach().on("click", function () {
+    let parent = e.target.closest(".shopify-product-form");
+    let input = parent.querySelector('input[name="id"]');
 
-      var obj = $(this);
-      $.ajax({
-        type: "POST",
-        url: "/cart/add.js",
-        data: {
-          quantity: 1,
-          id: productId,
-        },
-        dataType: "json",
-        success: function (data) {
-          $.ajax({
-            type: "GET",
-            dataType: "json",
-            url: "/cart.js",
-            success: function (cart) {
-              // once you get the data from AJAX API you need to get the latest count
-              let total = cart.item_count;
-              console.log(to);
-              $(".header__product-count").html(total);
-            },
-          });
-        },
-      });
+    var obj = $(this);
+    $.ajax({
+      type: "POST",
+      url: "/cart/add.js",
+      data: {
+        quantity: 1,
+        id: $(this).attr("data-variant"),
+      },
+      dataType: "json",
+      success: function (data) {
+        $.ajax({
+          type: "GET",
+          dataType: "json",
+          url: "/cart.js",
+          success: function (cart) {
+            // once you get the data from AJAX API you need to get the latest count
+            let total = cart.item_count;
+            $(".header__product-count").html(total);
+          },
+        });
+      },
     });
   });
 });
