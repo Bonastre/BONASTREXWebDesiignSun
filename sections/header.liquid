@@ -299,17 +299,6 @@
         <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
         </cart-dot>
 
-
-        <!-- Cart Icon -->
-        <div id="cart-icon">
-          <span class="js-cart-item-count">0</span>
-        </div>
-
-        {% if cart.item_count > 0 %}
-          <div class="header__product-count">
-            {{ cart.item_count }}
-          </div>
-        {% endif %}
       </a>
 {% endcomment %}    </nav>
 
