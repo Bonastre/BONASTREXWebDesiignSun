@@ -280,7 +280,9 @@
           <span class="h6 link-faded md-max:hidden">{{ 'header.general.cart' | t }} (<cart-count>{{ cart.item_count }}</cart-count>)</span>
         {%- endif -%}
 
-        <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}"></cart-dot>
+        <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
+          {{ cart.item_count }}
+        </cart-dot>
       </a>
     </nav>
 
