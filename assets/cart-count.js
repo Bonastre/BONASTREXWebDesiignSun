@@ -43,7 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => {
           updateCartCount();
           return response.json();
-          console.log("Response:", response);
+          if (
+            window.themeVariables.settings.cartType === "page" ||
+            window.themeVariables.settings.pageType === "cart"
+          ) {
+            return (window.location.href = `${Shopify.routes.root}cart`);
+          }
         })
         .catch((error) => {
           console.error("Error:", error);
