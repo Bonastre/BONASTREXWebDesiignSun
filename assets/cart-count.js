@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const lastProductId = parent.querySelector(
         "input[name='product-id']",
       ).value;
-      const lastProductQuantity = ;
+      const lastProductQuantity = 1;
       const variantId = parent.querySelector("input[name='product-id']").value;
 
       const routes = window.routes;
