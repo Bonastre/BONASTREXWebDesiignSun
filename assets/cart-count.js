@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify(formData),
       })
         .then((response) => {
+          updateCartCount();
           return response.json();
           console.log("Response:", response);
         })
