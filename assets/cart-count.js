@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
+      const myCart = window.Shopify && window.Shopify.Checkout && window.Shopify.Checkout.Cart;
+
       const parent = e.target.closest(".shopify-product-form");
 
       const variantId = parent.querySelector("input[name='id']").value;
