@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let productId;
       let quantity;
 
-      console.log(myCart)
+      console.log(myCart);
 
       const parent = e.target.closest(".shopify-product-form");
 
