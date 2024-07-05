@@ -25,11 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const variantId = parent.querySelector("input[name='product-id']").value;
       const formData = {
-        id: variantId,
-        quantity: 1,
-      };
-      const requestBody = {
-        items: formData,
+        items: [
+          {
+            id: variantId,
+            quantity: 1,
+          },
+        ],
       };
 
       fetch("/cart/add.js", {
@@ -38,9 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(requestBody),
+        body: JSON.stringify(formData),
       })
         .then((response) => {
+          console.log(response);
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }
