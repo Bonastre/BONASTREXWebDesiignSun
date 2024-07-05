@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const variantId = nextSibling.getAttribute("value");
+      const variantId = nextElementSibling.getAttribute("value");
       console.log(button);
       const formData = {
         items: [
