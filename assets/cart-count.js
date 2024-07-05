@@ -25,6 +25,7 @@ function fetchConfig(type = "json") {
   };
   return config;
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   // Update the cart count on page load
   updateCartCount();
