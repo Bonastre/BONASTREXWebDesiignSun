@@ -21,11 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const nextElementSibling = e.target.nextElementSibling;
-      console.log(nextElementSibling);
-
-      const variantId = nextElementSibling.getAttribute("value");
-      console.log(button);
+      const variantId = document.querySelectorAll("input [name='product-id']");
+      console.log(variantId);
       const formData = {
         items: [
           {
