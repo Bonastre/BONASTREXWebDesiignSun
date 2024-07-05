@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
           success: function (cart) {
             // once you get the data from AJAX API you need to get the latest count
             let total = cart.item_count;
-            $(".cart-item-count").html(total);
+            $(".header__product-count").html(total);
           },
         });
       },
