@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       const nextElementSibling = e.target.nextElementSibling;
+      console.log(nextElementSibling);
 
       const variantId = nextElementSibling.getAttribute("value");
       console.log(button);
