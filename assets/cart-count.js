@@ -1,18 +1,41 @@
+// Function to update the cart count
+// Initialize and set event listeners
 $(document).ready(function () {
-  function updateCartItemCount() {
-    Shopify.cart.getCart(function (cart) {
-      const itemCount = cart.item_count;
-      const textElement = $("#cart-item-text");
-      const text = itemCount === 1 ? "item is" : "items are";
-
-      console.log(itemCount);
-
-      const dynamicText = itemCount + " " + text + " in your cart";
-
-      textElement.text(dynamicText);
+  function updateCartCount() {
+    $.getJSON("/cart.js", function (cart) {
+      var itemCount = cart.item_count;
+      $("#cart-count").text(itemCount);
     });
   }
 
-  updateCartItemCount();
-  Shopify.onCartUpdate = updateCartItemCount;
+  // Update the cart count on page load
+  updateCartCount();
+
+  // Add an event listener to update the cart count when items are added to the cart
+  $(document).on("click", ".add-to-cart", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var formData = {
+      items: [
+        {
+          id: $this.data("variant-id"),
+          quantity: 1,
+        },
+      ],
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "/cart/add.js",
+      dataType: "json",
+      data: formData,
+      success: function (response) {
+        updateCartCount();
+        alert("Item added to cart!");
+      },
+      error: function () {
+        alert("There was an error adding the item to the cart.");
+      },
+    });
+  });
 });
