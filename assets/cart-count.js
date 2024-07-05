@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const myCart = window.Shopify && window.Shopify.Checkout && window.Shopify.Checkout.myCart;
+      
 
       const parent = e.target.closest(".shopify-product-form");
 
@@ -33,8 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const requestBody = {
         items: data,
       };
-
-      console.log(requestBody);
       fetch(`${window.Shopify.routes.root}cart/add.js`, {
         method: "POST",
         headers: {
