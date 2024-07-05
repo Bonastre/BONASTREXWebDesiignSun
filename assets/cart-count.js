@@ -42,8 +42,7 @@ $(document).ready(function () {
         updateCartCount();
         alert("Item added to cart!");
       },
-      error: function (xhr, status, error) {
-        console.error("Error adding to cart:", xhr, status, error);
+      error: function () {
         alert("There was an error adding the item to the cart.");
       },
     });
