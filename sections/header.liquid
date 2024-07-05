@@ -278,7 +278,9 @@
             {% endif %}>
             <span class="hidden-tablet-and-up">{%- render 'icon' with 'cart' ,class: 'header__nav-icon' -%}</span>
             <span class="hidden-phone">{%- render 'icon' with 'cart-desktop' -%}</span>
-            <span class="cart-count">{{ cart.item_count }}</span>
+            {% if cart.item_count > 0 %}
+              <span class="cart-count">{{ cart.item_count }}</span>
+            {% endif %}
         </a>
 
 {% comment %}      <a href="{{ routes.cart_url }}" class="relative" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %} data-no-instant>
