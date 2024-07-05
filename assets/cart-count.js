@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const parent = e.target.closest(".shopify-product-form");
 
-      const variantId = parent.querySelector("input[name='id']").value;
-      console.log(variantId);
+      const variantId = parent.querySelector("input[name='product-id']").value;
       const formData = {
         items: [
           {
@@ -33,8 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         ],
       };
-
-      console.log(formData);
 
       fetch("/cart/add.js", {
         method: "POST",
