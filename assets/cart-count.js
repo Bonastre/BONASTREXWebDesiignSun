@@ -1,3 +1,38 @@
+jQuery(document).ready(function ($) {
+  let buttons = $(".buy-buttons");
+  buttons.each(function () {
+    $(this).on("click", function (e) {
+      let parent = e.target.closest(".shopify-product-form");
+      let productId = parent.querySelector("input[name=product-id]").value;
+
+      var obj = $(this);
+      $.ajax({
+        type: "POST",
+        url: "/cart/add.js",
+        data: {
+          quantity: 1,
+          id: productId,
+        },
+        dataType: "json",
+        success: function (data) {
+          $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "/cart.js",
+            success: function (cart) {
+              // once you get the data from AJAX API you need to get the latest count
+              let total = cart.item_count;
+              console.log(to);
+              $(".header__product-count").html(total);
+            },
+          });
+        },
+      });
+    });
+  });
+});
+
+/*
 function updateCartCount() {
   fetch("/cart.js")
     .then((response) => response.json())
@@ -23,9 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const parent = e.target.closest(".shopify-product-form");
 
-      const variantId = parent.querySelector("input[name='id']").value;
-
-      let formData = {
+      const variantId = parent.querySelector("input[name='product-id']").value;
+      const formData = {
         items: [
           {
             id: variantId,
@@ -33,27 +67,31 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         ],
       };
-      fetch(window.Shopify.routes.root + "cart/add.js", {
+
+      fetch("/cart/add.js", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(formData),
       })
         .then((response) => {
-          updateCartCount();
-
-          if (
-            window.themeVariables.settings.cartType === "page" ||
-            window.themeVariables.settings.pageType === "cart"
-          ) {
-            return (window.location.href = `${Shopify.routes.root}cart`);
+          console.log(response);
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
           }
           return response.json();
         })
+        .then((data) => {
+          updateCartCount();
+          alert("Item added to cart!");
+        })
         .catch((error) => {
-          console.error("Error:", error);
+          console.error("Error adding to cart:", error);
+          alert("There was an error adding the item to the cart.");
         });
     });
   });
 });
+*/
