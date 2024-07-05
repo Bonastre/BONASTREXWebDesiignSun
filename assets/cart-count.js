@@ -12,6 +12,19 @@ function updateCartCount() {
     });
 }
 
+function fetchConfig(type = "json") {
+  const config = {
+    method: "POST",
+    headers: {
+      "Content-Type":
+        type === "json"
+          ? "application/json"
+          : "application/x-www-form-urlencoded",
+      Accept: "application/json",
+    },
+  };
+  return config;
+}
 document.addEventListener("DOMContentLoaded", () => {
   // Update the cart count on page load
   updateCartCount();
