@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const requestBody = {
         items: formData,
       };
+      
       await fetch(`${window.Shopify.routes.root}cart/add.js`, {
         method: "POST",
         headers: {
