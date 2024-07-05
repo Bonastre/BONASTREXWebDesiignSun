@@ -15,11 +15,12 @@ $(document).ready(function () {
   $(document).on("click", ".buy-buttons .button", function (e) {
     e.preventDefault();
     var $this = $(this);
-    let id = $('input[name="id"]').val();
+    let id = $('input[name="product-id"]').val();
+    log(id);
     var formData = {
       items: [
         {
-          id: $this.data("variant-id"),
+          id: id,
           quantity: 1,
         },
       ],
