@@ -1,3 +1,31 @@
+$(function () {
+  $(".varients-item").on("click", function () {
+    var obj = $(this);
+    $.ajax({
+      type: "POST",
+      url: "/cart/add.js",
+      data: {
+        quantity: 1,
+        id: $(this).attr("data-variant"),
+      },
+      dataType: "json",
+      success: function (data) {
+        $.ajax({
+          type: "GET",
+          dataType: "json",
+          url: "/cart.js",
+          success: function (cart) {
+            // once you get the data from AJAX API you need to get the latest count
+            let total = cart.item_count;
+            $(".cart-item-count").html(total);
+          },
+        });
+      },
+    });
+  });
+});
+
+/*
 function updateCartCount() {
   fetch("/cart.js")
     .then((response) => response.json())
@@ -59,3 +87,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+*/
