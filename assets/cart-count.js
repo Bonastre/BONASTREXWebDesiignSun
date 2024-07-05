@@ -15,7 +15,7 @@ $(document).ready(function () {
   $(document).on("click", ".buy-buttons .button", function (e) {
     e.preventDefault();
     var $this = $(this);
-    let id = $this.data("variant-id");
+    let id = $('input[name="id"]').val();
     var formData = {
       items: [
         {
