@@ -278,7 +278,10 @@
             {% endif %}>
             <span class="hidden-tablet-and-up">{%- render 'icon' with 'cart' ,class: 'header__nav-icon' -%}</span>
             <span class="hidden-phone">{%- render 'icon' with 'cart-desktop' -%}</span>
-            {% if cart.item_count > 0 %}
+            <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
+            </cart-dot>
+
+          {% if cart.item_count > 0 %}
               <span class="cart-count">{{ cart.item_count }}</span>
             {% endif %}
         </a>
