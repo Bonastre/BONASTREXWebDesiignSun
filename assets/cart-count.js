@@ -5,8 +5,6 @@ jQuery(document).ready(function ($) {
       let parent = e.target.closest(".shopify-product-form");
       let productId = parent.querySelector("input[name=product-id]").value;
 
-      console.log(productId);
-
       var obj = $(this);
       $.ajax({
         type: "POST",
@@ -24,6 +22,7 @@ jQuery(document).ready(function ($) {
             success: function (cart) {
               // once you get the data from AJAX API you need to get the latest count
               let total = cart.item_count;
+              console.log(total);
               $(".header__product-count").html(total);
             },
           });
