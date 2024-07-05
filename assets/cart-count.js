@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const parent = e.target.closest(".shopify-product-form");
 
       const variantId = parent.querySelector("input[name='id']").value;
-      const formData = {
+      const data = {
         items: [
           {
             id: variantId,
@@ -33,29 +33,64 @@ document.addEventListener("DOMContentLoaded", () => {
         ],
       };
 
-      fetch("/cart/add.js", {
+      fetch(`${window.Shopify.routes.root}cart/add.js`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       })
-        .then((response) => {
-          console.log(response);
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          updateCartCount();
-          alert("Item added to cart!");
-        })
-        .catch((error) => {
-          console.error("Error adding to cart:", error);
-          alert("There was an error adding the item to the cart.");
-        });
+          .then((res) => {
+            if (res.status === 400) {
+              alert('Please select a quantity');
+            }
+            return res.json();
+          });
+
+
+      const config = fetchConfig('javascript');
+      config.headers['X-Requested-With'] = 'XMLHttpRequest';
+      delete config.headers['Content-Type'];
+
+      // Create FormData
+      const formData = new FormData();
+      formData.append('id', variantId);
+      formData.append('quantity', 1);
+      if (myCart) {
+        formData.append(
+            'sections',
+            myCart.getSectionsToRender().map((section) => section.id)
+        );
+        formData.append('sections_url', window.location.pathname);
+      }
+
+      config.body = formData;
+
+      fetch(`${routes.cart_add_url}`, config)
+          .then((response) => response.json())
+          .then((response) => {
+            if (response.status) {
+              console.error('Error:', response.description);
+              return;
+            } else if (!myCart) {
+              window.location = window.routes.cart_url;
+              return;
+            }
+
+            myCart.renderContents(response);
+            myCart.classList.remove('is-empty');
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+
+
+      const res = await fetch("/cart.json");
+      const cart = await res.json();
+
+      document.querySelectorAll(".cart-count-bubble").forEach((el) => {
+        el.textContent = cart.item_count;
+      });
     });
   });
 });
