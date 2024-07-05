@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error:", response.description);
             return;
           } else if (!myCart) {
-            window.location = window.routes.cart_url;
+            window.location = routes.cart_url;
             return;
           }
 
