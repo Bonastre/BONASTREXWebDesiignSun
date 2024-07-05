@@ -1,47 +1,43 @@
-// Function to update the cart count
-function updateCartCount() {
-  $.getJSON("/cart.js", function (cart) {
-    let itemCount = cart.item_count;
-    $("#cart-count").text(itemCount);
-  });
-}
-
-let selectedProducts = {};
-// Initialize and set event listeners
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", () => {
   // Update the cart count on page load
   updateCartCount();
 
-  // Add an event listener to update the cart count when items are added to the cart
-  $(document).on("click", ".buy-buttons .button", function (e) {
-    e.preventDefault();
-    let $this = $(this);
-    let id = $('input[name="product-id"]').val();
-    let formData = {
-      id: id,
-      quantity: 1,
-    };
-    selectedProducts[id] = formData;
+  // Add event listener to add-to-cart buttons
+  document.querySelectorAll(".add-to-cart").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const variantId = e.target.getAttribute("data-variant-id");
+      const formData = {
+        items: [
+          {
+            id: variantId,
+            quantity: 1,
+          },
+        ],
+      };
 
-    const productData = Object.values(selectedProducts).map((formData) => ({
-      id: formData.id,
-      quantity: formData.quantity,
-    }));
-
-    console.log(productData);
-
-    $.ajax({
-      type: "POST",
-      url: "/cart/add.js",
-      dataType: "json",
-      data: formData,
-      success: function (response) {
-        updateCartCount();
-        alert("Item added to cart!");
-      },
-      error: function () {
-        alert("There was an error adding the item to the cart.");
-      },
+      fetch("/cart/add.js", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          updateCartCount();
+          alert("Item added to cart!");
+        })
+        .catch((error) => {
+          console.error("Error adding to cart:", error);
+          alert("There was an error adding the item to the cart.");
+        });
     });
   });
 });
