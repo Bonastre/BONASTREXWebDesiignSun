@@ -4304,10 +4304,6 @@ onSubmit_fn = async function (event) {
     new CustomEvent("theme:loading:end", { bubbles: true }),
   );
   if (response.ok) {
-    const counterEls = document.querySelectorAll(".js-cart-item-count");
-    counterEls.forEach((element) => {
-      element.innerHTML = data.item_count;
-    });
     if (
       window.themeVariables.settings.cartType === "page" ||
       window.themeVariables.settings.pageType === "cart"
