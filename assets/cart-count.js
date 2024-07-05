@@ -2,7 +2,9 @@ jQuery(document).ready(function ($) {
   let buttons = document.querySelectorAll(".buy-buttons");
   buttons.forEach().on("click", function () {
     let parent = e.target.closest(".shopify-product-form");
-    let variant-id = parent.querySelector("input[name=variant]").value;
+    let productId = parent.querySelector("input[name=product-id]").value;
+
+    console.log(productId);
 
     var obj = $(this);
     $.ajax({
@@ -10,7 +12,7 @@ jQuery(document).ready(function ($) {
       url: "/cart/add.js",
       data: {
         quantity: 1,
-        id: $(this).attr("data-variant"),
+        id: productId,
       },
       dataType: "json",
       success: function (data) {
