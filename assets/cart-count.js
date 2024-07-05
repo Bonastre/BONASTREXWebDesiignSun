@@ -41,6 +41,7 @@ $(document).ready(function () {
         alert("Item added to cart!");
       },
       error: function () {
+        console.error("Error adding to cart:", xhr, status, error);
         alert("There was an error adding the item to the cart.");
       },
     });
