@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
+      const myCart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+      let productId;
+      let quantity;
+
       const parent = e.target.closest(".shopify-product-form");
 
       const variantId = parent.querySelector("input[name='product-id']").value;
@@ -31,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const requestBody = {
         items: formData,
       };
-      
+
       await fetch(`${window.Shopify.routes.root}cart/add.js`, {
         method: "POST",
         headers: {
