@@ -283,6 +283,18 @@
         <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
         </cart-dot>
 
+
+        {% if cart.item_count == 0 %}
+          Your cart is empty.
+        {% else %}
+          {%- if settings.cart_count -%}
+            <span>
+              <span id="cart-item-text">{{ cart_item_count }}</span>
+              items are in your cart
+            </span>
+          {%- endif -%}
+        {% endif %}
+
         {% if cart.item_count > 0 %}
           <div class="header__product-count">
             {{ cart.item_count }}
