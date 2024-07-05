@@ -24,8 +24,8 @@ $(document).ready(function () {
     selectedProducts[id] = formData;
 
     const productData = Object.values(selectedProducts).map((formData) => ({
-      id: data.id,
-      quantity: data.quantity,
+      id: formData.id,
+      quantity: formData.quantity,
     }));
 
     console.log(productData);
