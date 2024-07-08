@@ -7603,6 +7603,7 @@ product-rerender {
 
 .text-xxs {
   font-size: .6875rem;
+  font-weight: 500;
 }
 
 .text-xs {
