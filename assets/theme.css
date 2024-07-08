@@ -2550,7 +2550,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 
 @media screen and (min-width: 1000px) {
   .prose:not(.prose--tight) :where(:not(meta, span) + *) {
-    margin-block-start: 1.25rem;
+    margin-block-start: 1.57rem;
   }
 
   .prose:not(.prose--tight) :is(.button, .button-group:has(.button)) {
