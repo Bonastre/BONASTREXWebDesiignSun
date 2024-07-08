@@ -25,7 +25,7 @@
         "message-1"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "enable_sticky": false,
         "autoplay": true,
         "cycle_speed": 5,
@@ -36,7 +36,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "enable_sticky": true,
         "hide_on_scroll": false,
         "show_separation_border": true,
@@ -50,6 +50,7 @@
         "menu_open_trigger": "hover",
         "enable_search": true,
         "enable_wishlist": true,
+        "enable_cart_count": true,
         "sidebar_color_scheme": "scheme-3",
         "sidebar_text_font": "heading",
         "sidebar_show_dividers": true,
