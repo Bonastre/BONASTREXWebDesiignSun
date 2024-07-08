@@ -270,35 +270,37 @@
         </a>
       {%- endif -%}
 
-        <a href="{{ routes.cart_url }}" class="relative Header__Icon Icon-Wrapper Icon-Wrapper--clickable {% unless section.settings.show_icons or use_sidebar_menu %}hidden-desk{% endunless %}"
-          {% if settings.cart_type != 'page' and request.page_type != 'cart' %}
-              aria-controls="cart-drawer"
-              data-action="open-drawer" data-drawer-id="sidebar-cart" aria-expanded="false"
-              aria-label="{{ 'header.navigation.open_cart' | t }}"
-            {% endif %}>
-            <span class="hidden-tablet-and-up">{%- render 'icon' with 'cart' ,class: 'header__nav-icon' -%}</span>
-            <span class="hidden-phone">{%- render 'icon' with 'cart-desktop' -%}</span>
+
+        {%- if section.settings.enable_cart_count -%}
+            <a href="{{ routes.cart_url }}" class="relative Header__Icon Icon-Wrapper Icon-Wrapper--clickable {% unless section.settings.show_icons or use_sidebar_menu %}hidden-desk{% endunless %}"
+              {% if settings.cart_type != 'page' and request.page_type != 'cart' %}
+                  aria-controls="cart-drawer"
+                  data-action="open-drawer" data-drawer-id="sidebar-cart" aria-expanded="false"
+                  aria-label="{{ 'header.navigation.open_cart' | t }}"
+                {% endif %}>
+                <span class="hidden-tablet-and-up">{%- render 'icon' with 'cart' ,class: 'header__nav-icon' -%}</span>
+                <span class="hidden-phone">{%- render 'icon' with 'cart-desktop' -%}</span>
+                <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
+                </cart-dot>
+                <span class="cart-count">{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}</span>
+            </a>
+        {% else %}
+          <a href="{{ routes.cart_url }}" class="relative" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %} data-no-instant>
+            <span class="sr-only">{{ 'header.general.open_cart' | t }}</span>
+
+            {%- if section.settings.show_icons -%}
+              {%- render 'icon' with 'cart', class: 'header__nav-icon' -%}
+            {%- else -%}
+              <span class="md:hidden">{%- render 'icon' with 'cart', class: 'header__nav-icon' -%}</span>
+              <span class="h6 link-faded md-max:hidden">{{ 'header.general.cart' | t }} (<cart-count>{{ cart.item_count }}</cart-count>)</span>
+            {%- endif -%}
+
             <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
             </cart-dot>
-            <span class="cart-count">{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}</span>
 
-        </a>
-
-{% comment %}      <a href="{{ routes.cart_url }}" class="relative" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %} data-no-instant>
-        <span class="sr-only">{{ 'header.general.open_cart' | t }}</span>
-
-        {%- if section.settings.show_icons -%}
-          {%- render 'icon' with 'cart', class: 'header__nav-icon' -%}
-        {%- else -%}
-          <span class="md:hidden">{%- render 'icon' with 'cart', class: 'header__nav-icon' -%}</span>
-          <span class="h6 link-faded md-max:hidden">{{ 'header.general.cart' | t }} (<cart-count>{{ cart.item_count }}</cart-count>)</span>
-        {%- endif -%}
-
-        <cart-dot class="header__cart-dot {% unless cart.empty? %}is-visible{% endunless %} {% unless section.settings.show_icons %}md:hidden{% endunless %}">
-        </cart-dot>
-
-      </a>
-{% endcomment %}    </nav>
+          </a>
+        {% endif %}
+    </nav>
 
     {%- if section.settings.enable_search -%}
       {%- render 'header-search' -%}
