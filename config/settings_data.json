@@ -59,9 +59,9 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#fcfbf6",
           "background_gradient": "",
-          "text_color": "#1c1c1c",
+          "text_color": "#1c1b1b",
           "card_product_background": "#ffffff",
           "primary_button_background": "#1c1c1c",
           "primary_button_text_color": "#ffffff",
