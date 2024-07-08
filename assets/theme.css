@@ -3199,7 +3199,7 @@ tr[onclick]:hover {
 
 @media screen and (min-width: 700px) {
   .badge {
-    font-size: .6875rem;
+    font-size: .625rem;
   }
 }
 
