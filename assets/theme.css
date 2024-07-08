@@ -2569,7 +2569,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 
 .link, .prose a:not(.h1, .h2, .h3, .h4, .h5, .h6, .button, .link-faded, .link-faded-reverse) {
   text-underline: none;
-  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat;
+  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 2px no-repeat;
   transition: background-size .3s ease-in-out;
 }
 
