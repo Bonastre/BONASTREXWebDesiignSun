@@ -7658,6 +7658,7 @@ product-rerender {
 .h5, :where(.prose h5) {
   font-size: var(--text-h5);
   line-height: 1.7;
+  font-weight: 500 !important;
 }
 
 .h6, :where(.prose h6) {
