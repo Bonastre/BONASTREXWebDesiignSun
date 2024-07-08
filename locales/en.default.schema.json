@@ -735,6 +735,7 @@
       },
       "enable_search": "Enable search",
       "enable_wishlist": "Enable wishlist",
+      "enable_cart_count": "Enable Cart Count",
       "sidebar_navigation_category": "Sidebar navigation",
       "sidebar_text_font": "Text font",
       "sidebar_text_font_options": {
