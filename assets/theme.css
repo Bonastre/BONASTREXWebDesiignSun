@@ -7793,6 +7793,8 @@ ul {
   min-height: 50px;
 }
 .ProductItem__Linked .product-title {
+  font-size: 11px;
+  text-align: start;
   transition: all 0.35s ease-in-out;
   background: #ffffff;
   display: flex;
