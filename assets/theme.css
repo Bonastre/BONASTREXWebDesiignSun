@@ -4856,12 +4856,8 @@ product-rerender {
     justify-content: safe center;
   }
 }
-@media screen and (min-width: 999px) {
-  .header__primary-nav {
-    column-gap: 0.7rem;
-  }
-}
-@media screen and (min-width: 1250px) {
+
+@media screen and (min-width: 1150px) {
   .header__primary-nav {
     column-gap: 2.5rem;
   }
@@ -4883,10 +4879,14 @@ product-rerender {
 
 @media screen and (min-width: 700px) {
   .header__secondary-nav {
+    column-gap: 0.7rem;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .header__secondary-nav {
     column-gap: 1.25rem;
   }
 }
-
 .header__dropdown-menu {
   background: rgb(var(--background));
   color: rgb(var(--text-color));
