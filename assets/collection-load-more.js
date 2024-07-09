@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
   let loadMore = $("#load-more");
-  let collection = $(".collection__main");
+  let collection = $(".product-list");
   let nextUrl = collection.data("next-url");
 
   if (nextUrl) {
