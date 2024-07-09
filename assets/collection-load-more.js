@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
           collection.append(newProducts.html());
           let newUrl = newProducts.data("next-url");
           let productCard = $(".product-card");
-          productCard.style.opacity = "1";
+          productCard.css;
           nextUrl = newUrl;
           if (!newUrl) {
             loadMore.remove();
