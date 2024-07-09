@@ -26,7 +26,7 @@
     "stagger_blog_posts_apparition": true,
     "product_color_display": "hide",
     "show_quick_buy": false,
-    "show_linked_products": false,
+    "show_linked_products": true,
     "cart_type": "drawer",
     "cart_icon": "shopping_bag_sharp",
     "enable-wishlist": true,
