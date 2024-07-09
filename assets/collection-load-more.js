@@ -6,11 +6,16 @@ jQuery(document).ready(function ($) {
   if (dataNextUrl) {
     loadMore.on("click", function (event) {
       event.preventDefault();
-      $;.ajax({
+      $.ajax({
         url: dataNextUrl,
+        type: "GET",
+        dataType: "html",
         success: function (data) {
           collection.html(data);
-          collection.data("next-url", $(data).find(".collection__main").data("next-url"));
+          collection.data(
+            "next-url",
+            $(data).find(".collection__main").data("next-url"),
+          );
           loadMore.remove();
         },
       });
