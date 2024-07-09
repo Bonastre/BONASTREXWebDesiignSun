@@ -4445,7 +4445,7 @@ product-rerender {
 }
 
 .footer__inner {
-  row-gap: min(var(--section-vertical-spacing), 3rem);
+  row-gap: min(var(--section-vertical-spacing), 2.8rem);
   display: grid;
 }
 @media (min-width: 1400px) {
