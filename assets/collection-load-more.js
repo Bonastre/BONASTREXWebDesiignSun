@@ -11,9 +11,9 @@ jQuery(document).ready(function ($) {
         type: "GET",
         dataType: "html",
         success: function (nextPage) {
-          let newProducts = $(nextPage).find(".collection__main");
+          let newProducts = $(nextPage).find(".product-list");
           collection.append(newProducts.html());
-          let nextUrl = newProducts.data("next-url");
+          let newUrl = newProducts.data("next-url");
           nextUrl = newUrl;
         },
       });
