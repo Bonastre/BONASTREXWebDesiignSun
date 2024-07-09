@@ -11,8 +11,8 @@ jQuery(document).ready(function ($) {
         type: "GET",
         dataType: "html",
         success: function (nextPage) {
-          let newProducts = $(nextPage).find(".product-card");
-          collection.append(newProducts);
+          let newProducts = $(nextPage).find(".collection__main");
+          collection.append(newProducts.html());
           collection.data(
             "next-url",
             $(nextPage).find(".pagination__next").data("url"),
