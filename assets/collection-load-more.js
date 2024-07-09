@@ -10,7 +10,14 @@ jQuery(document).ready(function ($) {
         url: dataNextUrl,
         type: "GET",
         dataType: "html",
-        success: function (nextPage) {},
+        success: function (nextPage) {
+          let newProducts = $(nextPage).find(".product-card");
+          collection.append(newProducts);
+          collection.data(
+            "next-url",
+            $(nextPage).find(".pagination__next").data("url"),
+          );
+        },
       });
     });
   }
