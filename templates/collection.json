@@ -58,8 +58,8 @@
         "products_count": 4,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 0.2,
-        "vertical_spacing_factor": 0.2,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
         "subheading": "",
         "title": "Recently Viewed",
         "content": ""
