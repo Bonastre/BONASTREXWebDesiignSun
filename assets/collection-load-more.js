@@ -14,7 +14,16 @@ jQuery(document).ready(function ($) {
           let newProducts = $(nextPage).find(".product-list");
           collection.append(newProducts.html());
           let newUrl = newProducts.data("next-url");
+          let productCard = $(".product-card");
+          productCard.style.opacity = "1";
           nextUrl = newUrl;
+          if (!newUrl) {
+            loadMore.remove();
+          }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.log(textStatus, errorThrown);
+          loadMore.remove();
         },
       });
     });
