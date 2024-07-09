@@ -4856,9 +4856,9 @@ product-rerender {
     justify-content: safe center;
   }
 }
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 999px) {
   .header__primary-nav {
-    column-gap: 2.5rem;
+    column-gap: 0.7rem;
   }
 }
 @media screen and (min-width: 1150px) {
