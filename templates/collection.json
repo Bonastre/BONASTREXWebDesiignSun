@@ -47,10 +47,28 @@
         "open_filters_by_default": false,
         "enable_load_more": true
       }
+    },
+    "recently_viewed_products_6KQNxP": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "color_scheme": "",
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 9,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Recently viewed products",
+        "content": ""
+      }
     }
   },
   "order": [
     "collection-banner",
-    "main"
+    "main",
+    "recently_viewed_products_6KQNxP"
   ]
 }
