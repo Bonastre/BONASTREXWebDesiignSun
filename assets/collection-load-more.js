@@ -10,14 +10,7 @@ jQuery(document).ready(function ($) {
         url: dataNextUrl,
         type: "GET",
         dataType: "html",
-        success: function (data) {
-          collection.html(data);
-          collection.data(
-            "next-url",
-            $(data).find(".collection__main").data("next-url"),
-          );
-          loadMore.remove();
-        },
+        success: function (nex) {},
       });
     });
   }
