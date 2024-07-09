@@ -52,6 +52,7 @@
       "type": "recently-viewed-products",
       "settings": {
         "separate_section_with_border": false,
+        "spacing_section": false,
         "color_scheme": "",
         "hide_product_information": true,
         "stack_products": false,
