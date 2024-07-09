@@ -4890,6 +4890,7 @@ product-rerender {
   padding-block: 1.125rem;
   position: absolute;
   inset-block-start: calc(100% - 2px);
+  font-family: "Futura LT" !important;
 }
 
 .header__dropdown-menu:not(:has(.header__dropdown-menu)) {
