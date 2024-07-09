@@ -1,13 +1,13 @@
 jQuery(document).ready(function ($) {
   let loadMore = $("#load-more");
   let collection = $(".collection__main");
-  let m = collection.data("next-url");
+  let nextUrl = collection.data("next-url");
 
-  if (dataNextUrl) {
+  if (nextUrl) {
     loadMore.on("click", function (event) {
       event.preventDefault();
       $.ajax({
-        url: dataNextUrl,
+        url: nextUrl,
         type: "GET",
         dataType: "html",
         success: function (nextPage) {
