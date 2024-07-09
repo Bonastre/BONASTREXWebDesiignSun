@@ -11,6 +11,7 @@
   "sections": {
     "collection-banner": {
       "type": "collection-banner",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "image_size": "auto",
