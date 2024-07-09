@@ -4709,12 +4709,19 @@ product-rerender {
   row-gap: var(--header-padding-block);
   box-shadow: 0 -1px rgb(var(--header-separation-border-color)) inset;
   --header-show-transparent-logo: 0;
-  padding: 1.8rem 5.62rem;
+  padding-block-start: var(--header-padding-block);
+  padding-block-end: var(--header-padding-block);
+  padding-inline-start: var(--container-gutter);
+  padding-inline-end: var(--container-gutter);
   transition: background .2s, color .2s, border .2s, box-shadow .2s, transform .15s ease-in-out;
   display: grid;
   position: relative;
 }
-
+@media screen and (min-width: 1000px) {
+  .header {
+    padding: 1.8rem 5.62rem;
+  }
+}
 .header.is-hidden {
   transform: translateY(-100%);
 }
