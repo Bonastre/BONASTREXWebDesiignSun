@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
         url: dataNextUrl,
         type: "GET",
         dataType: "html",
-        success: function (nex) {},
+        success: function (nextPage) {},
       });
     });
   }
