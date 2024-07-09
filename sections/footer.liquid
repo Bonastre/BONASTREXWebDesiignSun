@@ -71,7 +71,7 @@
                         <p class="h6">{{ block.settings.menu_title | default: menu.title }}</p>
                       {%- endif -%}
 
-                      <ul class="v-stack gap-2.5 unstyled-list" role="list">
+                      <ul class="v-stack unstyled-list" role="list">
                         {%- for link in menu.links -%}
                           <li>
                             <a href="{{ link.url }}" class="link-faded">{{ link.title }}</a>
