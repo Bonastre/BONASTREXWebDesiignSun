@@ -6,7 +6,14 @@ jQuery(document).ready(function ($) {
   if (dataNextUrl) {
     loadMore.on("click", function (event) {
       event.preventDefault();
-      collection.load(dataNextUrl);
+      $;.ajax({
+        url: dataNextUrl,
+        success: function (data) {
+          collection.html(data);
+          collection.data("next-url", $(data).find(".collection__main").data("next-url"));
+          loadMore.remove();
+        },
+      });
     });
   }
 });
