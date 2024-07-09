@@ -229,10 +229,14 @@ LIQUID
                   {%- endfor -%}
                 </product-list>
 
-                {% comment %}{%- render 'pagination', paginate: paginate, facet: true -%}{% endcomment %}
-                <button id="load-more" class="load-more-button">Load More</button>
+
+                {% if section.settings.enable_load-more %}
+                  <button id="load-more" class="load-more-button">Load More</button>
+                {% else %}
+                  {%- render 'pagination', paginate: paginate, facet: true -%}
+                {% endif %}
               </div>
-            {%- endif -%}
+          {%- endif -%}
           {%- endpaginate -%}
         </div>
       {%- endif -%}
