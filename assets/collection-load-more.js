@@ -13,10 +13,12 @@ jQuery(document).ready(function ($) {
         success: function (nextPage) {
           let newProducts = $(nextPage).find(".collection__main");
           collection.append(newProducts.html());
-          collection.data(
-            "next-url",
-            $(nextPage).find(".pagination__next").data("url"),
-          );
+          let nextUrl = newProducts.data("next-url");
+          if (nextUrl) {
+            collection.data("next-url", nextUrl);
+          } else {
+            loadMore.remove();
+          }
         },
       });
     });
