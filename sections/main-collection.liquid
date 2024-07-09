@@ -228,7 +228,8 @@ LIQUID
                   {%- endfor -%}
                 </product-list>
 
-                {%- render 'pagination', paginate: paginate, facet: true -%}
+                {% comment %}{%- render 'pagination', paginate: paginate, facet: true -%}{% endcomment %}
+                <button id="load-more" class="load-more-button">Load More</button>
               </div>
             {%- endif -%}
           {%- endpaginate -%}
