@@ -91,6 +91,7 @@
     "section": {
       "header_category": "Header de section",
       "separate_section_with_border": "Séparer la section par une bordure",
+      "spacing_section": "Espacement de la section",
       "allow_transparent_header": "Autoriser le header transparent",
       "allow_transparent_header_info": "Ce réglage ne s'applique que si cette section est la première."
     },
