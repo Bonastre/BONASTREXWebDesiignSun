@@ -1,4 +1,5 @@
-{%- liquid
+
+<script src="{{ 'collection-load-more.js' | asset_url }}" defer="defer"></script>{%- liquid
   assign active_values_count = 0
 
   for filter in collection.filters
