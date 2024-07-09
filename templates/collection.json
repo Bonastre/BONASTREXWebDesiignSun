@@ -51,7 +51,7 @@
     "recently_viewed_products_6KQNxP": {
       "type": "recently-viewed-products",
       "settings": {
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "color_scheme": "",
         "hide_product_information": true,
         "stack_products": false,
