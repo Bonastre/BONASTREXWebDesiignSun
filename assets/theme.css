@@ -4439,6 +4439,9 @@ product-rerender {
   .footer {
     padding: 1.8rem 5.62rem;
   }
+  .footer .container {
+    margin: unset;
+  }
 }
 
 .footer__inner {
