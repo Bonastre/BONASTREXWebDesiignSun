@@ -4572,6 +4572,7 @@ product-rerender {
 @media screen and (min-width: 1400px) {
   .footer__block-list {
     column-gap: 5rem;
+    padding: 0 35px 0 20px;
   }
 }
 
