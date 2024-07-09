@@ -4566,13 +4566,14 @@ product-rerender {
   .footer__block-list {
     justify-content: var(--footer-content-justify-items);
     column-gap: 3.75rem;
+    padding: 0 35px 0 20px;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .footer__block-list {
     column-gap: 5rem;
-    padding: 0 35px 0 20px;
+
   }
 }
 
