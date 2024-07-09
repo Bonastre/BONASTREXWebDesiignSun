@@ -162,7 +162,8 @@
       "show_group_name": "Show group name",
       "show_group_name_info": "Group name will be shown inside selected filters.",
       "show_filter_values_count": "Show filter values count",
-      "open_filters_by_default": "Open filters by default"
+      "open_filters_by_default": "Open filters by default",
+      "enable_load_more": "Enable load more"
     },
     "code": {
       "html": "HTML",

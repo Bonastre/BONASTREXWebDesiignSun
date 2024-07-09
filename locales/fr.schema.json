@@ -162,7 +162,8 @@
       "show_group_name": "Afficher le nom du groupe",
       "show_group_name_info": "Le nom du groupe s'affichera à l'intérieur des filtres sélectionnés.",
       "show_filter_values_count": "Afficher le nombre de résultats d'un filtre",
-      "open_filters_by_default": "Ouvrir les filtres par défaut"
+      "open_filters_by_default": "Ouvrir les filtres par défaut",
+      "enable_load_more": "Activer le chargement plus"
     },
     "code": {
       "html": "HTML",
