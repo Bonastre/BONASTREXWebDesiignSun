@@ -4717,7 +4717,7 @@ product-rerender {
   display: grid;
   position: relative;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .header {
     padding: 1.8rem 5.62rem;
   }
