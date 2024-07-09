@@ -14,11 +14,7 @@ jQuery(document).ready(function ($) {
           let newProducts = $(nextPage).find(".collection__main");
           collection.append(newProducts.html());
           let nextUrl = newProducts.data("next-url");
-          if (nextUrl) {
-            collection.data("next-url", nextUrl);
-          } else {
-            loadMore.remove();
-          }
+          nextUrl = newUrl;
         },
       });
     });
