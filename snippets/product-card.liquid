@@ -62,10 +62,6 @@ Supported variables
 %}
 {%- assign t = template | split: '.' | first -%}
 
-{%- if t == 'collection' -%}
-    {{ show_title | json }}
-    {%  assign show_title = false  %}
-{%- endif -%}
 
 <product-card class="product-card product-card-{{ forloop_index }}" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
 
@@ -74,8 +70,14 @@ Supported variables
   PRODUCT MEDIA
   --------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
+    {%- if t == 'collection' -%}
+        <a href="{{ product.url }}" class="product-title {% if text_class != blank %}{{ text_class }}{% endif %} {% if settings.product_title_max_lines > 0 %}line-clamp{% endif %}" {% if settings.product_title_max_lines > 0 %}style="--line-clamp-count: {{ settings.product_title_max_lines }}"{% endif %} data-instant>
+            {{- product.title -}}
+        </a>
+    {%- endif -%}
 
-  {%- if product.media.size > 0 -%}
+
+    {%- if product.media.size > 0 -%}
     <div class="product-card__figure">
         {% if settings.enable-wishlist %}
             <button type="button" aria-label="Add to wishlist" class="wishlist-button" button-wishlist data-product-handle="{{ product.handle }}">
