@@ -8169,7 +8169,7 @@ color: #231F20;
   opacity: 0;
   transition: ease 0.3s;
 }
-.shopify-section--main-collection .custom_block-9:hover {
+.shopify-section--main-collection .custom_block-9:hover img {
   opacity: 0.2;
 }
 .shopify-section--main-collection .custom_block-9:hover .custom_block-content--hover {
