@@ -18,9 +18,13 @@ jQuery(document).ready(function ($) {
         dataType: "html",
         success: function (nextPage) {
           let newProducts = $(nextPage).find(".product-list");
-          collection.append(newProducts.html());
           let newUrl = newProducts.data("next-url");
           let productCard = $(".product-card");
+          let fifthProduct = $(".product-card:nth-child(5)");
+          if (fifthProduct) {
+            fifthProduct.addClass("fifth-product");
+          }
+          collection.append(newProducts.html());
           productCard.attr("style", "opacity: 1;");
           nextUrl = newUrl;
           if (!newUrl) {
