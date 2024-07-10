@@ -8155,7 +8155,13 @@ font-weight: 500;
 text-align: center;
 color: #231F20;
 }
-
+.shopify-section--main-collection .custom_block-9 .custom_block-content--hover {
+  display: none;
+  transition: ease 0.3s;
+}
+.shopify-section--main-collection .custom_block-9:hover .custom_block-content--hover {
+  display: block;
+}
 
 
 .shopify-section--main-collection .ProductItem__Linked  {
