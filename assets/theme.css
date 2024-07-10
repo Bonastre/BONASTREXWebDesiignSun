@@ -8119,6 +8119,12 @@ ul {
   grid-row: span 2;
 }
 .shopify-section--main-collection .product-card-5 .h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.shopify-section--main-collection .product-card-5 .h3 {
   
 }
 /* ------------------------------------------------------------ *\
