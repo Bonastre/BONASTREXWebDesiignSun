@@ -225,15 +225,19 @@ LIQUID
 
                 <product-list id="product-list-{{ section.id }}" class="product-list" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}" data-next-url="{{paginate.next.url}}">
                   {%- for product in collection.products -%}
-                    {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, forloop_index: forloop.index, stacked: true -%}
+                  {% if forloop.index == 5  %}
+                    hello
+                  {% endif %}
+
+                  {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, forloop_index: forloop.index, stacked: true -%}
                   {%- endfor -%}
                 </product-list>
 
 
                 {% if section.settings.enable_load_more %}
-                  <button id="load-more" class="load-more-button">See More</button>
+                <button id="load-more" class="load-more-button">See More</button>
                 {% else %}
-                  {%- render 'pagination', paginate: paginate, facet: true -%}
+                {%- render 'pagination', paginate: paginate, facet: true -%}
                 {% endif %}
               </div>
           {%- endif -%}
