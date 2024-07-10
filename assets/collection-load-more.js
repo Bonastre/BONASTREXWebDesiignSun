@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
           let newUrl = newProducts.data("next-url");
           let productCard = $(".product-card");
           productCard.attr("style", "opacity: 1;");
-          let fifthProduct = $(".product-card:nth-child(5)");
+          let fifthProduct = productCard.eq(4);
           if (fifthProduct) {
             fifthProduct.addClass("fifth-product");
           }
