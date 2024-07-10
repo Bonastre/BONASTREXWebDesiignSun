@@ -44,13 +44,16 @@ Supported variables
     assign show_swatches = show_swatches | default: true, allow_false: true
   endif
 
-    
 -%}
 
 {% assign show_linked_products = settings.show_linked_products %}
 {%- liquid
  if show_linked_products
         assign show_badges = true
+    endif
+
+    if forloop_index == 5
+        assign show_linked_products = false
     endif
 %}
 
