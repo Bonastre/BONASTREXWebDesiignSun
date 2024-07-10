@@ -8159,6 +8159,9 @@ color: #231F20;
   display: none;
   transition: ease 0.3s;
 }
+.shopify-section--main-collection .custom_block-9:hover {
+  opacity: 0.8;
+}
 .shopify-section--main-collection .custom_block-9:hover .custom_block-content--hover {
   display: block;
 }
