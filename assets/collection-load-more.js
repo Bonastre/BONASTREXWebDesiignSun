@@ -26,6 +26,7 @@ jQuery(document).ready(function ($) {
           if (fifthProduct) {
             fifthProduct.addClass("fifth-product");
           }
+
           nextUrl = newUrl;
           if (!newUrl) {
             loadMore.remove();
