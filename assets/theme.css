@@ -8117,6 +8117,7 @@ ul {
   height: 100%;
   grid-column: span 2;
   grid-row: span 2;
+  background: rgb(var(--background));
 }
 /* ------------------------------------------------------------ *\
   Recently viewed
