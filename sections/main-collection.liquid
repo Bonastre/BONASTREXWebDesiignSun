@@ -88,16 +88,6 @@ CSS
         --collection-grid-template: var(--collection-sidebar-width, 0) minmax(0,1fr);
       {%- endif -%}
     }
-    .shopify-section--main-collection .custom_block-9 {
-      background-image: url({{ section.settings.image_block_9 | img_url: 'master' }});
-      background-repeat: no-repeat;
-      background-size: cover;
-      min-height: 839px;
-    }
-    .shopify-section--main-collection .custom_block-9--2 {
-      background-image: url({{ section.settings.image_block_10 | img_url: 'master' }});
-
-    }
   }
 
   @media screen and (min-width: 1400px) {
@@ -254,6 +244,9 @@ LIQUID
 
                   {% if forloop.index == 9  %}
                     <div class="custom_block custom_block-{{ forloop.index }}">
+                      {%- if section.settings.image_block_9 != blank -%}
+                        {{- section.settings.image_block_9 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                      {%- endif -%}
                       <div class="custom_block-content--hover">
                         {%- if section.settings.title_block_9 != blank -%}
                           <h6 class="h6">{{ section.settings.title_block_9 }}</h6>
@@ -266,7 +259,10 @@ LIQUID
                         {%- endif -%}
                       </div>
                     </div>
-                    <div class="custom_block custom_block-{{ forloop.index }} custom_block-{{ forloop.index }}--2">
+                    <div class="custom_block custom_block-{{ forloop.index }}">
+                      {%- if section.settings.image_block_10 != blank -%}
+                        {{- section.settings.image_block_10 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                      {%- endif -%}
                       <div class="custom_block-content--hover">
                         {%- if section.settings.title_block_10 != blank -%}
                           <h6 class="h6">{{ section.settings.title_block_10 }}</h6>
