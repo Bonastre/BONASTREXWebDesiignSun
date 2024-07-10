@@ -55,15 +55,11 @@ Supported variables
         assign show_badges = true
     endif
     assign product_description = false
-    if forloop_index == 5
-        assign show_linked_products = false
-        assign product_description = product.description
-    endif
 %}
 {%- assign t = template | split: '.' | first -%}
 
 
-<product-card class="product-card product-card-{{ forloop_index }}" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
+<product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
 
     {%- if t == 'collection' -%}
         <a href="{{ product.url }}" class="product-title product-title-collection {% if text_class != blank %}{{ text_class }}{% endif %} {% if settings.product_title_max_lines > 0 %}line-clamp{% endif %}" {% if settings.product_title_max_lines > 0 %}style="--line-clamp-count: {{ settings.product_title_max_lines }}"{% endif %} data-instant>
@@ -156,14 +152,6 @@ Supported variables
       {%- assign text_class = 'h6' -%}
     {%- endif -%}
 
-      {%- if product_description != false -%}
-          <div class="product__description">
-              <h3 class="h3"> {{- product.title -}}</h3>
-              <div class="product__description-little">
-                  {{- product_description -}}
-              </div>
-          </div>
-      {% endif %}
 
     {%- if show_title or show_prices or show_vendor and product.vendor != blank -%}
       <div class="v-stack justify-items-center gap-2">
