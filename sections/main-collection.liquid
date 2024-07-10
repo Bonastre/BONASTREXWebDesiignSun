@@ -244,6 +244,23 @@ LIQUID
 
                   {% if forloop.index == 9  %}
                     <div class="custom_block custom_block-{{ forloop.index }}">
+
+                      <div class="custom_block custom_block-{{ forloop.index }}">
+                        {%- if section.settings.image_block_9 != blank -%}
+                          {{- section.settings.image_block_9 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                        {%- endif -%}
+                        <div class="custom_block-content--hover">
+                          {%- if section.settings.title_block_9 != blank -%}
+                            <h6 class="h6">{{ section.settings.title_block_11 }}</h6>
+                          {%- endif -%}
+
+                          {%- if section.settings.content_block_9 != blank -%}
+                            <div class="custom_block-content">
+                              {{- section.settings.content_block_9 -}}
+                            </div>
+                          {%- endif -%}
+                        </div>
+                      </div>
                       {%- if section.settings.image_block_10 != blank -%}
                         {{- section.settings.image_block_10 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
                       {%- endif -%}
@@ -259,22 +276,7 @@ LIQUID
                       {%- endif -%}
                       </div>
                     </div>
-                    <div class="custom_block custom_block-{{ forloop.index }}">
-                      {%- if section.settings.image_block_11 != blank -%}
-                        {{- section.settings.image_block_11 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
-                      {%- endif -%}
-                      <div class="custom_block-content--hover">
-                        {%- if section.settings.title_block_11 != blank -%}
-                          <h6 class="h6">{{ section.settings.title_block_11 }}</h6>
-                        {%- endif -%}
 
-                        {%- if section.settings.content_block_11 != blank -%}
-                          <div class="custom_block-content">
-                            {{- section.settings.content_block_11 -}}
-                          </div>
-                        {%- endif -%}
-                      </div>
-                    </div>
                   {% endif %}
 
                   {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
@@ -481,6 +483,21 @@ LIQUID
     },
     {
       "type": "image_picker",
+      "id": "image_block_9",
+      "label": "Image for block №9"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_block_9",
+      "label": "Heading for block №9"
+    },
+    {
+      "type": "richtext",
+      "id": "content_block_9",
+      "label": "Content for block №9"
+    },
+    {
+      "type": "image_picker",
       "id": "image_block_10",
       "label": "Image for block №10"
     },
@@ -491,23 +508,8 @@ LIQUID
     },
     {
       "type": "richtext",
-      "id": "content_block_10",
-      "label": "Content for block №10"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_block_11",
-      "label": "Image for block №11"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "title_block_11",
-      "label": "Heading for block №11"
-    },
-    {
-      "type": "richtext",
       "id": "content_block_11",
-      "label": "Content for block №111"
+      "label": "Content for block №10"
     }
   ]
 }
