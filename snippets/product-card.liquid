@@ -60,7 +60,10 @@ Supported variables
         assign product_description = product.description
     endif
 %}
-
+{%  if request.page_type == 'collection' %}
+    hell
+    {%  assign show_title = false  %}
+{% endif %}
 
 <product-card class="product-card product-card-{{ forloop_index }}" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
 
