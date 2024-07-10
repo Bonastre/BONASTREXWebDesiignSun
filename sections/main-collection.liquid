@@ -226,9 +226,20 @@ LIQUID
                 <product-list id="product-list-{{ section.id }}" class="product-list" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}" data-next-url="{{paginate.next.url}}">
                   {%- for product in collection.products -%}
                   {% if forloop.index == 5  %}
-                    {%- if section.settings.image_block_5 != blank -%}
-                        {{- section.settings.image_block_5 | image_url: width: block.settings.image.width | image_tag: sizes: sizes, widths: widths, style: style, class: 'constrained-image' -}}
-                    {%- endif -%}
+                    <div class="custom_block-{{ forloop.index }}">
+                      {%- if section.settings.image_block_5 != blank -%}
+                        {{- section.settings.image_block_5 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                      {%- endif -%}
+                      {%- if section.settings.title_block_5 != blank -%}
+                        <h6 class="h6">{{ section.settings.title_block_5 }}</h6>
+                      {%- endif -%}
+
+                      {%- if section.settings.content_block_5 != blank -%}
+                        <div class="custom_block-content">
+                          {{- section.settings.content_block_5 -}}
+                        </div>
+                      {%- endif -%}
+                    </div>
                   {% endif %}
 
                   {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
