@@ -8106,6 +8106,9 @@ ul {
 .shopify-section--main-collection .product-card {
   gap: unset;
 }
+.shopify-section--main-collection .product-title-collection {
+  
+}
 .shopify-section--main-collection .product__description-little p:last-child {
   display: none;
 }
