@@ -82,6 +82,7 @@
         "image_A6Kgck": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
             "subheading": "Tell your story",
             "title": "Slide 1",
             "mobile_text_position": "place-self-center text-center",
