@@ -8166,6 +8166,7 @@ color: #231F20;
   height: 100%;
   bottom: 0;
   left: 0;
+  transform: translate(-50%, 50%);
   opacity: 0;
   transition: ease 0.3s;
 }
