@@ -8105,8 +8105,6 @@ ul {
 
 .shopify-section--main-collection .product-card {
   gap: unset;
-  max-width: 279px;
-  height: 372px;
 }
 
 .shopify-section--main-collection .product-title-collection {
