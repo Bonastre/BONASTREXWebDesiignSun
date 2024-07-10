@@ -225,6 +225,7 @@ LIQUID
 
                 <product-list id="product-list-{{ section.id }}" class="product-list" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}" data-next-url="{{paginate.next.url}}">
                   {%- for product in collection.products -%}
+                    {{ product.description }}
                     {%- render 'product-card', product: product, product_description:product.description, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, forloop_index: forloop.index, stacked: true -%}
                   {%- endfor -%}
                 </product-list>
