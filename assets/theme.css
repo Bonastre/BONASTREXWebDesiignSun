@@ -7917,7 +7917,7 @@ ul {
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  z-index: 9;
+  z-index: 1;
 }
 .wishlist-button-product {
    margin-top: 10px;
