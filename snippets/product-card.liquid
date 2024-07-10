@@ -54,7 +54,7 @@ Supported variables
  if show_linked_products
         assign show_badges = true
     endif
-
+    assign product_description = false
     if forloop_index == 5
         assign show_linked_products = false
         assign show_title = true
@@ -151,7 +151,7 @@ Supported variables
       {%- assign text_class = 'h6' -%}
     {%- endif -%}
 
-      {%- if product_description == true -%}
+      {%- if product_description != false -%}
           <div class="prose">
               {{- product_description -}}
           </div>
