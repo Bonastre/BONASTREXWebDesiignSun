@@ -8106,7 +8106,12 @@ ul {
 .product__description-little p:last-child {
   display: none;
 }
-
+.product__description {
+  display: none;
+}
+.product-card:hover .product__description {
+  display: block;
+}
 /* ------------------------------------------------------------ *\
   Recently viewed
 \* ------------------------------------------------------------ */
