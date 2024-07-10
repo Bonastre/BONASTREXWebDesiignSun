@@ -22,7 +22,7 @@ Supported variables
 * hide_product_information: if set to true, all content (vendor, badge, title...) are not rendered, to create image-based grid
 * quick_buy_context: a unique text to dissociate quick buy if the same product is embedded multiple times
 {%- endcomment -%}
-
+{% assign product_description = product.description %}
 {%- liquid
   if hide_product_information
     assign show_badges = false
@@ -31,9 +31,9 @@ Supported variables
     assign show_title = false
     assign show_prices = false
     assign show_swatches = false
+      assign product_description = false
     assign show_quick_buy = show_quick_buy | default: settings.show_quick_buy, allow_false: true
     assign show_secondary_image = show_secondary_image | default: settings.show_secondary_image, allow_false: true
-      assign product_description = product_description | default: product.description, allow_false: false
   else
     assign show_badges = show_badges | default: true, allow_false: true
     assign show_rating = show_rating | default: settings.show_product_rating, allow_false: true
@@ -41,14 +41,15 @@ Supported variables
     assign show_quick_buy = show_quick_buy | default: settings.show_quick_buy, allow_false: true
     assign show_title = true
     assign show_prices = true
-    assign show_secondary_image = show_secondary_image | default: settings.show_secondary_image, allow_false: true
+      assign product_description = false
+      assign show_secondary_image = show_secondary_image | default: settings.show_secondary_image, allow_false: true
     assign show_swatches = show_swatches | default: true, allow_false: true
-    assign product_description = product_description | default: product.description, allow_false: false
   endif
 
 -%}
 
 {% assign show_linked_products = settings.show_linked_products %}
+{% assign product_description = product.description %}
 {%- liquid
  if show_linked_products
         assign show_badges = true
@@ -57,7 +58,7 @@ Supported variables
     if forloop_index == 5
         assign show_linked_products = false
         assign show_title = true
-        assign product_description = product_description | default: product.description, allow_false: true
+        assign product_description = true
     endif
 %}
 
