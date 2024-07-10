@@ -8106,6 +8106,7 @@ ul {
 .shopify-section--main-collection .product-card {
   gap: unset;
 }
+
 .shopify-section--main-collection .product-title-collection {
   font-size: 11px;
   font-weight: 700;
@@ -8116,7 +8117,6 @@ ul {
   color: #231F20;
   background: rgb(var(--background));
   padding: 10px 0;
-
 }
 .shopify-section--main-collection .product__description-little p:last-child {
   display: none;
