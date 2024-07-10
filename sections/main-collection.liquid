@@ -281,8 +281,26 @@ LIQUID
                         {%- if section.settings.image_block_11 != blank -%}
                           {{- section.settings.image_block_11 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
                         {%- endif -%}
+                        {%- if section.settings.title_block_11 != blank -%}
+                          <h6 class="h6">{{ section.settings.title_block_10 }}</h6>
+                        {%- endif -%}
+
+                        {%- if section.settings.content_block_11 != blank -%}
+                          <div class="custom_block-content">
+                            {{- section.settings.content_block_11 -}}
+                          </div>
+                        {%- endif -%}
                       </div>
-                      <div class="custom_block custom_block-{{ forloop.index }}">
+                    {% endif %}
+
+                  {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
+                    {% if forloop.last %}
+                      <div class="custom_block custom_block-5">
+                        {%- if section.settings.image_block_12 != blank -%}
+                          {{- section.settings.image_block_12 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                        {%- endif -%}
+                      </div>
+                      <div class="custom_block custom_block-5">
                         {%- if section.settings.image_block_5 != blank -%}
                           {{- section.settings.image_block_5 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
                         {%- endif -%}
@@ -293,24 +311,6 @@ LIQUID
                         {%- if section.settings.content_block_5 != blank -%}
                           <div class="custom_block-content">
                             {{- section.settings.content_block_5 -}}
-                          </div>
-                        {%- endif -%}
-                      </div>
-                    {% endif %}
-
-                  {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
-                    {% if forloop.last %}
-                      <div class="custom_block custom_block-{{ forloop.last }}">
-                        {%- if section.settings.image_block_12 != blank -%}
-                          {{- section.settings.image_block_12 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
-                        {%- endif -%}
-                        {%- if section.settings.title_block_11 != blank -%}
-                          <h6 class="h6">{{ section.settings.title_block_10 }}</h6>
-                        {%- endif -%}
-
-                        {%- if section.settings.content_block_11 != blank -%}
-                          <div class="custom_block-content">
-                            {{- section.settings.content_block_11 -}}
                           </div>
                         {%- endif -%}
                       </div>
