@@ -8102,6 +8102,7 @@ ul {
 /* ------------------------------------------------------------ *\
   Collection style
 \* ------------------------------------------------------------ */
+.product__description-little p:first-child,
 .product__description-little p:last-child {
   display: none;
 }
