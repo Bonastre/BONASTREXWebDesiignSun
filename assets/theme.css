@@ -8105,9 +8105,7 @@ ul {
 .product-card-collection {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
-
 }
 .shopify-section--main-collection .product__description-little p:last-child {
   display: none;
