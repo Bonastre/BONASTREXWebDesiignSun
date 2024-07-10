@@ -125,6 +125,17 @@
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+      #widgetIframe {
+        z-index: 2147483647;
+        position: fixed;
+        bottom: 0;
+        right:0;
+      }</style><script>window.addEventListener('touchstart', {});
+      function resizeListener() {
+        document.getElementById('widgetIframe').style.height = 100% - (window.outerHeight - window.innerHeight);
+        document.getElementById('widgetIframe').className = "iframeIos";
+      }
+      window.addEventListener("resize", resizeListener);</script>
   </head>
 
   {% liquid
