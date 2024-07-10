@@ -8156,7 +8156,11 @@ text-align: center;
 color: #231F20;
 }
 .shopify-section--main-collection .custom_block-9 {
+  position: relative;
   padding: unset;
+}
+.shopify-section--main-collection .custom_block-9 img {
+  
 }
 .shopify-section--main-collection .custom_block-9 .custom_block-content--hover {
   display: none;
