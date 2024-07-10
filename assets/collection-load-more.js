@@ -21,9 +21,15 @@ jQuery(document).ready(function ($) {
           collection.append(newProducts.html());
           let newUrl = newProducts.data("next-url");
           let productCard = $(".product-card");
+          console.log(productCard);
 
           productCard.attr("style", "opacity: 1;");
-          let fifthProduct = ;
+
+          productCard.each(function () {
+            if ($(this).hasClass("fifth-product")) {
+              $(this).removeClass("fifth-product");
+            }
+          });
           console.log(fifthProduct);
           if (fifthProduct) {
             fifthProduct.addClass("fifth-product");
