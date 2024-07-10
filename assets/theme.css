@@ -8174,6 +8174,9 @@ color: #231F20;
   align-items: center;
   transition: ease 0.3s;
 }
+.shopify-section--main-collection .custom_block-9 .custom_block-content--hover .h6 {
+  margin-bottom: 60%;
+}
 .shopify-section--main-collection .custom_block-9 .custom_block-content--hover .custom_block-content {
   text-align: start;
   max-width: 527px;
