@@ -150,6 +150,10 @@ Supported variables
       {%- assign text_class = 'h6' -%}
     {%- endif -%}
 
+      <div class="prose">
+          {{- product_description -}}
+      </div>
+
     {%- if show_title or show_prices or show_vendor and product.vendor != blank -%}
       <div class="v-stack justify-items-center gap-2">
         {%- if show_vendor and product.vendor != blank -%}
