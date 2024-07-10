@@ -88,8 +88,8 @@ CSS
         --collection-grid-template: var(--collection-sidebar-width, 0) minmax(0,1fr);
       {%- endif -%}
     }
-    body {
-      background-image: url({{ 'image-name-with-extension' | asset_img_url: 'original' }});
+    .shopify-section--main-collection .custom_block-9 {
+      background-image: url({{ section.settings.image_block_9 | asset_img_url: 'original' }});
       background-repeat: no-repeat;
       background-size: cover;
     }
