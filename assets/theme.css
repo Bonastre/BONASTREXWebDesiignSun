@@ -8168,6 +8168,11 @@ color: #231F20;
   left: 0;
   opacity: 0;
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  transition: ease 0.3s;
 }
 .shopify-section--main-collection .custom_block-9 .custom_block-content--hover .custom_block-content {
   text-align: start;
@@ -8178,11 +8183,6 @@ color: #231F20;
 }
 .shopify-section--main-collection .custom_block-9:hover .custom_block-content--hover {
   opacity: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
 }
 
 
