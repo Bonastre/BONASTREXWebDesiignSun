@@ -8161,13 +8161,19 @@ color: #231F20;
 }
 
 .shopify-section--main-collection .custom_block-9 .custom_block-content--hover {
-  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
   transition: ease 0.3s;
 }
 .shopify-section--main-collection .custom_block-9:hover {
   opacity: 0.8;
 }
 .shopify-section--main-collection .custom_block-9:hover .custom_block-content--hover {
+  opacity: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
