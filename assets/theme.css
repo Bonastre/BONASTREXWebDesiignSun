@@ -8150,9 +8150,14 @@ ul {
 }
 .shopify-section--main-collection .ProductItem__Linked  {
   background: white;
+  border: 1px solid #ffffff;
 }
 .shopify-section--main-collection .ProductItem__Linked .product-title {
   display: none;
+}
+.shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems {
+  background: white;
+  border: 1px solid #;
 }
   /* ------------------------------------------------------------ *\
     Recently viewed
