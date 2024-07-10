@@ -125,6 +125,7 @@
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+    <style>
       #widgetIframe {
         z-index: 2147483647;
         position: fixed;
