@@ -8137,6 +8137,12 @@ display: block;
   grid-row: span 2;
   padding: 30px 10px;
 }
+.shopify-section--main-collection .custom_block-10 {
+  align-content: center;
+  height: 100%;
+  grid-column: span 4;
+  grid-row: span 2;
+}
 .shopify-section--main-collection .custom_block-5 img {
   margin: 0 auto 50px;
 }
