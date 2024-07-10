@@ -8133,6 +8133,7 @@ display: block;
 height: 100%;
 grid-column: span 2;
 grid-row: span 2;
+  padding: 20px 10px;
 }
 .shopify-section--main-collection .custom_block-5 img {
   margin: 0 auto;
