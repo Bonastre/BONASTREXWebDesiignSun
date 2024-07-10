@@ -46,7 +46,10 @@
         "show_filter_group_name": false,
         "show_filter_values_count": false,
         "open_filters_by_default": false,
-        "enable_load_more": true
+        "enable_load_more": true,
+        "image_block_5": "shopify:\/\/shop_images\/Bon-Bonblack1-_1_600x_2.png",
+        "title_block_5": "",
+        "content_block_5": ""
       }
     },
     "recently_viewed_products_6KQNxP": {
