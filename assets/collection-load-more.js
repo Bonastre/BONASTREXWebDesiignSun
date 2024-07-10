@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
           collection.append(newProducts.html());
           let newUrl = newProducts.data("next-url");
           let productCard = $(".product-card");
-          console.log(productCard);
+
           productCard.attr("style", "opacity: 1;");
           let fifthProduct = ;
           console.log(fifthProduct);
