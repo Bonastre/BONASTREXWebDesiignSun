@@ -24,6 +24,7 @@ jQuery(document).ready(function ($) {
 
           productCards.attr("style", "opacity: 1;");
           productCards.each((product, index) => {
+            console.log(index % 10);
             if (index % 10 === 5) {
               $(product).addClass("fifth-product");
             }
