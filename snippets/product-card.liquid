@@ -22,7 +22,7 @@ Supported variables
 * hide_product_information: if set to true, all content (vendor, badge, title...) are not rendered, to create image-based grid
 * quick_buy_context: a unique text to dissociate quick buy if the same product is embedded multiple times
 {%- endcomment -%}
-{% assign product_description = product.description %}
+
 {%- liquid
   if hide_product_information
     assign show_badges = false
@@ -49,7 +49,7 @@ Supported variables
 -%}
 
 {% assign show_linked_products = settings.show_linked_products %}
-{% assign product_description = product.description %}
+
 {%- liquid
  if show_linked_products
         assign show_badges = true
@@ -58,7 +58,7 @@ Supported variables
     if forloop_index == 5
         assign show_linked_products = false
         assign show_title = true
-        assign product_description = true
+        assign product_description = product.description
     endif
 %}
 
