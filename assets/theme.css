@@ -8148,15 +8148,18 @@ ul {
   text-align: center;
   color: #231F20;
 }
-.shopify-section--main-collection .ProductItem__Linked {
+.shopify-section--main-collection .ProductItem__Linked  {
   background: white;
   border: 1px solid #DAD9D5;
   padding: 10px;
   transition: ease 0.3s;
 }
-/* ------------------------------------------------------------ *\
-  Recently viewed
-\* ------------------------------------------------------------ */
+.shopify-section--main-collection .ProductItem__Linked .product-title {
+  display: none;
+}
+  /* ------------------------------------------------------------ *\
+    Recently viewed
+  \* ------------------------------------------------------------ */
 .shopify-section--recently-viewed-products .section-header {
   min-width: 100%;
 }
