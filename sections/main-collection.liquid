@@ -88,6 +88,11 @@ CSS
         --collection-grid-template: var(--collection-sidebar-width, 0) minmax(0,1fr);
       {%- endif -%}
     }
+    body {
+      background-image: url({{ 'image-name-with-extension' | asset_img_url: 'original' }});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   @media screen and (min-width: 1400px) {
