@@ -8145,7 +8145,9 @@ display: block;
   grid-row: span 2;
 }
 .shopify-section--main-collection .custom_block-10 img {
-  ;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .shopify-section--main-collection .custom_block-5 img {
   margin: 0 auto 50px;
