@@ -8103,16 +8103,16 @@ ul {
   Collection style
 \* ------------------------------------------------------------ */
 
-.product__description-little p:last-child {
+.shopify-section--main-collection .product__description-little p:last-child {
   display: none;
 }
-.product__description {
+.shopify-section--main-collection .product__description {
   display: none;
 }
-.product-card:hover .product__description {
+.shopify-section--main-collection .product-card:hover .product__description {
   display: block;
 }
-.product-card-5 {
+.shopify-section--main-collection .product-card-5 {
   
 }
 /* ------------------------------------------------------------ *\
