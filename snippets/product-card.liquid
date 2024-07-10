@@ -60,12 +60,11 @@ Supported variables
         assign product_description = product.description
     endif
 %}
-{%- liquid
-    assign t = template | split: '.' | first
-    if t == 'collection'
-        assign show_title = false
-    endif
-%}
+{%- assign t = template | split: '.' | first -%}
+
+{%- if t == 'collection' -%}
+    {%  assign show_title = false  %}
+{%- endif -%}
 
 <product-card class="product-card product-card-{{ forloop_index }}" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
 
