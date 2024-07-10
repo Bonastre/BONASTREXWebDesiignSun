@@ -20,20 +20,14 @@ jQuery(document).ready(function ($) {
           let newProducts = $(nextPage).find(".product-list");
           collection.append(newProducts.html());
           let newUrl = newProducts.data("next-url");
-          let productCard = $(".product-card");
-          console.log(productCard);
+          let productCards = $(".product-card");
 
-          productCard.attr("style", "opacity: 1;");
-
-          productCard.each(function () {
-            if ($(this).hasClass("fifth-product")) {
-              $(this).removeClass("fifth-product");
+          productCards.attr("style", "opacity: 1;");
+          productCards.each((product, index) => {
+            if (index % 10 === 5) {
+              $(product).addClass("fifth-product");
             }
           });
-          console.log(fifthProduct);
-          if (fifthProduct) {
-            fifthProduct.addClass("fifth-product");
-          }
 
           nextUrl = newUrl;
           if (!newUrl) {
