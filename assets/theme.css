@@ -8108,6 +8108,7 @@ ul {
 }
 .shopify-section--main-collection .product__description {
   display: none;
+  transition: ease 0.3s;
 }
 .shopify-section--main-collection .product-card:hover .product__description {
   display: block;
