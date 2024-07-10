@@ -8171,13 +8171,13 @@ color: #231F20;
   transition: ease 0.3s;
 }
 .shopify-section--main-collection .custom_block-9:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 .shopify-section--main-collection .custom_block-9:hover .custom_block-content--hover {
   opacity: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   text-align: center;
