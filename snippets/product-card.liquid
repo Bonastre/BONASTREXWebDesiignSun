@@ -44,7 +44,7 @@ Supported variables
     assign show_swatches = show_swatches | default: true, allow_false: true
   endif
 
-    assign forloop_index =
+    assign forloop_index = forloop.index
 -%}
 
 {% assign show_linked_products = settings.show_linked_products %}
@@ -55,7 +55,7 @@ Supported variables
 %}
 
 
-<product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
+<product-card class="product-card product-card-{{ forloop_index }}" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
 
   {%- comment -%}
   --------------------------------------------------------------------------------------------------------------------
