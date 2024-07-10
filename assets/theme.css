@@ -8113,6 +8113,12 @@ ul {
 .shopify-section--main-collection .product-card:hover .product__description {
   display: block;
 }
+@media screen and (max-width: 640px) {
+  .shopify-section--main-collection .product-card-5 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
 .shopify-section--main-collection .product-card-5 {
   height: 100%;
   grid-column: span 2;
