@@ -62,15 +62,15 @@ Supported variables
 %}
 {%- assign t = template | split: '.' | first -%}
 
-{%- if t == 'collection' -%}
-    <div class="product-card product-card-{{ forloop_index }} product-card-collection">
-    <a href="{{ product.url }}" class="product-title {% if text_class != blank %}{{ text_class }}{% endif %} {% if settings.product_title_max_lines > 0 %}line-clamp{% endif %}" {% if settings.product_title_max_lines > 0 %}style="--line-clamp-count: {{ settings.product_title_max_lines }}"{% endif %} data-instant>
-        {{- product.title -}}
-    </a>
-{%- endif -%}
+
 <product-card class="product-card product-card-{{ forloop_index }}" {% if reveal %}reveal-on-scroll="true"{% endif %} handle="{{ product.handle | escape }}">
 
-  {%- comment -%}
+    {%- if t == 'collection' -%}
+        <a href="{{ product.url }}" class="product-title {% if text_class != blank %}{{ text_class }}{% endif %} {% if settings.product_title_max_lines > 0 %}line-clamp{% endif %}" {% if settings.product_title_max_lines > 0 %}style="--line-clamp-count: {{ settings.product_title_max_lines }}"{% endif %} data-instant>
+            {{- product.title -}}
+        </a>
+    {%- endif -%}
+    {%- comment -%}
   --------------------------------------------------------------------------------------------------------------------
   PRODUCT MEDIA
   --------------------------------------------------------------------------------------------------------------------
@@ -270,7 +270,3 @@ Supported variables
     {%- endif -%}
   </div>
 </product-card>
-{%- if t == 'collection' -%}
-    </div>
-
-{%- endif -%}
