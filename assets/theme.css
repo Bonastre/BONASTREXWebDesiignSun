@@ -8114,6 +8114,8 @@ ul {
   text-align: left;
   text-transform: uppercase;
   color: #231F20;
+  background: rgb(var(--background));
+
 }
 .shopify-section--main-collection .product__description-little p:last-child {
   display: none;
