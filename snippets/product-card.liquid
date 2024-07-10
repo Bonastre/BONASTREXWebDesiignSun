@@ -43,6 +43,8 @@ Supported variables
     assign show_secondary_image = show_secondary_image | default: settings.show_secondary_image, allow_false: true
     assign show_swatches = show_swatches | default: true, allow_false: true
   endif
+
+    assign forloop_index =
 -%}
 
 {% assign show_linked_products = settings.show_linked_products %}
