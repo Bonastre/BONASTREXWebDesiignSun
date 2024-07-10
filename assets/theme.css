@@ -8112,7 +8112,9 @@ ul {
 .product-card:hover .product__description {
   display: block;
 }
-
+.product-card-5 {
+  
+}
 /* ------------------------------------------------------------ *\
   Recently viewed
 \* ------------------------------------------------------------ */
