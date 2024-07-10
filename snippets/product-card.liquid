@@ -61,8 +61,8 @@ Supported variables
     endif
 %}
 {%- liquid
-    
-    if request.page_type == 'collection'
+    assign t = template | split: '.' | first
+    if t == 'collection'
         assign show_title = false
     endif
 %}
