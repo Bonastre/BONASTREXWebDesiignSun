@@ -3,12 +3,6 @@ jQuery(document).ready(function ($) {
   let collection = $(".product-list");
   let nextUrl = collection.data("next-url");
 
-  let fifthProduct = $(".product-card:nth-child(5)");
-
-  if (fifthProduct) {
-    fifthProduct.addClass("fifth-product");
-  }
-
   if (nextUrl) {
     loadMore.on("click", function (event) {
       event.preventDefault();
