@@ -63,7 +63,7 @@ Supported variables
 {%- assign t = template | split: '.' | first -%}
 
 {%- if t == 'collection' -%}
-    hell
+    {{ show_title | json }}
     {%  assign show_title = false  %}
 {%- endif -%}
 
