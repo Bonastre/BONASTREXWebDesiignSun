@@ -229,7 +229,7 @@ LIQUID
                     hello
                   {% endif %}
 
-                  {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, forloop_index: forloop.index, stacked: true -%}
+                  {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
                   {%- endfor -%}
                 </product-list>
 
