@@ -292,6 +292,9 @@ LIQUID
                         {%- endif -%}
                       </div>
                     {% endif %}
+
+
+                  {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
                     {% if forloop.last %}
                       <div class="custom_block custom_block-{{ forloop.last }}">
                         {%- if section.settings.image_block_11 != blank -%}
@@ -308,8 +311,6 @@ LIQUID
                         {%- endif -%}
                       </div>
                     {% endif %}
-
-                  {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
                   {%- endfor -%}
                 </product-list>
 
