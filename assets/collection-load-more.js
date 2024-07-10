@@ -23,6 +23,7 @@ jQuery(document).ready(function ($) {
           let productCard = $(".product-card");
           productCard.attr("style", "opacity: 1;");
           let fifthProduct = productCard.eq(4);
+          console.log(fifthProduct);
           if (fifthProduct) {
             fifthProduct.addClass("fifth-product");
           }
