@@ -8136,6 +8136,11 @@ ul {
   background: rgb(var(--background));
   padding: 10px 0;
 }
+@media screen and (max-width: 450px) {
+  .shopify-section--main-collection .product-title-collection {
+    font-size: 10px;
+  }
+}
 .shopify-section--main-collection .product__description-little p:last-child {
 display: none;
 }
