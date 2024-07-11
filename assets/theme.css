@@ -8126,6 +8126,7 @@ Favorite wishlist
     max-width: 1330px;
     display: flex;
     justify-content: space-evenly;
+    gap: unset;
   }
 
   .shopify-section--main-product .product-gallery,
