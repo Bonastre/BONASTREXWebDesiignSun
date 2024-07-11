@@ -34,7 +34,7 @@
         "apparition_delay": 3,
         "show_only_on_index": false,
         "hide_for_account_holders": false,
-        "show_only_once": true,
+        "show_only_once": false,
         "title": "",
         "content": "Sign up below and be the first to hear about new collections, special events <strong>and enjoy 10% off your first order<\/strong>",
         "button_text": "Subscribe"
