@@ -5788,6 +5788,7 @@ product-rerender {
   padding: unset;
   border: unset;
   border-bottom: 1px solid rgb(var(--border-color));
+  font-weight: 600;
 }
 .password {
 position: relative;
