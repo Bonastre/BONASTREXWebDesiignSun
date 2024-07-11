@@ -8142,15 +8142,17 @@ ul {
   }
 }
 .shopify-section--main-collection .product__description-little p:last-child {
-display: none;
+  display: none;
 }
 .shopify-section--main-collection .product__description {
-display: none;
-transition: ease 0.3s;
+  display: none;
+  transition: ease 0.3s;
 }
+
 .shopify-section--main-collection .product-card:hover .product__description {
-display: block;
+  display: block;
 }
+
 .shopify-section--main-collection .custom_block-3,
 .shopify-section--main-collection .custom_block-5,
 .shopify-section--main-collection .custom_block-7,
@@ -8160,10 +8162,12 @@ display: block;
   grid-column: span 2;
   grid-row: span 2;
 }
+
 .shopify-section--main-collection .custom_block-3,
 .shopify-section--main-collection .custom_block-7 {
   display: none;
 }
+
 .shopify-section--main-collection .custom_block-9--3 {
   align-content: center;
   height: 100%;
@@ -8172,18 +8176,19 @@ display: block;
   grid-row: span 2;
   padding-bottom: 100px;
 }
+
 .shopify-section--main-collection .custom_block-9--3 .custom-block_image-mobile {
   display: none;
 }
 
-
-
 .shopify-section--main-collection .custom_block-5 img {
   margin: 0 auto 50px;
 }
+
 .shopify-section--main-collection .custom_block-5-left img {
   margin: unset;
 }
+
 .shopify-section--main-collection .custom_block .h6 {
 font-size: 18px;
 font-weight: 500;
@@ -8191,6 +8196,7 @@ text-align: center;
 margin-bottom: 20px;
 color: #231F20;
 }
+
 .shopify-section--main-collection .custom_block .custom_block-content {
 max-width: 358px;
 margin-inline: auto;
@@ -8261,7 +8267,7 @@ border: 1px solid #231F20;
     display: none;
   }
 }
-  @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .shopify-section--main-collection .custom_block-3,
     .shopify-section--main-collection .custom_block-7 {
       display: grid;
@@ -8292,7 +8298,7 @@ border: 1px solid #231F20;
     .shopify-section--main-collection .collection .product-list[collection-desktop-layout=medium] {
       --product-list-items-per-row: 2;
     }
-  }
+}
 /* ------------------------------------------------------------ *\
 Recently viewed
 \* ------------------------------------------------------------ */
