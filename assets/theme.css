@@ -8153,6 +8153,9 @@ display: block;
     display: grid;
     grid-column: span 3;
   }
+  .shopify-section--main-collection .custom_block-5 {
+    display: none;
+  }
   .shopify-section--main-collection .custom_block-9 {
     display: none;
   }
