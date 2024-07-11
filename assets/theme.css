@@ -5780,7 +5780,9 @@ product-rerender {
 .newsletter-popup .form {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  justify-content: space-between;
+
 }
 .newsletter-popup .form input[type="email"] {
   padding: unset;
