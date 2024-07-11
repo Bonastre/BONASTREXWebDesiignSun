@@ -5781,6 +5781,11 @@ product-rerender {
   align-items: center;
   gap: 1rem;
 }
+.newsletter-popup .form input[type="email"] {
+  padding: unset;
+  border: unset;
+  border-bottom: 1px solid rgb(var(--border-color));
+}
 .password {
 position: relative;
 }
