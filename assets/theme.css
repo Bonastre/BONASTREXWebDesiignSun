@@ -4455,6 +4455,7 @@ product-rerender {
   width: 100%;
   align-items: center;
   padding: 0 10px;
+  margin-bottom: 40px;
 }
 .footer__logo img {
   width: 100%;
