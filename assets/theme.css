@@ -8127,6 +8127,11 @@ Favorite wishlist
     display: flex;
     justify-content: space-between;
   }
+
+  .shopify-section--main-product .product-info__block-item .share-buttons {
+    margin-top: unset;
+    margin-bottom: unset;
+  }
   .shopify-section--main-product .product-gallery__image-list {
     max-width: 400px;
   }
