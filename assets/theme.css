@@ -4490,6 +4490,7 @@ product-rerender {
   font-size: 11px;
   color: rgb(var(--text-color));
 }
+
 .footer__block--newsletter input[type="email"] {
   padding: unset;
   border: unset;
