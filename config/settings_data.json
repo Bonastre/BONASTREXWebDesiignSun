@@ -97,9 +97,9 @@
       },
       "scheme-30c2d622-038b-417a-8f5b-75817662c082": {
         "settings": {
-          "background": "#fbfbf6",
+          "background": "#d9d9d9",
           "background_gradient": "",
-          "text_color": "#1c1c1c",
+          "text_color": "#000000",
           "card_product_background": "#fbfbf6",
           "primary_button_background": "#1c1c1c",
           "primary_button_text_color": "#ffffff",
