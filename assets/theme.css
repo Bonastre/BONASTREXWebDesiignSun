@@ -5766,13 +5766,14 @@ product-rerender {
 .newsletter-popup {
   width: 100%;
   inset-inline-start: auto;
+  inset-block-end: 0;
+  inset-inline: 0;
 }
 .newsletter-popup .v-stack {
   display: flex;
   align-items: center;
   gap: 3rem;
-  inset-block-end: 0;
-  inset-inline: 0;
+
 }
 .password {
 position: relative;
