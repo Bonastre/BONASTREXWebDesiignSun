@@ -8145,8 +8145,10 @@ display: block;
   grid-row: span 2;
   padding-bottom: 80px;
 }
-@media screen and (max-width: ) {
-  
+@media screen and (max-width: 1000px) {
+  .shopify-section--main-collection .custom_block-9--3 {
+    grid-column: span 2;
+  }
 }
 .shopify-section--main-collection .custom_block-5 img {
   margin: 0 auto 50px;
