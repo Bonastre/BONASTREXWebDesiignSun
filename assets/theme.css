@@ -8313,6 +8313,7 @@ display: none;
   bottom: -24%;
   right: -12px;
   z-index: 10;
+  color: #231F20;
 }
 
 @media screen and (max-width: 1000px) {
