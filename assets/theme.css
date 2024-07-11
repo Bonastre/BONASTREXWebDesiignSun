@@ -8304,6 +8304,7 @@ display: none;
   justify-content: space-between;
   z-index: 2;
 }
+.shopify-section--main-collection 
 .shopify-section--main-collection .ProductItem__Linked:before {
   content: "";
   position: absolute;
@@ -8323,6 +8324,7 @@ display: none;
   height: 20px;
   background-color: red;
   z-index: 10;
+  transform: rotate(90deg);
 }
 
 @media screen and (max-width: 1000px) {
