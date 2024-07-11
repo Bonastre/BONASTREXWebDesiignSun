@@ -5790,6 +5790,11 @@ product-rerender {
   border-bottom: 1px solid rgb(var(--border-color));
   font-weight: 600;
 }
+.newsletter-popup .pop-in__close-button {
+  inset-block-start: 1.5rem;
+  inset-inline-start: 1.25rem;
+  position: absolute !important;
+}
 .password {
 position: relative;
 }
