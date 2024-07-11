@@ -8150,7 +8150,9 @@ display: block;
   grid-row: span 2;
   padding-bottom: 80px;
 }
-.shopify-section--main-collection .custom_block-9--3
+.shopify-section--main-collection .custom_block-9--3 .custom-block_image-mob {
+  display: none;
+}
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .custom_block-3,
   .shopify-section--main-collection .custom_block-7 {
@@ -8166,6 +8168,12 @@ display: block;
   }
   .shopify-section--main-collection .custom_block-9--3 {
     grid-column: span 2;
+  }
+  .shopify-section--main-collection .custom_block-9--3 .custom-block_image-desk {
+    display: none;
+  }
+  .shopify-section--main-collection .custom_block-9--3 .custom-block_image-mob {
+    display: block;
   }
   .shopify-section--main-collection .collection .product-list[collection-desktop-layout=medium] {
     --product-list-items-per-row: 2;
