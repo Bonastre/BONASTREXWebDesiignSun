@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "heading_color": "#1c1b1b",
@@ -479,6 +488,12 @@
     "blocks": {
       "13951170544780599758": {
         "type": "shopify:\/\/apps\/tapita-seo-speed\/blocks\/app-embed\/cd37ca7a-40ad-4fdc-afd3-768701482209",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "3294164036280357830": {
+        "type": "shopify:\/\/apps\/mlv-auto-currency-switcher\/blocks\/mlveda-currencies-head\/92ab730f-097e-4571-b27c-3f449e098ca3",
         "disabled": false,
         "settings": {
         }
