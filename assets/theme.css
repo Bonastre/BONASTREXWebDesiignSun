@@ -8164,14 +8164,10 @@ display: block;
     display: none;
   }
   .shopify-section--main-collection .custom_block-9--3 {
-    grid-column: span 3;
-  }
-}
-@media screen and (max-width: 700px) {
-  .shopify-section--main-collection .custom_block-9--3 {
     grid-column: span 2;
   }
 }
+
 .shopify-section--main-collection .custom_block-5 img {
   margin: 0 auto 50px;
 }
