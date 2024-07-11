@@ -5775,6 +5775,11 @@ product-rerender {
   gap: 3rem;
 
 }
+.newsletter-popup .form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .password {
 position: relative;
 }
