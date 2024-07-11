@@ -8092,6 +8092,10 @@ ul {
   Load more
 \* ------------------------------------------------------------ */
 #load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   margin-top: 40px;
   font-size: 18px;
   font-weight: 500;
