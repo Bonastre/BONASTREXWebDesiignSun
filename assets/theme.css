@@ -8269,10 +8269,11 @@ display: none;
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems {
   position: relative;
   background: white;
-  border-left: 1px solid #231F20;
-  border-right: 1px solid #231F20;
-  border-bottom: 1px solid #231F20;
+  border-left: 0.5px solid #231F20;
+  border-right: 0.5px solid #231F20;
+  border-bottom: 0.5px solid #231F20;
   justify-content: space-between;
+
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:after {
   content: '';
