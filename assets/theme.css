@@ -8136,10 +8136,12 @@ Favorite wishlist
   .shopify-section--main-product .product-gallery {
     max-width: 500px;
   }
-
   .shopify-section--main-product .product-info,
   .shopify-section--main-product .product-gallery__image-list {
     max-width: 400px;
+  }
+  .shopify-section--main-product .product-gallery__thumbnail-list {
+    position: relative;
   }
 }
 /* ------------------------------------------------------------ *\
