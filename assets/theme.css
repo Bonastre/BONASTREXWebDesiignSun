@@ -8330,7 +8330,12 @@ display: none;
   z-index: 10;
   transform: rotate(90deg);
 }
-.shopify-section--main-collection .
+.shopify-section--main-collection .product-card:hover .ProductItem__Linked:before {
+  display: block;
+}
+.shopify-section--main-collection .product-card:hover .ProductItem__Linked:hover:after {
+  display: block;
+}
 
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .product-card__figure > .badge-list {
