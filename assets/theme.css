@@ -8253,11 +8253,13 @@ background: white;
 border: 1px solid #231F20;
 }
 @media screen and (min-width: 700px) {
-.shopify-section--main-collection .product-card__figure>.badge-list {
-inset-block-start: 105%;
-}
-.shopify-section--main-collection .product-card:hover .product-card__figure>.badge-list {
-display: none;
+  .shopify-section--main-collection .product-card__figure > .badge-list {
+    inset-block-start: 105%;
+  }
+
+  .shopify-section--main-collection .product-card:hover .product-card__figure > .badge-list {
+    display: none;
+  }
 }
   @media screen and (max-width: 1000px) {
     .shopify-section--main-collection .custom_block-3,
