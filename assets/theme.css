@@ -5779,7 +5779,11 @@ product-rerender {
   flex-wrap: wrap;
   font-size: 11px;
 }
-
+@media screen and (min-width: 700px) {
+  .newsletter-popup .v-stack {
+    flex-wrap: nowrap;
+  }
+}
 .newsletter-popup .form {
   display: flex;
   align-items: center;
