@@ -8304,7 +8304,9 @@ display: none;
   justify-content: space-between;
   z-index: 2;
 }
-.shopify-section--main-collection 
+.shopify-section--main-collection .product-card__info {
+  position: relative;
+}
 .shopify-section--main-collection .ProductItem__Linked:before {
   content: "";
   position: absolute;
