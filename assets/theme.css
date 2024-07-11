@@ -8303,7 +8303,8 @@ display: none;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:after {
   content: '';
-  ackground-image: url("");
+  ackground-image: url("/assets/cross.svg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
