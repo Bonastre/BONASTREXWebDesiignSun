@@ -8289,7 +8289,7 @@ display: none;
   content: '';
   width: 1px;
   height: 11px;
-  color: #231F20;
+  background: #231F20;
   position: absolute;
   bottom: -15%;
   right: 0;
