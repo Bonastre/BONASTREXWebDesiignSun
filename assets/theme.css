@@ -8277,13 +8277,12 @@ display: none;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:after {
   content: '';
-  width: 10px;
+  width: 11px;
   height: 1px;
   background: #231F20;
   position: absolute;
-  bottom: -50%;
-  right: 50%;
-  transform: translate(-50%, 50%);
+  bottom: 0;
+  right: -4%;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:before {
   content: '';
