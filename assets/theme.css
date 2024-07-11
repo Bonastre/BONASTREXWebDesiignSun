@@ -5762,11 +5762,10 @@ product-rerender {
   }
 }
 
-@media screen and (min-width: 700px) {
-  .newsletter-popup {
-    width: 23.75rem;
-    inset-inline-start: auto;
-  }
+
+.newsletter-popup {
+  width: 100%;
+  inset-inline-start: auto;
 }
 
 .password {
