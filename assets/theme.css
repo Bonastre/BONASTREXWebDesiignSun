@@ -5900,19 +5900,19 @@ display: grid;
 }
 
 @media screen and (min-width: 1000px) {
-.shopify-section--main-product .section-spacing {
-padding-block-start: var(--container-gutter);
-}
+  .shopify-section--main-product .section-spacing {
+  padding-block-start: var(--container-gutter);
+  }
 
-.product {
---product-gap: 3.5rem;
-}
+  .product {
+  --product-gap: 3.5rem;
+  }
 }
 
 @media screen and (min-width: 1150px) {
-.product {
---product-gap: 5rem;
-}
+  .product {
+  --product-gap: 5rem;
+  }
 }
 
 .product-gallery {
@@ -8088,6 +8088,7 @@ Favorite wishlist
 /* ------------------------------------------------------------ *\
   Custom product info
 \* ------------------------------------------------------------ */
+.shopify-section--main-product 
 .shopify-section--main-product .product-info__block-item {
   margin-bottom: unset;
   margin-top: unset;
