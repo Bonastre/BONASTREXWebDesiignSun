@@ -8130,7 +8130,7 @@ display: block;
 }
 .shopify-section--main-collection .custom_block-3,
 .shopify-section--main-collection .custom_block-5,
-.shopify-section--main-collection .custom_block-8,
+.shopify-section--main-collection .custom_block-7,
 .shopify-section--main-collection .custom_block-9 {
   align-content: center;
   height: 100%;
@@ -8139,7 +8139,7 @@ display: block;
   padding: 30px 10px;
 }
 .shopify-section--main-collection .custom_block-3,
-.shopify-section--main-collection .custom_block-8 {
+.shopify-section--main-collection .custom_block-7 {
   display: none;
 }
 .shopify-section--main-collection .custom_block-9--3 {
@@ -8152,7 +8152,7 @@ display: block;
 }
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .custom_block-3,
-  .shopify-section--main-collection .custom_block-8 {
+  .shopify-section--main-collection .custom_block-7 {
     display: grid;
     grid-column: span 2;
   }
