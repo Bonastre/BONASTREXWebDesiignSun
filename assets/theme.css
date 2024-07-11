@@ -8168,6 +8168,7 @@ display: block;
   }
   .shopify-section--main-collection .custom_block-9--3 {
     grid-column: span 2;
+    padding-bottom: 150px;
   }
   .shopify-section--main-collection .custom_block-9--3 .custom-block_image-desk {
     display: none;
