@@ -8275,17 +8275,12 @@ display: none;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:after {
   content: '+';
-  font-size: 10px;
-  font-weight: 500;
-  color: #231F20;
-  text-align: center;
-  line-height: 2.5;
-  display: block;
+  font-size: 35px;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  bottom: -50%;
+  right: -50%;
+  transform: translate(-50%, 50%);
+
 }
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .product-card__figure > .badge-list {
