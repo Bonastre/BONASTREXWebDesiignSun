@@ -8152,9 +8152,7 @@ display: block;
 .shopify-section--main-collection .custom_block-9--3 .custom-block_image-mobile {
   display: none;
 }
-.shopify-section--main-collection .custom_block-5-left img {
-  margin: unset;
-}
+
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .custom_block-3,
   .shopify-section--main-collection .custom_block-7 {
@@ -8185,6 +8183,9 @@ display: block;
 
 .shopify-section--main-collection .custom_block-5 img {
   margin: 0 auto 50px;
+}
+.shopify-section--main-collection .custom_block-5-left img {
+  margin: unset;
 }
 .shopify-section--main-collection .custom_block .h6 {
 font-size: 18px;
