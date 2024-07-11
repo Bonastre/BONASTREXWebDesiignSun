@@ -5776,13 +5776,14 @@ product-rerender {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 .newsletter-popup .form {
   display: flex;
   align-items: center;
   gap: 2rem;
   justify-content: space-between;
-
+  min-width: 325px;
 }
 .newsletter-popup .form input[type="email"] {
   padding: unset;
