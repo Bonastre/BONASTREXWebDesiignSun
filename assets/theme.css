@@ -8304,18 +8304,25 @@ display: none;
   justify-content: space-between;
   z-index: 2;
 }
-.shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:after {
-  content: '';
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.shopify-section--main-collection .ProductItem__Linked:before {
+  content: "";
   position: absolute;
-  width:22px;
-  height: 22px;
-  bottom: -24%;
-  right: -12px;
-  z-index: 1;
-  color: #231F20;
+  bottom: -8px;
+  right: 1px;
+  width: 1.7px;
+  height: 20px;
+  background-color: red;
+  z-index: 10;
+}
+.shopify-section--main-collection .ProductItem__Linked:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 1px;
+  width: 1.7px;
+  height: 20px;
+  background-color: red;
+  z-index: 10;
 }
 
 @media screen and (max-width: 1000px) {
