@@ -4888,6 +4888,11 @@ product-rerender {
   gap: .625rem .9rem;
   display: flex;
 }
+@media screen and (max-width: 450px) {
+  .header__secondary-nav {
+    flex-wrap: nowrap;
+  }
+}
 
 .header__secondary-nav .localization-selectors:not(:only-child) {
   margin-inline-end: .625rem;
