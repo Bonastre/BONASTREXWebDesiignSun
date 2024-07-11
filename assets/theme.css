@@ -8275,13 +8275,24 @@ display: none;
   justify-content: space-between;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:after {
-  content: '+';
-  font-size: 35px;
+  content: '';
+  width: 10px;
+  height: 1px;
+  background: #231F20;
   position: absolute;
   bottom: -50%;
   right: 50%;
   transform: translate(-50%, 50%);
-
+}
+.shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:before {
+  content: '';
+  width: 10px;
+  height: 1px;
+  background: #231F20;
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(50%, 50%);
 }
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .product-card__figure > .badge-list {
