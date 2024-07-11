@@ -8125,7 +8125,7 @@ Favorite wishlist
   .shopify-section--main-product .product {
     max-width: 1330px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .shopify-section--main-product .product-gallery,
