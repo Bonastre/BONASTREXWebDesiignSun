@@ -8,7 +8,7 @@
 
 <div class="footer color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
   {%- if section.settings.image_logo != blank and section.settings.link_logo != blank -%}
-    {%- assign sizes = '(max-width: 100%) 100vw, 50vw' -%}
+    {%- assign sizes = '(width: 100%) 100vw, 50vw' -%}
     <a class="footer__logo" href="{{ section.settings.link_logo }}">
       {{- section.settings.image_logo | image_url: width: section.settings.image_logo.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
     </a>
