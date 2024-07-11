@@ -8091,9 +8091,7 @@ Favorite wishlist
 .shopify-section--main-product .product-gallery {
   justify-content: flex-end;
 }
-.shopify-section--main-product .product-gallery__image-list {
-  max-width: 400px;
-}
+
 .shopify-section--main-product .product-info__block-item {
   margin-bottom: unset;
   margin-top: unset;
@@ -8122,6 +8120,11 @@ Favorite wishlist
 
 .shopify-section--main-product .product-info__block-item .ProductItem__ColorSwatchItem__label {
   margin-bottom: 30px;
+}
+@media (min-width: 1000px) {
+  .shopify-section--main-product .product-gallery__image-list {
+    max-width: 400px;
+  }
 }
 /* ------------------------------------------------------------ *\
   Custom blog image
