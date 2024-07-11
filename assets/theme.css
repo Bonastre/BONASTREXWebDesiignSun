@@ -8152,6 +8152,9 @@ display: block;
 .shopify-section--main-collection .custom_block-9--3 .custom-block_image-mobile {
   display: none;
 }
+.shopify-section--main-collection .custom_block-5-left img {
+  margin: unset;
+}
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .custom_block-3,
   .shopify-section--main-collection .custom_block-7 {
