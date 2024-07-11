@@ -8129,9 +8129,8 @@ Favorite wishlist
   }
 
   .shopify-section--main-product .product-gallery,
-  .{
-    margin-top: unset;
-    margin-bottom: unset;
+  .shopify-section--main-product .product-info {
+    width: 50%;
   }
   .shopify-section--main-product .product-gallery__image-list {
     max-width: 400px;
