@@ -4456,7 +4456,9 @@ product-rerender {
   align-items: center;
   padding: 0 10px;
 }
-
+.footer__logo img {
+  width: 100%;
+}
 .footer__block-list {
   justify-content: start;
   align-items: start;
