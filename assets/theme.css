@@ -8146,6 +8146,9 @@ display: block;
   padding-bottom: 80px;
 }
 @media screen and (max-width: 1000px) {
+  shopify-section--main-collection .custom_block-9 {
+    display: none;
+  }
   .shopify-section--main-collection .custom_block-9--3 {
     grid-column: span 3;
   }
