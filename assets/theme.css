@@ -8314,7 +8314,7 @@ display: none;
   right: 1px;
   width: 1.7px;
   height: 20px;
-  background-color: red;
+  background-color: #a6a4a5;
   z-index: 10;
 }
 .shopify-section--main-collection .ProductItem__Linked:after {
@@ -8324,7 +8324,7 @@ display: none;
   right: 1px;
   width: 1.7px;
   height: 20px;
-  background-color: red;
+  background-color: #a6a4a5;
   z-index: 10;
   transform: rotate(90deg);
 }
