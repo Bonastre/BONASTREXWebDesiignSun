@@ -8155,6 +8155,7 @@ display: block;
   .shopify-section--main-collection .custom_block-7 {
     display: grid;
     grid-column: span 2;
+    justify-content: center;
   }
   .shopify-section--main-collection .custom_block-5 {
     display: none;
