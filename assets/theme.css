@@ -5775,13 +5775,14 @@ product-rerender {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  font-size: 11px;
+  font-size: 8px;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1266px) {
   .newsletter-popup .v-stack {
-    flex-wrap: nowrap;
+    gap: 2.5rem;
+    font-size: 11px;
   }
 }
 .newsletter-popup .form {
