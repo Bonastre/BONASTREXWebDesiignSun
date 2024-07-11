@@ -299,10 +299,10 @@ LIQUID
                     </div>
                     <div class="custom_block custom_block-{{ forloop.index }}--3">
                       {%- if section.settings.image_block_11 != blank -%}
-                        {{- section.settings.image_block_11 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                        {{- section.settings.image_block_11 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'custom-block_image-desk' -}}
                       {%- endif -%}
                       {%- if section.settings.image_block_11_mobile != blank -%}
-                        {{- section.settings.image_block_11_mobile | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                        {{- section.settings.image_block_11_mobile | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'custom-block_image-mobile' -}}
                       {%- endif -%}
                       {%- if section.settings.title_block_11 != blank -%}
                         <h6 class="h6">{{ section.settings.title_block_10 }}</h6>
@@ -574,6 +574,11 @@ LIQUID
       "type": "image_picker",
       "id": "image_block_11",
       "label": "Image for block №11"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_block_11_mobile",
+      "label": "Image for block №11 mobile"
     },
     {
       "type": "inline_richtext",
