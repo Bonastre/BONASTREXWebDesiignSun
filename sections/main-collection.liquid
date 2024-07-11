@@ -248,7 +248,7 @@ LIQUID
                       {%- endif -%}
                     </div>
                   {% endif %}
-                    {% if forloop.index == 8  %}
+                    {% if forloop.index == 7  %}
                       <div class="custom_block custom_block-{{ forloop.index }}">
                         {%- if section.settings.image_block_5 != blank -%}
                           {{- section.settings.image_block_5 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
