@@ -8374,4 +8374,7 @@ Recently viewed
   letter-spacing: 0.03em;
   text-align: left;
 }
-.shopify-section--recently-viewed-products .
+.shopify-section--recently-viewed-products .product-card__image {
+  max-height: 350px;
+  object-fit: contain;
+}
