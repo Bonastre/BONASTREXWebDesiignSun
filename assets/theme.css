@@ -8176,35 +8176,7 @@ display: block;
   display: none;
 }
 
-@media screen and (max-width: 1000px) {
-  .shopify-section--main-collection .custom_block-3,
-  .shopify-section--main-collection .custom_block-7 {
-    display: grid;
-    grid-column: span 2;
-    justify-content: center;
-  }
-  .shopify-section--main-collection .custom_block-5 {
-    display: none;
-  }
-  .shopify-section--main-collection .custom_block-9 {
-    display: none;
-  }
-  .shopify-section--main-collection .custom_block-9--3 {
-    grid-column: span 2;
-    padding-bottom: 25px;
-  }
-  .shopify-section--main-collection .custom_block-9--3 .custom-block_image-desk {
-    display: none;
-  }
-  .shopify-section--main-collection .custom_block-9--3 .custom-block_image-mobile {
-    display: block;
-    max-height: 300px;
-    object-fit: contain;
-  }
-  .shopify-section--main-collection .collection .product-list[collection-desktop-layout=medium] {
-    --product-list-items-per-row: 2;
-  }
-}
+
 
 .shopify-section--main-collection .custom_block-5 img {
   margin: 0 auto 50px;
@@ -8287,7 +8259,38 @@ inset-block-start: 105%;
 .shopify-section--main-collection .product-card:hover .product-card__figure>.badge-list {
 display: none;
 }
-}
+  @media screen and (max-width: 1000px) {
+    .shopify-section--main-collection .custom_block-3,
+    .shopify-section--main-collection .custom_block-7 {
+      display: grid;
+      grid-column: span 2;
+      justify-content: center;
+    }
+    .shopify-section--main-collection .custom_block-5 {
+      display: none;
+    }
+    .shopify-section--main-collection .custom_block-9 {
+      display: none;
+    }
+    .shopify-section--main-collection .custom_block-9--3 {
+      grid-column: span 2;
+      padding-bottom: 25px;
+    }
+    .shopify-section--main-collection .custom_block-9--3 .custom_block-content {
+      font-size: 11px;
+    }
+    .shopify-section--main-collection .custom_block-9--3 .custom-block_image-desk {
+      display: none;
+    }
+    .shopify-section--main-collection .custom_block-9--3 .custom-block_image-mobile {
+      display: block;
+      max-height: 300px;
+      object-fit: contain;
+    }
+    .shopify-section--main-collection .collection .product-list[collection-desktop-layout=medium] {
+      --product-list-items-per-row: 2;
+    }
+  }
 /* ------------------------------------------------------------ *\
 Recently viewed
 \* ------------------------------------------------------------ */
