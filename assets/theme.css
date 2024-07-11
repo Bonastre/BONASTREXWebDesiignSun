@@ -4437,10 +4437,11 @@ product-rerender {
 }
 @media screen and (min-width: 1200px) {
   .footer {
-    padding: 1.8rem 5.62rem;
+    padding: unset;
   }
   .footer .container {
     margin: unset;
+    padding: 1.8rem 5.62rem;
   }
 }
 
