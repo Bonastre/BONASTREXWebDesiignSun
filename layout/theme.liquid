@@ -125,8 +125,7 @@
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
-    {% render 'weglot_switcher' %}
-    {% render 'weglot_hreftags' %}
+
     <style>
       #widgetIframe {
         z-index: 2147483647;
@@ -139,6 +138,8 @@
         document.getElementById('widgetIframe').className = "iframeIos";
       }
       window.addEventListener("resize", resizeListener);</script>
+    {% render 'weglot_switcher' %}
+    {% render 'weglot_hreftags' %}
   </head>
 
   {% liquid
