@@ -8286,8 +8286,8 @@ display: none;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:before {
   content: '';
-  width: 10px;
-  height: 1px;
+  width: 1px;
+  height: 10px;
   background: #231F20;
   position: absolute;
   bottom: -10%;
