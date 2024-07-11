@@ -8278,7 +8278,7 @@ display: none;
   font-size: 35px;
   position: absolute;
   bottom: -50%;
-  right: -50%;
+  right: 50%;
   transform: translate(-50%, 50%);
 
 }
