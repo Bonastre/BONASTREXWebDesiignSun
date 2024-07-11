@@ -49,7 +49,7 @@
             <div class="fieldset">
               <input type="hidden" name="contact[tags]" value="newsletter">
 
-              {%- assign label = 'blog.comments.email' | t -%}
+              {%- assign label = '*email address' -%}
               {%- render 'input', type: 'email', name: 'contact[email]', label: label, value: customer.email, required: true, autocomplete: 'email' -%}
             </div>
 
