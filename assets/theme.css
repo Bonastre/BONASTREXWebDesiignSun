@@ -8333,7 +8333,7 @@ display: none;
 .shopify-section--main-collection .product-card:hover .ProductItem__Linked:before {
   display: block;
 }
-.shopify-section--main-collection .product-card:hover .ProductItem__Linked:hover:after {
+.shopify-section--main-collection .product-card:hover .ProductItem__Linked:after {
   display: block;
 }
 
