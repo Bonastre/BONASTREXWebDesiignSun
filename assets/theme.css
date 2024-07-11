@@ -8133,6 +8133,10 @@ Favorite wishlist
     width: 50%;
   }
 
+  .shopify-section--main-product .product-gallery {
+    max-width: 500px;
+  }
+
   .shopify-section--main-product .product-info,
   .shopify-section--main-product .product-gallery__image-list {
     max-width: 400px;
