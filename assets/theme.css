@@ -5778,6 +5778,7 @@ product-rerender {
   gap: 3rem;
   flex-wrap: wrap;
 }
+
 .newsletter-popup .form {
   display: flex;
   align-items: center;
