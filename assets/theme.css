@@ -8088,7 +8088,9 @@ Favorite wishlist
 /* ------------------------------------------------------------ *\
   Custom product info
 \* ------------------------------------------------------------ */
-.shopify-section--main-product 
+.shopify-section--main-product .product-gallery__image-list {
+  max-width: 400px;
+}
 .shopify-section--main-product .product-info__block-item {
   margin-bottom: unset;
   margin-top: unset;
