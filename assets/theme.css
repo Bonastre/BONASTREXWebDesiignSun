@@ -8146,6 +8146,9 @@ display: block;
   padding-bottom: 80px;
 }
 @media screen and (max-width: 1000px) {
+  .shopify-section--main-collection .custom_block-5 {
+    grid-column: span 3;
+  }
   .shopify-section--main-collection .custom_block-9 {
     display: none;
   }
@@ -8154,6 +8157,9 @@ display: block;
   }
 }
 @media screen and (max-width: 700px) {
+  .shopify-section--main-collection .custom_block-5 {
+    grid-column: span 2;
+  }
   .shopify-section--main-collection .custom_block-9--3 {
     grid-column: span 2;
   }
