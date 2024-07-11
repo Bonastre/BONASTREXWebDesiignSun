@@ -8198,6 +8198,8 @@ display: block;
   }
   .shopify-section--main-collection .custom_block-9--3 .custom-block_image-mobile {
     display: block;
+    max-height: 300px;
+    object-fit: contain;
   }
   .shopify-section--main-collection .collection .product-list[collection-desktop-layout=medium] {
     --product-list-items-per-row: 2;
