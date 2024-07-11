@@ -8276,13 +8276,13 @@ display: none;
 
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:after {
-  content: "";
+  content: '';
   width: 11px;
   height: 0.5px;
-  background: #231f20;
+  background: #231F20;
   position: absolute;
-  bottom: -24%;
-  right: 0;
+  bottom: 0;
+  right: -4%;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:before {
   content: '';
