@@ -8377,6 +8377,8 @@ Recently viewed
 .shopify-section--recently-viewed-products .product-card {
   gap: unset;
 }
-.shopify-section--recently-viewed-products .product-card__image {
-  max-height: 350px;
+@media screen and (max-width: 1350px) {
+  .shopify-section--recently-viewed-products .product-card__image {
+    max-height: 350px;
+  }
 }
