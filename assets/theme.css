@@ -8153,6 +8153,7 @@ display: block;
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .custom_block-3,
   .shopify-section--main-collection .custom_block-8 {
+    display: grid;
     grid-column: span 2;
   }
   .shopify-section--main-collection .custom_block-5 {
