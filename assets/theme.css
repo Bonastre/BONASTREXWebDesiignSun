@@ -8313,15 +8313,7 @@ display: none;
   bottom: 0;
   right: 0;
 }
-.shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems:before {
-  content: '';
-  width: 0.5px;
-  height: 11px;
-  background: #231F20;
-  position: absolute;
-  bottom: -24%;
-  right: 0;
-}
+
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .product-card__figure > .badge-list {
     inset-block-start: 105%;
