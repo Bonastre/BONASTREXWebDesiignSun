@@ -8290,9 +8290,8 @@ display: none;
   height: 1px;
   background: #231F20;
   position: absolute;
-  bottom: -50%;
-  left: 50%;
-  transform: translate(50%, 50%);
+  bottom: -10%;
+  right: 0;
 }
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .product-card__figure > .badge-list {
