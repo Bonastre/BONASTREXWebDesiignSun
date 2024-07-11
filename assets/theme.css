@@ -8309,6 +8309,7 @@ display: none;
 }
 .shopify-section--main-collection .ProductItem__Linked:before {
   content: "";
+  display: none;
   position: absolute;
   bottom: -8px;
   right: 1px;
@@ -8319,6 +8320,7 @@ display: none;
 }
 .shopify-section--main-collection .ProductItem__Linked:after {
   content: "";
+  display: none;
   position: absolute;
   bottom: -8px;
   right: 1px;
@@ -8328,6 +8330,7 @@ display: none;
   z-index: 10;
   transform: rotate(90deg);
 }
+.shopify-section--main-collection .
 
 @media screen and (max-width: 1000px) {
   .shopify-section--main-collection .product-card__figure > .badge-list {
