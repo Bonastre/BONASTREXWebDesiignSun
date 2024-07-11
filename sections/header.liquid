@@ -228,9 +228,7 @@
           {%- render block -%}
         {%- endif -%}
       {%- endfor -%}
-
-      {% render 'weglot_switcher' %}
-      {% render 'weglot_hreftags' %}
+      
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="sm-max:hidden">
