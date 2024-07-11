@@ -125,12 +125,14 @@
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+    {% render 'weglot_switcher' %}
+    {% render 'weglot_hreftags' %
     <style>
       #widgetIframe {
         z-index: 2147483647;
         position: fixed;
         bottom: 50px;
-        right:0;
+        left:0;
       }</style><script>window.addEventListener('touchstart', {});
       function resizeListener() {
         document.getElementById('widgetIframe').style.height = 100% - (window.outerHeight - window.innerHeight);
