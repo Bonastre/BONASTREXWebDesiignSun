@@ -319,12 +319,12 @@ LIQUID
                   {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
 
                     {% if forloop.last %}
-                      <div class="custom_block custom_block-5">
+                      <div class="custom_block custom_block-5 custom_block-5-left">
                         {%- if section.settings.image_block_10 != blank -%}
                           {{- section.settings.image_block_10 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
                         {%- endif -%}
                       </div>
-                      <div class="custom_block custom_block-5">
+                      <div class="custom_block custom_block-5 custom_block-5-right">
                         {%- if section.settings.image_block_5 != blank -%}
                           {{- section.settings.image_block_5 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
                         {%- endif -%}
