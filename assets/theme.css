@@ -5774,8 +5774,8 @@ product-rerender {
 .newsletter-popup .v-stack {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
-
 }
 .newsletter-popup .form {
   display: flex;
