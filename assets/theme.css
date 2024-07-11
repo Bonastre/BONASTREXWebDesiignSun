@@ -8140,9 +8140,7 @@ Favorite wishlist
   .shopify-section--main-product .product-gallery__image-list {
     max-width: 400px;
   }
-  .shopify-section--main-product .product-gallery__thumbnail-list {
-    position: relative;
-  }
+  
 }
 /* ------------------------------------------------------------ *\
   Custom blog image
