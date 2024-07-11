@@ -5769,6 +5769,7 @@ product-rerender {
   inset-inline-start: auto;
   inset-block-end: 0;
   inset-inline: 0;
+  padding: 10px 5px;
 }
 .newsletter-popup .v-stack {
   display: flex;
