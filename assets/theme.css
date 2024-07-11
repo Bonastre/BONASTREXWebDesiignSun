@@ -5777,6 +5777,7 @@ product-rerender {
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
+  font-size: 11px;
 }
 
 .newsletter-popup .form {
