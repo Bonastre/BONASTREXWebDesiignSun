@@ -228,7 +228,7 @@
           {%- render block -%}
         {%- endif -%}
       {%- endfor -%}
-      
+
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="sm-max:hidden">
