@@ -4477,6 +4477,9 @@ product-rerender {
   .footer__block-list {
     gap: unset;
   }
+  .footer__block--newsletter {
+    
+  }
 }
 .footer__aside {
   text-align: center;
