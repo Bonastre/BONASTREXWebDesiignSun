@@ -7890,6 +7890,9 @@ background: #ebeae9;
 .product-card:hover .product-title  {
 display: none;
 }
+.product-card:hover .ProductItem__ColorSwatchItems {
+  display: flex;
+}
 .product-card__figure:hover ~ .product-card__info .ProductItem__ColorSwatchItems {
 display: flex;
 flex-wrap: wrap;
