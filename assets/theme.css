@@ -4480,6 +4480,9 @@ product-rerender {
   .footer__block--newsletter {
     margin-bottom: 40px;
   }
+  .footer__block--newsletter .gap-4 {
+    gap: 0.5rem;
+  }
 }
 .footer__aside {
   text-align: center;
