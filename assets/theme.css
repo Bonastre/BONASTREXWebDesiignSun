@@ -7892,6 +7892,11 @@ display: none;
 }
 .product-card:hover .ProductItem__ColorSwatchItems {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  height: 100%;
 }
 .product-card__figure:hover ~ .product-card__info .ProductItem__ColorSwatchItems {
 display: flex;
