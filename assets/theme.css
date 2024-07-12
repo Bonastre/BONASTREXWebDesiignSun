@@ -8453,7 +8453,7 @@ Recently viewed
   }
 }
 .country-selector {
-  color: black;
+  color: #1C1C1C;
 }
 
 
@@ -8464,6 +8464,9 @@ Recently viewed
 }
 .header.is-solid .header__secondary-nav .country-selector a  {
   color: rgb(var(--text-color));
+}
+.header:hover .country-selector a  {
+  color: #1C1C1C ;
 }
 .country-selector a:hover {
   color: rgb(var(--text-color)) !important;
