@@ -8460,7 +8460,9 @@ Recently viewed
 .header__secondary-nav .country-selector a  {
   color: white;
 }
-.header.is-
+.header.is-solid .header__secondary-nav .country-selector a  {
+  color: rgb(var(--text-color) / .65);
+}
 .country-selector a:hover {
   color: rgb(var(--text-color) / .65); !important;
 }
