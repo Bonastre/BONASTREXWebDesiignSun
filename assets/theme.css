@@ -8486,9 +8486,9 @@ Recently viewed
   filter: invert(0%)!important;
 }
 .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
-  height: 11px;
+  height: 8px;
   top: 12px;
-  background-size: 10px;
+  background-size: 8px;
 }
 
 
