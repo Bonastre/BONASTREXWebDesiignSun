@@ -8345,7 +8345,7 @@ display: none;
   bottom: -11px;
   right: -1.5px;
   width: 1.7px;
-  height: 20px;
+  height: 9px;
   background-color: #231F20;
   z-index: 10;
 }
@@ -8356,7 +8356,7 @@ display: none;
   bottom: -11px;
   right: 0;
   width: 1.7px;
-  height: 20px;
+  height: 9px;
   background-color: #231F20;
   z-index: 10;
   transform: rotate(90deg);
