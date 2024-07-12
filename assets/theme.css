@@ -8385,6 +8385,11 @@ display: none;
     margin-top: -10px;
   }
 }
+@media screen and (max-width: 1450px) {
+  .shopify-section--main-collection .product-card__image {
+    max-height: 350px;
+  }
+}
 
 @media screen and (max-width: 1000px) {
     .shopify-section--main-collection .product-card__figure > .badge-list {
@@ -8437,7 +8442,7 @@ Recently viewed
 .shopify-section--recently-viewed-products .product-card {
   gap: unset;
 }
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1450px) {
   .shopify-section--recently-viewed-products .product-card__image {
     max-height: 350px;
   }
