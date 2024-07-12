@@ -199,6 +199,7 @@
     {%- endcomment -%}
 
     <nav class="header__secondary-nav" aria-label="{{ 'header.general.secondary_navigation' | t | escape }}">
+      <div class="weglot-container" data-switcher-id="1" id="weglot-switcher-1" data-switcher-style-opt="{&quot;full_name&quot;:false,&quot;with_name&quot;:true,&quot;is_dropdown&quot;:true,&quot;with_flags&quot;:false,&quot;flag_type&quot;:&quot;circle&quot;,&quot;invert_flags&quot;:false}"><aside data-wg-notranslate="true" aria-label="Language selected: English" class="weglot_switcher wg-mouse-click country-selector default closed wg-drop"><div data-l="en" role="combobox" aria-activedescendant="" aria-label="Language" tabindex="0" aria-expanded="false" aria-controls="weglot-listbox" class="wg-li en wgcurrent"><a target="_self" href="#" id="weglot-language-en" tabindex="-1">EN</a></div><ul role="listbox" id="weglot-listbox" style="display: none;"><li data-l="fr" role="none" id="wg-fr" class="wg-li fr"><a role="option" href="#" id="weglot-language-fr" tabindex="-1">FR</a></li><li data-l="ja" role="none" id="wg-ja" class="wg-li ja"><a role="option" href="#" id="weglot-language-ja" tabindex="-1">JA</a></li><li data-l="tw" role="none" id="wg-tw" class="wg-li tw"><a role="option" href="#" id="weglot-language-tw" tabindex="-1">TW</a></li><li data-l="zh" role="none" id="wg-zh" class="wg-li zh"><a role="option" href="#" id="weglot-language-zh" tabindex="-1">ZH</a></li></ul></aside></div>
       {%- liquid
         if section.settings.show_country_selector and localization.available_countries.size > 1
           assign show_country_selector = true
@@ -211,20 +212,9 @@
 
       {%- if show_country_selector or show_locale_selector -%}
         <div class="localization-selectors md-max:hidden">
-          {%- capture localization_form -%}
-            {%- form 'localization', id: 'localization_form_header', class: 'Header__LocalizationForm hidden-pocket hidden-lap' -%}
-              <div class="HorizontalList HorizontalList--spacingLoose">
-
-                <div class="HorizontalList__Item">
-                  {%- include 'bold-currency-picker-mount', openDirection: 'down' -%}
-                </div>
-              </div>
-            {%- endform -%}
-          {%- endcapture -%}
 
           {%- if show_locale_selector -%}
-            {{- localization_form -}}
-           {% comment %} {%- render 'localization-selector', type: 'locale', placement: 'bottom-end', id_prefix: 'header-nav' -%}{% endcomment %}
+            {%- render 'localization-selector', type: 'locale', placement: 'bottom-end', id_prefix: 'header-nav' -%}
           {%- endif -%}
 
           {%- if show_country_selector -%}
