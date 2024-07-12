@@ -1,1 +1,102 @@
-<div class="weglot-container" data-switcher-id="1" id="weglot-switcher-1" data-switcher-style-opt="{&quot;full_name&quot;:false,&quot;with_name&quot;:true,&quot;is_dropdown&quot;:true,&quot;with_flags&quot;:false,&quot;flag_type&quot;:&quot;circle&quot;,&quot;invert_flags&quot;:false}"><aside data-wg-notranslate="true" aria-label="Language selected: English" class="weglot_switcher wg-mouse-click country-selector default closed wg-drop"><div data-l="en" role="combobox" aria-activedescendant="" aria-label="Language" tabindex="0" aria-expanded="false" aria-controls="weglot-listbox" class="wg-li en wgcurrent"><a target="_self" href="#" id="weglot-language-en" tabindex="-1">EN</a></div><ul role="listbox" id="weglot-listbox" style="display: none;"><li data-l="fr" role="none" id="wg-fr" class="wg-li fr"><a role="option" href="#" id="weglot-language-fr" tabindex="-1">FR</a></li><li data-l="ja" role="none" id="wg-ja" class="wg-li ja"><a role="option" href="#" id="weglot-language-ja" tabindex="-1">JA</a></li><li data-l="tw" role="none" id="wg-tw" class="wg-li tw"><a role="option" href="#" id="weglot-language-tw" tabindex="-1">TW</a></li><li data-l="zh" role="none" id="wg-zh" class="wg-li zh"><a role="option" href="#" id="weglot-language-zh" tabindex="-1">ZH</a></li></ul></aside></div>
+{%- comment -%}
+----------------------------------------------------------------------------------------------------------------------
+LOCALIZATION SELECTOR COMPONENT
+----------------------------------------------------------------------------------------------------------------------
+
+This component renders a selector for a localization component (either country or locale).
+
+********************************************
+Supported variables
+********************************************
+
+* type: can be either "country" or "locale" (required)
+* show_country_name: for type "country", if set to true the country name is shown
+* show_country_flag: for type "country", if set to true the country flag is shown
+* id_prefix: an option to help dissociate the ID in case this is included several times in the same section
+{%- endcomment -%}
+
+{%- capture localization_form_id -%}localization-form-{{ id_prefix }}-{{ section.id }}-{{ type }}{%- endcapture -%}
+{%- capture localization_popover_id -%}popover-localization-{{ id_prefix }}-{{ section.id }}-{{ type }}{%- endcapture -%}
+
+{%- case type -%}
+  {%- when 'country' -%}
+    {%- comment -%}
+    ----------------------------------------------------------------------------------------------
+    COUNTRY SELECTOR
+    ----------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div class="relative">
+      <button type="button" class="localization-toggle heading text-xxs link-faded" aria-controls="{{ localization_popover_id }}" aria-expanded="false">
+        {%- if show_country_flag -%}
+          {{- localization.country | image_url: width: 60, format: 'jpg' | image_tag: class: 'country-flag' -}}
+        {%- endif -%}
+
+        {%- if show_country_name -%}
+          <span>{{ localization.country.name }} ({{ localization.country.currency.iso_code }} {% if localization.country.currency.symbol %}{{ localization.country.currency.symbol }}){%- endif -%}</span>
+        {%- else -%}
+          <span>{{ localization.country.currency.iso_code }} {% if localization.country.currency.symbol %}{{ localization.country.currency.symbol }}{%- endif -%}</span>
+        {%- endif -%}
+
+        {%- render 'icon' with 'chevron-down' -%}
+      </button>
+
+      <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }} color-scheme color-scheme--dialog">
+        <p class="h4" slot="header">{{ 'general.localization.country' | t }}</p>
+
+        {%- form 'localization', id: localization_form_id -%}
+          <x-listbox class="popover__value-list">
+            {%- for country in localization.available_countries -%}
+              {%- assign is_selected = false -%}
+
+              {%- if country.iso_code == localization.country.iso_code -%}
+                {%- assign is_selected = true -%}
+              {%- endif -%}
+
+              <button type="submit" name="country_code" class="popover__value-option h-stack gap-2.5" role="option" value="{{ country.iso_code }}" aria-selected="{% if is_selected %}true{% else %}false{% endif %}">
+                {%- if show_country_flag -%}
+                  {{- country | image_url: width: 60, format: 'jpg' | image_tag: loading: 'lazy', class: 'country-flag' -}}
+                {%- endif -%}
+
+                <span>{{- country.name }} ({{ country.currency.iso_code }} {% if country.currency.symbol %}{{ country.currency.symbol }}{%- endif -%})</span>
+              </button>
+            {%- endfor -%}
+          </x-listbox>
+        {%- endform -%}
+      </x-popover>
+    </div>
+
+  {%- when 'locale' -%}
+    {%- comment -%}
+    ----------------------------------------------------------------------------------------------
+    LOCALE SELECTOR
+    ----------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div class="relative">
+      <button type="button" class="localization-toggle heading text-xxs link-faded" aria-controls="{{ localization_popover_id }}" aria-expanded="false">
+        {{- localization.language.iso_code | capitalize -}}
+        {%- render 'icon' with 'chevron-down' -%}
+      </button>
+
+      <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }} color-scheme color-scheme--dialog">
+        <p class="h4" slot="header">{{ 'general.localization.language' | t }}</p>
+
+        {%- form 'localization', id: localization_form_id -%}
+          <x-listbox class="popover__value-list">
+            {%- for language in localization.available_languages -%}
+              {%- assign is_selected = false -%}
+
+              {%- if language.iso_code == localization.language.iso_code -%}
+                {%- assign is_selected = true -%}
+              {%- endif -%}
+
+              <button type="submit" name="locale_code" class="popover__value-option" role="option" value="{{ language.iso_code }}" aria-selected="{% if is_selected %}true{% else %}false{% endif %}">
+                {{- language.iso_code | capitalize -}}
+              </button>
+            {%- endfor -%}
+          </x-listbox>
+        {%- endform -%}
+      </x-popover>
+    </div>
+{%- endcase -%}
