@@ -8461,10 +8461,10 @@ Recently viewed
   color: white;
 }
 .header.is-solid .header__secondary-nav .country-selector a  {
-  color: rgb(var(--text-color) / .65);
+  color: rgb(var(--text-color));
 }
 .country-selector a:hover {
-  color: rgb(var(--text-color) / .65); !important;
+  color: rgb(var(--text-color)); !important;
 }
 
 .header__secondary-nav .wg-drop.country-selector ul  {
