@@ -8457,18 +8457,18 @@ Recently viewed
 }
 
 
-.Header--transparent .country-selector a  {
+.header__secondary-nav .country-selector a  {
   color: white;
 }
 .country-selector a:hover {
   color: black !important;
 }
 
-.Header--transparent .wg-drop.country-selector ul  {
+.header__secondary-nav .wg-drop.country-selector ul  {
   background-color: transparent;
 }
 
-.Header--transparent .wg-drop.country-selector .wgcurrent:after {
+.header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
   filter: invert(100%)!important;
 }
 
