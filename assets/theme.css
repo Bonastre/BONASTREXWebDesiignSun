@@ -8478,7 +8478,7 @@ Recently viewed
 .header__secondary-nav .wg-drop.country-selector ul a {
   color: #1C1C1C;
 }
-.header .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
+.header-index .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
   filter: invert(100%)!important;
 }
 .header.is-solid .header__secondary-nav .wg-drop.country-selector .wgcurrent:after,
