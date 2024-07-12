@@ -8368,11 +8368,7 @@ display: none;
   display: block;
 }
 
-@media screen and (max-width: 1000px) {
-  .shopify-section--main-collection .product-card__figure > .badge-list {
-    inset-block-start: 105%;
-  }
-}
+
 @media screen and (min-width: 700px) {
   .shopify-section--main-collection .product-card__figure > .badge-list {
     inset-block-start: 105%;
@@ -8382,7 +8378,18 @@ display: none;
     display: none;
   }
 }
+@media screen and (min-width: 1000px) {
+  .shopify-section--main-collection .container {
+    margin-inline-start: 104px;
+    margin-inline-end: 104px;
+    margin-top: -10px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
+    .shopify-section--main-collection .product-card__figure > .badge-list {
+      inset-block-start: 105%;
+    }
     .shopify-section--main-collection .custom_block-3,
     .shopify-section--main-collection .custom_block-7 {
       display: grid;
@@ -8438,6 +8445,11 @@ Recently viewed
 
 /* Weglot custom code */
 
+@media (min-width: 1000px) {
+  #weglot-switcher-2 {
+    display: block !important;
+  }
+}
 .country-selector {
   color: black;
 }
@@ -8482,3 +8494,4 @@ Recently viewed
     bottom: auto!important;
   }
 }
+
