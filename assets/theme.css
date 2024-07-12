@@ -8332,10 +8332,11 @@ display: none;
 }
 .shopify-section--main-collection .product-card:hover .product-card__content {
   position: relative;
+  border: 2px solid #231F20;
+}
+.shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems {
+  position: relative;
   background: white;
-  border-left: 2px solid #231F20;
-  border-right: 2px solid #231F20;
-  border-bottom: 2px solid #231F20;
   justify-content: space-between;
   z-index: 2;
 }
