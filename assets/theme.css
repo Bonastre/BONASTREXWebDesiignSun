@@ -8471,9 +8471,6 @@ Recently viewed
 .country-selector a:hover {
   color: rgb(var(--text-color)) !important;
 }
-.country-selector:hover .wgcurrent:after {
-  color: #1C1C1C !important;
-}
 
 .header__secondary-nav .wg-drop.country-selector ul  {
   background-color: white;
@@ -8484,7 +8481,8 @@ Recently viewed
 .header .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
   filter: invert(100%)!important;
 }
-.header.is-solid .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
+.header.is-solid .header__secondary-nav .wg-drop.country-selector .wgcurrent:after,
+.header:hover .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
   filter: invert(0%)!important;
 }
 .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
