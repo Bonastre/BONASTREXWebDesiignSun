@@ -5815,7 +5815,10 @@ product-rerender {
   inset-inline-start: 1.25rem;
   position: absolute !important;
 }
-.newsletter-popup 
+.newsletter-popup .button {
+  max-height: 25px;
+  font-size: 11px;
+}
 .password {
 position: relative;
 }
