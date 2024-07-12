@@ -8484,8 +8484,10 @@ Recently viewed
 .header .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
   filter: invert(100%)!important;
 }
+.header.is-solid .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
+  filter: invert(0%)!important;
+}
 .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
-
   height: 11px;
   top: 12px;
   background-size: 10px;
