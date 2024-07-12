@@ -4478,7 +4478,7 @@ product-rerender {
     gap: unset;
   }
   .footer__block--newsletter {
-    
+    margin-bottom: 40px;
   }
 }
 .footer__aside {
