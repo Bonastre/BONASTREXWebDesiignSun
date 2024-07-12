@@ -7948,7 +7948,9 @@ Favorite wishlist
   background-size: contain;
   background-image: url('./star-product.svg?v=2');
 }
-
+.icon-star-product svg {
+  fill: black;
+}
 .icon-star-white {
   display: block;
   width: 20px;
