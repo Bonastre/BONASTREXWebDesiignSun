@@ -7946,7 +7946,7 @@ Favorite wishlist
   width: 20px;
   height: 20px;
   background-size: contain;
-
+  background-image: url('./star-product.svg?v=2');
 }
 
 .icon-star-white {
@@ -7962,7 +7962,7 @@ Favorite wishlist
   width: 20px;
   height: 20px;
   background-size: contain;
-  
+  background-image: url('./star-fill-product.svg?v=2');
 }
 
 .count-wishlist {
