@@ -81,7 +81,9 @@ Supported variables
                     {%- render 'icon' with 'star-product' -%}
 
                 </span>
-                <span class="icon-star-product-fill" data-button-content="added"></span>
+                <span class="icon-star-product-fill" data-button-content="added">
+                    {%- render 'icon' with 'star-product-full' -%}
+                </span>
             </button>
         {% endif %}
       {%- if show_badges -%}
