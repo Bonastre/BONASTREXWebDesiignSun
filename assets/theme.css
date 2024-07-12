@@ -8468,7 +8468,7 @@ Recently viewed
 .country-selector a:hover {
   color: rgb(var(--text-color)) !important;
 }
-.country-selector:hover wgcurrent:after {
+.country-selector:hover .wgcurrent:after {
   color: rgb(var(--text-color)) !important;
 }
 
