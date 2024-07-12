@@ -8443,23 +8443,23 @@ Recently viewed
 }
 
 
-.header-sidebar .country-selector a  {
+.Header--transparent .country-selector a  {
   color: white;
 }
 .country-selector a:hover {
   color: black !important;
 }
 
-.header-sidebar .wg-drop.country-selector ul  {
+.Header--transparent .wg-drop.country-selector ul  {
   background-color: transparent;
 }
 
-.header-sidebar .wg-drop.country-selector .wgcurrent:after {
+.Header--transparent .wg-drop.country-selector .wgcurrent:after {
   filter: invert(100%)!important;
 }
 
 
-.header-sidebar .country-selector {
+.Drawer__Main .country-selector {
 
   padding-left: 8px;
 
