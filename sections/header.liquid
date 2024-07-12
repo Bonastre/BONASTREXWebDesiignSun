@@ -211,6 +211,16 @@
 
       {%- if show_country_selector or show_locale_selector -%}
         <div class="localization-selectors md-max:hidden">
+          {%- capture localization_form -%}
+            {%- form 'localization', id: 'localization_form_header', class: 'Header__LocalizationForm hidden-pocket hidden-lap' -%}
+              <div class="HorizontalList HorizontalList--spacingLoose">
+
+                <div class="HorizontalList__Item">
+                  {%- include 'bold-currency-picker-mount', openDirection: 'down' -%}
+                </div>
+              </div>
+            {%- endform -%}
+          {%- endcapture -%}
 
           {%- if show_locale_selector -%}
             {{- localization_form -}}
