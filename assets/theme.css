@@ -8461,7 +8461,7 @@ Recently viewed
   color: white;
 }
 .country-selector a:hover {
-  color: black !important;
+  color: rgb(var(--text-color) / .65); !important;
 }
 
 .header__secondary-nav .wg-drop.country-selector ul  {
