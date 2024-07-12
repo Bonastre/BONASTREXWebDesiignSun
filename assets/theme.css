@@ -8472,7 +8472,7 @@ Recently viewed
   color: rgb(var(--text-color)) !important;
 }
 .header .country-selector .wgcurrent:after {
-  color: white;
+  color: white !important;
 }
 .header .country-selector:hover .wgcurrent:after {
   color: #1C1C1C;
