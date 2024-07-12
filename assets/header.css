@@ -530,3 +530,9 @@
         display: none !important;
     }
 }
+
+#weglot-switcher-2 footer {
+  
+  position: fixed;
+  
+}
