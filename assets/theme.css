@@ -8466,7 +8466,7 @@ Recently viewed
   color: rgb(var(--text-color));
 }
 .country-selector a:hover {
-  color: rgb(var(--text-color)); !important;
+  color: rgb(var(--text-color)) !important;
 }
 
 .header__secondary-nav .wg-drop.country-selector ul  {
