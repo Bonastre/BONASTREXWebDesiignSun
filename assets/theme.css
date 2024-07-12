@@ -8459,6 +8459,8 @@ Recently viewed
 
 .header__secondary-nav .country-selector a  {
   color: white;
+  font-size: .6875rem;
+  font-weight: 500 !important;
 }
 .header.is-solid .header__secondary-nav .country-selector a  {
   color: rgb(var(--text-color));
