@@ -8303,7 +8303,8 @@ Favorite wishlist
   max-width: 527px;
 }
 .shopify-section--main-collection .custom_block-9 img {
-  max-height: }
+  max-height: 840px;
+}
 .shopify-section--main-collection .custom_block-9:hover img {
   opacity: 0.2;
 }
