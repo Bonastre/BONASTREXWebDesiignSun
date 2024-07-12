@@ -721,6 +721,7 @@
     "header": {
       "name": "Header",
       "enable_sticky_header": "Activer le header fixe",
+      "enable_chat": "Activer le chat",
       "hide_on_scroll": "Cacher au scroll",
       "show_separation_border": "Afficher la bordure de séparation",
       "reduce_padding": "Réduire la hauteur sur desktop",
