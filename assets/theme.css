@@ -8444,10 +8444,12 @@ Recently viewed
 }
 
 /* Weglot custom code */
-
+#weglot-switcher-2 {
+  display: none;
+}
 @media (min-width: 1000px) {
   #weglot-switcher-2 {
-    display: block !important;
+    display: block;
   }
 }
 .country-selector {
