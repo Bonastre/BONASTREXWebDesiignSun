@@ -213,7 +213,8 @@
         <div class="localization-selectors md-max:hidden">
 
           {%- if show_locale_selector -%}
-            {%- render 'localization-selector', type: 'locale', placement: 'bottom-end', id_prefix: 'header-nav' -%}
+            {{- localization_form -}}
+           {% comment %} {%- render 'localization-selector', type: 'locale', placement: 'bottom-end', id_prefix: 'header-nav' -%}{% endcomment %}
           {%- endif -%}
 
           {%- if show_country_selector -%}
