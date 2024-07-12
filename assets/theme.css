@@ -8330,7 +8330,7 @@ border: 1px solid #ffffff;
 .shopify-section--main-collection .ProductItem__Linked .product-title {
 display: none;
 }
-.shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems {
+.shopify-section--main-collection .product-card__content {
   position: relative;
   background: white;
   border-left: 2px solid #231F20;
