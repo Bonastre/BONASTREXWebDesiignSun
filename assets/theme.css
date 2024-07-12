@@ -8476,7 +8476,8 @@ Recently viewed
 .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
   filter: invert(100%)!important;
   height: 11px;
-top: ;
+  top: 12px;
+  background-size: 10px;
 }
 
 
