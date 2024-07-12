@@ -85,6 +85,7 @@ CSS
 
     #shopify-section-{{ section.id }} .collection {
       margin-bottom: unset;
+      margin-top: unset;
       {%- if section.settings.filter_layout == 'sidebar' and show_filters -%}
         --collection-grid-template: var(--collection-sidebar-width, 0) minmax(0,1fr);
       {%- endif -%}
