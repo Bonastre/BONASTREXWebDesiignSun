@@ -7958,8 +7958,6 @@ Favorite wishlist
   display: block;
   width: 20px;
   height: 20px;
-  background-size: contain;
-  background-image: url('./star-fill-product.svg?v=2');
 }
 
 .count-wishlist {
@@ -8445,37 +8443,37 @@ Recently viewed
 }
 
 
-.Header--transparent .country-selector a  {
+.header-sidebar .country-selector a  {
   color: white;
 }
 .country-selector a:hover {
   color: black !important;
 }
 
-.Header--transparent .wg-drop.country-selector ul  {
+.header-sidebar .wg-drop.country-selector ul  {
   background-color: transparent;
 }
 
-.Header--transparent .wg-drop.country-selector .wgcurrent:after {
+.header-sidebar .wg-drop.country-selector .wgcurrent:after {
   filter: invert(100%)!important;
 }
 
 
-.Drawer__Main .country-selector {
+.header-sidebar .country-selector {
 
   padding-left: 8px;
 
 }
-.Drawer__Main .country-selector a  {
+.header-sidebar .country-selector a  {
   color: white !important;
   font-size: 13px;
 }
 
-.Drawer__Main .wg-drop.country-selector .wgcurrent:after {
+.header-sidebar .wg-drop.country-selector .wgcurrent:after {
   filter: invert(100%)!important;
 }
 
-.Drawer__Main .wg-drop.country-selector ul {
+.header-sidebar .wg-drop.country-selector ul {
   background-color: transparent;
 }
 
