@@ -8304,6 +8304,7 @@ Favorite wishlist
 }
 .shopify-section--main-collection .custom_block-9 img {
   max-height: 840px;
+  object-fit: cover;
 }
 .shopify-section--main-collection .custom_block-9:hover img {
   opacity: 0.2;
