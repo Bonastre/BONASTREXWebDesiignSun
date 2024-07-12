@@ -4473,7 +4473,11 @@ product-rerender {
   gap: min(var(--section-vertical-spacing), 2.5rem);
   display: grid;
 }
-
+@media (max-width: 700px) {
+  .footer__block-list {
+    gap: unset;
+  }
+}
 .footer__aside {
   text-align: center;
   justify-content: center;
