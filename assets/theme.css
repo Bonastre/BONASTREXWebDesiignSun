@@ -8333,9 +8333,9 @@ display: none;
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems {
   position: relative;
   background: white;
-  border-left: 2px solid #a6a4a5;
-  border-right: 2px solid #a6a4a5;
-  border-bottom: 2px solid #a6a4a5;
+  border-left: 2px solid #231F20;
+  border-right: 2px solid #231F20;
+  border-bottom: 2px solid #231F20;
   justify-content: space-between;
   z-index: 2;
 }
@@ -8350,7 +8350,7 @@ display: none;
   right: 1px;
   width: 1.7px;
   height: 20px;
-  background-color: #a6a4a5;
+  background-color: #231F20;
   z-index: 10;
 }
 .shopify-section--main-collection .ProductItem__Linked:after {
