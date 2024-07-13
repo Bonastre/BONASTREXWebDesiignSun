@@ -68,17 +68,33 @@
         font-display: swap;
       }
     </style>
+    {% if settings.enable_live_chat %}
+      <style>
+        #widgetIframe {
+          z-index: 2147483647;
+          position: fixed;
+          bottom: 70px;
+          right:0;
+          width: 75px;
+          height: 75px;
+        }
+      </style>
+      {% else %}
+      <style>
+        #widgetIframe {
+          display: none;
+          z-index: 2147483647;
+          position: fixed;
+          bottom: 70px;
+          right:0;
+          width: 75px;
+          height: 75px;
+        }
+      </style>
 
-    <style>
-      #widgetIframe {
-        z-index: 2147483647;
-        position: fixed;
-        bottom: 70px;
-        right:0;
-        width: 75px;
-        height: 75px;
-      }
-    </style>
+    {% endif %}
+
+
     <script>window.addEventListener('touchstart', {});
       function resizeListener() {
         document.getElementById('widgetIframe').style.height = 100% - (window.outerHeight - window.innerHeight);
