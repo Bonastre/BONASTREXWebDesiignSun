@@ -8222,6 +8222,7 @@ Favorite wishlist
 
 .shopify-section--main-collection .product-card {
   gap: unset;
+  position: relative;
 }
 
 .shopify-section--main-collection .product-title-collection {
