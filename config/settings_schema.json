@@ -757,7 +757,7 @@
       {
         "type":"checkbox",
         "id":"enable_live_chat",
-        "label": "Enable Live chat",
+        "label": "Enable Custom Live chat",
         "default": false
       }
     ]
