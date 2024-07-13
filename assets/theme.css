@@ -4756,6 +4756,11 @@ product-rerender {
     padding: 1.8rem 5.62rem;
   }
 }
+@media (max-width: 700px) {
+  .header {
+    padding: 15px 4px 15px 21px;
+  }
+}
 .header.is-hidden {
   transform: translateY(-100%);
 }
