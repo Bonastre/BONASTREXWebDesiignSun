@@ -8462,7 +8462,7 @@ display: none;
     }
     .shopify-section--main-collection .custom_block-7 .custom-block_image-mobile {
       display: block;
-      max-height: 320px;
+      max-height: 315px;
       object-fit: contain;
       margin: 0 auto;
     }
