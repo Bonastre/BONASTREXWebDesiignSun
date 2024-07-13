@@ -8522,7 +8522,11 @@ Recently viewed
   top: 12px;
   background-size: 8px;
 }
+@media (max-width: 700px) {
 
+  .header__secondary-nav
+
+}
 
 .header-sidebar .country-selector {
 
