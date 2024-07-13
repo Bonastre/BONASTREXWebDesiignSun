@@ -8468,6 +8468,7 @@ display: none;
     }
     .shopify-section--main-collection .custom_block .custom_block-content {
       max-width: 332px;
+      font-size: 11px;
     }
     .shopify-section--main-collection .custom_block .h6 {
       font-size: 15px;
