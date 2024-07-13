@@ -752,6 +752,17 @@
     ]
   },
   {
+    "name":"Live chat",
+    "settings":[
+      {
+        "type":"checkbox",
+        "id":"enable-live_chat",
+        "label": "Enable Live chat",
+        "default": false
+      }
+    ]
+  },
+  {
     "name": "t:theme_settings.social_media.name",
     "settings": [
       {
