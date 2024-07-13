@@ -43,7 +43,7 @@
         "reduce_padding": false,
         "logo": "shopify:\/\/shop_images\/logo_bonastre_png.png",
         "logo_max_width": 310,
-        "logo_mobile_max_width": 90,
+        "logo_mobile_max_width": 185,
         "menu": "main-menu",
         "sidebar_menu": "",
         "show_social_media": true,
