@@ -8422,6 +8422,11 @@ display: none;
     max-height: 350px;
   }
 }
+@media screen and (max-width: 700px) {
+  .shopify-section--main-collection .product-card__image {
+    max-height: 175px;
+  }
+}
 
 @media screen and (max-width: 1000px) {
     .shopify-section--main-collection .product-card__figure > .badge-list {
