@@ -8372,7 +8372,7 @@ display: none;
 .shopify-section--main-collection .product-card__info {
   position: relative;
 }
-.shopify-section--main-collection .product-card__content:before {
+.shopify-section--main-collection .product-card:before {
   content: "";
   display: none;
   position: absolute;
@@ -8383,7 +8383,7 @@ display: none;
   background-color: #231F20;
   z-index: 10;
 }
-.shopify-section--main-collection .product-card__content:after {
+.shopify-section--main-collection .product-card:after {
   content: "";
   display: none;
   position: absolute;
