@@ -8462,6 +8462,8 @@ display: none;
     }
     .shopify-section--main-collection .custom_block-5 .custom-block_image-mobile {
       display: block;
+      max-height: 338px;
+      object-fit: contain;
     }
     .shopify-section--main-collection .collection .product-list[collection-desktop-layout=medium] {
       --product-list-items-per-row: 2;
