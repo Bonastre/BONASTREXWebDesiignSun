@@ -8395,10 +8395,10 @@ display: none;
   z-index: 10;
   transform: rotate(90deg);
 }
-.shopify-section--main-collection .product-card:hover .ProductItem__Linked:before {
+.shopify-section--main-collection .product-card:hover .product-card__content:before {
   display: block;
 }
-.shopify-section--main-collection .product-card:hover .ProductItem__Linked:after {
+.shopify-section--main-collection .product-card:hover .product-card__content:after {
   display: block;
 }
 
