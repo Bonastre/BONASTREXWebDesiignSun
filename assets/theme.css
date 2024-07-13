@@ -8175,6 +8175,7 @@ Favorite wishlist
   }
   .shopify-section--main-product .product-gallery__thumbnail-list {
     margin-top: 125px;
+    top: 200 !important;
   }
 }
 /* ------------------------------------------------------------ *\
