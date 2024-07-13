@@ -8464,6 +8464,7 @@ display: none;
       display: block;
       max-height: 338px;
       object-fit: contain;
+      margin: 0;
     }
     .shopify-section--main-collection .collection .product-list[collection-desktop-layout=medium] {
       --product-list-items-per-row: 2;
