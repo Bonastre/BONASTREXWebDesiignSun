@@ -8466,10 +8466,10 @@ display: none;
       object-fit: contain;
       margin: 0 auto;
     }
-  .shopify-section--main-collection .custom_block .custom_block-content {
-    max-width: 332px;
-  }
     .shopify-section--main-collection .custom_block .custom_block-content {
+      max-width: 332px;
+    }
+    .shopify-section--main-collection .custom_block .h6 {
       font-size: 15px;
     }
     .shopify-section--main-collection .collection .product-list[collection-desktop-layout=medium] {
