@@ -8484,6 +8484,11 @@ Recently viewed
     max-height: 350px;
   }
 }
+@media screen and (max-width: 700px) {
+  .shopify-section--recently-viewed-products .product-card__image {
+    max-height: 175px;
+  }
+}
 
 /* Weglot custom code */
 #weglot-switcher-2 {
