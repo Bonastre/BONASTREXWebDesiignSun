@@ -8533,6 +8533,11 @@ Recently viewed
     width: 16px;
     height: 16px;
   }
+  .header__secondary-nav .icon-cart {
+    width: 18px;
+    height: 18px;
+  }
+
 }
 
 .header-sidebar .country-selector {
