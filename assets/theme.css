@@ -4766,7 +4766,7 @@ product-rerender {
     padding: 15px 4px 15px 10px;
   }
   .header__logo-image {
-    width: 120px;
+    width: 120px !important;
   }
 }
 .header.is-hidden {
