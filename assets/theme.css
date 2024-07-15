@@ -7953,7 +7953,10 @@ left: -2px;
 /* ------------------------------------------------------------ *\
 Favorite wishlist
 \* ------------------------------------------------------------ */
-.wishlist .product-
+.wishlist .product-card {
+  align-content: space-between;
+}
+.wishlist .product-card 
 .favorite-card {
   position: absolute;
   top: 13px;
