@@ -7954,10 +7954,13 @@ left: -2px;
 Favorite wishlist
 \* ------------------------------------------------------------ */
 .wishlist .product-card {
-  align-content: space-between;
+  align-content: unset;
 }
 .wishlist .product-card .product-card__content {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .favorite-card {
   position: absolute;
