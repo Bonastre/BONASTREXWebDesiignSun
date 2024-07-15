@@ -7962,6 +7962,9 @@ Favorite wishlist
   justify-content: space-between;
   height: 100%;
 }
+.wishlist .product-card .product-card__content .product-card__figure {
+  height: 100%;
+}
 .favorite-card {
   position: absolute;
   top: 13px;
