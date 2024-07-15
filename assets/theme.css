@@ -8392,7 +8392,7 @@ display: none;
   display: none;
   position: absolute;
   bottom: -9px;
-  right: -1px;
+  right: -0.5px;
   width: 0.5px;
   height: 9px;
   background-color: #231F20;
