@@ -7956,7 +7956,9 @@ Favorite wishlist
 .wishlist .product-card {
   align-content: space-between;
 }
-.wishlist .product-card 
+.wishlist .product-card .product-card__content {
+  
+}
 .favorite-card {
   position: absolute;
   top: 13px;
