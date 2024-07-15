@@ -4761,6 +4761,11 @@ product-rerender {
     padding: 15px 4px 15px 21px;
   }
 }
+@media (max-width: 385px) {
+  .header {
+    padding: 10px 4px 10px 21px;
+  }
+}
 .header.is-hidden {
   transform: translateY(-100%);
 }
