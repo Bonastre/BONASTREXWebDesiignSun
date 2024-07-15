@@ -8044,7 +8044,11 @@ Favorite wishlist
   grid-auto-flow: row;
   gap: 1rem;
 }
-
+@media (max-width: 700px) {
+  .wishlist__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .wishlist__grid .v-stack {
   display: none;
 }
