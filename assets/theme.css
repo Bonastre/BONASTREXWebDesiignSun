@@ -4763,7 +4763,7 @@ product-rerender {
 }
 @media (max-width: 385px) {
   .header {
-    padding: 10px 4px 10px 21px;
+    padding: 15px 4px;
   }
 }
 .header.is-hidden {
