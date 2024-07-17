@@ -7969,7 +7969,6 @@ Favorite wishlist
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  min-height: 50px;
 }
 .wishlist .product-card .product-card__content .product-card__figure {
   height: 100%;
@@ -8399,6 +8398,7 @@ display: none;
 }
 .shopify-section--main-collection .product-card__info {
   position: relative;
+  min-height: 50px;
 }
 .shopify-section--main-collection .product-card__content:before {
   content: "";
