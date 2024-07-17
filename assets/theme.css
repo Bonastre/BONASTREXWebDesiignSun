@@ -7969,6 +7969,7 @@ Favorite wishlist
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  min-height: 50px;
 }
 .wishlist .product-card .product-card__content .product-card__figure {
   height: 100%;
@@ -8045,7 +8046,7 @@ Favorite wishlist
   gap: 1rem;
 }
 @media (max-width: 700px) {
-  .wishlist__grid {
+  .wishlist__grid.active {
     grid-template-columns: repeat(2, 1fr);
   }
 }
