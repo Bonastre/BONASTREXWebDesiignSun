@@ -300,6 +300,7 @@ LIQUID
                   {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
 
                     {% if forloop.last %}
+                      fsadgd
                       {% for block in section.blocks %}
                         {% if block.settings.index ==  main_index %}
                           {%- case block.type -%}
