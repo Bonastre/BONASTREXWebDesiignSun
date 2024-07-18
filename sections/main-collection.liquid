@@ -231,7 +231,6 @@ LIQUID
 
                     {% assign main_index = forloop.index %}
                     {% for block in section.blocks %}
-                      {{ main_index }}
                       {% if block.settings.index ==  main_index %}
                         {%- case block.type -%}
                           {%- when '@app' -%}
