@@ -295,9 +295,39 @@ LIQUID
                         {% endcase %}
                       {% endif %}
                     {% endfor %}
-                    
+
 
                   {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
+
+                    {% for block in section.blocks %}
+                      {% if block.settings.index ==  main_index %}
+                        {%- case block.type -%}
+                          {%- when 'block_last' -%}
+                            {% if forloop.last %}
+                              <div class="custom_block custom_block-5 custom_block-5-left">
+                              {%- if section.settings.image_block_last_ != blank -%}
+                                {{- section.settings.image_block_last | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                              {%- endif -%}
+                            </div>
+                              <div class="custom_block custom_block-5 custom_block-5-right">
+                              {%- if section.settings.image_block_last != blank -%}
+                                {{- section.settings.image_block_5 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                              {%- endif -%}
+                              {%- if section.settings.title_block_5 != blank -%}
+                                <h6 class="h6">{{ section.settings.title_block_5 }}</h6>
+                              {%- endif -%}
+
+                              {%- if section.settings.content_block_5 != blank -%}
+                                <div class="custom_block-content">
+                                  {{- section.settings.content_block_5 -}}
+                                </div>
+                              {%- endif -%}
+                            </div>
+                          {% endif %}
+                        {% endcase %}
+                      {% endif %}
+                    {% endfor %}
+
 
                     {% if forloop.last %}
                       <div class="custom_block custom_block-5 custom_block-5-left">
