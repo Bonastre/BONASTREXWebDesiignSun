@@ -232,7 +232,7 @@ LIQUID
                      {%- case block.type -%}
                       {%- when '@app' -%}
                         {% render block %}
-                      {%- when 'block_1' -%}
+                      {%- when 'block-1' -%}
                         <div class="custom_block custom_block-{{ main_index }}">
                         {%- if block.settings.image_block_5 != blank -%}
                           {{- block.settings.image_block_5 | image_url: width: block.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
@@ -637,7 +637,7 @@ LIQUID
       "type": "@app"
     },
     {
-      "type": "block_1",
+      "type": "block-1",
       "name": "Block - Image with text",
       "settings": [
         {
