@@ -236,11 +236,11 @@ LIQUID
                           {%- when '@app' -%}
                             {% render block %}
                           {%- when 'block_1_mobile' -%}
-                            <div class="custom_block custom_block-{{ forloop.index }} custom_block-{{ forloop.index }}--mobile">
-                          {%- if section.settings.image_block_11 != blank -%}
-                              {{- section.settings.image_block_11 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
-                            {%- endif -%}
-                          </div>
+                            <div class="custom_block custom_block-{{ main_index }} custom_block-{{ main_index }}--mobile">
+                              {%- if block.settings.image_block_1_mobile != blank -%}
+                                {{- block.settings.image_block_1_mobile | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                              {%- endif -%}
+                            </div>
                           {%- when 'block_1' -%}
                             <div class="custom_block custom_block-{{ main_index }}">
                               {%- if block.settings.image_block_5 != blank -%}
@@ -658,7 +658,23 @@ LIQUID
           "label": "Content for block №5"
         }
       ]
-    }
-  ]
+    },
+    {
+      "type": "block_1_mobile",
+      "name": "Block - Image-mobile",
+      "settings": [
+          {
+            "type": "number",
+            "id": "index",
+            "label": "Block location number"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_block_1_mobile",
+            "label": "Image for block №5"
+          }
+        ]
+      }
+      ]
 }
 {% endschema %}
