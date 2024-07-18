@@ -301,10 +301,9 @@ LIQUID
 
                     {% for block in section.blocks %}
                       {% if block.settings.index ==  main_index %}
-                        {{ forloop.last | json }}
                         {%- case block.type -%}
                           {%- when 'block_last' -%}
-                            {% if forloop.last %}
+
                               <div class="custom_block custom_block-5 custom_block-5-left">
                               {%- if block.settings.image_block_one_image != blank -%}
                                 {{- block.settings.image_block_last | image_url: width: block.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
@@ -324,7 +323,7 @@ LIQUID
                                 </div>
                               {%- endif -%}
                             </div>
-                          {% endif %}
+                          
                         {% endcase %}
                       {% endif %}
                     {% endfor %}
