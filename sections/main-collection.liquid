@@ -235,6 +235,12 @@ LIQUID
                         {%- case block.type -%}
                           {%- when '@app' -%}
                             {% render block %}
+                          {%- when 'block_1_mobile' -%}
+                            <div class="custom_block custom_block-{{ forloop.index }} custom_block-{{ forloop.index }}--mobile">
+                          {%- if section.settings.image_block_11 != blank -%}
+                              {{- section.settings.image_block_11 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                            {%- endif -%}
+                          </div>
                           {%- when 'block_1' -%}
                             <div class="custom_block custom_block-{{ main_index }}">
                               {%- if block.settings.image_block_5 != blank -%}
@@ -263,23 +269,6 @@ LIQUID
                         {%- endif -%}
                       </div>
                     {% endif %}
-
-                  {% if forloop.index == 5  %}
-                    <div class="custom_block custom_block-{{ forloop.index }}">
-                      {%- if section.settings.image_block_5 != blank -%}
-                        {{- section.settings.image_block_5 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
-                      {%- endif -%}
-                      {%- if section.settings.title_block_5 != blank -%}
-                        <h6 class="h6">{{ section.settings.title_block_5 }}</h6>
-                      {%- endif -%}
-
-                      {%- if section.settings.content_block_5 != blank -%}
-                        <div class="custom_block-content">
-                          {{- section.settings.content_block_5 -}}
-                        </div>
-                      {%- endif -%}
-                    </div>
-                  {% endif %}
 
                     {% if forloop.index == 7  %}
                       <div class="custom_block custom_block-{{ forloop.index }}">
