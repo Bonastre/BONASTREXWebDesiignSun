@@ -12678,12 +12678,6 @@ url("FuturaLT-Light.svg") format("svg"),
   display: none;
 }
 
-/** Blog Studio by ShopPad **/
-.studioeditor #shopify-section-popup,
-.studioeditor #sidebar-cart {
-  display: none !important;
-}
-
 
 
 
