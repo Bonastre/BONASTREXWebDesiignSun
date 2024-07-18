@@ -301,6 +301,7 @@ LIQUID
 
                     {% for block in section.blocks %}
                       {% if block.settings.index ==  main_index %}
+                        {{ main_index }}
                         {%- case block.type -%}
                           {%- when 'block_last' -%}
                             {% if forloop.last %}
