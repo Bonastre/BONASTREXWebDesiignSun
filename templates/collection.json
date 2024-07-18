@@ -84,6 +84,15 @@
             "title_block_11": "",
             "content_block_11": "<p>BON-BON is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>"
           }
+        },
+        "block_last_zFmLWW": {
+          "type": "block_last",
+          "settings": {
+            "image_block_one_image": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "image_block_content": "shopify:\/\/shop_images\/Bon-Bonblack1-_1_600x_2.png",
+            "title_block_content": "LOVNI",
+            "content_block_content": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. <\/p>"
+          }
         }
       },
       "block_order": [
@@ -92,7 +101,8 @@
         "block_1_tNHgEa",
         "block_hover_CGzeYt",
         "block_hover_a6xhpE",
-        "block_big_image_YUpBTP"
+        "block_big_image_YUpBTP",
+        "block_last_zFmLWW"
       ],
       "settings": {
         "color_scheme": "",
