@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-article",
+      "type": "main-article-studio-full",
       "settings": {
         "show_article_image": false,
         "show_date": false,
