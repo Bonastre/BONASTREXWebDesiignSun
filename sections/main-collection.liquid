@@ -330,25 +330,6 @@ LIQUID
 
 
                     {% if forloop.last %}
-                      <div class="custom_block custom_block-5 custom_block-5-left">
-                        {%- if section.settings.image_block_10 != blank -%}
-                          {{- section.settings.image_block_10 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
-                        {%- endif -%}
-                      </div>
-                      <div class="custom_block custom_block-5 custom_block-5-right">
-                        {%- if section.settings.image_block_5 != blank -%}
-                          {{- section.settings.image_block_5 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
-                        {%- endif -%}
-                        {%- if section.settings.title_block_5 != blank -%}
-                          <h6 class="h6">{{ section.settings.title_block_5 }}</h6>
-                        {%- endif -%}
-
-                        {%- if section.settings.content_block_5 != blank -%}
-                          <div class="custom_block-content">
-                            {{- section.settings.content_block_5 -}}
-                          </div>
-                        {%- endif -%}
-                      </div>
                     {% endif %}
                   {%- endfor -%}
                 </product-list>
@@ -725,22 +706,22 @@ LIQUID
       "settings": [
         {
           "type": "image_picker",
-          "id": "image_block_one_",
-          "label": "Image for block"
+          "id": "image_block_one_image",
+          "label": "Block - One image"
         },
         {
           "type": "image_picker",
-          "id": "image_block_5_mobile",
-          "label": "Image for block mobile"
+          "id": "image_block_content",
+          "label": "Image for block content"
         },
         {
           "type": "inline_richtext",
-          "id": "title_block_5",
+          "id": "title_block_content",
           "label": "Heading for block"
         },
         {
           "type": "richtext",
-          "id": "content_block_5",
+          "id": "content_block_content",
           "label": "Content for block"
         }
       ]
