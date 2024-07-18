@@ -228,6 +228,7 @@ LIQUID
                 <product-list id="product-list-{{ section.id }}" class="product-list" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}" data-next-url="{{paginate.next.url}}">
                   {% assign main_index = forloop.index %}
                   {% for block in section.blocks %}
+                    {{ main_index }}
                     {% if block.settings.index ==  main_index %}
                      {%- case block.type -%}
                       {%- when '@app' -%}
