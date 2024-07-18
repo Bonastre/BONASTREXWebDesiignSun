@@ -305,21 +305,21 @@ LIQUID
                           {%- when 'block_last' -%}
                             {% if forloop.last %}
                               <div class="custom_block custom_block-5 custom_block-5-left">
-                              {%- if section.settings.image_block_last_ != blank -%}
-                                {{- section.settings.image_block_last | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                              {%- if block.settings.image_block_one_image != blank -%}
+                                {{- block.settings.image_block_last | image_url: width: block.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
                               {%- endif -%}
                             </div>
                               <div class="custom_block custom_block-5 custom_block-5-right">
-                              {%- if section.settings.image_block_last != blank -%}
-                                {{- section.settings.image_block_5 | image_url: width: section.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
+                              {%- if block.settings.image_block_content != blank -%}
+                                {{- block.settings.image_block_content | image_url: width: block.settings.image.width | image_tag: widths: '400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' -}}
                               {%- endif -%}
-                              {%- if section.settings.title_block_5 != blank -%}
-                                <h6 class="h6">{{ section.settings.title_block_5 }}</h6>
+                              {%- if block.settings.title_block_content != blank -%}
+                                <h6 class="h6">{{ block.settings.title_block_content }}</h6>
                               {%- endif -%}
 
-                              {%- if section.settings.content_block_5 != blank -%}
+                              {%- if block.settings.content_block_content != blank -%}
                                 <div class="custom_block-content">
-                                  {{- section.settings.content_block_5 -}}
+                                  {{- block.settings.content_block_content -}}
                                 </div>
                               {%- endif -%}
                             </div>
@@ -718,8 +718,33 @@ LIQUID
           "label": "Content for block"
         }
         ]
-      }
-
+      },
+    {
+      "type": "block_last",
+      "name": "Block Last",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_block_one_",
+          "label": "Image for block"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_block_5_mobile",
+          "label": "Image for block mobile"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title_block_5",
+          "label": "Heading for block"
+        },
+        {
+          "type": "richtext",
+          "id": "content_block_5",
+          "label": "Content for block"
+        }
       ]
+    }
+  ]
 }
 {% endschema %}
