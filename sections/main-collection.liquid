@@ -226,7 +226,15 @@ LIQUID
                 {%- render 'active-facets', results: collection -%}
 
                 <product-list id="product-list-{{ section.id }}" class="product-list" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}" data-next-url="{{paginate.next.url}}">
+                  {% assign main_index = forloop.index %}
+                  {% for block in section.blocks %}
+                    {% if block.settings.index ==  main_index %}
+                      выводим сюда блок
+                    {% endif %}
+                  {% endfor %}
+
                   {%- for product in collection.products -%}
+
                     {% if forloop.index == 3  %}
                       <div class="custom_block custom_block-{{ forloop.index }} custom_block-{{ forloop.index }}--mobile">
                         {%- if section.settings.image_block_11 != blank -%}
@@ -234,6 +242,7 @@ LIQUID
                         {%- endif -%}
                       </div>
                     {% endif %}
+
                   {% if forloop.index == 5  %}
                     <div class="custom_block custom_block-{{ forloop.index }}">
                       {%- if section.settings.image_block_5 != blank -%}
@@ -250,6 +259,7 @@ LIQUID
                       {%- endif -%}
                     </div>
                   {% endif %}
+
                     {% if forloop.index == 7  %}
                       <div class="custom_block custom_block-{{ forloop.index }}">
                         {%- if section.settings.image_block_5 != blank -%}
@@ -602,6 +612,11 @@ LIQUID
       "type": "richtext",
       "id": "content_block_11",
       "label": "Content for block №11"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
     }
   ]
 }
