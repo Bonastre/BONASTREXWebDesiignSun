@@ -74,6 +74,16 @@
             "title_block_9": "LOVNI BAG",
             "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.<\/p>"
           }
+        },
+        "block_big_image_YUpBTP": {
+          "type": "block_big_image",
+          "settings": {
+            "index": 9,
+            "image_block_11": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
+            "image_block_11_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "title_block_11": "",
+            "content_block_11": "<p>BON-BON is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>"
+          }
         }
       },
       "block_order": [
@@ -81,7 +91,8 @@
         "block_1_mobile_CRe7xY",
         "block_1_tNHgEa",
         "block_hover_CGzeYt",
-        "block_hover_a6xhpE"
+        "block_hover_a6xhpE",
+        "block_big_image_YUpBTP"
       ],
       "settings": {
         "color_scheme": "",
