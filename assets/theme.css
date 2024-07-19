@@ -8385,10 +8385,10 @@ display: none;
 }
 .shopify-section--main-collection .product-card .product-card__content {
   position: relative;
-  border: 0.5px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 .shopify-section--main-collection .product-card:hover .product-card__content {
-  border: 0.5px solid #231F20;
+  border: 1px solid #231F20;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems {
   position: relative;
@@ -8405,8 +8405,8 @@ display: none;
   display: none;
   position: absolute;
   bottom: -10px;
-  right: -0.5px;
-  width: 0.5px;
+  right: -1px;
+  width: 1px;
   height: 9px;
   background-color: #231F20;
   z-index: 10;
@@ -8417,7 +8417,7 @@ display: none;
   position: absolute;
   bottom: -5px;
   right: -5px;
-  width: 0.5px;
+  width: 1px;
   height: 9px;
   background-color: #231F20;
   z-index: 10;
