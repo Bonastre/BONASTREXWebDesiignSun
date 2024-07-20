@@ -89,8 +89,8 @@
             {%-  assign new_page_title = new_page_title | replace: variableMapper[i], variableValueItem -%}
             {%-  assign new_page_description = new_page_description | replace: variableMapper[i], variableValueItem -%}
         {%- endfor %}
-        {%-  assign page_title = new_page_title | strip_html -%}
-        {%-  assign page_description = new_page_description | strip_html -%}
+        {%-  assign page_title = new_page_title | strip_html | url_decode -%}
+        {%-  assign page_description = new_page_description | strip_html | url_decode -%}
         {%-  assign page_description = new_page_description | replace: '"', "'" -%}
         <script>
         var tapita_meta_page_title =  `{{  page_title }}`;
@@ -132,10 +132,10 @@
       {%- endif -%}
       {%- if tptmetamatched -%}
         {%- if aicustom_tcontent.title and aicustom_tcontent.title != "" -%}
-          {%-  assign page_title = aicustom_tcontent.title | strip_html -%}
+          {%-  assign page_title = aicustom_tcontent.title | strip_html | url_decode -%}
         {%- endif -%}
         {%- if aicustom_tcontent.description and aicustom_tcontent.description != "" -%}
-          {%-  assign page_description = aicustom_tcontent.description | strip_html -%}
+          {%-  assign page_description = aicustom_tcontent.description | strip_html | url_decode -%}
           {%-  assign page_description = page_description | replace: '"', "'" -%}
         {%- endif %}
         <script>
