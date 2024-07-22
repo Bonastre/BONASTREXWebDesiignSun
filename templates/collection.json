@@ -134,7 +134,6 @@
     },
     "recently_viewed_products_6KQNxP": {
       "type": "recently-viewed-products",
-      "disabled": true,
       "settings": {
         "separate_section_with_border": false,
         "spacing_section": true,
