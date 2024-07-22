@@ -8580,15 +8580,10 @@ Recently viewed
 }
 .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
   height: 8px;
-  top: 12px;
+  top: 14px;
   background-size: 8px;
 }
-@media (max-width: 1200px) {
 
-  .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
-    top: 14px;
-  }
-}
 @media (max-width: 700px) {
 
   .header__secondary-nav .icon-wishlist {
