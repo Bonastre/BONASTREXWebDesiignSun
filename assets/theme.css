@@ -8586,7 +8586,7 @@ Recently viewed
 @media (max-width: 1200px) {
 
   .header__secondary-nav .wg-drop.country-selector .wgcurrent:after {
-    top: 12px;
+    top: 14px;
   }
 }
 @media (max-width: 700px) {
