@@ -1539,8 +1539,8 @@ height-observer {
 }
 
 .section-spacing {
-  padding-block-start: 2rem;
-  padding-block-end: 2rem;
+  padding-block-start: calc(var(--section-vertical-spacing-override, var(--section-vertical-spacing))  + var(--section-vertical-spacing-block-start-compensation, 0px));
+  padding-block-end: var(--section-vertical-spacing-override, var(--section-vertical-spacing));
 }
 
 .shopify-section:has(.section-spacing) {
