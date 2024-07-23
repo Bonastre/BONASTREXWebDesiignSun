@@ -8388,9 +8388,6 @@ display: none;
   position: relative;
   border: 1px solid #ffffff;
 }
-.shopify-section--main-collection .product-card:hover .product-card__content {
-  border: 1px solid #231F20;
-}
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems {
   position: relative;
   background: white;
@@ -8405,11 +8402,11 @@ display: none;
   content: "";
   display: none;
   position: absolute;
-  bottom: -10px;
-  right: -1px;
-  width: 1px;
-  height: 9px;
-  background-color: #231F20;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #231F20;
+  left: 0;
+  top: 0;
   z-index: 10;
 }
 .shopify-section--main-collection .product-card__content:after {
