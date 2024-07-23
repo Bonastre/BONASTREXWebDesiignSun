@@ -8413,11 +8413,13 @@ display: none;
   content: "";
   display: none;
   position: absolute;
-  bottom: -5px;
-  right: -5px;
-  width: 1px;
+  left: 100%;
+  top: 100%;
+  width: 9px;
   height: 9px;
-  background-color: #231F20;
+  border: 1px solid #231F20;
+  border-right: 0;
+  border-bottom: 0;
   z-index: 10;
   transform: rotate(90deg);
 }
