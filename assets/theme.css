@@ -8421,6 +8421,7 @@ display: none;
   border-right: 0;
   border-bottom: 0;
   z-index: 10;
+  transform: translate(-1px, -1px);
 }
 .shopify-section--main-collection .product-card:hover .product-card__content:before {
   display: block;
