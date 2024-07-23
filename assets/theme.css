@@ -8386,7 +8386,7 @@ display: none;
 }
 .shopify-section--main-collection .product-card .product-card__content {
   position: relative;
-  border: 1px solid #ffffff;
+  padding: 1px;
 }
 .shopify-section--main-collection .ProductItem__Linked .ProductItem__ColorSwatchItems {
   position: relative;
@@ -8421,7 +8421,6 @@ display: none;
   border-right: 0;
   border-bottom: 0;
   z-index: 10;
-  transform: rotate(90deg);
 }
 .shopify-section--main-collection .product-card:hover .product-card__content:before {
   display: block;
