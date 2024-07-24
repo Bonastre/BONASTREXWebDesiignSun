@@ -6,7 +6,7 @@
 
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
- <script>/* start spd config */window._spt_delay_keywords=["/gtag/js,gtag(,/checkouts,/tiktok-track.js,/hotjar-,/smile-,/adoric.js,/extensions,/wpm/,fbq("];window._spt_customer_delay_keywords=["/gtag/js","gtag(","/checkouts","/tiktok-track.js","/hotjar-","/smile-","/adoric.js"];window._spt_advdlkws=["a","e"];/* end spd config */</script>{%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
+ <script>/* start spd config */window._spt_delay_keywords=["/gtag/js,gtag(,/checkouts,/tiktok-track.js,/hotjar-,/smile-,/adoric.js,/wpm/,fbq("];window._spt_customer_delay_keywords=["/gtag/js","gtag(","/checkouts","/tiktok-track.js","/hotjar-","/smile-","/adoric.js"];window._spt_advdlkws=["a","e"];/* end spd config */</script>{%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
 {{ locksmith_initializations }}
 {% render 'pagefly-head' %}
     {{ 'jquery.min.js' | asset_url | preload_tag: as: 'script' }}
