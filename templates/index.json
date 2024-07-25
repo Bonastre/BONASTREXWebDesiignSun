@@ -61,6 +61,7 @@
       "blocks": {
         "collection-1": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "lovni-bags",
             "products_count": 4,
@@ -88,6 +89,7 @@
     },
     "image_with_text_overlay_EVNbLe": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "image_size": "md",
@@ -132,6 +134,7 @@
         "richtext_pBFbHG",
         "link_LQmUtP"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -172,6 +175,7 @@
         "richtext_8TYyYJ",
         "link_F8WzLd"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
@@ -184,6 +188,7 @@
     },
     "image_with_text_overlay_gE49bT": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "image_size": "md",
@@ -228,6 +233,7 @@
         "richtext_BprNKV",
         "link_ExYkb8"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
