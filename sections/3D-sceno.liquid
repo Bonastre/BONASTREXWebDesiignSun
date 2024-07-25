@@ -1,0 +1,151 @@
+<!-- Three.js Scene Container -->
+<div id="three-sceno-container">
+  {% comment %}
+    <div
+      class="smooth_blink"
+      style="position: absolute; left: 2rem; bottom: 2rem; z-index: 4; display: flex; align-items: center; justify-content: center;"
+    >
+      <span style="margin-right: 6px; font-weight: 400; font-size: 20px;">360</span>
+      <svg
+        style="height: 20px;"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        class="bi bi-arrows-move"
+        viewBox="0 0 16 16"
+      >
+        <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/>
+      </svg>
+    </div>
+  {% endcomment %}
+  <div
+    class="smooth_blink"
+    style="position: absolute; left: 50%; top: 20vh; transform: translate(-50%,-50%); z-index: 4; display: flex; align-items: center; justify-content: center; flex-direction: column;"
+  >
+    <span style="font-weight: 400; font-size: 15px; margin-top: 0rem;">360</span>
+    <img style="height: 2rem; margin-top: -.5rem;" src="{{ 'arrow-circle.png' | asset_url }}">
+
+    {% comment %}
+      <svg
+        style="height: 20px;"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        class="bi bi-arrows-move"
+        viewBox="0 0 16 16"
+      >
+        <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/>
+      </svg>
+    {% endcomment %}
+  </div>
+</div>
+
+<script>
+  const PILIER_NOISE_ASSETS = {
+    gros_pilier: 'https://cdn.shopify.com/3d/models/42e049b15291bcdf/gros_low_draco2.glb',
+    fin_pilier: 'https://cdn.shopify.com/3d/models/cf0350deb945f112/fin_low_draco2.glb',
+    noise1: 'https://cdn.shopify.com/3d/models/25dc66c16d85227b/noise1_low_draco2.glb',
+    noise2: 'https://cdn.shopify.com/3d/models/0770eb6204e28935/noise2_low_draco2.glb',
+  };
+  const BAGS_ASSETS = [
+    'https://cdn.shopify.com/3d/models/712ac6f7a7920755/sac_1_only-scaled-compressed.glb',
+    'https://cdn.shopify.com/3d/models/94749b4835412f61/sac_2_only-scaled-compressed.glb',
+    'https://cdn.shopify.com/3d/models/f420c02020936738/sac_3_only-scaled-compressed.glb',
+    'https://cdn.shopify.com/3d/models/8a571b35fe0c4fc0/sac_4_only-scaled-compressed.glb',
+    'https://cdn.shopify.com/3d/models/bdc5b489eccfbeac/sac_5_only-scaled-compressed.glb',
+    'https://cdn.shopify.com/3d/models/51656856a055d803/sac_6_only-scaled-compressed.glb',
+    'https://cdn.shopify.com/3d/models/1bbde890debb509b/sac_7_only-scaled-compressed.glb',
+    'https://cdn.shopify.com/3d/models/b99311732e0e1fc6/sac_8_only-scaled-compressed.glb',
+  ];
+
+  // event when drag three-sceno-container -> delete drag_helper element (once)
+  {% comment %} document.getElementById('three-sceno-container').addEventListener('pointerdown', () => {
+    const dragHelper = document.getElementById('drag_helper');
+    if (dragHelper) {
+      dragHelper.remove();
+    }
+  },{ once: true }); {% endcomment %}
+</script>
+
+<script async src="{{ '3D-sceno.js' | asset_url }}"></script>
+
+<style>
+    #three-sceno-container {
+      {% comment %} border: solid red 1px; {% endcomment %}
+      position: relative;
+      background-color: white;
+      height: 100vh;
+    }
+
+    #three-sceno-title {
+      font-family: 'Futura LT';
+      letter-spacing: 0.2em;
+      font-weight: 800;
+      font-size: 2.5rem;
+      position: fixed;
+      top: 0;
+      height: 20rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0%;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s ease;
+    }
+
+    #three-sceno-container > canvas {
+      {% comment %} border: solid green 1px; {% endcomment %}
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      touch-action: auto;
+    }
+
+    @media (orientation: portrait) {
+      #drag_helper {
+        display: none;
+      }
+
+      #three-sceno-container {
+        height: 250rem;
+      }
+
+      #three-sceno-container > canvas {
+        position: sticky;
+      }
+    }
+
+    /* blinking */
+  .smooth_blink {
+    animation: smooth_blinker 2s ease-in-out infinite;
+  }
+
+  @keyframes smooth_blinker {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "3D-sceno",
+  "settings": [],
+  "presets": [
+    {
+      "name": "3D-sceno",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
