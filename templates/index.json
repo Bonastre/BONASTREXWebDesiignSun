@@ -76,6 +76,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
+        "spacing_section": true,
         "hide_product_information": true,
         "stack_products": true,
         "products_per_row_mobile": "2",
@@ -236,6 +237,11 @@
         "content_width": "sm",
         "remove_vertical_spacing": true
       }
+    },
+    "3_d_sceno_rMAKRR": {
+      "type": "3D-sceno",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -245,6 +251,7 @@
     "image_with_text_pwE7Pr",
     "image_with_text_dcgFkm",
     "image_with_text_overlay_gE49bT",
-    "image_with_text_E7FqVN"
+    "image_with_text_E7FqVN",
+    "3_d_sceno_rMAKRR"
   ]
 }
