@@ -34,6 +34,7 @@
           "type": "block_1",
           "settings": {
             "index": 5,
+            "page": 1,
             "image_block_5": "shopify:\/\/shop_images\/Bon-Bonblack1-_1_600x_2.png",
             "image_block_5_mobile": "shopify:\/\/shop_images\/Bon-Bonblack1-_1_600x_1.png",
             "title_block_5": "LOVNI",
@@ -44,6 +45,7 @@
           "type": "block_1_mobile",
           "settings": {
             "index": 3,
+            "page": 1,
             "image_block_1_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png"
           }
         },
@@ -51,6 +53,7 @@
           "type": "block_1",
           "settings": {
             "index": 7,
+            "page": 1,
             "image_block_5": "shopify:\/\/shop_images\/Bon-Bonblack1-_1_600x_2.png",
             "image_block_5_mobile": "shopify:\/\/shop_images\/Bon-Bonblack1-_1_600x_1.png",
             "title_block_5": "LOVNI",
@@ -61,6 +64,7 @@
           "type": "block_hover",
           "settings": {
             "index": 9,
+            "page": 1,
             "image_block_9": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
             "title_block_9": "LOVNI BAG",
             "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.<\/p>"
@@ -70,6 +74,7 @@
           "type": "block_hover",
           "settings": {
             "index": 9,
+            "page": 1,
             "image_block_9": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
             "title_block_9": "LOVNI BAG",
             "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.<\/p>"
@@ -79,6 +84,7 @@
           "type": "block_big_image",
           "settings": {
             "index": 9,
+            "page": 1,
             "image_block_11": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
             "image_block_11_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
             "title_block_11": "",
@@ -88,6 +94,7 @@
         "block_1_eAmJTT": {
           "type": "block_1",
           "settings": {
+            "page": 1,
             "title_block_5": "",
             "content_block_5": ""
           }
