@@ -231,7 +231,7 @@ LIQUID
 
                     {% assign main_index = forloop.index %}
                     {% for block in section.blocks %}
-                      {% if block.settings.index ==  main_index %}
+                      {% if block.settings.index ==  main_index and block.settings.page == paginate.current_page %}
                         {%- case block.type -%}
                           {%- when '@app' -%}
                             {% render block %}
