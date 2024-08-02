@@ -2174,6 +2174,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 
 .product-card__figure {
   position: relative;
+  z-index: 10;
 }
 
 .product-card__figure > .badge-list {
