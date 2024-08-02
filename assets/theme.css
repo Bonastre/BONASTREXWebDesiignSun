@@ -8398,6 +8398,7 @@ display: none;
 .shopify-section--main-collection .product-card__info {
   position: relative;
   min-height: 50px;
+  z-index: 10;
 }
 .shopify-section--main-collection .product-card__content:before {
   content: "";
