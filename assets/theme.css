@@ -8249,6 +8249,7 @@ Favorite wishlist
 .shopify-section--main-collection .product-card {
   gap: unset;
   position: relative;
+  z-index: 1;
 }
 
 .shopify-section--main-collection .product-title-collection {
