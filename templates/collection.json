@@ -102,14 +102,6 @@
             "content_block_11": "<p>BON-BON is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>"
           }
         },
-        "block_1_eAmJTT": {
-          "type": "block_1",
-          "settings": {
-            "page": 1,
-            "title_block_5": "",
-            "content_block_5": ""
-          }
-        },
         "block_last_zFmLWW": {
           "type": "block_last",
           "settings": {
@@ -129,7 +121,6 @@
         "block_hover_CGzeYt",
         "block_hover_a6xhpE",
         "block_big_image_YUpBTP",
-        "block_1_eAmJTT",
         "block_last_zFmLWW"
       ],
       "settings": {
