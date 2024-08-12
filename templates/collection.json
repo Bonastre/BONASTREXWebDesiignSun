@@ -111,6 +111,17 @@
             "title_block_content": "LOVNI",
             "content_block_content": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. <\/p>"
           }
+        },
+        "block_1_EfifKE": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 3,
+            "image_block_5": "shopify:\/\/shop_images\/Rider_S_coupe_blhuh.jpg",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/Rider_S_coupe_blhuh.jpg",
+            "title_block_5": "11",
+            "content_block_5": "<p>111<\/p>"
+          }
         }
       },
       "block_order": [
@@ -121,7 +132,8 @@
         "block_hover_CGzeYt",
         "block_hover_a6xhpE",
         "block_big_image_YUpBTP",
-        "block_last_zFmLWW"
+        "block_last_zFmLWW",
+        "block_1_EfifKE"
       ],
       "settings": {
         "color_scheme": "",
