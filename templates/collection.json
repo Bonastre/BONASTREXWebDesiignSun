@@ -118,7 +118,6 @@
         },
         "block_1_BRAWKM": {
           "type": "block_1",
-          "disabled": true,
           "settings": {
             "index": 5,
             "page": 3,
