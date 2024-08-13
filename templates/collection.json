@@ -108,13 +108,12 @@
         },
         "block_last_zFmLWW": {
           "type": "block_last",
-          "disabled": true,
           "settings": {
-            "image_block_one_image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "image_block_one_image": "shopify:\/\/shop_images\/FOLDERPHONETERRAF.png",
             "page": 1,
-            "image_block_content": "shopify:\/\/shop_images\/BON_BON_CORDS_BLACK_1_1-2.jpg",
-            "title_block_content": "BON-BON CORDS",
-            "content_block_content": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+            "image_block_content": "shopify:\/\/shop_images\/FOLDER_DOC_TERRA_2_3.jpg",
+            "title_block_content": "Folder",
+            "content_block_content": "<p>Origami style, minimal, refined and functional Folder. The construction is stitchless as the folder is assembled by leather covered metal studs.<\/p>"
           }
         },
         "block_1_BRAWKM": {
