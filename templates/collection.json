@@ -120,7 +120,9 @@
           "type": "block_1",
           "settings": {
             "index": 5,
-            "page": 4,
+            "page": 3,
+            "image_block_5": "shopify:\/\/shop_images\/AIRBAG_M_TERRA_1_1.jpg",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/AIRBAG_M_TERRA_1_1.jpg",
             "title_block_5": "",
             "content_block_5": ""
           }
