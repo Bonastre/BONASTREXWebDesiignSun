@@ -115,6 +115,15 @@
             "title_block_content": "BON-BON CORDS",
             "content_block_content": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
           }
+        },
+        "block_1_BRAWKM": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 4,
+            "title_block_5": "",
+            "content_block_5": ""
+          }
         }
       },
       "block_order": [
@@ -125,7 +134,8 @@
         "block_hover_CGzeYt",
         "block_hover_a6xhpE",
         "block_big_image_YUpBTP",
-        "block_last_zFmLWW"
+        "block_last_zFmLWW",
+        "block_1_BRAWKM"
       ],
       "settings": {
         "color_scheme": "",
