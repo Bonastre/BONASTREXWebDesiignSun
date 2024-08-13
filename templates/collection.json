@@ -126,6 +126,15 @@
             "title_block_5": "Airbag",
             "content_block_5": "<p>This line is inspired by an airbag where the soft leather inflatesby fastening both side strips to the center hardware piece . The handles, straps and pads are detachable to allow the designs to fold flat. <\/p>"
           }
+        },
+        "block_big_image_3CVNFg": {
+          "type": "block_big_image",
+          "settings": {
+            "index": 9,
+            "page": 5,
+            "title_block_11": "",
+            "content_block_11": ""
+          }
         }
       },
       "block_order": [
@@ -137,7 +146,8 @@
         "block_hover_a6xhpE",
         "block_big_image_YUpBTP",
         "block_last_zFmLWW",
-        "block_1_BRAWKM"
+        "block_1_BRAWKM",
+        "block_big_image_3CVNFg"
       ],
       "settings": {
         "color_scheme": "",
