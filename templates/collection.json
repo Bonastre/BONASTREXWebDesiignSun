@@ -108,6 +108,7 @@
         },
         "block_last_zFmLWW": {
           "type": "block_last",
+          "disabled": true,
           "settings": {
             "image_block_one_image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
             "page": 1,
@@ -118,6 +119,7 @@
         },
         "block_1_BRAWKM": {
           "type": "block_1",
+          "disabled": true,
           "settings": {
             "index": 5,
             "page": 3,
@@ -129,6 +131,7 @@
         },
         "block_big_image_3CVNFg": {
           "type": "block_big_image",
+          "disabled": true,
           "settings": {
             "index": 9,
             "page": 5,
