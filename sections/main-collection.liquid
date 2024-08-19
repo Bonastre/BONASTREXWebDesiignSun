@@ -330,7 +330,7 @@ LIQUID
                 </product-list>
 
 
-                {% if section.settings.enable_load_more %}
+                {% if section.settings.enable_load_more and paginate.pages > 1 and paginate.next.is_link %}
                   <button id="load-more" class="load-more-button">
                     See More
                     {%- render 'icon' with 'cross' -%}
