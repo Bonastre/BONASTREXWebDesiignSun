@@ -138,6 +138,17 @@
             "title_block_11": "",
             "content_block_11": ""
           }
+        },
+        "block_1_zdnB7c": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 5,
+            "image_block_5": "shopify:\/\/shop_images\/01_DOMETOTEM-BLACK.jpg",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/01_DOMETOTEM-BLACK.jpg",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
         }
       },
       "block_order": [
@@ -150,7 +161,8 @@
         "block_big_image_YUpBTP",
         "block_last_zFmLWW",
         "block_1_BRAWKM",
-        "block_big_image_3CVNFg"
+        "block_big_image_3CVNFg",
+        "block_1_zdnB7c"
       ],
       "settings": {
         "color_scheme": "",
