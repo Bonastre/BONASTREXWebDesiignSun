@@ -21,6 +21,15 @@
             "col_2_list_en": "PASHA ST BARTH, SAINT BARTHELEMY"
           }
         },
+        "row_8CFreQ": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "ITALY",
+            "col_1_list_en": "MILAURA,  Milano Italy",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
+        },
         "e27b6103-e69b-4f90-b180-5924290bb8ef": {
           "type": "row",
           "settings": {
@@ -92,19 +101,11 @@
             "col_2_title_en": "",
             "col_2_list_en": ""
           }
-        },
-        "row_8CFreQ": {
-          "type": "row",
-          "settings": {
-            "col_1_title_en": "ITALY",
-            "col_1_list_en": "MILAURA,  Milano Italy",
-            "col_2_title_en": "",
-            "col_2_list_en": ""
-          }
         }
       },
       "block_order": [
         "d9940c2e-cd40-4660-b174-4acddfc56885",
+        "row_8CFreQ",
         "e27b6103-e69b-4f90-b180-5924290bb8ef",
         "9e88cc48-450c-4029-b7c7-ed8234ac1b29",
         "4c5378bc-2c8b-40ab-ae9b-e77b8ce7e61c",
@@ -112,8 +113,7 @@
         "64beb4c9-7e5e-448c-bafc-771909dccca3",
         "d2a72099-31f2-4c4b-be30-60856ede56ec",
         "1095c553-e1f2-4c77-b267-26e74c5ea4e6",
-        "row_QmJ6jx",
-        "row_8CFreQ"
+        "row_QmJ6jx"
       ],
       "settings": {
         "title_en": "Stockists",
@@ -122,7 +122,7 @@
         "location_image": "shopify:\/\/shop_images\/image_196.jpg",
         "location_info_en": "10 RUE DU PERCHE, PARIS 3\nMON - SAT 10:00 18:00\n+33 1 42 78 99 10",
         "footer_title_en": "ONLINE",
-        "footer_info_en": "NET-A-PORTER\n\nsmallable.com"
+        "footer_info_en": "NET-A-PORTER\nZalando\nsmallable.com"
       }
     }
   },
