@@ -92,6 +92,15 @@
             "col_2_title_en": "",
             "col_2_list_en": ""
           }
+        },
+        "row_8CFreQ": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "ITALY",
+            "col_1_list_en": "MILAURA,  Milano Italy",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
         }
       },
       "block_order": [
@@ -103,7 +112,8 @@
         "64beb4c9-7e5e-448c-bafc-771909dccca3",
         "d2a72099-31f2-4c4b-be30-60856ede56ec",
         "1095c553-e1f2-4c77-b267-26e74c5ea4e6",
-        "row_QmJ6jx"
+        "row_QmJ6jx",
+        "row_8CFreQ"
       ],
       "settings": {
         "title_en": "Stockists",
