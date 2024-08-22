@@ -151,14 +151,14 @@
             "content_block_5": "<p>This is a vertical, minimalist and very urban medium tote. Inspired by a kimono: you may fold it flat after a complete unzipping when you want to store it or pack it.<\/p>"
           }
         },
-        "block_hover_W7ETmR": {
-          "type": "block_hover",
+        "block_big_image_pjamQ6": {
+          "type": "block_big_image",
           "settings": {
             "index": 9,
             "page": 2,
-            "image_block_9": "shopify:\/\/shop_images\/BONBONCORDSTAUPEF.png",
-            "title_block_9": "",
-            "content_block_9": ""
+            "image_block_11": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "title_block_11": "",
+            "content_block_11": ""
           }
         }
       },
@@ -174,7 +174,7 @@
         "block_1_BRAWKM",
         "block_big_image_3CVNFg",
         "block_1_zdnB7c",
-        "block_hover_W7ETmR"
+        "block_big_image_pjamQ6"
       ],
       "settings": {
         "color_scheme": "",
