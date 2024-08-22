@@ -150,6 +150,16 @@
             "title_block_5": "DOME TOTE M",
             "content_block_5": "<p>This is a vertical, minimalist and very urban medium tote. Inspired by a kimono: you may fold it flat after a complete unzipping when you want to store it or pack it.<\/p>"
           }
+        },
+        "block_hover_W7ETmR": {
+          "type": "block_hover",
+          "settings": {
+            "index": 9,
+            "page": 2,
+            "image_block_9": "shopify:\/\/shop_images\/BONBONCORDSTAUPEF.png",
+            "title_block_9": "",
+            "content_block_9": ""
+          }
         }
       },
       "block_order": [
@@ -163,7 +173,8 @@
         "block_last_zFmLWW",
         "block_1_BRAWKM",
         "block_big_image_3CVNFg",
-        "block_1_zdnB7c"
+        "block_1_zdnB7c",
+        "block_hover_W7ETmR"
       ],
       "settings": {
         "color_scheme": "",
