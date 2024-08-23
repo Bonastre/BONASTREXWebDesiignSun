@@ -175,12 +175,23 @@
         },
         "block_hover_gYH6wn": {
           "type": "block_hover",
+          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
-            "image_block_9": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "image_block_9": "shopify:\/\/shop_images\/01_BONBONCORDS-TERRA.jpg",
             "title_block_9": "BON-BON CORDS",
-            "content_block_9": ""
+            "content_block_9": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+          }
+        },
+        "block_1_ng6Jjk": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 2,
+            "image_block_5": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "title_block_5": "",
+            "content_block_5": ""
           }
         }
       },
@@ -198,7 +209,8 @@
         "block_big_image_3CVNFg",
         "block_1_zdnB7c",
         "block_big_image_pjamQ6",
-        "block_hover_gYH6wn"
+        "block_hover_gYH6wn",
+        "block_1_ng6Jjk"
       ],
       "settings": {
         "color_scheme": "",
