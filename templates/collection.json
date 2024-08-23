@@ -211,8 +211,9 @@
             "index": 9,
             "page": 6,
             "image_block_11": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
-            "title_block_11": "",
-            "content_block_11": ""
+            "image_block_11_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
+            "title_block_11": "LOVNI",
+            "content_block_11": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
           }
         }
       },
