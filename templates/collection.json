@@ -193,6 +193,17 @@
             "title_block_5": "BON-BON CORDS",
             "content_block_5": "<p>Enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
           }
+        },
+        "block_1_GHWMyf": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 5,
+            "image_block_5": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
+            "title_block_5": "LOVNI",
+            "content_block_5": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -210,7 +221,8 @@
         "block_1_zdnB7c",
         "block_big_image_pjamQ6",
         "block_hover_gYH6wn",
-        "block_1_ng6Jjk"
+        "block_1_ng6Jjk",
+        "block_1_GHWMyf"
       ],
       "settings": {
         "color_scheme": "",
