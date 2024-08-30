@@ -240,6 +240,16 @@
             "title_block_5": "",
             "content_block_5": ""
           }
+        },
+        "block_1_NEWdwq": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
         }
       },
       "block_order": [
@@ -260,7 +270,8 @@
         "block_1_ng6Jjk",
         "block_1_GHWMyf",
         "block_big_image_FaBWdc",
-        "block_1_xrjfeN"
+        "block_1_xrjfeN",
+        "block_1_NEWdwq"
       ],
       "settings": {
         "color_scheme": "",
