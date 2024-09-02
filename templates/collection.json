@@ -46,8 +46,8 @@
           "type": "block_1",
           "settings": {
             "index": 5,
-            "page": 0,
-            "block_collection": "",
+            "page": 2,
+            "block_collection": "main-collection",
             "image_block_5": "shopify:\/\/shop_images\/BONBONBLACKFILLE.png",
             "image_block_5_mobile": "shopify:\/\/shop_images\/BONBONBLACKFILLE.png",
             "title_block_5": "BON-BON",
