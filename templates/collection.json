@@ -30,6 +30,19 @@
     "main": {
       "type": "main-collection",
       "blocks": {
+        "block_1_eiz4bE": {
+          "type": "block_1",
+          "disabled": true,
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/BONBONBLACKFILLE.png",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/BONBONBLACKFILLE.png",
+            "title_block_5": "BON-BON",
+            "content_block_5": "<p>Buttery soft leather meets at each pleated end, held together by a beautiful solid metal clasp<\/p>"
+          }
+        },
         "block_1_bepRzH": {
           "type": "block_1",
           "settings": {
@@ -42,16 +55,16 @@
             "content_block_5": "<p>The RIDER Line figures the shape a skateboard rink. It is conceived as a modern<br\/>building from the architectural movement of the 50s and 60s known as BRUTALISM.<\/p>"
           }
         },
-        "block_1_eiz4bE": {
+        "block_1_3d3CrP": {
           "type": "block_1",
           "settings": {
-            "index": 5,
-            "page": 2,
+            "index": 9,
+            "page": 1,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/BONBONBLACKFILLE.png",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/BONBONBLACKFILLE.png",
-            "title_block_5": "BON-BON",
-            "content_block_5": "<p>Buttery soft leather meets at each pleated end, held together by a beautiful solid metal clasp<\/p>"
+            "image_block_5": "shopify:\/\/shop_images\/01_RIDERM-BLACK.jpg",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/02_RIDERM-BLACK.jpg",
+            "title_block_5": "RIDER",
+            "content_block_5": "<p>The RIDER Line figures the shape a skateboard rink. It is conceived as a modern<br\/>building from the architectural movement of the 50s and 60s known as BRUTALISM.<\/p>"
           }
         },
         "block_hover_XJA9xT": {
@@ -233,21 +246,22 @@
             "content_block_11": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
           }
         },
-        "block_1_xrjfeN": {
+        "block_1_KdaGQ9": {
           "type": "block_1",
           "settings": {
             "index": 5,
-            "page": 2,
-            "block_collection": "collection-bon-bon",
-            "image_block_5": "shopify:\/\/shop_images\/DOME_TOTE_TAUPE_34.png",
+            "page": 1,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/Dome_TOTE_M_3_4_Terra.png",
             "title_block_5": "",
             "content_block_5": ""
           }
         }
       },
       "block_order": [
-        "block_1_bepRzH",
         "block_1_eiz4bE",
+        "block_1_bepRzH",
+        "block_1_3d3CrP",
         "block_hover_XJA9xT",
         "block_1_mobile_CRe7xY",
         "block_1_tNHgEa",
@@ -263,7 +277,7 @@
         "block_1_ng6Jjk",
         "block_1_GHWMyf",
         "block_big_image_FaBWdc",
-        "block_1_xrjfeN"
+        "block_1_KdaGQ9"
       ],
       "settings": {
         "color_scheme": "",
