@@ -209,39 +209,6 @@
             "content_block_11": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
           }
         },
-        "block_1_fQDNqA": {
-          "type": "block_1",
-          "settings": {
-            "index": 9,
-            "page": 1,
-            "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/Dome_TOTE_M_3_4_Terra.png",
-            "title_block_5": "111",
-            "content_block_5": "<p>111<\/p>"
-          }
-        },
-        "block_1_ArwQBX": {
-          "type": "block_1",
-          "settings": {
-            "index": 5,
-            "page": 9,
-            "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/DOME_TOTE_BLUE_34.png",
-            "title_block_5": "",
-            "content_block_5": ""
-          }
-        },
-        "block_1_QeYcYb": {
-          "type": "block_1",
-          "settings": {
-            "index": 5,
-            "page": 1,
-            "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/TBuckettaub.jpg",
-            "title_block_5": "",
-            "content_block_5": ""
-          }
-        },
         "block_1_yJ8Qtb": {
           "type": "block_1",
           "settings": {
@@ -251,6 +218,17 @@
             "image_block_5": "shopify:\/\/shop_images\/TBucketterrf.jpg",
             "title_block_5": "",
             "content_block_5": ""
+          }
+        },
+        "block_1_fQDNqA": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/Dome_TOTE_M_3_4_Terra.png",
+            "title_block_5": "111",
+            "content_block_5": "<p>111<\/p>"
           }
         }
       },
@@ -270,10 +248,8 @@
         "block_1_ng6Jjk",
         "block_1_GHWMyf",
         "block_big_image_FaBWdc",
-        "block_1_fQDNqA",
-        "block_1_ArwQBX",
-        "block_1_QeYcYb",
-        "block_1_yJ8Qtb"
+        "block_1_yJ8Qtb",
+        "block_1_fQDNqA"
       ],
       "settings": {
         "color_scheme": "",
