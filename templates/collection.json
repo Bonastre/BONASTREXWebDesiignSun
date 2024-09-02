@@ -212,7 +212,7 @@
         "block_1_fQDNqA": {
           "type": "block_1",
           "settings": {
-            "index": 5,
+            "index": 9,
             "page": 1,
             "block_collection": "main-collection",
             "image_block_5": "shopify:\/\/shop_images\/Dome_TOTE_M_3_4_Terra.png",
@@ -227,6 +227,17 @@
             "page": 9,
             "block_collection": "main-collection",
             "image_block_5": "shopify:\/\/shop_images\/DOME_TOTE_BLUE_34.png",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
+        },
+        "block_1_QeYcYb": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/TBuckettaub.jpg",
             "title_block_5": "",
             "content_block_5": ""
           }
@@ -249,7 +260,8 @@
         "block_1_GHWMyf",
         "block_big_image_FaBWdc",
         "block_1_fQDNqA",
-        "block_1_ArwQBX"
+        "block_1_ArwQBX",
+        "block_1_QeYcYb"
       ],
       "settings": {
         "color_scheme": "",
