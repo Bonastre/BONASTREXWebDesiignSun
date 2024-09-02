@@ -241,6 +241,17 @@
             "title_block_5": "",
             "content_block_5": ""
           }
+        },
+        "block_1_yJ8Qtb": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 9,
+            "block_collection": "",
+            "image_block_5": "shopify:\/\/shop_images\/TBucketterrf.jpg",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
         }
       },
       "block_order": [
@@ -261,7 +272,8 @@
         "block_big_image_FaBWdc",
         "block_1_fQDNqA",
         "block_1_ArwQBX",
-        "block_1_QeYcYb"
+        "block_1_QeYcYb",
+        "block_1_yJ8Qtb"
       ],
       "settings": {
         "color_scheme": "",
