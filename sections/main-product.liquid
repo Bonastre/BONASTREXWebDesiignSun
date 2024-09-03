@@ -2,6 +2,20 @@
 {%- assign share_buttons_block = section.blocks | where: 'type', 'share_buttons' | first -%}
 {%- assign inventory_block = section.blocks | where: 'type', 'inventory' | first -%}
 {%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}
+{% assign linked_collection = blank %}
+
+  {% assign product_title = product.title %}
+  {% assign product_description = product.description %}
+  {% assign product_tab_description = product.metafields.custom_fields["description"] %}
+  {% assign product_tab_delivery = product.metafields.custom_fields["delivery"] %}
+
+
+{% for tags in product.tags %}
+  {% assign temp_tag = tags | strip | remove:' '%}
+  {% if temp_tag contains 'Group_'%}
+    {% assign linked_collection = collections[temp_tag] %}
+  {% endif %}
+{% endfor %}
 
 {%- capture section_settings -%}
 {
@@ -56,8 +70,8 @@
           </button>
 
           {%- assign share_url = shop.url | append: product.url -%}
-          {%- assign twitter_text = product.title -%}
-          {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
+          {%- assign twitter_text = product_title -%}
+          {%- assign pinterest_description = product_description | strip_html | truncatewords: 15 | url_param_escape -%}
           {%- assign pinterest_image = product.featured_media | img_url: '1024x' | prepend: 'https:' -%}
 
           <div class="Product__ShareList" aria-hidden="true">
@@ -213,7 +227,7 @@
         {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
 
         {%- if first_3d_model -%}
-          <button class="Product__ViewInSpace Button Button--full" data-shopify-xr data-shopify-model3d-id="{{ first_3d_model.id }}" data-shopify-model3d-default-id="{{ first_3d_model.id }}" data-shopify-title="{{ product.title | escape }}" data-shopify-xr-hidden>
+          <button class="Product__ViewInSpace Button Button--full" data-shopify-xr data-shopify-model3d-id="{{ first_3d_model.id }}" data-shopify-model3d-default-id="{{ first_3d_model.id }}" data-shopify-title="{{ product_title | escape }}" data-shopify-xr-hidden>
             {%- render 'icon', icon: 'media-view-in-space' -%} {{- 'product.general.view_in_space' | t -}}
           </button>
         {%- endif -%}
@@ -293,12 +307,16 @@
 
                 {%- when 'product_meta' -%}
                   {%- render 'product-meta', form: form, block: block, product: product -%}
+          
+                {%- when 'variant_selector' -%}
+                  {%- assign has_ouputted_variant_selector = true -%}
+                  {%- render 'product-form', block: block, product: product -%}
 
                 {%- when 'description' -%}
-                  {%- if product.description != blank -%}
+                  {%- if product_description != blank -%}
                     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
                       <div class="Rte">
-                        {{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
+                        {{- product_description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
                       </div>
                     </div>
                   {%- endif -%}
@@ -308,8 +326,8 @@
                     <span class="ProductMeta__ShareTitle Heading Text--subdued u-h7">{{ 'product.form.share' | t }}</span>
 
                     {%- assign share_url = shop.url | append: product.url -%}
-                    {%- assign twitter_text = product.title -%}
-                    {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
+                    {%- assign twitter_text = product_title -%}
+                    {%- assign pinterest_description = product_description | strip_html | truncatewords: 15 | url_param_escape -%}
                     {%- assign pinterest_image = product.featured_image | img_url: 'large' | prepend: 'https:' -%}
 
                     <div class="ProductMeta__ShareList Text--subdued">
@@ -319,9 +337,7 @@
                     </div>
                   </div>
 
-                {%- when 'variant_selector' -%}
-                  {%- assign has_ouputted_variant_selector = true -%}
-                  {%- render 'product-form', block: block, product: product -%}
+
 
                 {%- when 'quantity_selector' -%}
                   <div class="ProductForm__QuantitySelector" {{ block.shopify_attributes }}>
@@ -386,6 +402,13 @@
                       {%- endif -%}
                     </button>
 
+                    <div data-js-product data-product-handle="{{ product.handle }}"
+                    data-product-variant-id="{{ product.selected_or_first_available_variant.id }}">
+                      <button class="Button Button--secondary Button--full btn--status js-store-lists-add-wishlist" style="margin-top: 10px;">
+                        <span>{{- 'wishlist.add' | t -}}</span>
+                        <span data-button-content="added">{{- 'wishlist.remove' | t -}}</span>
+                      </button>
+                    </div>
                     {%- if block.settings.show_payment_button and product.template_suffix != 'pre-order' -%}
                       {{ form | payment_button }}
                     {%- endif -%}
@@ -426,6 +449,20 @@
               </div>
             </div>
           {%- endif -%}
+        </div>
+        <div class="tabs">
+          <div class="tabsNav">
+            <button class="tabsNavBtn tabsActive" type="button" data-tab="#tab-description">{{ 'product.tabs.title1' | t }}</button>
+            <button class="tabsNavBtn" type="button" data-tab="#tab-livraison">{{ 'product.tabs.title2' | t }}</button>
+          </div>
+          <div class="tabsContent">
+            <div class="tabsItem tabsActive" id="tab-description">
+              <p>{{ product_tab_description }}</p>
+            </div>
+            <div class="tabsItem" id="tab-livraison">
+              <p>{{ product_tab_delivery }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
