@@ -33,9 +33,8 @@
         },
         "variant_selector": {
           "type": "variant_selector",
-          "repeater": "{{ product.metafields.shopify[\"color-pattern\"].value }}",
           "settings": {
-            "selector_mode": "block",
+            "selector_mode": "dropdown",
             "show_color_swatch": true,
             "show_color_carousel": false,
             "size_chart": ""
