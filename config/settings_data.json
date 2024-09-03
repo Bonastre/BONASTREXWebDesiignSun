@@ -24,7 +24,7 @@
     "button_letter_spacing": 18,
     "currency_code_enabled": true,
     "stagger_blog_posts_apparition": true,
-    "round_color_swatches": true,
+    "round_color_swatches": false,
     "product_color_display": "hide",
     "show_quick_buy": false,
     "show_linked_products": true,
