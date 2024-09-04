@@ -101,7 +101,7 @@
           "settings": {
             "image_block_one_image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
             "page": 1,
-            "block_collection": "",
+            "block_collection": "main-collection",
             "image_block_content": "shopify:\/\/shop_images\/BON_BON_CORDS_BLACK_1_1.jpg",
             "title_block_content": "BON-BON CORDS",
             "content_block_content": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
