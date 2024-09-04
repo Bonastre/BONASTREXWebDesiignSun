@@ -211,17 +211,6 @@
             "title_block_5": "",
             "content_block_5": ""
           }
-        },
-        "block_1_RmgBrQ": {
-          "type": "block_1",
-          "settings": {
-            "index": 5,
-            "page": 1,
-            "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/DOME_TOTE_BLUE_34.png",
-            "title_block_5": "",
-            "content_block_5": ""
-          }
         }
       },
       "block_order": [
@@ -240,8 +229,7 @@
         "block_1_ng6Jjk",
         "block_1_GHWMyf",
         "block_big_image_FaBWdc",
-        "block_1_yJ8Qtb",
-        "block_1_RmgBrQ"
+        "block_1_yJ8Qtb"
       ],
       "settings": {
         "color_scheme": "",
