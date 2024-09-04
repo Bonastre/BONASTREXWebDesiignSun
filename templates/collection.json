@@ -43,7 +43,6 @@
         },
         "block_1_mobile_CRe7xY": {
           "type": "block_1_mobile",
-          "disabled": true,
           "settings": {
             "index": 3,
             "page": 1,
@@ -65,7 +64,6 @@
         },
         "block_hover_CGzeYt": {
           "type": "block_hover",
-          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
@@ -77,7 +75,6 @@
         },
         "block_hover_a6xhpE": {
           "type": "block_hover",
-          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
@@ -89,7 +86,6 @@
         },
         "block_big_image_YUpBTP": {
           "type": "block_big_image",
-          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
@@ -102,7 +98,6 @@
         },
         "block_last_zFmLWW": {
           "type": "block_last",
-          "disabled": true,
           "settings": {
             "image_block_one_image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
             "page": 1,
@@ -126,7 +121,6 @@
         },
         "block_big_image_3CVNFg": {
           "type": "block_big_image",
-          "disabled": true,
           "settings": {
             "index": 9,
             "page": 5,
@@ -151,7 +145,6 @@
         },
         "block_big_image_pjamQ6": {
           "type": "block_big_image",
-          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
@@ -164,7 +157,6 @@
         },
         "block_hover_gYH6wn": {
           "type": "block_hover",
-          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
