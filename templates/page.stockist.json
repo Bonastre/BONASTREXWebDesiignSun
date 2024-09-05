@@ -18,7 +18,16 @@
             "col_1_title_en": "",
             "col_1_list_en": "PRINTEMPS, PARIS\nUPPER SHOES, PARIS\nV&V, VERSAILLES\nUPPER SHOES, LYON\nQUATRE HEURES ONZE, BORDEAUX",
             "col_2_title_en": "CARIBBEAN",
-            "col_2_list_en": "PASHA ST BARTH, SAINT BARTHELEMY"
+            "col_2_list_en": "PASHA, SAINT BARTHELEMY"
+          }
+        },
+        "row_GBXK93": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "",
+            "col_1_list_en": "",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
           }
         },
         "row_8CFreQ": {
@@ -105,6 +114,7 @@
       },
       "block_order": [
         "d9940c2e-cd40-4660-b174-4acddfc56885",
+        "row_GBXK93",
         "row_8CFreQ",
         "e27b6103-e69b-4f90-b180-5924290bb8ef",
         "9e88cc48-450c-4029-b7c7-ed8234ac1b29",
