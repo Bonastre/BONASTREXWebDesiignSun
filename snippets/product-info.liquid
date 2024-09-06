@@ -235,7 +235,6 @@ Supported variables
                 endif
             %}
 
-          {{ show_linked_products }}
             {% if show_linked_products %}
 
                 {% assign linked_collection = blank %}
@@ -247,6 +246,8 @@ Supported variables
 
                     {% endif %}
                 {% endfor %}
+
+              {{ temp_tag }}
 
                 {% if linked_collection and linked_collection.products.size > 0%}
                     {% assign g_color_name = blank %}
