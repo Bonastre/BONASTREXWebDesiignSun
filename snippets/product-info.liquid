@@ -244,10 +244,10 @@ Supported variables
                     {% if temp_tag contains 'Group_'%}
                         {% assign linked_collection = collections[temp_tag] %}
 
+              {{ temp_tag }}
+
                     {% endif %}
                 {% endfor %}
-
-              {{ temp_tag }}
 
                 {% if linked_collection and linked_collection.products.size > 0%}
                     {% assign g_color_name = blank %}
