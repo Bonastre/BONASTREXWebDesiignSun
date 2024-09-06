@@ -1,0 +1,206 @@
+/*
+* --depict-theme-resource-version: v1
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Depict App.
+* Please exercise caution as any changes
+* made to this file may be overwritten.
+*
+* ------------------------------------------------------------
+*/
+.depict-grid {
+  display: grid !important;
+  grid-template-columns: repeat(var(--grid-columns), 1fr) !important;
+  grid-template-rows: var(--grid-rows) !important;
+  gap: var(--grid-gap) !important;
+  row-gap: var(--row-gap, var(--grid-gap)) !important;
+  align-items: unset !important;
+}
+@media (max-width: 990px) {
+  .depict-grid {
+    grid-template-columns: repeat(var(--mobile-grid-columns), 1fr) !important;
+    gap: var(--mobile-grid-gap) !important;
+    row-gap: var(--mobile-row-gap, var(--mobile-grid-gap)) !important;
+    grid-template-rows: var(--mobile-grid-rows) !important;
+  }
+}
+.depict-grid::before, .depict-grid::after {
+  display: none !important;
+}
+.depict-grid > * {
+  width: 100% !important;
+  max-width: unset !important;
+  margin: 0 !important;
+}
+
+.depict-card-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.depict-card-wrapper > * {
+  flex-grow: 1 !important;
+  width: 100% !important;
+  max-width: unset !important;
+  margin: 0 !important;
+}
+.depict-card-wrapper, .depict-card-wrapper * {
+  box-sizing: border-box;
+}
+
+.depict-content-block {
+  grid-row-start: var(--grid-row-start);
+  grid-column-start: var(--grid-column-start);
+  grid-row-end: var(--grid-row-end);
+  grid-column-end: var(--grid-column-end);
+  display: var(--desktop-display);
+}
+@media (max-width: 990px) {
+  .depict-content-block {
+    display: var(--mobile-display);
+    grid-row-start: var(--mobile-grid-row-start);
+    grid-column-start: var(--mobile-grid-column-start);
+    grid-row-end: var(--mobile-grid-row-end);
+    grid-column-end: var(--mobile-grid-column-end);
+  }
+}
+
+depict-block-media {
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 100%;
+  container-type: inline-size;
+  display: flex;
+  align-items: stretch;
+  align-self: stretch;
+  max-width: 100%;
+  /* Implement pure css responsive images so we only load an image as big as the container actually is, which results in faster load times on mobile and sharper images on desktop */
+}
+depict-block-media:not(:has(video)) {
+  padding-bottom: var(--align-to-image-offset);
+}
+@media (min-width: 991px) {
+  depict-block-media {
+    aspect-ratio: var(--content-aspect-ratio, auto);
+  }
+}
+@media (max-width: 990px) {
+  depict-block-media {
+    aspect-ratio: var(--mobile-content-aspect-ratio, auto);
+  }
+}
+depict-block-media .depict-video-wrapper {
+  position: relative;
+  margin-bottom: var(--align-to-image-offset);
+  flex-grow: 1;
+}
+depict-block-media video {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+depict-block-media .depict-image-container {
+  position: relative;
+  width: 100%;
+  transition: opacity 0.5s ease;
+}
+depict-block-media .depict-default-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+depict-block-media .depict-hover-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+depict-block-media .depict-image-container:hover .depict-hover-image {
+  opacity: var(--hover-image-hover-opacity);
+}
+depict-block-media .depict-image-container:hover .depict-default-image {
+  opacity: var(--default-image-hover-opacity);
+}
+depict-block-media .depict-responsive-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+  display: block !important;
+  background-image: var(--src-64);
+  /* Seems like -webkit-min-device-pixel-ratio is supported by all major browsers */
+}
+@container (width >= 64px) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-128);
+  }
+}
+@container (width >= 128px) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-256);
+  }
+}
+@container (width >= 256px) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-512);
+  }
+}
+@container (width >= 512px) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-1024);
+  }
+}
+@container (width >= 1024px) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-2048);
+  }
+}
+@container (width >= 2048px) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-4096);
+  }
+}
+@supports not (container-type: inline-size) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-1024);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-128);
+  }
+  @container (width >= 64px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-256);
+    }
+  }
+  @container (width >= 128px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-512);
+    }
+  }
+  @container (width >= 256px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-1024);
+    }
+  }
+  @container (width >= 512px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-2048);
+    }
+  }
+  @container (width >= 1024px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-4096);
+    }
+  }
+  @supports not (container-type: inline-size) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-2048);
+    }
+  }
+}
