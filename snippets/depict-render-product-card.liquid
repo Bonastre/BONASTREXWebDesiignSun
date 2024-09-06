@@ -1,0 +1,144 @@
+{% comment %}
+  --depict-theme-resource-version: v1
+  ------------------------------------------------------------
+   Place your product card rendering code here.
+   This code will be used to render each product card in the grid.
+   You have access to the following variables:
+   - product: The product object to render
+   - forloop: The forloop object of the loop that loops over the products
+   - default_image: The default image object (the image that is displayed when the product is not being hovered)
+   - hover_image: The hover image object (the image that is displayed when the product is being hovered)
+
+   - section: The section object that contains the settings for the grid
+   - collection: The collection object in which the grid is being displayed (in which the products are being displayed)
+  ------------------------------------------------------------
+
+  Example:
+  ```
+  {% assign lazy_load = false %}
+  {%- if forloop.index > 2 -%}
+      {%- assign lazy_load = true -%}
+  {%- endif -%}
+
+  {% render "card-product",
+          card_product: product,
+          media_aspect_ratio: section.settings.image_ratio,
+          show_secondary_image: section.settings.show_secondary_image,
+          show_vendor: section.settings.show_vendor,
+          show_rating: section.settings.show_rating,
+          lazy_load: lazy_load,
+          show_quick_add: section.settings.enable_quick_add,
+          section_id: section.id,
+          default_image: default_image,
+          hover_image: hover_image
+  %}
+  ```
+{% endcomment %}
+
+{% assign main_index = forloop.index %}
+{% for block in section.blocks %}
+  {% if block.settings.index == main_index
+    and block.settings.page == paginate.current_page
+    and block.settings.block_collection == collection
+  %}
+    {%- case block.type -%}
+      {%- when "@app" -%}
+        {% render block %}
+      {%- when "block_1_mobile" -%}
+        <div class="custom_block custom_block-{{ main_index }} custom_block-{{ main_index }}--mobile">
+          {%- if block.settings.image_block_1_mobile != blank -%}
+            {{-
+              block.settings.image_block_1_mobile
+              | image_url: width: section.settings.image.width
+              | image_tag:
+                widths: "400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000"
+            -}}
+          {%- endif -%}
+        </div>
+      {%- when "block_1" -%}
+        <div class="custom_block custom_block-{{ main_index }}">
+          {%- if block.settings.image_block_5 != blank -%}
+            {{-
+              block.settings.image_block_5
+              | image_url: width: block.settings.image.width
+              | image_tag:
+                widths: "400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000"
+            -}}
+          {%- endif -%}
+          {%- if block.settings.title_block_5 != blank -%}
+            <h6 class="h6">{{ block.settings.title_block_5 }}</h6>
+          {%- endif -%}
+
+          {%- if block.settings.content_block_5 != blank -%}
+            <div class="custom_block-content">
+              {{- block.settings.content_block_5 -}}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- when "block_hover" -%}
+        <div class="custom_block custom_block-{{ main_index }}">
+          {%- if block.settings.image_block_9 != blank -%}
+            {{-
+              block.settings.image_block_9
+              | image_url: width: block.settings.image.width
+              | image_tag:
+                widths: "400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000"
+            -}}
+          {%- endif -%}
+          <div class="custom_block-content--hover">
+            {%- if block.settings.title_block_9 != blank -%}
+              <h6 class="h6">{{ block.settings.title_block_9 }}</h6>
+            {%- endif -%}
+
+            {%- if block.settings.content_block_9 != blank -%}
+              <div class="custom_block-content">
+                {{- block.settings.content_block_9 -}}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- when "block_big_image" -%}
+        <div class="custom_block custom_block-{{ main_index }}--3">
+          {%- if block.settings.image_block_11 != blank -%}
+            {{-
+              block.settings.image_block_11
+              | image_url: width: block.settings.image.width
+              | image_tag:
+                widths: "400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000",
+                class: "custom-block_image-desk"
+            -}}
+          {%- endif -%}
+          {%- if block.settings.image_block_11_mobile != blank -%}
+            {{-
+              block.settings.image_block_11_mobile
+              | image_url: width: block.settings.image.width
+              | image_tag:
+                widths: "400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000",
+                class: "custom-block_image-mobile"
+            -}}
+          {%- endif -%}
+          {%- if block.settings.title_block_11 != blank -%}
+            <h6 class="h6">{{ block.settings.title_block_10 }}</h6>
+          {%- endif -%}
+
+          {%- if block.settings.content_block_11 != blank -%}
+            <div class="custom_block-content">
+              {{- block.settings.content_block_11 -}}
+            </div>
+          {%- endif -%}
+        </div>
+    {% endcase %}
+  {% endif %}
+{% endfor %}
+
+<div>
+  {%- render "depict-product-card",
+    product: product,
+    reveal: settings.stagger_products_apparition,
+    position: forloop.index,
+    hide_product_information: section.settings.hide_product_information,
+    stacked: true,
+    default_image: default_image,
+    hover_image: hover_image
+  -%}
+</div>

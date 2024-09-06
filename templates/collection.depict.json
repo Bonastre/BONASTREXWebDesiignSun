@@ -1,0 +1,278 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "image_size": "auto",
+        "allow_transparent_header": true,
+        "reveal": true,
+        "enable_parallax": true,
+        "show_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "show_breadcrumb": true,
+        "content_width": "xs",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "main": {
+      "type": "depict-main-collection",
+      "blocks": {
+        "block_hover_XJA9xT": {
+          "type": "block_hover",
+          "settings": {
+            "index": 9,
+            "page": 2,
+            "block_collection": "",
+            "image_block_9": "shopify:\/\/shop_images\/RCB_589x839_ef40c160-2693-4ece-a452-a652a917f1f3.png",
+            "title_block_9": "RING CROSSBODY",
+            "content_block_9": "<p>So trendy, light and very functional crossbody.Wear it across or at shoulder, it will be the ideal companion for every one of your city getaways and best looks.<\/p>"
+          }
+        },
+        "block_1_mobile_CRe7xY": {
+          "type": "block_1_mobile",
+          "settings": {
+            "index": 3,
+            "page": 1,
+            "block_collection": "",
+            "image_block_1_mobile": "shopify:\/\/shop_images\/02_RIDERM-BLACK.jpg"
+          }
+        },
+        "block_1_tNHgEa": {
+          "type": "block_1",
+          "settings": {
+            "index": 7,
+            "page": 1,
+            "block_collection": "",
+            "image_block_5": "shopify:\/\/shop_images\/Rider_S_coupe_bls.jpg",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/Rider_S_coupe_blsh.jpg",
+            "title_block_5": "LOVNI",
+            "content_block_5": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. <\/p>"
+          }
+        },
+        "block_hover_CGzeYt": {
+          "type": "block_hover",
+          "settings": {
+            "index": 9,
+            "page": 1,
+            "block_collection": "",
+            "image_block_9": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "title_block_9": "LOVNI BAG",
+            "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.<\/p>"
+          }
+        },
+        "block_hover_a6xhpE": {
+          "type": "block_hover",
+          "settings": {
+            "index": 9,
+            "page": 1,
+            "block_collection": "",
+            "image_block_9": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "title_block_9": "LOVNI BAG",
+            "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.<\/p>"
+          }
+        },
+        "block_big_image_YUpBTP": {
+          "type": "block_big_image",
+          "settings": {
+            "index": 9,
+            "page": 1,
+            "image_block_11": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
+            "block_collection": "",
+            "image_block_11_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "title_block_11": "",
+            "content_block_11": "<p>BON-BON is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>"
+          }
+        },
+        "block_last_zFmLWW": {
+          "type": "block_last",
+          "settings": {
+            "image_block_one_image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "page": 1,
+            "block_collection": "main-collection",
+            "image_block_content": "shopify:\/\/shop_images\/BON_BON_CORDS_BLACK_1_1.jpg",
+            "title_block_content": "BON-BON CORDS",
+            "content_block_content": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+          }
+        },
+        "block_1_BRAWKM": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 3,
+            "block_collection": "",
+            "image_block_5": "shopify:\/\/shop_images\/AIRBAGSTAUPEH.png",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/AIRBAG_M_TERRA_1_1.jpg",
+            "title_block_5": "Airbag",
+            "content_block_5": "<p>This line is inspired by an airbag where the soft leather inflatesby fastening both side strips to the center hardware piece . The handles, straps and pads are detachable to allow the designs to fold flat. <\/p>"
+          }
+        },
+        "block_big_image_3CVNFg": {
+          "type": "block_big_image",
+          "settings": {
+            "index": 9,
+            "page": 5,
+            "image_block_11": "shopify:\/\/shop_images\/F1_32fe7e84-78bf-40f8-be2b-36ef40028183.jpg",
+            "block_collection": "",
+            "image_block_11_mobile": "shopify:\/\/shop_images\/F1_32fe7e84-78bf-40f8-be2b-36ef40028183.jpg",
+            "title_block_11": "",
+            "content_block_11": ""
+          }
+        },
+        "block_1_zdnB7c": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 4,
+            "block_collection": "",
+            "image_block_5": "shopify:\/\/shop_images\/01_DOMETOTEM-BLACK.jpg",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/01_DOMETOTEM-BLACK.jpg",
+            "title_block_5": "DOME TOTE M",
+            "content_block_5": "<p>This is a vertical, minimalist and very urban medium tote. Inspired by a kimono: you may fold it flat after a complete unzipping when you want to store it or pack it.<\/p>"
+          }
+        },
+        "block_big_image_pjamQ6": {
+          "type": "block_big_image",
+          "settings": {
+            "index": 9,
+            "page": 1,
+            "image_block_11": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "block_collection": "",
+            "image_block_11_mobile": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "title_block_11": "BON-BON CORDS",
+            "content_block_11": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+          }
+        },
+        "block_hover_gYH6wn": {
+          "type": "block_hover",
+          "settings": {
+            "index": 9,
+            "page": 1,
+            "block_collection": "",
+            "image_block_9": "shopify:\/\/shop_images\/01_BONBONCORDS-TERRA.jpg",
+            "title_block_9": "BON-BON CORDS",
+            "content_block_9": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+          }
+        },
+        "block_1_ng6Jjk": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/BON_BON_CORDS.png",
+            "title_block_5": "BON-BON CORDS",
+            "content_block_5": "<p>Enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+          }
+        },
+        "block_1_GHWMyf": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 5,
+            "block_collection": "",
+            "image_block_5": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
+            "title_block_5": "LOVNI",
+            "content_block_5": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
+          }
+        },
+        "block_big_image_FaBWdc": {
+          "type": "block_big_image",
+          "settings": {
+            "index": 9,
+            "page": 1,
+            "image_block_11": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
+            "block_collection": "main-collection",
+            "image_block_11_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
+            "title_block_11": "LOVNI",
+            "content_block_11": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
+          }
+        },
+        "block_1_yJ8Qtb": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 9,
+            "block_collection": "",
+            "image_block_5": "shopify:\/\/shop_images\/TBucketterrf.jpg",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_hover_XJA9xT",
+        "block_1_mobile_CRe7xY",
+        "block_1_tNHgEa",
+        "block_hover_CGzeYt",
+        "block_hover_a6xhpE",
+        "block_big_image_YUpBTP",
+        "block_last_zFmLWW",
+        "block_1_BRAWKM",
+        "block_big_image_3CVNFg",
+        "block_1_zdnB7c",
+        "block_big_image_pjamQ6",
+        "block_hover_gYH6wn",
+        "block_1_ng6Jjk",
+        "block_1_GHWMyf",
+        "block_big_image_FaBWdc",
+        "block_1_yJ8Qtb"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "hide_product_information": true,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": false,
+        "horizontal_spacing_factor": 0.5,
+        "vertical_spacing_factor": 0.5,
+        "filter_layout": "sidebar",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": false,
+        "show_results_count": false,
+        "show_filter_group_name": false,
+        "show_filter_values_count": false,
+        "open_filters_by_default": false,
+        "enable_load_more": true
+      }
+    },
+    "recently_viewed_products_6KQNxP": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": false,
+        "spacing_section": true,
+        "color_scheme": "",
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_count": 4,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 0.5,
+        "vertical_spacing_factor": 0.5,
+        "subheading": "",
+        "title": "Recently Viewed",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "main",
+    "recently_viewed_products_6KQNxP"
+  ]
+}
