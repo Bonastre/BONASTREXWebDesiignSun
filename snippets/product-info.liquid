@@ -242,7 +242,7 @@ Supported variables
                 {% for tags in product.tags %}
                     {% assign temp_tag = tags | strip | remove:' '%}
                     {% if temp_tag contains 'Group_'%}
-                        {% assign linked_collection = collections[temp_tag] %}
+                        {% assign linked_collection = collections['Group_TTBUCKETV1'] %}
 
                     {% endif %}
                 {% endfor %}
