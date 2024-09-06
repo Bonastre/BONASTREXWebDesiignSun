@@ -1,0 +1,127 @@
+{% comment %}
+  --depict-theme-resource-version: v1
+  ------------------------------------------------------------
+   IMPORTANT: The contents of this file are auto-generated.
+
+   This file may be updated by the Depict App.
+   Please exercise caution as any changes
+   made to this file may be overwritten.
+   ------------------------------------------------------------
+{% endcomment %}
+
+{% comment %}
+  Renders a depict content block
+
+  Usage:
+  {% render 'depict-content-block'%}
+{% endcomment %}
+{% comment %}
+  {% assign media_name = media | file_url | split: '?' %}
+  {% assign media_name = media_name[0] %}
+  {% assign media_name_array = media_name | split: '/' %}
+  {% assign media_name_length = media_name_array | size %}
+  {% assign index = media_name_length | minus: 1 %}
+  {% assign media_file_name = media_name_array[index] %}
+  {% assign aspect_ratio = images[media_file_name].aspect_ratio %}
+{% endcomment %}
+
+{% liquid
+  if content.link_to_collection or content.link_to_page or content.link_to_product
+    assign tag = "a"
+  else
+    assign tag = "div"
+  endif
+%}
+
+<{{ tag }}
+  {% if content.link_to_collection %}
+    href="{{ collections[content.link_to_collection].url }}?content-block={{ content.system.id }}"
+  {% elsif content.link_to_page %}
+    href="{{ pages[content.link_to_page].url }}?content-block={{ content.system.id }}"
+  {% elsif content.link_to_product %}
+    href="{{ content.link_to_product.value.url }}?content-block={{ content.system.id }}"
+  {% endif %}
+  class="depict-content-block"
+  style="
+    --grid-row-start: {{ grid_row_start }};
+    --grid-column-start: {{ grid_column_start }};
+    --grid-row-end: {{ grid_row_end }};
+    --grid-column-end: {{ grid_column_end }};
+    --mobile-grid-row-start: {{ mobile_grid_row_start }};
+    --mobile-grid-column-start: {{ mobile_grid_column_start }};
+    --mobile-grid-row-end: {{ mobile_grid_row_end }};
+    --mobile-grid-column-end: {{ mobile_grid_column_end }};
+    {% if spans_whole_row == 'true' or does_not_fit == 'true' or desktop_goes_on_extra_row == 'true' %}--content-aspect-ratio: {{ content.aspect_ratio }};{% endif %}
+    {% if mobile_spans_whole_row == 'true' or mobile_does_not_fit == 'true' or mobile_goes_on_extra_row == 'true' %}--mobile-content-aspect-ratio: {{ content.aspect_ratio }};{% endif %}
+    --mobile-display: {% if show_mobile or mobile_goes_on_extra_row == 'true' %}flex{% else %}none{% endif %};
+    --desktop-display: {% if show_desktop or desktop_goes_on_extra_row == 'true' %}flex{% else %}none{% endif %};
+  "
+>
+  <depict-block-media data-span-rows="{{ content.span_rows }}" data-span-columns="{{ content.span_columns }}">
+    {%- if content.video and content.video != empty -%}
+      <div class="depict-video-wrapper">
+        <video
+          disablepictureinpicture
+          playsinline
+          autoplay
+          muted
+          loop
+          src="{{ content.video | file_url }}"
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    {%- elsif content.image and content.image != empty -%}
+      {% liquid
+        assign hover_image_hover_opacity = 0
+        assign default_image_hover_opacity = 1
+        if content.hover_image and content.hover_image != empty
+          assign hover_image_hover_opacity = 1
+          assign default_image_hover_opacity = 0
+        endif
+      %}
+      <div
+        class="depict-image-container"
+        style="--hover-image-hover-opacity: {{ hover_image_hover_opacity  }}; --default-image-hover-opacity: {{ default_image_hover_opacity }}"
+      >
+        {% assign widths = "64,128,256,512,1024,2048,4096" | split: "," %}
+        <div
+          class="depict-responsive-image depict-default-image"
+          style="
+            {% for width in widths %}
+              {% if aspect_ratio > 1 %}
+                {% assign corrected_width = width | times: aspect_ratio | round %}
+              {% else %}
+                {% comment %}
+                Attempt to correct images being blurry when much wider than how they're shown.
+                This is not entirely correct and leads to overly big or blurry images sometimes, but since we're not sure anyone will use this yet we'll fix it later (tell us if you need this to be better).
+                {% endcomment %}
+                {% assign corrected_width = width %}
+              {% endif %}
+                    --src-{{ width }}: url('{{ content.image | image_url: width: corrected_width }}');
+            {% endfor %}
+          "
+        ></div>
+        {% if content.hover_image and content.hover_image != empty %}
+          <div
+            class="depict-responsive-image depict-hover-image"
+            style="
+              {% for width in widths %}
+                {% if aspect_ratio > 1 %}
+                  {% assign corrected_width = width | times: aspect_ratio | round %}
+                {% else %}
+                  {% comment %}
+                  Attempt to correct images being blurry when much wider than how they're shown.
+                  This is not entirely correct and leads to overly big or blurry images sometimes, but since we're not sure anyone will use this yet we'll fix it later (tell us if you need this to be better).
+                  {% endcomment %}
+                  {% assign corrected_width = width %}
+                {% endif %}
+                      --src-{{ width }}: url('{{ content.hover_image | image_url: width: corrected_width }}');
+              {% endfor %}
+            "
+          ></div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </depict-block-media>
+</{{ tag }}>
