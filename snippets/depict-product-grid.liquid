@@ -38,31 +38,6 @@
 {% comment %}
   Expected settings:
     {
-        "type": "select",
-        "id": "columns_mobile",
-        "default": "2",
-        "label": "Columns Mobile",
-        "options": [
-          {
-            "value": "1",
-            "label": "1 Column"
-          },
-          {
-            "value": "2",
-            "label": "2 Columns"
-          }
-        ]
-      },
-      {
-      "type": "range",
-      "id": "columns_desktop",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 4,
-      "label": "Columns Desktop"
-    },
-    {
       "label": "Desktop column gap",
       "info": "Grid column gap on desktop",
       "type": "text",
@@ -93,7 +68,7 @@
     {
       "type": "select",
       "id": "align_depict_blocks",
-      "default": "image",
+      "default": "card",
       "label": "Align depict content blocks",
       "options": [
         {
@@ -118,10 +93,22 @@
 {% comment %}Random class in case someone has multiple blocks with different settings{% endcomment %}
 {% assign grid_class = "x" | append: random_string %}
 {% comment %}DO NOT REMOVE THE PLUS 0 IT COERCES THE STRING INTO A NUMBER AND COMPARISONS WILL SILENTLY FAIL/go wrong WITHOUT IT{% endcomment %}
-{% assign columns_mobile = section.settings.columns_mobile %}
-{% assign columns_mobile = columns_mobile | plus: 0 %}
-{% assign columns_desktop = section.settings.columns_desktop %}
-{% assign columns_desktop = columns_desktop | plus: 0 %}
+{% liquid
+  assign namespace = "app--93504864257--column-settings"
+  assign key = "column_settings"
+  assign column_settings = shop.metafields[namespace][key].value
+  if column_settings[0]
+    assign columns_desktop = column_settings[0]
+  else
+    assign columns_desktop = 4
+  endif
+
+  if column_settings[1]
+    assign columns_mobile = column_settings[1]
+  else
+    assign columns_mobile = 2
+  endif
+%}
 {% assign zero_indexed_current_page = paginate.current_page | minus: 1 %}
 {% comment %}To be able to have a metafield that is storefront accessible in a custom namespace one needs to use `$app:namespace` and this is the way to access it from liquid, see https://shopify.dev/docs/apps/build/custom-data/reserved-prefixes#create-a-metafield-definition-under-a-reserved-namespace{% endcomment %}
 {% assign namespace = "app--93504864257--content-blocks" %}
@@ -272,7 +259,6 @@
       assign endRow = takenStuff | divided_by: showingColumnsDecimal
       assign endRow = endRow | ceil
     %}
-
 
     {% comment %}Whether we should we should place the block on an extra row after all the products/content blocks because it didn't fit before (it's hard to know on the next page that we had one that didn't fix on the previous page){% endcomment %}
     {% if blockIndex <= endOfTakenWithOneRowOverhang and doesNotFit and blockIndex != block.index %}
