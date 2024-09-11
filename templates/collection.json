@@ -208,7 +208,7 @@
           "settings": {
             "index": 5,
             "page": 2,
-            "block_collection": "",
+            "block_collection": "main-collection",
             "image_block_5": "shopify:\/\/shop_images\/Ring_Crossbody.png",
             "title_block_5": "",
             "content_block_5": ""
