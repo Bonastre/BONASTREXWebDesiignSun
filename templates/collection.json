@@ -86,6 +86,7 @@
         },
         "block_big_image_YUpBTP": {
           "type": "block_big_image",
+          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
@@ -195,7 +196,7 @@
           "settings": {
             "index": 9,
             "page": 1,
-            "image_block_11": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
+            "image_block_11": "shopify:\/\/shop_images\/BON_BON_TERRA_avec_Border.png",
             "block_collection": "main-collection",
             "image_block_11_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
             "title_block_11": "LOVNI",
