@@ -133,6 +133,7 @@ depict-block-media .depict-responsive-image {
   display: block !important;
   background-image: var(--src-64);
   /* Seems like -webkit-min-device-pixel-ratio is supported by all major browsers */
+  /* Seems like -webkit-min-device-pixel-ratio is supported by all major browsers */
 }
 @container (width >= 64px) {
   depict-block-media .depict-responsive-image {
@@ -170,6 +171,41 @@ depict-block-media .depict-responsive-image {
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2) {
+  depict-block-media .depict-responsive-image {
+    background-image: var(--src-128);
+  }
+  @container (width >= 64px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-256);
+    }
+  }
+  @container (width >= 128px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-512);
+    }
+  }
+  @container (width >= 256px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-1024);
+    }
+  }
+  @container (width >= 512px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-2048);
+    }
+  }
+  @container (width >= 1024px) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-4096);
+    }
+  }
+  @supports not (container-type: inline-size) {
+    depict-block-media .depict-responsive-image {
+      background-image: var(--src-2048);
+    }
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
   depict-block-media .depict-responsive-image {
     background-image: var(--src-128);
   }
