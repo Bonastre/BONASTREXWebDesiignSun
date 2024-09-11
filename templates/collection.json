@@ -227,6 +227,18 @@
             "title_block_11": "AIRBAG",
             "content_block_11": "<p>The AIRBAG Line has one key specificity: everything in this style is detachable, including the handles, straps and pads, in order to allow the design to fold flat.<\/p>"
           }
+        },
+        "block_1_eqCjdA": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 3,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/Ring_Crossbody.png",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/Ring_Crossbody.png",
+            "title_block_5": "Abc",
+            "content_block_5": "<p>ABc<\/p>"
+          }
         }
       },
       "block_order": [
@@ -246,7 +258,8 @@
         "block_1_GHWMyf",
         "block_big_image_FaBWdc",
         "block_1_yJ8Qtb",
-        "block_big_image_RgjRwL"
+        "block_big_image_RgjRwL",
+        "block_1_eqCjdA"
       ],
       "settings": {
         "color_scheme": "",
