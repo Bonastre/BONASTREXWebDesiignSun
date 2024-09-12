@@ -122,6 +122,7 @@
         },
         "block_big_image_3CVNFg": {
           "type": "block_big_image",
+          "disabled": true,
           "settings": {
             "index": 9,
             "page": 5,
@@ -249,6 +250,17 @@
             "title_block_5": "A",
             "content_block_5": "<p>A<\/p>"
           }
+        },
+        "block_last_ArhF9r": {
+          "type": "block_last",
+          "settings": {
+            "image_block_one_image": "shopify:\/\/shop_images\/T_Tote_coupe_blud.jpg",
+            "page": 4,
+            "block_collection": "main-collection",
+            "image_block_content": "shopify:\/\/shop_images\/T_Tote_coupe_taud.jpg",
+            "title_block_content": "A",
+            "content_block_content": "<p>BB<\/p>"
+          }
         }
       },
       "block_order": [
@@ -270,7 +282,8 @@
         "block_1_yJ8Qtb",
         "block_big_image_RgjRwL",
         "block_1_eqCjdA",
-        "block_1_NUmjmD"
+        "block_1_NUmjmD",
+        "block_last_ArhF9r"
       ],
       "settings": {
         "color_scheme": "",
