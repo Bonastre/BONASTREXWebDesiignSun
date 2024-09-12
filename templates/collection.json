@@ -258,8 +258,8 @@
             "page": 3,
             "block_collection": "main-collection",
             "image_block_content": "shopify:\/\/shop_images\/T_Tote_coupe_taud.jpg",
-            "title_block_content": "A",
-            "content_block_content": "<p>BB<\/p>"
+            "title_block_content": "",
+            "content_block_content": ""
           }
         },
         "block_last_pykgEb": {
