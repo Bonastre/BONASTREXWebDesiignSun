@@ -102,19 +102,22 @@
             "content_block_11": "<p>BON-BON is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>"
           }
         },
-        "block_last_zFmLWW": {
-          "type": "block_last",
+        "block_1_GHWMyf": {
+          "type": "block_1",
+          "disabled": true,
           "settings": {
-            "image_block_one_image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
-            "page": 1,
-            "block_collection": "main-collection",
-            "image_block_content": "shopify:\/\/shop_images\/BON_BON_CORDS_BLACK_1_1.jpg",
-            "title_block_content": "BON-BON CORDS",
-            "content_block_content": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+            "index": 5,
+            "page": 5,
+            "block_collection": "",
+            "image_block_5": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
+            "title_block_5": "LOVNI",
+            "content_block_5": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
           }
         },
         "block_1_BRAWKM": {
           "type": "block_1",
+          "disabled": true,
           "settings": {
             "index": 5,
             "page": 3,
@@ -140,6 +143,7 @@
         },
         "block_1_zdnB7c": {
           "type": "block_1",
+          "disabled": true,
           "settings": {
             "index": 5,
             "page": 4,
@@ -152,6 +156,7 @@
         },
         "block_big_image_pjamQ6": {
           "type": "block_big_image",
+          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
@@ -164,6 +169,7 @@
         },
         "block_hover_gYH6wn": {
           "type": "block_hover",
+          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
@@ -185,16 +191,15 @@
             "content_block_5": "<p>The RIDER Line figures the shape a skateboard rink. It is conceived as a modern building from the architectural movement of the 50s and 60s known as BRUTALISM. The design comes in three sizes.<\/p><p>The nobility of the leather, natural, soft and living skin is wonderfully expressed in this design, its supple contours allowing the bag to embrace your body shape.<\/p>"
           }
         },
-        "block_1_GHWMyf": {
-          "type": "block_1",
+        "block_last_zFmLWW": {
+          "type": "block_last",
           "settings": {
-            "index": 5,
-            "page": 5,
-            "block_collection": "",
-            "image_block_5": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
-            "title_block_5": "LOVNI",
-            "content_block_5": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
+            "image_block_one_image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "page": 1,
+            "block_collection": "main-collection",
+            "image_block_content": "shopify:\/\/shop_images\/BON_BON_CORDS_BLACK_1_1.jpg",
+            "title_block_content": "BON-BON CORDS",
+            "content_block_content": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
           }
         },
         "block_big_image_FaBWdc": {
@@ -300,14 +305,14 @@
         "block_hover_CGzeYt",
         "block_hover_a6xhpE",
         "block_big_image_YUpBTP",
-        "block_last_zFmLWW",
+        "block_1_GHWMyf",
         "block_1_BRAWKM",
         "block_big_image_3CVNFg",
         "block_1_zdnB7c",
         "block_big_image_pjamQ6",
         "block_hover_gYH6wn",
         "block_1_ng6Jjk",
-        "block_1_GHWMyf",
+        "block_last_zFmLWW",
         "block_big_image_FaBWdc",
         "block_1_yJ8Qtb",
         "block_big_image_RgjRwL",
