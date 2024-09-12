@@ -261,6 +261,17 @@
             "title_block_content": "A",
             "content_block_content": "<p>BB<\/p>"
           }
+        },
+        "block_last_pykgEb": {
+          "type": "block_last",
+          "settings": {
+            "image_block_one_image": "shopify:\/\/shop_images\/LOVNIPORTEE_d9611d23-5dd3-4c00-9eb4-86091079f105.png",
+            "page": 5,
+            "block_collection": "main-collection",
+            "image_block_content": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "title_block_content": "A",
+            "content_block_content": "<p>BB<\/p>"
+          }
         }
       },
       "block_order": [
@@ -283,7 +294,8 @@
         "block_big_image_RgjRwL",
         "block_1_eqCjdA",
         "block_1_NUmjmD",
-        "block_last_ArhF9r"
+        "block_last_ArhF9r",
+        "block_last_pykgEb"
       ],
       "settings": {
         "color_scheme": "",
