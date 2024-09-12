@@ -218,6 +218,7 @@
         },
         "block_big_image_RgjRwL": {
           "type": "block_big_image",
+          "disabled": true,
           "settings": {
             "index": 9,
             "page": 3,
