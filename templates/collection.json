@@ -197,9 +197,9 @@
           "settings": {
             "index": 9,
             "page": 1,
-            "image_block_11": "shopify:\/\/shop_images\/BON_BON_TERRA_avec_Border.png",
+            "image_block_11": "shopify:\/\/shop_images\/BON_BON_Black.png",
             "block_collection": "main-collection",
-            "image_block_11_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO_700x_4.png",
+            "image_block_11_mobile": "shopify:\/\/shop_images\/BON_BON_Black.png",
             "title_block_11": "LOVNI",
             "content_block_11": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
           }
@@ -272,6 +272,17 @@
             "title_block_content": "A",
             "content_block_content": "<p>BB<\/p>"
           }
+        },
+        "block_last_gTQbKK": {
+          "type": "block_last",
+          "settings": {
+            "image_block_one_image": "shopify:\/\/shop_images\/Airbag_S_Taupe.png",
+            "page": 2,
+            "block_collection": "main-collection",
+            "image_block_content": "shopify:\/\/shop_images\/Airbag_M.png",
+            "title_block_content": "AIR BAG",
+            "content_block_content": "<p>The AIRBAG Line has one key specificity: everything in this style is detachable, including the handles, straps and pads, in order to allow the design to fold flat.<\/p><p>Referencing the automotive industrial design, once you construct the AIRBAG by fastening the pads on the sides, it inflates naturally. <\/p>"
+          }
         }
       },
       "block_order": [
@@ -295,7 +306,8 @@
         "block_1_eqCjdA",
         "block_1_NUmjmD",
         "block_last_ArhF9r",
-        "block_last_pykgEb"
+        "block_last_pykgEb",
+        "block_last_gTQbKK"
       ],
       "settings": {
         "color_scheme": "",
