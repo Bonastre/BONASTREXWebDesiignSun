@@ -220,7 +220,7 @@
           "disabled": true,
           "settings": {
             "index": 9,
-            "page": 2,
+            "page": 3,
             "image_block_11": "shopify:\/\/shop_images\/Airbag_M_plus_espace.png",
             "block_collection": "main-collection",
             "image_block_11_mobile": "shopify:\/\/shop_images\/Airbag_M_plus_espace.png",
@@ -237,7 +237,7 @@
             "image_block_5": "shopify:\/\/shop_images\/Ring_Crossbody.png",
             "image_block_5_mobile": "shopify:\/\/shop_images\/Ring_Crossbody.png",
             "title_block_5": "Abc",
-            "content_block_5": "<p>ABc<\/p>"
+            "content_block_5": "<p>Abc<\/p>"
           }
         }
       },
