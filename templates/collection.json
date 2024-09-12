@@ -245,10 +245,10 @@
           "settings": {
             "index": 5,
             "page": 4,
-            "block_collection": "",
+            "block_collection": "main-collection",
             "image_block_5": "shopify:\/\/shop_images\/01_T-TOTE-L-TAUPE_e34cbf0c-638f-4a3b-a0fb-d995100d0f4a.jpg",
-            "title_block_5": "",
-            "content_block_5": ""
+            "title_block_5": "A",
+            "content_block_5": "<p>A<\/p>"
           }
         }
       },
