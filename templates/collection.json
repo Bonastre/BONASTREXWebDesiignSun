@@ -277,6 +277,7 @@
         },
         "block_last_pykgEb": {
           "type": "block_last",
+          "disabled": true,
           "settings": {
             "image_block_one_image": "shopify:\/\/shop_images\/LOVNIPORTEE_d9611d23-5dd3-4c00-9eb4-86091079f105.png",
             "page": 4,
