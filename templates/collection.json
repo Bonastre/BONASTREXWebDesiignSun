@@ -318,6 +318,15 @@
             "block_collection": "main-collection",
             "image_block_1_mobile": "shopify:\/\/shop_images\/BON_BON_CORDS.png"
           }
+        },
+        "block_1_mobile_rYAkcg": {
+          "type": "block_1_mobile",
+          "settings": {
+            "index": 6,
+            "page": 2,
+            "block_collection": "main-collection",
+            "image_block_1_mobile": "shopify:\/\/shop_images\/ring_bleu.jpg"
+          }
         }
       },
       "block_order": [
@@ -344,7 +353,8 @@
         "block_last_pykgEb",
         "block_last_gTQbKK",
         "block_1_gCRUdd",
-        "block_1_mobile_hnGF4d"
+        "block_1_mobile_hnGF4d",
+        "block_1_mobile_rYAkcg"
       ],
       "settings": {
         "color_scheme": "",
