@@ -327,6 +327,15 @@
             "block_collection": "main-collection",
             "image_block_1_mobile": "shopify:\/\/shop_images\/ring_bleu.jpg"
           }
+        },
+        "block_1_mobile_jGxgMK": {
+          "type": "block_1_mobile",
+          "settings": {
+            "index": 16,
+            "page": 12,
+            "block_collection": "main-collection",
+            "image_block_1_mobile": "shopify:\/\/shop_images\/Airbag_S_Taupe_s.png"
+          }
         }
       },
       "block_order": [
@@ -354,7 +363,8 @@
         "block_last_gTQbKK",
         "block_1_gCRUdd",
         "block_1_mobile_hnGF4d",
-        "block_1_mobile_rYAkcg"
+        "block_1_mobile_rYAkcg",
+        "block_1_mobile_jGxgMK"
       ],
       "settings": {
         "color_scheme": "",
