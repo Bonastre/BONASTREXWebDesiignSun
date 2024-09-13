@@ -337,6 +337,17 @@
             "block_collection": "main-collection",
             "image_block_1_mobile": "shopify:\/\/shop_images\/Airbag_S_Taupe_s.png"
           }
+        },
+        "block_1_FX6a4Q": {
+          "type": "block_1",
+          "settings": {
+            "index": 7,
+            "page": 3,
+            "block_collection": "main-collection",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/03_DOMETOTEM-BLACK.jpg",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
         }
       },
       "block_order": [
@@ -365,7 +376,8 @@
         "block_1_gCRUdd",
         "block_1_mobile_hnGF4d",
         "block_1_mobile_rYAkcg",
-        "block_1_mobile_jGxgMK"
+        "block_1_mobile_jGxgMK",
+        "block_1_FX6a4Q"
       ],
       "settings": {
         "color_scheme": "",
