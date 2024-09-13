@@ -330,6 +330,7 @@
         },
         "block_1_mobile_jGxgMK": {
           "type": "block_1_mobile",
+          "disabled": true,
           "settings": {
             "index": 14,
             "page": 2,
