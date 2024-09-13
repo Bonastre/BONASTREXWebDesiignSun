@@ -211,7 +211,7 @@
             "block_collection": "main-collection",
             "image_block_11_mobile": "shopify:\/\/shop_images\/Bon-Bon_Cream_c124bcb4-3928-49f6-a87c-62a3b4578dec.png",
             "title_block_11": "LOVNI",
-            "content_block_11": "<p>Drawing inspiration from the shape of classic wrapped candy, the BON-BON exudes a distinctive charm and character, making it both sweet and highly appealing. Its soft contours are designed to mold to your body, creating a snug fit that makes the BON-BON feel like the leather version of an irresistible sugar rush. Playful, buttery soft, and effortlessly stylish, it's the perfect combination of fun and function.<\/p>"
+            "content_block_11": "<p>Drawing inspiration from the shape of classic wrapped candy, the BON-BON exudes a distinctive charm and character, making it both sweet and highly appealing. Its soft contours are designed to mold to your body, creating a snug fit that makes the BON-BON feel like the leather version of an irresistible sugar rush. Playful, buttery soft, and effortlessly stylish, it's the perfect combination of fun and function.  <\/p>"
           }
         },
         "block_1_yJ8Qtb": {
@@ -297,6 +297,18 @@
             "title_block_content": "AIR BAG",
             "content_block_content": "<p>The AIRBAG Line has one key specificity: everything in this style is detachable, including the handles, straps and pads, in order to allow the design to fold flat.<\/p><p>Referencing the automotive industrial design, once you construct the AIRBAG by fastening the pads on the sides, it inflates naturally. <\/p>"
           }
+        },
+        "block_1_gCRUdd": {
+          "type": "block_1",
+          "settings": {
+            "index": 7,
+            "page": 1,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/Tyler_Rider_8b1aed50-4091-4367-b909-e76dd044359d.png",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/Tyler_Rider_8b1aed50-4091-4367-b909-e76dd044359d.png",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
         }
       },
       "block_order": [
@@ -321,7 +333,8 @@
         "block_1_NUmjmD",
         "block_last_ArhF9r",
         "block_last_pykgEb",
-        "block_last_gTQbKK"
+        "block_last_gTQbKK",
+        "block_1_gCRUdd"
       ],
       "settings": {
         "color_scheme": "",
