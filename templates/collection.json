@@ -309,6 +309,17 @@
             "title_block_5": "",
             "content_block_5": ""
           }
+        },
+        "block_1_hfKXbx": {
+          "type": "block_1",
+          "settings": {
+            "index": 7,
+            "page": 2,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
         }
       },
       "block_order": [
@@ -334,7 +345,8 @@
         "block_last_ArhF9r",
         "block_last_pykgEb",
         "block_last_gTQbKK",
-        "block_1_gCRUdd"
+        "block_1_gCRUdd",
+        "block_1_hfKXbx"
       ],
       "settings": {
         "color_scheme": "",
