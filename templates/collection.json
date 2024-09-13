@@ -349,6 +349,18 @@
             "title_block_5": "",
             "content_block_5": ""
           }
+        },
+        "block_1_LUtwWf": {
+          "type": "block_1",
+          "settings": {
+            "index": 7,
+            "page": 4,
+            "block_collection": "main-collection",
+            "image_block_5": "shopify:\/\/shop_images\/01_T-TOTE-L-TAUPE.jpg",
+            "image_block_5_mobile": "shopify:\/\/shop_images\/01_T-TOTE-L-TAUPE_e34cbf0c-638f-4a3b-a0fb-d995100d0f4a.jpg",
+            "title_block_5": "",
+            "content_block_5": ""
+          }
         }
       },
       "block_order": [
@@ -378,7 +390,8 @@
         "block_1_mobile_hnGF4d",
         "block_1_mobile_rYAkcg",
         "block_1_mobile_jGxgMK",
-        "block_1_FX6a4Q"
+        "block_1_FX6a4Q",
+        "block_1_LUtwWf"
       ],
       "settings": {
         "color_scheme": "",
