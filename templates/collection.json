@@ -310,15 +310,13 @@
             "content_block_5": ""
           }
         },
-        "block_1_hfKXbx": {
-          "type": "block_1",
+        "block_1_mobile_hnGF4d": {
+          "type": "block_1_mobile",
           "settings": {
-            "index": 7,
+            "index": 15,
             "page": 2,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
-            "title_block_5": "",
-            "content_block_5": ""
+            "image_block_1_mobile": "shopify:\/\/shop_images\/BON_BON_CORDS.png"
           }
         }
       },
@@ -346,7 +344,7 @@
         "block_last_pykgEb",
         "block_last_gTQbKK",
         "block_1_gCRUdd",
-        "block_1_hfKXbx"
+        "block_1_mobile_hnGF4d"
       ],
       "settings": {
         "color_scheme": "",
