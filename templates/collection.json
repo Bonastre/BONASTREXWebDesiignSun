@@ -91,7 +91,6 @@
         },
         "block_big_image_YUpBTP": {
           "type": "block_big_image",
-          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
