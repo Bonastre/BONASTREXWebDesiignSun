@@ -284,7 +284,7 @@
     %}
 
     {% comment %}Whether we should we should place the block on an extra row after all the products/content blocks because it didn't fit before (it's hard to know on the next page that we had one that didn't fix on the previous page){% endcomment %}
-    {% if blockIndex <= endOfTakenWithOneRowOverhang and doesNotFit and blockIndex != block.index %}
+    {% if blockIndex < endOfTakenWithOneRowOverhang and doesNotFit and blockIndex != block.index %}
       {% assign goesOnExtraRow = true %}
     {% elsif doesNotFit and block.span_columns >= showingColumns and paginate.current_page == paginate.pages %}
       {% comment %}If a content block does fit and is alone on a row and that is the last row then set goesOnExtraRow {% endcomment %}
