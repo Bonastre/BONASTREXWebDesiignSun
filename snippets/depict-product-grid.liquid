@@ -109,6 +109,27 @@
     assign columns_mobile = 2
   endif
 %}
+
+{%- liquid
+  assign namespace = "app--93504864257--product-duplicate"
+  assign key = "product_duplicate"
+  assign product_duplicate_metafiled = collection.metafields[namespace][key].value
+
+  assign numberOfProductDuplicatesOnPage = 0
+
+  for duplicated_product in product_duplicate_metafiled
+    assign duplicated_product_gid = duplicated_product.product | split: "/"
+    assign duplicated_product_id = duplicated_product_gid[-1]
+    for product in collection.products
+      assign product_id_string = product.id | append: ""
+      if duplicated_product_id == product_id_string
+        assign numberOfProductDuplicatesOnPage = numberOfProductDuplicatesOnPage | plus: 1
+      endif
+    endfor
+  endfor
+%}
+
+
 {% assign zero_indexed_current_page = paginate.current_page | minus: 1 %}
 {% comment %}To be able to have a metafield that is storefront accessible in a custom namespace one needs to use `$app:namespace` and this is the way to access it from liquid, see https://shopify.dev/docs/apps/build/custom-data/reserved-prefixes#create-a-metafield-definition-under-a-reserved-namespace{% endcomment %}
 {% assign namespace = "app--93504864257--content-blocks" %}
@@ -242,6 +263,8 @@
       {% assign iter = iter | plus: 1 %}
     {% endfor %}
     {% assign takenStuff = numberOfPositionsTakenByBlocks | plus: numberOfProducts %}
+    {% assign takenStuff = takenStuff | plus: numberOfProductDuplicatesOnPage %}
+    
     {% assign endOfTakenWithOneRowOverhang = takenStuff | plus: showingColumns %}
     {% if takenStuff <= blockIndex and paginate.pages > 1 %}
       {% assign doesNotFit = true %}
