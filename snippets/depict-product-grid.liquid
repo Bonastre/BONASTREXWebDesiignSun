@@ -124,11 +124,11 @@
       assign product_id_string = product.id | append: ""
       if duplicated_product_id == product_id_string
         assign numberOfProductDuplicatesOnPage = numberOfProductDuplicatesOnPage | plus: 1
+        break
       endif
     endfor
   endfor
 %}
-
 
 {% assign zero_indexed_current_page = paginate.current_page | minus: 1 %}
 {% comment %}To be able to have a metafield that is storefront accessible in a custom namespace one needs to use `$app:namespace` and this is the way to access it from liquid, see https://shopify.dev/docs/apps/build/custom-data/reserved-prefixes#create-a-metafield-definition-under-a-reserved-namespace{% endcomment %}
@@ -177,7 +177,7 @@
     {% assign showingColumns = columns_mobile %}
   {% endif %}
   {% comment %}It's not possible to create, or easily push to, arrays in liquid, so we're doing this instead{% endcomment %}
-  {% assign occupiedByBlocks = "false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false"
+  {% assign occupiedByBlocks = "false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false"
     | split: ","
   %}
   {% assign perBlockDelimiter = "|" %}
@@ -264,7 +264,7 @@
     {% endfor %}
     {% assign takenStuff = numberOfPositionsTakenByBlocks | plus: numberOfProducts %}
     {% assign takenStuff = takenStuff | plus: numberOfProductDuplicatesOnPage %}
-    
+
     {% assign endOfTakenWithOneRowOverhang = takenStuff | plus: showingColumns %}
     {% if takenStuff <= blockIndex and paginate.pages > 1 %}
       {% assign doesNotFit = true %}
@@ -282,7 +282,6 @@
       assign endRow = takenStuff | divided_by: showingColumnsDecimal
       assign endRow = endRow | ceil
     %}
-
 
     {% comment %}Whether we should we should place the block on an extra row after all the products/content blocks because it didn't fit before (it's hard to know on the next page that we had one that didn't fix on the previous page){% endcomment %}
     {% if blockIndex <= endOfTakenWithOneRowOverhang and doesNotFit and blockIndex != block.index %}
