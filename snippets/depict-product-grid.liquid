@@ -68,7 +68,7 @@
     {
       "type": "select",
       "id": "align_depict_blocks",
-      "default": "card",
+      "default": "image",
       "label": "Align depict content blocks",
       "options": [
         {
@@ -259,6 +259,7 @@
       assign endRow = takenStuff | divided_by: showingColumnsDecimal
       assign endRow = endRow | ceil
     %}
+
 
     {% comment %}Whether we should we should place the block on an extra row after all the products/content blocks because it didn't fit before (it's hard to know on the next page that we had one that didn't fix on the previous page){% endcomment %}
     {% if blockIndex <= endOfTakenWithOneRowOverhang and doesNotFit and blockIndex != block.index %}
