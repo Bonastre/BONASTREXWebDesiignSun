@@ -115,7 +115,7 @@
       "sidebar-menu": {
         "type": "sidebar-menu",
         "settings": {
-          "primary_menu": "menu-en",
+          "primary_menu": "main-menu",
           "secondary_menu": "",
           "show_social_media": true
         }
