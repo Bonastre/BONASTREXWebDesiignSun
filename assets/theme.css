@@ -8625,5 +8625,5 @@ Recently viewed
 }
 
 .pick_currency {
-  display: none;
+  display: none !important;
 }
