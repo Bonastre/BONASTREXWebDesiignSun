@@ -8439,10 +8439,6 @@ display: none;
   .shopify-section--main-collection .product-card__figure > .badge-list {
     inset-block-start: 10px;
   }
-
-  .shopify-section--main-collection .product-card:hover .product-card__figure > .badge-list {
-    display: none;
-  }
 }
 @media screen and (min-width: 1000px) {
   .shopify-section--main-collection .container {
