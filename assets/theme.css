@@ -8437,7 +8437,7 @@ display: none;
 
 @media screen and (min-width: 700px) {
   .shopify-section--main-collection .product-card__figure > .badge-list {
-    inset-block-start: 105%;
+    inset-block-start: 10px;
   }
 
   .shopify-section--main-collection .product-card:hover .product-card__figure > .badge-list {
