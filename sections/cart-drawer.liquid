@@ -125,10 +125,8 @@
 
           {%- render 'button', type: 'submit', content: checkout_button, name: 'checkout', stretch: true -%}
 
-          <a href="/cart">
-            <button class="button button--outline w-full">
+          <a href="/cart" class="button button--outline w-full">
               <span>{{- 'cart.general.view_cart' | t -}}</span>
-            </button>
           </a>
         {%- endif -%}
       </div>
