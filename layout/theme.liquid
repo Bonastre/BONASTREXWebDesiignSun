@@ -215,42 +215,42 @@
     <iframe  id="widgetIframe" src="https://ds.distancesales.com/chat/?brand=webBonastreProd" frameborder="0" title="DS Chat" loading="lazy" ></iframe>
 
     <script type="text/javascript">
-      // Add event listener for messages being massed from the iframe
-      var eventMethod = window.addEventListener ? "addEventListener" :
-              "attachEvent";
-      var eventer = window[eventMethod];
-      var messageEvent = eventMethod == "attachEvent" ? "onmessage" :
-              "message";
-      eventer(messageEvent, function (e) {
+    // Add event listener for messages being massed from the iframe
+    var eventMethod = window.addEventListener ? "addEventListener" :
+        "attachEvent";
+    var eventer = window[eventMethod];
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" :
+        "message";
+    eventer(messageEvent, function (e) {
         // Check that message being passed is the documentHeight
         if (typeof e.data === 'string') {
-          if (e.data.indexOf('documentHeight') > -1) {
-            console.log('documentHeight', e);
-
-            var height = e.data.split('documentHeight:')[1];
-            console.log('height', height);
-
-
-            if (height=="20%") {
-              document.getElementById('widgetIframe').style.width = '75px';
-              document.getElementById('widgetIframe').style.height = '75px';
-
-              // window.location.reload();
-            }else{
-              if(window.innerWidth > 800){
-                document.getElementById('widgetIframe').style.width = "375px";
+            if (e.data.indexOf('documentHeight') > -1) {
+                console.log('documentHeight', e);
+             
+                var height = e.data.split('documentHeight:')[1];
+                console.log('height', height);
+               
+				
+                if (height=="20%") {                
+                  document.getElementById('widgetIframe').style.width = '75px';
+                  document.getElementById('widgetIframe').style.height = '75px';
+                
+                   // window.location.reload();                  
+                }else{
+                  if(window.innerWidth > 800){
+                  document.getElementById('widgetIframe').style.width = "375px";
                 document.getElementById('widgetIframe').style.height = "60%";
-
-              }else{
+                
+                  }else{
                 document.getElementById('widgetIframe').style.width = height;
                 document.getElementById('widgetIframe').style.height = height;
-
-              }
+                  
+                  }
+                }
             }
-          }
         }
-      }, false);
-    </script>
+    }, false);
+</script>
 
   </body>
 </html>
