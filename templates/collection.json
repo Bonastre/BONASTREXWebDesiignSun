@@ -91,6 +91,7 @@
         },
         "block_big_image_YUpBTP": {
           "type": "block_big_image",
+          "disabled": true,
           "settings": {
             "index": 9,
             "page": 1,
@@ -294,7 +295,7 @@
             "block_collection": "main-collection",
             "image_block_content": "shopify:\/\/shop_images\/Airbag_M_151e7369-fa46-4235-8a85-3e07a969ce1f.png",
             "title_block_content": "AIR BAG",
-            "content_block_content": "<p>The AIRBAG Line has one key specificity: everything in this style is detachable, including the handles, straps and pads, in order to allow the design to fold flat.<\/p><p>Referencing the automotive industrial design, once you construct the AIRBAG by fastening the pads on the sides, it inflates naturally. <\/p>"
+            "content_block_content": "<p>The AIRBAG Line is defined by its ingenious versatility: every component, from the handles to the straps and pads, can be effortlessly detached, enabling the design to collapse into a sleek, flat form. Inspired by the elegance of automotive industrial design, once the side pads are fastened, the AIRBAG springs to life, gracefully inflating into its distinct shape.<\/p>"
           }
         },
         "block_1_gCRUdd": {
