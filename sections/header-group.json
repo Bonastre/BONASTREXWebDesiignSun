@@ -17,7 +17,7 @@
         "message-1": {
           "type": "message",
           "settings": {
-            "text": "<a href=\"\/collections\/group_riderbags\" target=\"_blank\" title=\"RIDER BAGS\">NEW IN : RIDER BAG : Free shipping over 300€<\/a>"
+            "text": "<a href=\"/collections/group_riderbags\" target=\"_blank\" title=\"RIDER BAGS\">NEW : RIDER BAG : Free shipping over 300€</a>"
           }
         }
       },
@@ -41,7 +41,7 @@
         "hide_on_scroll": false,
         "show_separation_border": false,
         "reduce_padding": false,
-        "logo": "shopify:\/\/shop_images\/logo_bonastre_png.png",
+        "logo": "shopify://shop_images/logo_bonastre_png.png",
         "logo_max_width": 310,
         "logo_mobile_max_width": 185,
         "menu": "main-menu",
