@@ -77,7 +77,8 @@ depict-block-media {
   /* Implement pure css responsive images so we only load an image as big as the container actually is, which results in faster load times on mobile and sharper images on desktop */
 }
 depict-block-media:not(:has(video)) {
-  padding-bottom: var(--align-to-image-offset);
+  padding-bottom: var(--bottom-alignment-spacing);
+  padding-top: var(--top-alignment-spacing);
 }
 @media (min-width: 991px) {
   depict-block-media {
@@ -91,7 +92,8 @@ depict-block-media:not(:has(video)) {
 }
 depict-block-media .depict-video-wrapper {
   position: relative;
-  margin-bottom: var(--align-to-image-offset);
+  margin-bottom: var(--bottom-alignment-spacing);
+  margin-top: var(--top-alignment-spacing);
   flex-grow: 1;
 }
 depict-block-media video {
