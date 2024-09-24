@@ -1,286 +1,161 @@
-const context = [];
-
-class DepictBlockMedia extends HTMLElement {
-  static onElementRemoved = new Map();
-  static elementsToTheLeftOf = new Map();
-  static elementsToTheRightOf = new Map();
-
+const x = [];
+class l extends HTMLElement {
+  static onElementRemoved = /* @__PURE__ */ new Map();
+  static elementsToTheLeftOf = /* @__PURE__ */ new Map();
+  static elementsToTheRightOf = /* @__PURE__ */ new Map();
   static intersectionObserver = new IntersectionObserver(
-    entries =>
-      entries.forEach(({ target, boundingClientRect }) =>
-        DepictBlockMedia.findAdjacentElements(target, boundingClientRect)
-      ),
+    (n) => n.forEach(
+      ({ target: e, boundingClientRect: c }) => l.findAdjacentElements(e, c)
+    ),
     // Notify at every 1% change in intersection ratio
-    { threshold: buildThresholdList(100) }
+    { threshold: U(100) }
   );
-
-  static findAdjacentElements(depictBlockMediaElement, boundingClientRect) {
-    const spanRows = +depictBlockMediaElement.dataset.spanRows;
-    const spanColumns = +depictBlockMediaElement.dataset.spanColumns;
-    const { height, width } = boundingClientRect;
-    const approximatelyOneRow = height / spanRows;
-    const approximatelyOneColumn = width / spanColumns;
-    const halfLastRowRelativeToHeight = height - approximatelyOneRow + approximatelyOneRow / 2;
-    const absoluteHalfLastRow = boundingClientRect.top + halfLastRowRelativeToHeight;
-    const windowHeight = innerHeight;
-    const bottomHalfOfLastRowIsInViewport =
-      (absoluteHalfLastRow >= 0 && absoluteHalfLastRow <= windowHeight) ||
-      (boundingClientRect.bottom >= 0 && boundingClientRect.bottom <= windowHeight);
-
-    if (!bottomHalfOfLastRowIsInViewport) return;
-    // We know that the bottom half of the last row is in the viewport, that means the user might see our padding,
-    // which means we can (elementsFromPoint only works on elements in the viewport) and have to (because the user will notice if it's wrong) calculate it.
-    const siblingsOfOurParent = new Set(depictBlockMediaElement.parentElement.parentElement.children);
-    const xToCheckLeft = boundingClientRect.left - approximatelyOneColumn / 2;
-    const xToCheckRight = boundingClientRect.right + approximatelyOneColumn / 2;
-    const yToCheck = Math.max(absoluteHalfLastRow, 0);
-    const filterFn = el => siblingsOfOurParent.has(el);
-    // In case there's a popup or menu above the element, check all elements at that point and filter for the ones that are siblings of our parent
-    const elementToTheLeft = document.elementsFromPoint(xToCheckLeft, yToCheck).find(filterFn);
-    const elementToTheRight = document.elementsFromPoint(xToCheckRight, yToCheck).find(filterFn);
-    const [, setElementToTheRight] = DepictBlockMedia.elementsToTheLeftOf.get(depictBlockMediaElement);
-    const [, setElementToTheLeft] = DepictBlockMedia.elementsToTheRightOf.get(depictBlockMediaElement);
-    // This often runs when scrolling or resizing, the signals give us de-duplication, so we only create ResizeObservers when the element to the left/right actually changes
-    setElementToTheRight(elementToTheRight);
-    setElementToTheLeft(elementToTheLeft);
+  static findAdjacentElements(n, e) {
+    const c = +n.dataset.spanRows, r = +n.dataset.spanColumns, { height: i, width: g } = e, O = i / c, R = g / r, L = i - O + O / 2, d = e.top + L, v = innerHeight;
+    if (!(d >= 0 && d <= v || e.bottom >= 0 && e.bottom <= v)) return;
+    const I = new Set(n.parentElement.parentElement.children), m = e.left - R / 2, a = e.right + R / 2, o = Math.max(d, 0), s = (y) => I.has(y), u = document.elementsFromPoint(m, o).find(s), h = document.elementsFromPoint(a, o).find(s), [, p] = l.elementsToTheLeftOf.get(n), [, w] = l.elementsToTheRightOf.get(n);
+    w(h), p(u);
   }
-
   // Use custom elements to hook into the lifecycle of one of our content block elements being in the DOM.
   connectedCallback() {
-    const { intersectionObserver, onElementRemoved, elementsToTheLeftOf, elementsToTheRightOf } = DepictBlockMedia;
-    const elementToTheLeftSignal = createSignal();
-    const elementToTheRightSignal = createSignal();
-    const [elementToTheLeft] = elementToTheLeftSignal;
-    const [elementToTheRight] = elementToTheRightSignal;
-
-    elementsToTheLeftOf.set(this, elementToTheLeftSignal);
-    elementsToTheRightOf.set(this, elementToTheRightSignal);
-
-    // We only have this effect because we haven't implemented createRoot, we never want it to re-execute, just need it to clean up all the other effects inside it.
-    const cleanupEffect = createEffect(() => {
-      // Since we don't have batch implemented, use a separate memo for every element
-      const leftImageOffset = createMemo(() => {
-        reCheckImagesToggle();
-        return watchImageOffset(elementToTheLeft());
+    const { intersectionObserver: n, onElementRemoved: e, elementsToTheLeftOf: c, elementsToTheRightOf: r } = l, i = f(void 0), g = f(void 0), [O] = i, [R] = g;
+    c.set(this, i), r.set(this, g);
+    const L = H(() => {
+      const d = b(() => (k(), C(O()))), v = b(() => (k(), C(R()))), T = b(() => {
+        const a = d()(), o = v()();
+        return Math.min(a ?? 1 / 0, o ?? 1 / 0);
+      }), I = b(() => {
+        const a = z().get(T());
+        return a ? a.values().next().value?.topPadding ?? 0 : 0;
+      }), m = b(() => {
+        const a = z().get(T());
+        if (!a) return 0;
+        const o = a.values().next().value;
+        let s;
+        return o ? s = o.bottomPadding : s = T(), s === 1 / 0 ? 0 : s;
       });
-      const rightImageOffset = createMemo(() => {
-        reCheckImagesToggle();
-        return watchImageOffset(elementToTheRight());
-      });
-
-      // Now we know the changing offsets of changing elements in an efficient way, we can calculate the padding for the largest image (which is the smallest one that's set)
-      const finalOffset = createMemo(() => {
-        const left = leftImageOffset()();
-        const right = rightImageOffset()();
-        return Math.min(left ?? Infinity, right ?? Infinity);
-      });
-      createEffect(() => {
-        const offset = finalOffset();
-        this.style.setProperty("--align-to-image-offset", `${offset === Infinity ? 0 : offset}px`);
-      });
-
-      // Set offset for content blocks to our side, that aren't directly besides a product they can get the size of
-      setExistingOffsets(prev => prev.set(this, finalOffset));
-      onCleanup(() =>
-        setExistingOffsets(prev => {
-          prev.delete(this);
-          return prev;
-        })
+      H(() => this.style.setProperty("--bottom-alignment-spacing", `${m()}px`)), H(() => this.style.setProperty("--top-alignment-spacing", `${I()}px`)), F((a) => a.set(this, T)), E(
+        () => F((a) => (a.delete(this), a))
       );
     });
-
-    intersectionObserver.observe(this);
-    onElementRemoved.set(this, [
+    n.observe(this), e.set(this, [
       // We need to clean up the top-level effect, but child-effects will be cleaned up automatically (there's no createRoot in the simple reactive library)
-      cleanupEffect,
+      L,
       () => {
-        intersectionObserver.unobserve(this);
-        onElementRemoved.delete(this);
-        elementsToTheLeftOf.delete(this);
-        elementsToTheRightOf.delete(this);
-      },
+        n.unobserve(this), e.delete(this), c.delete(this), r.delete(this);
+      }
     ]);
   }
-
   disconnectedCallback() {
-    DepictBlockMedia.onElementRemoved.get(this).forEach(fn => fn());
+    l.onElementRemoved.get(this).forEach((n) => n());
   }
 }
-
-// Sometimes we run querySelectorAll so fast that the images aren't in the DOM yet, it seems, so we have this toggle to trigger a re-check of the images
-const [reCheckImagesToggle, setReCheckImagesToggle] = createSignal(false);
-const [existingOffsets, setExistingOffsets] = createSignal(new Map(), false);
-
-customElements.define("depict-block-media", DepictBlockMedia);
-
-// "resize" event doesn't fire sometimes when it should (rotating phone for example), also it doesn't when showing/hiding scrollbars which for example, disabling scrolling does
-// This is the most reliable way to know the screen got resized
-// Ideally this would be in a static initialisation block (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) in the DepictBlockMedia class because it's a side effect related to those elements, but we don't have transpilation and support for it was only added in safari a year ago
-const resizeRO = new ResizeObserver(() => {
-  // On window resize, re-find adjacent elements since if the elements are 100% intersecting both before and afterward, the intersectionobservers won't trigger
-  for (const element of DepictBlockMedia.elementsToTheLeftOf.keys()) {
-    DepictBlockMedia.findAdjacentElements(element, element.getBoundingClientRect());
-  }
+const [k, P] = f(!1), [M, F] = f(/* @__PURE__ */ new Map(), !1), [z, A] = f(
+  /* @__PURE__ */ new Map(),
+  !1
+);
+customElements.define("depict-block-media", l);
+const j = new ResizeObserver(() => {
+  for (const t of l.elementsToTheLeftOf.keys())
+    l.findAdjacentElements(t, t.getBoundingClientRect());
 });
-resizeRO.observe(document.documentElement);
-resizeRO.observe(document.body);
-
-addEventListener("DOMContentLoaded", () => setReCheckImagesToggle(toggle => !toggle));
-addEventListener("load", () => setReCheckImagesToggle(toggle => !toggle));
-
-function watchImageOffset(maybeProductCardElement) {
-  if (maybeProductCardElement?.matches(".depict-content-block")) {
-    // If the row contains block, 2x block, product and we are the first block, we "connect" and get the offset from the block besides us, which gets it from the actual product besides it
-    const mediaElement = maybeProductCardElement.querySelector("depict-block-media");
-    return () => existingOffsets().get(mediaElement)?.();
+j.observe(document.documentElement);
+j.observe(document.body);
+addEventListener("DOMContentLoaded", () => P((t) => !t));
+addEventListener("load", () => P((t) => !t));
+function C(t) {
+  if (t?.matches(".depict-content-block")) {
+    const o = t.querySelector("depict-block-media");
+    return () => M().get(o)?.();
   }
-
-  const [imageOffset, setImageOffset] = createSignal();
-  const [cardHeight, setCardHeight] = createSignal(0);
-  const [defaultImageHeight, setDefaultImageHeight] = createSignal(0);
-  const [hoverImageHeight, setHoverImageHeight] = createSignal(0);
-  const allImageChildren = maybeProductCardElement?.querySelectorAll(`img`);
-  const findImage = filename => {
-    if (!filename) return;
-
-    for (const image of allImageChildren) {
-      if (matchFilename(filename, image.src)) {
-        return image;
-      }
-      if (matchFilename(filename, image.srcset)) {
-        return image;
-      }
+  const n = t?.querySelectorAll("img"), e = (o) => {
+    if (!(!o || !n)) {
+      for (const s of n)
+        if (S(o, s.src) || S(o, s.srcset) || S(o, s.dataset.src))
+          return s;
     }
-  };
-  const defaultImage = findImage(maybeProductCardElement?.dataset?.defaultImage);
-  const hoverImage = findImage(maybeProductCardElement?.dataset?.hoverImage);
-
-  if (maybeProductCardElement && (defaultImage || hoverImage)) {
-    const resizeObserver = new ResizeObserver(records => {
-      for (const {
-        target,
-        contentRect: { height },
-      } of records) {
-        if (target === maybeProductCardElement) {
-          setCardHeight(height);
-        } else if (target === defaultImage) {
-          setDefaultImageHeight(height);
-        } else {
-          setHoverImageHeight(height);
-        }
-      }
+  }, c = e(t?.dataset?.defaultImage), r = e(t?.dataset?.hoverImage);
+  if (!t || !c && !r)
+    return () => {
+    };
+  let i = !1;
+  const [g, O] = f(0), [R, L] = f(0), [d, v] = f(0), [T, I] = f(0), m = new ResizeObserver((o) => {
+    for (const {
+      target: s,
+      contentRect: { height: u }
+    } of o)
+      s === t ? O(u) : s === c ? L(u) : s === r && v(u), i || (i = !0, queueMicrotask(() => {
+        const h = t.getBoundingClientRect(), w = (d() && r ? r : c).getBoundingClientRect();
+        if (w.width && w.height && h.width && h.height) {
+          const y = w.top - h.top;
+          I(y);
+        } else
+          I(0);
+        i = !1;
+      }));
+  });
+  E(() => m.disconnect()), c && m.observe(c), r && m.observe(r), m.observe(t);
+  const a = b(() => {
+    const o = g(), s = R() || d();
+    if (o && s)
+      return o - s;
+  });
+  return H(() => {
+    const o = T(), s = a();
+    if (s == null) return;
+    const u = { topPadding: o, bottomPadding: s - o };
+    A((h) => {
+      let p = h.get(s);
+      return p || (p = /* @__PURE__ */ new Set(), h.set(s, p)), p.add(u), E(
+        () => A((w) => (p.delete(u), w))
+      ), h;
     });
-    createEffect(() => {
-      const cardHeightValue = cardHeight();
-      const imageHeightValue = defaultImageHeight() || hoverImageHeight();
-      if (cardHeightValue && imageHeightValue) {
-        const offset = cardHeightValue - imageHeightValue;
-        setImageOffset(offset);
-      } else {
-        setImageOffset(undefined);
-      }
-    });
-    onCleanup(() => resizeObserver.disconnect());
-    if (defaultImage) {
-      resizeObserver.observe(defaultImage);
-    }
-    if (hoverImage) {
-      resizeObserver.observe(hoverImage);
-    }
-    resizeObserver.observe(maybeProductCardElement);
+  }), a;
+}
+function U(t) {
+  const n = [];
+  for (let e = 1; e <= t; e++) {
+    const c = e / t;
+    n.push(c);
   }
-
-  return imageOffset;
+  return n.push(0), n;
 }
-
-function buildThresholdList(numSteps) {
-  const thresholds = [];
-  for (let i = 1.0; i <= numSteps; i++) {
-    const ratio = i / numSteps;
-    thresholds.push(ratio);
-  }
-  thresholds.push(0);
-  return thresholds;
+function S(t, n) {
+  if (!n) return !1;
+  const e = new URL(t, location.href), c = new URL(n, location.href), i = e.pathname.split("/").pop().split(".").slice(0, -1).join(".");
+  return c.pathname.includes(i);
 }
-
-// Needed because legacy version of shopify API allows URLs like these https://depict-ai-onboarding-evals.myshopify.com/cdn/shop/files/male-jacket-3_900x.jpg?v=1721808791 where male-jacket-3.jpg is the filename provided to us
-function matchFilename(baseFilename, testString) {
-  // Extract the base part of the filename without extension and extract the extension
-  const match = baseFilename.match(/^(.+?)(\.\w+)$/);
-  if (!match) {
-    console.error("Invalid base filename format. Ensure it has an extension.");
-    return false;
-  }
-
-  const basePart = match[1];
-  const extension = match[2];
-
-  // Create a regex pattern dynamically
-  const pattern = new RegExp(`${escapeRegex(basePart)}(_\\d+x\\d+|_\\d+x)?${escapeRegex(extension)}`, "i");
-
-  // Test the testString against the pattern
-  const isMatch = pattern.test(testString);
-
-  // Return the result
-  return isMatch;
+function f(t, n = !0) {
+  const e = /* @__PURE__ */ new Set();
+  return [() => {
+    const i = x.at(-1);
+    return i && (e.add(i), i.dependencies.add(e)), t;
+  }, (i) => {
+    typeof i == "function" && (i = i(t)), !(t === i && n) && (t = i, [...e].forEach((g) => g.execute()));
+  }];
 }
-
-// Helper function to escape regex special characters, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions#escaping
-function escapeRegex(text) {
-  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
-}
-
-// Simple reactive library inspired by https://dev.to/ryansolid/building-a-reactive-library-from-scratch-1i0p
-function createSignal(value, equalityCheck = true) {
-  const subscriptions = new Set();
-  const read = () => {
-    const running = context.at(-1);
-    if (running) {
-      subscriptions.add(running);
-      running.dependencies.add(subscriptions);
-    }
-    return value;
-  };
-
-  const write = nextValue => {
-    if (typeof nextValue === "function") nextValue = nextValue(value);
-    if (value === nextValue && equalityCheck) return;
-    value = nextValue;
-    [...subscriptions].forEach(sub => sub.execute());
-  };
-  return [read, write];
-}
-
-function createEffect(fn) {
-  const cleanup = () => {
-    effect.dependencies.forEach(dep => dep.delete(effect));
-    effect.dependencies.clear();
-    while (effect.cleanups.length) {
-      effect.cleanups.pop()();
-    }
-  };
-  const effect = {
+function H(t) {
+  const n = () => {
+    for (e.dependencies.forEach((c) => c.delete(e)), e.dependencies.clear(); e.cleanups.length; )
+      e.cleanups.pop()();
+  }, e = {
     execute() {
-      cleanup();
-      context.push(effect);
+      n(), x.push(e);
       try {
-        fn();
+        t();
       } finally {
-        context.pop();
+        x.pop();
       }
     },
-    dependencies: new Set(),
-    cleanups: [],
+    dependencies: /* @__PURE__ */ new Set(),
+    cleanups: []
   };
-  onCleanup(cleanup);
-  effect.execute();
-  return cleanup;
+  return E(n), e.execute(), n;
 }
-function onCleanup(fn) {
-  context.at(-1)?.cleanups?.push(fn);
+function E(t) {
+  x.at(-1)?.cleanups?.push(t);
 }
-function createMemo(fn) {
-  const [s, set] = createSignal();
-  createEffect(() => set(() => fn()));
-  return s;
+function b(t) {
+  const [n, e] = f();
+  return H(() => e(() => t())), n;
 }
