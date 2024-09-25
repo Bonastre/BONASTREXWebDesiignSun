@@ -32,7 +32,7 @@
 {% assign alignBlocksToImages = false %}
 {% if section.settings.align_depict_blocks == "image" %}
   {% assign alignBlocksToImages = true %}
-  <script src="{{ 'depict-content-blocks.js' | asset_url }}" async></script>
+  <script src="{{ 'depict-content-blocks.js' | asset_url }}" async type="module"></script>
 {% endif %}
 
 {% comment %}
@@ -652,7 +652,8 @@
       product: product,
       forloop: forloop,
       default_image: default_image,
-      hover_image: hover_image
+      hover_image: hover_image,
+      paginate: paginate
     %}
     {% if alignBlocksToImages %}
       </div>
