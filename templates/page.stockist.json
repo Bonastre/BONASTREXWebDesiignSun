@@ -52,7 +52,7 @@
           "type": "row",
           "settings": {
             "col_1_title_en": "CHINA",
-            "col_1_list_en": "LANE CRAWFORD, BEJING\nLANE CRAWFORD, SHANGHAI\nLANE CRAWFORD, CHENGDU\nLANE CRAWFORD, SICHUAN\nLANE CRAWFORD, TIANJIN",
+            "col_1_list_en": "LANE CRAWFORD, BEJING\nLANE CRAWFORD, SHANGHAI\nLANE CRAWFORD, CHENGDU\nLANE CRAWFORD, SICHUAN\nLANE CRAWFORD, TIANJIN\nIRIS GARDEN, SHANGHAI",
             "col_2_title_en": "",
             "col_2_list_en": ""
           }
@@ -118,8 +118,8 @@
       "settings": {
         "title_en": "Stockists",
         "location_title_en": "",
-        "location_address_en": "<b> FLAGSHIP BONASTRE <\/b>",
-        "location_image": "shopify:\/\/shop_images\/image_196.jpg",
+        "location_address_en": "<b> FLAGSHIP BONASTRE </b>",
+        "location_image": "shopify://shop_images/image_196.jpg",
         "location_info_en": "10 RUE DU PERCHE, PARIS 3\nMON - SAT 10:00 18:00\n+33 1 42 78 99 10",
         "footer_title_en": "ONLINE",
         "footer_info_en": "NET-A-PORTER\nZALANDO\nPAUW\nFOUND STORE"
