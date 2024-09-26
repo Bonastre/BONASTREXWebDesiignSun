@@ -18,7 +18,7 @@
           "type": "newsletter",
           "settings": {
             "title": "Newsletter",
-            "content": "<p>Subscribe to follow all the news from BONASTRE and get 10% off for your first order.</p>",
+            "content": "<p>Subscribe to follow all the news from BONASTRE.<\/p>",
             "button_background": "",
             "button_text_color": ""
           }
@@ -53,8 +53,8 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "image_logo": "shopify://shop_images/Calque_1.svg",
-        "link_logo": "https://www.bonastre.net/",
+        "image_logo": "shopify:\/\/shop_images\/Calque_1.svg",
+        "link_logo": "https:\/\/www.bonastre.net\/",
         "separate_section_with_border": false,
         "show_social_media": false,
         "show_payment_icons": false,
