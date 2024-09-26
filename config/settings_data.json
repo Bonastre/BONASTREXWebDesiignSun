@@ -25,6 +25,7 @@
     "currency_code_enabled": false,
     "stagger_blog_posts_apparition": true,
     "round_color_swatches": false,
+    "product_image_aspect_ratio": "tall",
     "product_color_display": "hide",
     "show_quick_buy": false,
     "show_linked_products": true,
@@ -32,35 +33,35 @@
     "cart_icon": "shopping_bag_sharp",
     "enable-wishlist": true,
     "enable_live_chat": false,
-    "social_facebook": "https:\/\/www.facebook.com\/BONASTRE-222499097761551\/",
-    "social_pinterest": "https:\/\/www.pinterest.fr\/bonastreparis\/",
-    "social_instagram": "https:\/\/www.instagram.com\/bonastreparis\/?hl=fr",
-    "social_linkedin": "https:\/\/www.linkedin.com\/company\/bonastre-paris",
-    "favicon": "shopify:\/\/shop_images\/Fav_Icon_Site_Bonastre_1.png",
+    "social_facebook": "https://www.facebook.com/BONASTRE-222499097761551/",
+    "social_pinterest": "https://www.pinterest.fr/bonastreparis/",
+    "social_instagram": "https://www.instagram.com/bonastreparis/?hl=fr",
+    "social_linkedin": "https://www.linkedin.com/company/bonastre-paris",
+    "favicon": "shopify://shop_images/Fav_Icon_Site_Bonastre_1.png",
     "content_for_index": [
 
     ],
     "blocks": {
       "6987625696575125306": {
-        "type": "shopify:\/\/apps\/weglot-translate-your-store\/blocks\/weglot\/3097482a-fafe-42ff-bc33-ea19e35c4a20",
+        "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
         "disabled": false,
         "settings": {
         }
       },
       "3294164036280357830": {
-        "type": "shopify:\/\/apps\/mlv-auto-currency-switcher\/blocks\/mlveda-currencies-head\/92ab730f-097e-4571-b27c-3f449e098ca3",
+        "type": "shopify://apps/mlv-auto-currency-switcher/blocks/mlveda-currencies-head/92ab730f-097e-4571-b27c-3f449e098ca3",
         "disabled": false,
         "settings": {
         }
       },
       "13951170544780599758": {
-        "type": "shopify:\/\/apps\/tapita-seo-speed\/blocks\/app-embed\/cd37ca7a-40ad-4fdc-afd3-768701482209",
+        "type": "shopify://apps/tapita-seo-speed/blocks/app-embed/cd37ca7a-40ad-4fdc-afd3-768701482209",
         "disabled": false,
         "settings": {
         }
       },
       "12526071353035850722": {
-        "type": "shopify:\/\/apps\/back-in-stock-customer-alerts\/blocks\/app-embed\/bfa6a8c4-24e2-411a-9396-e35031b33f34",
+        "type": "shopify://apps/back-in-stock-customer-alerts/blocks/app-embed/bfa6a8c4-24e2-411a-9396-e35031b33f34",
         "disabled": false,
         "settings": {
         }
