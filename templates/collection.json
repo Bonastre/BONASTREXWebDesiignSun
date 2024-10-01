@@ -383,6 +383,17 @@
             "title_block_5": "BON-BON",
             "content_block_5": "<p>This little crossbody is as fresh as a sweetie or a brioche straight from the oven, of typical parisian cultural delights. Buttery soft leather meets at each pleated end, held together by a beautiful solid metal clasp that also holds the shoulder strap. This is the Bonastre crossbody line … a shoulder bag option this time in the crossbody family. Made in our workshop with hand finishing and traditional savoir-faire.</p>"
           }
+        },
+        "block_1_8a37ED": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "ring-crossbody-collection",
+            "image_block_5": "shopify://shop_images/1_BONASTRE_RING_CROSSBODY_HOME_PAGE_2.png",
+            "title_block_5": "RING-CROSSBODY BAG",
+            "content_block_5": "<p>So trendy, light and very functional crossbody.Wear it across or at shoulder, it will be the ideal companion for every one of your city getaways and best looks.</p>"
+          }
         }
       },
       "block_order": [
@@ -415,7 +426,8 @@
         "block_1_FX6a4Q",
         "block_1_LUtwWf",
         "block_1_jWA9tU",
-        "block_1_HxfbyK"
+        "block_1_HxfbyK",
+        "block_1_8a37ED"
       ],
       "settings": {
         "color_scheme": "",
