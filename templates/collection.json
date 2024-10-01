@@ -37,9 +37,9 @@
             "index": 9,
             "page": 2,
             "block_collection": "",
-            "image_block_9": "shopify:\/\/shop_images\/RCB_589x839_ef40c160-2693-4ece-a452-a652a917f1f3.png",
+            "image_block_9": "shopify://shop_images/RCB_589x839_ef40c160-2693-4ece-a452-a652a917f1f3.png",
             "title_block_9": "RING CROSSBODY",
-            "content_block_9": "<p>So trendy, light and very functional crossbody.Wear it across or at shoulder, it will be the ideal companion for every one of your city getaways and best looks.<\/p>"
+            "content_block_9": "<p>So trendy, light and very functional crossbody.Wear it across or at shoulder, it will be the ideal companion for every one of your city getaways and best looks.</p>"
           }
         },
         "block_1_mobile_CRe7xY": {
@@ -49,7 +49,7 @@
             "index": 3,
             "page": 1,
             "block_collection": "",
-            "image_block_1_mobile": "shopify:\/\/shop_images\/02_RIDERM-BLACK.jpg"
+            "image_block_1_mobile": "shopify://shop_images/02_RIDERM-BLACK.jpg"
           }
         },
         "block_1_tNHgEa": {
@@ -59,10 +59,10 @@
             "index": 7,
             "page": 1,
             "block_collection": "",
-            "image_block_5": "shopify:\/\/shop_images\/Rider_S_coupe_bls.jpg",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/Rider_S_coupe_blsh.jpg",
+            "image_block_5": "shopify://shop_images/Rider_S_coupe_bls.jpg",
+            "image_block_5_mobile": "shopify://shop_images/Rider_S_coupe_blsh.jpg",
             "title_block_5": "LOVNI",
-            "content_block_5": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. <\/p>"
+            "content_block_5": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. </p>"
           }
         },
         "block_hover_CGzeYt": {
@@ -72,9 +72,9 @@
             "index": 9,
             "page": 1,
             "block_collection": "",
-            "image_block_9": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "image_block_9": "shopify://shop_images/LOVNIMULTICO.png",
             "title_block_9": "LOVNI BAG",
-            "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.<\/p>"
+            "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.</p>"
           }
         },
         "block_hover_a6xhpE": {
@@ -84,9 +84,9 @@
             "index": 9,
             "page": 1,
             "block_collection": "",
-            "image_block_9": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "image_block_9": "shopify://shop_images/LOVNIMULTICO.png",
             "title_block_9": "LOVNI BAG",
-            "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.<\/p>"
+            "content_block_9": "<p>Our LOVNI Bag is inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space. Made out of stiff leather, this boxy clutch closes with a padded flap and secures with 2 metal hooks where the 2 side rings help to structure the bag.</p>"
           }
         },
         "block_big_image_YUpBTP": {
@@ -95,11 +95,11 @@
           "settings": {
             "index": 9,
             "page": 1,
-            "image_block_11": "shopify:\/\/shop_images\/BON_BON_Terra.png",
+            "image_block_11": "shopify://shop_images/BON_BON_Terra.png",
             "block_collection": "",
-            "image_block_11_mobile": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "image_block_11_mobile": "shopify://shop_images/LOVNIMULTICO.png",
             "title_block_11": "",
-            "content_block_11": "<p>BON-BON is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!<\/p>"
+            "content_block_11": "<p>BON-BON is the french word for sweets and this small bag makes your mouth water like a candy. A pure homage to Paris typical cultural delights: gastronomy, architecture and fashion!</p>"
           }
         },
         "block_1_GHWMyf": {
@@ -109,10 +109,10 @@
             "index": 5,
             "page": 5,
             "block_collection": "",
-            "image_block_5": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/LOVNIPORTEE.png",
+            "image_block_5": "shopify://shop_images/LOVNIPORTEE.png",
+            "image_block_5_mobile": "shopify://shop_images/LOVNIPORTEE.png",
             "title_block_5": "LOVNI",
-            "content_block_5": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.<\/p>"
+            "content_block_5": "<p>Inspired by the sculptures of Eduardo Chillida, also called the sculptor of the air, whose whole work is a journey of discovery in space.</p>"
           }
         },
         "block_1_BRAWKM": {
@@ -122,10 +122,10 @@
             "index": 5,
             "page": 3,
             "block_collection": "",
-            "image_block_5": "shopify:\/\/shop_images\/AIRBAGSTAUPEH.png",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/AIRBAG_M_TERRA_1_1.jpg",
+            "image_block_5": "shopify://shop_images/AIRBAGSTAUPEH.png",
+            "image_block_5_mobile": "shopify://shop_images/AIRBAG_M_TERRA_1_1.jpg",
             "title_block_5": "Airbag",
-            "content_block_5": "<p>This line is inspired by an airbag where the soft leather inflatesby fastening both side strips to the center hardware piece . The handles, straps and pads are detachable to allow the designs to fold flat. <\/p>"
+            "content_block_5": "<p>This line is inspired by an airbag where the soft leather inflatesby fastening both side strips to the center hardware piece . The handles, straps and pads are detachable to allow the designs to fold flat. </p>"
           }
         },
         "block_big_image_3CVNFg": {
@@ -134,9 +134,9 @@
           "settings": {
             "index": 9,
             "page": 5,
-            "image_block_11": "shopify:\/\/shop_images\/F1_32fe7e84-78bf-40f8-be2b-36ef40028183.jpg",
+            "image_block_11": "shopify://shop_images/F1_32fe7e84-78bf-40f8-be2b-36ef40028183.jpg",
             "block_collection": "",
-            "image_block_11_mobile": "shopify:\/\/shop_images\/F1_32fe7e84-78bf-40f8-be2b-36ef40028183.jpg",
+            "image_block_11_mobile": "shopify://shop_images/F1_32fe7e84-78bf-40f8-be2b-36ef40028183.jpg",
             "title_block_11": "",
             "content_block_11": ""
           }
@@ -148,10 +148,10 @@
             "index": 5,
             "page": 4,
             "block_collection": "",
-            "image_block_5": "shopify:\/\/shop_images\/01_DOMETOTEM-BLACK.jpg",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/01_DOMETOTEM-BLACK.jpg",
+            "image_block_5": "shopify://shop_images/01_DOMETOTEM-BLACK.jpg",
+            "image_block_5_mobile": "shopify://shop_images/01_DOMETOTEM-BLACK.jpg",
             "title_block_5": "DOME TOTE M",
-            "content_block_5": "<p>This is a vertical, minimalist and very urban medium tote. Inspired by a kimono: you may fold it flat after a complete unzipping when you want to store it or pack it.<\/p>"
+            "content_block_5": "<p>This is a vertical, minimalist and very urban medium tote. Inspired by a kimono: you may fold it flat after a complete unzipping when you want to store it or pack it.</p>"
           }
         },
         "block_big_image_pjamQ6": {
@@ -160,11 +160,11 @@
           "settings": {
             "index": 9,
             "page": 1,
-            "image_block_11": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "image_block_11": "shopify://shop_images/IMG_3466-removebg_copie.jpg",
             "block_collection": "",
-            "image_block_11_mobile": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "image_block_11_mobile": "shopify://shop_images/IMG_3466-removebg_copie.jpg",
             "title_block_11": "BON-BON CORDS",
-            "content_block_11": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+            "content_block_11": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.</p>"
           }
         },
         "block_hover_gYH6wn": {
@@ -174,9 +174,9 @@
             "index": 9,
             "page": 1,
             "block_collection": "",
-            "image_block_9": "shopify:\/\/shop_images\/01_BONBONCORDS-TERRA.jpg",
+            "image_block_9": "shopify://shop_images/01_BONBONCORDS-TERRA.jpg",
             "title_block_9": "BON-BON CORDS",
-            "content_block_9": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+            "content_block_9": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.</p>"
           }
         },
         "block_1_ng6Jjk": {
@@ -185,21 +185,21 @@
             "index": 5,
             "page": 1,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/Tyler_Sans_Border.png",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/Tyler_Sans_Border.png",
+            "image_block_5": "shopify://shop_images/Tyler_Sans_Border.png",
+            "image_block_5_mobile": "shopify://shop_images/Tyler_Sans_Border.png",
             "title_block_5": "RIDER BAG",
-            "content_block_5": "<p>The RIDER Line is inspired by the sleek curves of a skateboard ramp, reflecting the architectural principles of the BRUTALISM movement from the 1950s and 60s. <\/p>"
+            "content_block_5": "<p>The RIDER Line is inspired by the sleek curves of a skateboard ramp, reflecting the architectural principles of the BRUTALISM movement from the 1950s and 60s. </p>"
           }
         },
         "block_last_zFmLWW": {
           "type": "block_last",
           "settings": {
-            "image_block_one_image": "shopify:\/\/shop_images\/IMG_3466-removebg_copie.jpg",
+            "image_block_one_image": "shopify://shop_images/IMG_3466-removebg_copie.jpg",
             "page": 1,
             "block_collection": "main-collection",
-            "image_block_content": "shopify:\/\/shop_images\/BON_BON_CORDS_BLACK_1_1.jpg",
+            "image_block_content": "shopify://shop_images/BON_BON_CORDS_BLACK_1_1.jpg",
             "title_block_content": "BON-BON CORDS",
-            "content_block_content": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.<\/p>"
+            "content_block_content": "<p>This petite crossbody is as enchanting as a warm brioche or a delicate sweet, freshly drawn from the oven, evoking the timeless charm of Parisian delights.</p>"
           }
         },
         "block_big_image_FaBWdc": {
@@ -207,11 +207,11 @@
           "settings": {
             "index": 9,
             "page": 1,
-            "image_block_11": "shopify:\/\/shop_images\/Bon-Bon_Cream_c124bcb4-3928-49f6-a87c-62a3b4578dec.png",
+            "image_block_11": "shopify://shop_images/Bon-Bon_Cream_c124bcb4-3928-49f6-a87c-62a3b4578dec.png",
             "block_collection": "main-collection",
-            "image_block_11_mobile": "shopify:\/\/shop_images\/Bon-Bon_Cream_c124bcb4-3928-49f6-a87c-62a3b4578dec.png",
+            "image_block_11_mobile": "shopify://shop_images/Bon-Bon_Cream_c124bcb4-3928-49f6-a87c-62a3b4578dec.png",
             "title_block_11": "LOVNI",
-            "content_block_11": "<p>Drawing inspiration from the shape of classic wrapped candy, the BON-BON exudes a distinctive charm and character, making it both sweet and highly appealing. Its soft contours are designed to mold to your body, creating a snug fit that makes the BON-BON feel like the leather version of an irresistible sugar rush. Playful, buttery soft, and effortlessly stylish, it's the perfect combination of fun and function.  <\/p>"
+            "content_block_11": "<p>Drawing inspiration from the shape of classic wrapped candy, the BON-BON exudes a distinctive charm and character, making it both sweet and highly appealing. Its soft contours are designed to mold to your body, creating a snug fit that makes the BON-BON feel like the leather version of an irresistible sugar rush. Playful, buttery soft, and effortlessly stylish, it's the perfect combination of fun and function.  </p>"
           }
         },
         "block_1_yJ8Qtb": {
@@ -220,10 +220,10 @@
             "index": 5,
             "page": 2,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/RC_Tyler.png",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/RC_Tyler.png",
+            "image_block_5": "shopify://shop_images/RC_Tyler.png",
+            "image_block_5_mobile": "shopify://shop_images/RC_Tyler.png",
             "title_block_5": "RING CROSSBODY",
-            "content_block_5": "<p><\/p><p>Inspired by Spanish designer and artist Mariano Fortuny, who is known for his timeless and intricately pleated gowns, the RING is harmonious, functional and lightweight. Its soft and supple leather is held together by solid metal clasps, which were developed exclusively for BONASTRE.<\/p>"
+            "content_block_5": "<p></p><p>Inspired by Spanish designer and artist Mariano Fortuny, who is known for his timeless and intricately pleated gowns, the RING is harmonious, functional and lightweight. Its soft and supple leather is held together by solid metal clasps, which were developed exclusively for BONASTRE.</p>"
           }
         },
         "block_big_image_RgjRwL": {
@@ -232,11 +232,11 @@
           "settings": {
             "index": 9,
             "page": 3,
-            "image_block_11": "shopify:\/\/shop_images\/BON_BON_Black.png",
+            "image_block_11": "shopify://shop_images/BON_BON_Black.png",
             "block_collection": "main-collection",
-            "image_block_11_mobile": "shopify:\/\/shop_images\/BON_BON_Black.png",
+            "image_block_11_mobile": "shopify://shop_images/BON_BON_Black.png",
             "title_block_11": "AIRBAG",
-            "content_block_11": "<p>The AIRBAG Line has one key specificity: everything in this style is detachable, including the handles, straps and pads, in order to allow the design to fold flat.<\/p>"
+            "content_block_11": "<p>The AIRBAG Line has one key specificity: everything in this style is detachable, including the handles, straps and pads, in order to allow the design to fold flat.</p>"
           }
         },
         "block_1_eqCjdA": {
@@ -245,10 +245,10 @@
             "index": 5,
             "page": 3,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/03_DOMETOTEM-BLACK.jpg",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/03_DOMETOTEM-BLACK.jpg",
+            "image_block_5": "shopify://shop_images/03_DOMETOTEM-BLACK.jpg",
+            "image_block_5_mobile": "shopify://shop_images/03_DOMETOTEM-BLACK.jpg",
             "title_block_5": "DOME TOTE M",
-            "content_block_5": "<p>Inspired by the poetic beauty of the floor plan of the Notre-Dame de Paris, the DOME is a celebration of the cross shape, as well as the delights of complete deconstruction. Each style within that range can be fully unzipped, and laid-out flat in a suitcase in order to maximize space.<\/p>"
+            "content_block_5": "<p>Inspired by the poetic beauty of the floor plan of the Notre-Dame de Paris, the DOME is a celebration of the cross shape, as well as the delights of complete deconstruction. Each style within that range can be fully unzipped, and laid-out flat in a suitcase in order to maximize space.</p>"
           }
         },
         "block_1_NUmjmD": {
@@ -257,20 +257,20 @@
             "index": 5,
             "page": 4,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/01_T-TOTE-L-TAUPE_e34cbf0c-638f-4a3b-a0fb-d995100d0f4a.jpg",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/01_T-TOTE-L-TAUPE.jpg",
+            "image_block_5": "shopify://shop_images/01_T-TOTE-L-TAUPE_e34cbf0c-638f-4a3b-a0fb-d995100d0f4a.jpg",
+            "image_block_5_mobile": "shopify://shop_images/01_T-TOTE-L-TAUPE.jpg",
             "title_block_5": "T TOTE L",
-            "content_block_5": "<p>Conceived as a contemporary reinterpretation of the classic leather tote, the T range is an homage to the architectural wonders of Tadao Ando. Effortlessly light and elegantly minimalist, the T tote and weekender embody a harmonious blend of form and function, where sleek lines meet thoughtful simplicity.<\/p><p> <\/p>"
+            "content_block_5": "<p>Conceived as a contemporary reinterpretation of the classic leather tote, the T range is an homage to the architectural wonders of Tadao Ando. Effortlessly light and elegantly minimalist, the T tote and weekender embody a harmonious blend of form and function, where sleek lines meet thoughtful simplicity.</p><p> </p>"
           }
         },
         "block_last_ArhF9r": {
           "type": "block_last",
           "disabled": true,
           "settings": {
-            "image_block_one_image": "shopify:\/\/shop_images\/T_Tote_coupe_bluf.jpg",
+            "image_block_one_image": "shopify://shop_images/T_Tote_coupe_bluf.jpg",
             "page": 3,
             "block_collection": "main-collection",
-            "image_block_content": "shopify:\/\/shop_images\/T_Tote_coupe_terd.jpg",
+            "image_block_content": "shopify://shop_images/T_Tote_coupe_terd.jpg",
             "title_block_content": "",
             "content_block_content": ""
           }
@@ -279,10 +279,10 @@
           "type": "block_last",
           "disabled": true,
           "settings": {
-            "image_block_one_image": "shopify:\/\/shop_images\/LOVNIPORTEE_d9611d23-5dd3-4c00-9eb4-86091079f105.png",
+            "image_block_one_image": "shopify://shop_images/LOVNIPORTEE_d9611d23-5dd3-4c00-9eb4-86091079f105.png",
             "page": 4,
             "block_collection": "main-collection",
-            "image_block_content": "shopify:\/\/shop_images\/LOVNIMULTICO.png",
+            "image_block_content": "shopify://shop_images/LOVNIMULTICO.png",
             "title_block_content": "",
             "content_block_content": ""
           }
@@ -290,12 +290,12 @@
         "block_last_gTQbKK": {
           "type": "block_last",
           "settings": {
-            "image_block_one_image": "shopify:\/\/shop_images\/Airbag_S_Taupe_s.png",
+            "image_block_one_image": "shopify://shop_images/Airbag_S_Taupe_s.png",
             "page": 2,
             "block_collection": "main-collection",
-            "image_block_content": "shopify:\/\/shop_images\/Airbag_M_151e7369-fa46-4235-8a85-3e07a969ce1f.png",
+            "image_block_content": "shopify://shop_images/Airbag_M_151e7369-fa46-4235-8a85-3e07a969ce1f.png",
             "title_block_content": "AIR BAG",
-            "content_block_content": "<p>The AIRBAG Line is defined by its ingenious versatility: every component, from the handles to the straps and pads, can be effortlessly detached, enabling the design to collapse into a sleek, flat form. Inspired by the elegance of automotive industrial design, once the side pads are fastened, the AIRBAG springs to life, gracefully inflating into its distinct shape.<\/p>"
+            "content_block_content": "<p>The AIRBAG Line is defined by its ingenious versatility: every component, from the handles to the straps and pads, can be effortlessly detached, enabling the design to collapse into a sleek, flat form. Inspired by the elegance of automotive industrial design, once the side pads are fastened, the AIRBAG springs to life, gracefully inflating into its distinct shape.</p>"
           }
         },
         "block_1_gCRUdd": {
@@ -304,8 +304,8 @@
             "index": 7,
             "page": 1,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/Tyler_Sans_Border.png",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/Tyler_Rider_8b1aed50-4091-4367-b909-e76dd044359d.png",
+            "image_block_5": "shopify://shop_images/Tyler_Sans_Border.png",
+            "image_block_5_mobile": "shopify://shop_images/Tyler_Rider_8b1aed50-4091-4367-b909-e76dd044359d.png",
             "title_block_5": "",
             "content_block_5": ""
           }
@@ -316,7 +316,7 @@
             "index": 3,
             "page": 2,
             "block_collection": "main-collection",
-            "image_block_1_mobile": "shopify:\/\/shop_images\/BON_BON_CORDS.png"
+            "image_block_1_mobile": "shopify://shop_images/BON_BON_CORDS.png"
           }
         },
         "block_1_mobile_rYAkcg": {
@@ -325,7 +325,7 @@
             "index": 7,
             "page": 2,
             "block_collection": "main-collection",
-            "image_block_1_mobile": "shopify:\/\/shop_images\/ring_bleu.jpg"
+            "image_block_1_mobile": "shopify://shop_images/ring_bleu.jpg"
           }
         },
         "block_1_mobile_jGxgMK": {
@@ -335,7 +335,7 @@
             "index": 14,
             "page": 2,
             "block_collection": "main-collection",
-            "image_block_1_mobile": "shopify:\/\/shop_images\/Airbag_S_Taupe_s.png"
+            "image_block_1_mobile": "shopify://shop_images/Airbag_S_Taupe_s.png"
           }
         },
         "block_1_FX6a4Q": {
@@ -344,8 +344,8 @@
             "index": 7,
             "page": 3,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/03_DOMETOTEM-BLACK.jpg",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/03_DOMETOTEM-BLACK.jpg",
+            "image_block_5": "shopify://shop_images/03_DOMETOTEM-BLACK.jpg",
+            "image_block_5_mobile": "shopify://shop_images/03_DOMETOTEM-BLACK.jpg",
             "title_block_5": "",
             "content_block_5": ""
           }
@@ -356,10 +356,21 @@
             "index": 7,
             "page": 4,
             "block_collection": "main-collection",
-            "image_block_5": "shopify:\/\/shop_images\/01_T-TOTE-L-TAUPE.jpg",
-            "image_block_5_mobile": "shopify:\/\/shop_images\/01_T-TOTE-L-TAUPE_e34cbf0c-638f-4a3b-a0fb-d995100d0f4a.jpg",
+            "image_block_5": "shopify://shop_images/01_T-TOTE-L-TAUPE.jpg",
+            "image_block_5_mobile": "shopify://shop_images/01_T-TOTE-L-TAUPE_e34cbf0c-638f-4a3b-a0fb-d995100d0f4a.jpg",
             "title_block_5": "",
             "content_block_5": ""
+          }
+        },
+        "block_1_jWA9tU": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "group_riderbags",
+            "image_block_5": "shopify://shop_images/Tyler_Sans_Border.png",
+            "title_block_5": "RIDER BAG",
+            "content_block_5": "<p></p><p>The nobility of the leather, natural, soft and living skin is wonderfully expressed in this design, its supple contours allowing the bag to embrace your body shape. The shoulder strap is very easy to adjust as it is constructed as a belt.</p>"
           }
         }
       },
@@ -391,7 +402,8 @@
         "block_1_mobile_rYAkcg",
         "block_1_mobile_jGxgMK",
         "block_1_FX6a4Q",
-        "block_1_LUtwWf"
+        "block_1_LUtwWf",
+        "block_1_jWA9tU"
       ],
       "settings": {
         "color_scheme": "",
