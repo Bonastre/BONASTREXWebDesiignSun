@@ -405,6 +405,17 @@
             "title_block_5": "T",
             "content_block_5": "<p>Conceived as a contemporary reinterpretation of the classic leather tote, the T range is an homage to the architectural wonders of Tadao Ando. Effortlessly light and elegantly minimalist, the T tote and weekender embody a harmonious blend of form and function, where sleek lines meet thoughtful simplicity.</p>"
           }
+        },
+        "block_1_FFYeC8": {
+          "type": "block_1",
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "dome-line",
+            "image_block_5": "shopify://shop_images/03_DOMETOTEM-BLACK.jpg",
+            "title_block_5": "DOME",
+            "content_block_5": "<p>Inspired by the poetic beauty of the floor plan of the Notre-Dame de Paris, the DOME is a celebration of the cross shape, as well as the delights of complete deconstruction. Each style within that range can be fully unzipped, and laid-out flat in a suitcase in order to maximize space.</p>"
+          }
         }
       },
       "block_order": [
@@ -439,7 +450,8 @@
         "block_1_jWA9tU",
         "block_1_HxfbyK",
         "block_1_8a37ED",
-        "block_1_WXedeQ"
+        "block_1_WXedeQ",
+        "block_1_FFYeC8"
       ],
       "settings": {
         "color_scheme": "",
