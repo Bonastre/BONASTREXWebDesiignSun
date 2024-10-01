@@ -19,6 +19,7 @@
   - extra_grid_attributes: {String} Optional: Additional attributes to apply to the grid container.
       Any except 'class', 'id', 'data-id' is allowed.
         Example: 'data-foo="bar" data-baz="qux"'
+  - grid_element_name {String} Optional: The name of the element to render. defaults to "div"
   Example:
     {% render "depict-product-grid",
       extra_grid_classes: "my-class",
@@ -27,6 +28,11 @@
       extra_grid_attributes: "data-foo='bar' data-baz='qux'"
     %}
 {% endcomment %}
+{% liquid
+  unless grid_element_name
+    assign grid_element_name = "div"
+  endunless
+%}
 
 {{ "depict-product-grid.css" | asset_url | stylesheet_tag }}
 {% assign alignBlocksToImages = false %}
@@ -522,7 +528,7 @@
   {% assign grid_data_id = "" %}
 {% endunless %}
 
-<div
+<{{ grid_element_name }}
   class="depict-grid {{ grid_class }} {{ extra_grid_classes }}"
   id="{{ grid_id }}"
   data-id="{{ grid_data_id }}"
@@ -712,4 +718,4 @@
       {% endif %}
     {% endif %}
   {%- endfor -%}
-</div>
+</{{ grid_element_name }}>
