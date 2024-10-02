@@ -393,6 +393,15 @@
             "content_block_5": "<p>This little crossbody is as fresh as a sweetie or a brioche straight from the oven, of typical parisian cultural delights. Buttery soft leather meets at each pleated end, held together by a beautiful solid metal clasp that also holds the shoulder strap. This is the Bonastre crossbody line … a shoulder bag option this time in the crossbody family. </p>"
           }
         },
+        "block_1_mobile_yHgp38": {
+          "type": "block_1_mobile",
+          "settings": {
+            "index": 3,
+            "page": 1,
+            "block_collection": "collection-bon-bon",
+            "image_block_1_mobile": "shopify://shop_images/02_BONBONCORDS-TERRA.jpg"
+          }
+        },
         "block_1_8a37ED": {
           "type": "block_1",
           "settings": {
@@ -459,6 +468,7 @@
         "block_1_jWA9tU",
         "block_1_mobile_xEhCLK",
         "block_1_HxfbyK",
+        "block_1_mobile_yHgp38",
         "block_1_8a37ED",
         "block_1_WXedeQ",
         "block_1_FFYeC8"
