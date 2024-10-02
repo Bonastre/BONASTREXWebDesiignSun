@@ -376,10 +376,10 @@
         "block_1_mobile_xEhCLK": {
           "type": "block_1_mobile",
           "settings": {
-            "index": 5,
+            "index": 3,
             "page": 1,
             "block_collection": "group_riderbags",
-            "image_block_1_mobile": "shopify://shop_images/01_RIDERM-BLACK_600bd2c2-146d-4516-8ddb-fe7b10e4ef9e.jpg"
+            "image_block_1_mobile": "shopify://shop_images/02_RIDERM-BLACK.jpg"
           }
         },
         "block_1_HxfbyK": {
