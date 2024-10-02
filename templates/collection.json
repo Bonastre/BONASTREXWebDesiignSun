@@ -452,6 +452,15 @@
             "title_block_5": "DOME",
             "content_block_5": "<p>Inspired by the poetic beauty of the floor plan of the Notre-Dame de Paris, the DOME is a celebration of the cross shape, as well as the delights of complete deconstruction. Each style within that range can be fully unzipped, and laid-out flat in a suitcase in order to maximize space.</p>"
           }
+        },
+        "block_1_mobile_rGPChx": {
+          "type": "block_1_mobile",
+          "settings": {
+            "index": 3,
+            "page": 1,
+            "block_collection": "dome-line",
+            "image_block_1_mobile": "shopify://shop_images/Dome_tote_M_coupe_ewct.jpg"
+          }
         }
       },
       "block_order": [
@@ -491,7 +500,8 @@
         "block_1_mobile_KBRJhP",
         "block_1_WXedeQ",
         "block_1_mobile_KnntFk",
-        "block_1_FFYeC8"
+        "block_1_FFYeC8",
+        "block_1_mobile_rGPChx"
       ],
       "settings": {
         "color_scheme": "",
