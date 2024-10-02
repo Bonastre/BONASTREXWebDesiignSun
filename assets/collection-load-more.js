@@ -61,7 +61,3 @@ function isElementInViewport(el) {
       checkAndClickButton();
   });
   
-  
-  $(window).on('load', function() {
-      checkAndClickButton();
-  });
