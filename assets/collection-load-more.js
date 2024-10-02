@@ -40,14 +40,14 @@ jQuery(document).ready(function ($) {
 });
 
 function isElementInViewport(el) {
-      const rect = el[0].getBoundingClientRect();
-      return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= ($(window).height() || $(document).height()) &&
-          rect.right <= ($(window).width() || $(document).width())
-      );
-  }
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
   
   function checkAndClickButton() {
       const $loadMoreButton = $('#load-more');
