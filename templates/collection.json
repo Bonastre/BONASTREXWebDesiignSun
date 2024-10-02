@@ -433,6 +433,15 @@
             "content_block_5": "<p>Conceived as a contemporary reinterpretation of the classic leather tote, the T range is an homage to the architectural wonders of Tadao Ando. Effortlessly light and elegantly minimalist, the T tote and weekender embody a harmonious blend of form and function, where sleek lines meet thoughtful simplicity.</p>"
           }
         },
+        "block_1_mobile_KnntFk": {
+          "type": "block_1_mobile",
+          "settings": {
+            "index": 3,
+            "page": 1,
+            "block_collection": "t",
+            "image_block_1_mobile": "shopify://shop_images/T_Briefcase_coupe_tadh_e5c476f9-7e84-419e-a35b-7cd3f6a850b8.jpg"
+          }
+        },
         "block_1_FFYeC8": {
           "type": "block_1",
           "settings": {
@@ -481,6 +490,7 @@
         "block_1_8a37ED",
         "block_1_mobile_KBRJhP",
         "block_1_WXedeQ",
+        "block_1_mobile_KnntFk",
         "block_1_FFYeC8"
       ],
       "settings": {
