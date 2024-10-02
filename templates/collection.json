@@ -413,6 +413,15 @@
             "content_block_5": "<p>So trendy, light and very functional crossbody.Wear it across or at shoulder, it will be the ideal companion for every one of your city getaways and best looks.</p>"
           }
         },
+        "block_1_mobile_KBRJhP": {
+          "type": "block_1_mobile",
+          "settings": {
+            "index": 3,
+            "page": 1,
+            "block_collection": "ring-crossbody-collection",
+            "image_block_1_mobile": "shopify://shop_images/RINGCROSSBODYCREAMLHOMME.png"
+          }
+        },
         "block_1_WXedeQ": {
           "type": "block_1",
           "settings": {
@@ -470,6 +479,7 @@
         "block_1_HxfbyK",
         "block_1_mobile_yHgp38",
         "block_1_8a37ED",
+        "block_1_mobile_KBRJhP",
         "block_1_WXedeQ",
         "block_1_FFYeC8"
       ],
