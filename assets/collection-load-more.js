@@ -52,12 +52,14 @@ function isElementInViewport(el) {
   function checkAndClickButton() {
     const loadMoreButton = document.querySelector('#load-more');
 
-    if (loadMoreButton && isElementInViewport(loadMoreButton)) {
+    setTimeout(function(){
+      if (loadMoreButton && isElementInViewport(loadMoreButton)) {
         loadMoreButton.click();
     }
+    },2000)
 }
   
-  $(window).on('scroll', function() {
-      checkAndClickButton();
-  });
+  window.addEventListener('scroll', function() {
+    checkAndClickButton();
+});
   
