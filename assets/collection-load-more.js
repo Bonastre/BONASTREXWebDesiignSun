@@ -39,27 +39,37 @@ jQuery(document).ready(function ($) {
   }
 });
 
+let buttonClicked = false; 
+
 function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
+    const rect = el[0].getBoundingClientRect();
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.bottom <= ($(window).height() || $(document).height()) &&
+        rect.right <= ($(window).width() || $(document).width())
     );
 }
-  
-  function checkAndClickButton() {
-    const loadMoreButton = document.querySelector('#load-more');
 
-    setTimeout(function(){
-      if (loadMoreButton && isElementInViewport(loadMoreButton)) {
-        loadMoreButton.click();
+function checkAndClickButton() {
+    const $loadMoreButton = $('#load-more');
+
+    if ($loadMoreButton.length && isElementInViewport($loadMoreButton) && !buttonClicked) {
+        $loadMoreButton.click();
+        buttonClicked = true; 
     }
-    },2000)
+
+    if (!isElementInViewport($loadMoreButton)) {
+        buttonClicked = false;
+    }
 }
-  
-  window.addEventListener('scroll', function() {
+
+$(window).on('scroll', function() {
     checkAndClickButton();
 });
+
+$(window).on('load', function() {
+    checkAndClickButton();
+});
+
   
