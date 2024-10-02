@@ -1,30 +1,5 @@
 jQuery(document).ready(function ($) {
-  function isElementInViewport(el) {
-      const rect = el[0].getBoundingClientRect();
-      return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= ($(window).height() || $(document).height()) &&
-          rect.right <= ($(window).width() || $(document).width())
-      );
-  }
   
-  function checkAndClickButton() {
-      const $loadMoreButton = $('#load-more');
-  
-      if ($loadMoreButton.length && isElementInViewport($loadMoreButton)) {
-          $loadMoreButton.click();
-      }
-  }
-  
-  $(window).on('scroll', function() {
-      checkAndClickButton();
-  });
-  
-  
-  $(window).on('load', function() {
-      checkAndClickButton();
-  });
   
   let loadMore = $("#load-more");
   let collection = $(".product-list");
@@ -63,3 +38,30 @@ jQuery(document).ready(function ($) {
     });
   }
 });
+
+function isElementInViewport(el) {
+      const rect = el[0].getBoundingClientRect();
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= ($(window).height() || $(document).height()) &&
+          rect.right <= ($(window).width() || $(document).width())
+      );
+  }
+  
+  function checkAndClickButton() {
+      const $loadMoreButton = $('#load-more');
+  
+      if ($loadMoreButton.length && isElementInViewport($loadMoreButton)) {
+          $loadMoreButton.click();
+      }
+  }
+  
+  $(window).on('scroll', function() {
+      checkAndClickButton();
+  });
+  
+  
+  $(window).on('load', function() {
+      checkAndClickButton();
+  });
