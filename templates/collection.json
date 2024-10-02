@@ -373,6 +373,15 @@
             "content_block_5": "<p>The natural beauty of the leather, soft and full of character, comes through gently in this design. Its flexible contours let the bag comfortably follow your shape. The shoulder strap, designed like a simple belt, makes it easy to adjust.</p>"
           }
         },
+        "block_1_mobile_xEhCLK": {
+          "type": "block_1_mobile",
+          "settings": {
+            "index": 5,
+            "page": 1,
+            "block_collection": "group_riderbags",
+            "image_block_1_mobile": "shopify://shop_images/01_RIDERM-BLACK_600bd2c2-146d-4516-8ddb-fe7b10e4ef9e.jpg"
+          }
+        },
         "block_1_HxfbyK": {
           "type": "block_1",
           "settings": {
@@ -448,6 +457,7 @@
         "block_1_FX6a4Q",
         "block_1_LUtwWf",
         "block_1_jWA9tU",
+        "block_1_mobile_xEhCLK",
         "block_1_HxfbyK",
         "block_1_8a37ED",
         "block_1_WXedeQ",
