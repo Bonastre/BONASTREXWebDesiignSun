@@ -8238,6 +8238,7 @@ Favorite wishlist
   font-weight: 500;
   text-transform: uppercase;
   color: #231F20;
+  pointer-events: none;
 }
 #load-more svg {
   width: 18px;
