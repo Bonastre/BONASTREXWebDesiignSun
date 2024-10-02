@@ -50,12 +50,12 @@ function isElementInViewport(el) {
 }
   
   function checkAndClickButton() {
-      const $loadMoreButton = document.querySelector('#load-more');
-  
-      if ($loadMoreButton.length && isElementInViewport($loadMoreButton)) {
-          $loadMoreButton.click();
-      }
-  }
+    const loadMoreButton = document.querySelector('#load-more');
+
+    if (loadMoreButton && isElementInViewport(loadMoreButton)) {
+        loadMoreButton.click();
+    }
+}
   
   $(window).on('scroll', function() {
       checkAndClickButton();
