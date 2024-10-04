@@ -56,15 +56,15 @@
     'https://cdn.shopify.com/3d/models/b99311732e0e1fc6/sac_8_only-scaled-compressed.glb',
   ];
   const BAGS_LINKS = [
+    'https://www.bonastre.net/collections/t',
+    'https://www.bonastre.net/collections/group_riderbags',
+    'https://www.bonastre.net/collections/dome-line',
+    'https://www.bonastre.net/collections/the-airbag-line',
+    'https://www.bonastre.net/collections/collection-bon-bon',
+    'https://www.bonastre.net/collections/ring-crossbody-collection',
     'https://www.bonastre.net/collections/main-collection',
-    'https://www.bonastre.net/collections/main-collection',
-    'https://www.bonastre.net/collections/main-collection',
-    'https://www.bonastre.net/collections/main-collection',
-    'https://www.bonastre.net/collections/main-collection',
-    'https://www.bonastre.net/collections/main-collection',
-    'https://www.bonastre.net/collections/main-collection',
-    'https://www.bonastre.net/collections/main-collection'
-  ];
+    'https://www.bonastre.net/collections/folder'
+  ]
 
   // event when drag three-sceno-container -> delete drag_helper element (once)
   {% comment %} document.getElementById('three-sceno-container').addEventListener('pointerdown', () => {
@@ -113,7 +113,8 @@
       touch-action: auto;
     }
 
-    @media (orientation: portrait) {
+    {% comment %} @media (orientation: portrait) { {% endcomment %}
+    @media (pointer: coarse) {
       #drag_helper {
         display: none;
       }
