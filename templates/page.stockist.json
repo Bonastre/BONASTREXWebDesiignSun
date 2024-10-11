@@ -84,6 +84,15 @@
             "col_2_list_en": ""
           }
         },
+        "row_PneNh3": {
+          "type": "row",
+          "settings": {
+            "col_1_title_en": "NEW ZEALAND",
+            "col_1_list_en": "FOUND STORE, MADE - EAST HAMILTON",
+            "col_2_title_en": "",
+            "col_2_list_en": ""
+          }
+        },
         "1095c553-e1f2-4c77-b267-26e74c5ea4e6": {
           "type": "row",
           "settings": {
@@ -112,6 +121,7 @@
         "4f1f808f-9732-4e0f-b34e-0be30f1ac111",
         "64beb4c9-7e5e-448c-bafc-771909dccca3",
         "d2a72099-31f2-4c4b-be30-60856ede56ec",
+        "row_PneNh3",
         "1095c553-e1f2-4c77-b267-26e74c5ea4e6",
         "row_QmJ6jx"
       ],
