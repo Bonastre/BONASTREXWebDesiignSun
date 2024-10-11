@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -62,15 +62,15 @@
           "settings": {
             "col_1_title_en": "SOUTH KOREA",
             "col_1_list_en": "11:55 LOTTE WORLD TOWER, SEOUL",
-            "col_2_title_en": "HONG KONG",
-            "col_2_list_en": "LANE CRAWFORD, TSIM SHA TSUI\nLANE CRAWFORD, KWAI CHUNG\nLANE CRAWFORD, LANTAU"
+            "col_2_title_en": "",
+            "col_2_list_en": ""
           }
         },
         "64beb4c9-7e5e-448c-bafc-771909dccca3": {
           "type": "row",
           "settings": {
             "col_1_title_en": "TAIWAN",
-            "col_1_list_en": "GATHER CRAFTS, TAIPEI 6\nFEDE, TAICHUNG CITY",
+            "col_1_list_en": "FEDE, TAICHUNG CITY",
             "col_2_title_en": "",
             "col_2_list_en": ""
           }
