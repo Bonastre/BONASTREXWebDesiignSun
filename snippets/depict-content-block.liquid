@@ -42,22 +42,13 @@
     href="{{ content.link_to_product.value.url }}?content-block={{ content.system.id }}"
   {% endif %}
   class="depict-content-block"
-  style="
-    --grid-row-start: {{ grid_row_start }};
-    --grid-column-start: {{ grid_column_start }};
-    --grid-row-end: {{ grid_row_end }};
-    --grid-column-end: {{ grid_column_end }};
-    --mobile-grid-row-start: {{ mobile_grid_row_start }};
-    --mobile-grid-column-start: {{ mobile_grid_column_start }};
-    --mobile-grid-row-end: {{ mobile_grid_row_end }};
-    --mobile-grid-column-end: {{ mobile_grid_column_end }};
-    {% if spans_whole_row == 'true' or does_not_fit == 'true' or desktop_goes_on_extra_row == 'true' %}--content-aspect-ratio: {{ content.aspect_ratio }};{% endif %}
-    {% if mobile_spans_whole_row == 'true' or mobile_does_not_fit == 'true' or mobile_goes_on_extra_row == 'true' %}--mobile-content-aspect-ratio: {{ content.aspect_ratio }};{% endif %}
-    --mobile-display: {% if show_mobile or mobile_goes_on_extra_row == 'true' %}flex{% else %}none{% endif %};
-    --desktop-display: {% if show_desktop or desktop_goes_on_extra_row == 'true' %}flex{% else %}none{% endif %};
-  "
+  data-block-id="{{ content.system.id }}"
 >
-  <depict-block-media data-span-rows="{{ content.span_rows }}" data-span-columns="{{ content.span_columns }}">
+  <depict-block-media
+    data-span-rows="{{ content.span_rows }}"
+    data-span-columns="{{ content.span_columns }}"
+    data-block-id="{{ content.system.id }}"
+  >
     {%- if content.video and content.video != empty -%}
       <div class="depict-video-wrapper">
         <video
