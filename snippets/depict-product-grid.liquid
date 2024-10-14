@@ -34,12 +34,11 @@
   endunless
 %}
 
-{{ "depict-product-grid.css" | asset_url | stylesheet_tag }}
 {% assign alignBlocksToImages = false %}
 {% if section.settings.align_depict_blocks == "image" %}
   {% assign alignBlocksToImages = true %}
-  <script src="{{ 'depict-content-blocks.js' | asset_url }}" async type="module"></script>
 {% endif %}
+{% render "depict-inline-script", paginate: paginate %}
 
 {% comment %}
   Expected settings:
@@ -89,33 +88,6 @@
     }
 {% endcomment %}
 
-{% assign chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" | split: "" %}
-{% assign random_string = "" %}
-
-{% for i in (1..10) %}
-  {% assign random_index = "now" | date: "%N" | modulo: chars.size %}
-  {% assign random_string = random_string | append: chars[random_index] %}
-{% endfor %}
-{% comment %}Random class in case someone has multiple blocks with different settings{% endcomment %}
-{% assign grid_class = "x" | append: random_string %}
-{% comment %}DO NOT REMOVE THE PLUS 0 IT COERCES THE STRING INTO A NUMBER AND COMPARISONS WILL SILENTLY FAIL/go wrong WITHOUT IT{% endcomment %}
-{% liquid
-  assign namespace = "app--93504864257--column-settings"
-  assign key = "column_settings"
-  assign column_settings = shop.metafields[namespace][key].value
-  if column_settings[0]
-    assign columns_desktop = column_settings[0]
-  else
-    assign columns_desktop = 4
-  endif
-
-  if column_settings[1]
-    assign columns_mobile = column_settings[1]
-  else
-    assign columns_mobile = 2
-  endif
-%}
-
 {%- liquid
   assign namespace = "app--93504864257--product-duplicate"
   assign key = "product_duplicate"
@@ -141,379 +113,6 @@
 {% assign namespace = "app--93504864257--content-blocks" %}
 {% assign key = "content_block" %}
 {% assign content_blocks = collection.metafields[namespace][key].value %}
-{% assign numberOfProducts = collection.products | size %}
-{% comment %}These are the output variables of below's for-looped calculations that we will use when printing the content blocks{% endcomment %}
-{% assign desktopRowsWithOnlyBlocks = "" %}
-{% assign desktopPositionData = "" -%}
-{% comment %}Comma separated 0-based row indexes{% endcomment %}
-{% assign mobileRowsWithOnlyBlocks = "" %}
-{% comment %}What css variables of blocks will be set to, example value: ["5|1|7|3|false|true|false","8|3|10|5|false|true|false","12|1|14|3|false|true|false","10|3|11|5|false|true|false"]{% endcomment %}
-{% assign mobilePositionData = "" %}
-
-{% assign displacment = 0 %}
-{% assign alreadySeenPositions = zero_indexed_current_page | times: paginate.page_size %}
-{% assign break_outer = false %}
-{% for contentIndex in (0..3000) %}
-  {% for block in content_blocks %}
-    {% if block.index == contentIndex %}
-      {% if block.index < alreadySeenPositions %}
-        {% assign block_size = block.span_rows | times: block.span_columns %}
-        {% assign displacment = displacment | plus: block_size %}
-        {% assign alreadySeenPositions = alreadySeenPositions | plus: block_size %}
-      {% else %}
-        {% assign break_outer = true %}
-        {% break %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-  {% if break_outer %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-
-{% comment %}
-  We're using a for loop to be able to calculate all needed data for the content blocks for both mobile and desktop.
-  Ideally this would be a function but because we don't want to use the deprecated `{% include %}` and we only want to return one set of content blocks to avoid duplicate image/video loading.
-{% endcomment %}
-{% for screensize in (0..1) %}
-  {% if screensize == 0 %}
-    {% assign showingColumns = columns_desktop %}
-  {% endif %}
-  {% if screensize == 1 %}
-    {% assign showingColumns = columns_mobile %}
-  {% endif %}
-  {% comment %}It's not possible to create, or easily push to, arrays in liquid, so we're doing this instead{% endcomment %}
-  {% assign occupiedByBlocks = "false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false"
-    | split: ","
-  %}
-  {% assign perBlockDelimiter = "|" %}
-  {% assign block_mapping_output = "" %}
-  {% comment %}Map over our content blocks, liquid equivalent of https://github.com/depict-org/depict/blob/bf53dbea760ffa76118d897f24242d82c5f2e3f1/portal/frontend/app/src/lite/views/ContentBlock/positionBlocks.tsx#L14-L14{% endcomment %}
-  {% for block in content_blocks %}
-    {% if block.span_columns >= showingColumns %}
-      {% assign blockSpanColumnsPossible = showingColumns %}
-      {% assign spansWholeRow = true %}
-    {% else %}
-      {% assign blockSpanColumnsPossible = block.span_columns %}
-      {% assign spansWholeRow = false %}
-    {% endif %}
-    {% assign nbrOfAlreadyShownProducts = zero_indexed_current_page | times: paginate.page_size %}
-
-    {% assign blockIndex = block.index | minus: nbrOfAlreadyShownProducts %}
-    {% assign blockIndex = blockIndex | minus: displacment %}
-
-    {% if blockIndex < 0 %}
-      {% assign block_mapping_output = block_mapping_output | append: "0|0|0|0|false|true|false" %}
-      {% if forloop.last == false %}
-        {% assign block_mapping_output = block_mapping_output | append: "," %}
-      {% endif %}
-      {% continue %}
-    {% endif %}
-    {% for _whileEmulation in (0..2000) %}
-      {% comment %}Do-while loop implemented in liquid to move block index until it fits, equivalent to https://github.com/depict-org/depict/blob/bf53dbea760ffa76118d897f24242d82c5f2e3f1/portal/frontend/app/src/lite/views/ContentBlock/positionBlocks.tsx#L24-L52{% endcomment %}
-      {% assign rowStartBeforeFloor = blockIndex | divided_by: showingColumns %}
-      {% assign rowStart = rowStartBeforeFloor | floor %}
-      {% assign columnStart = blockIndex | modulo: showingColumns %}
-      {% assign wouldEndAt = columnStart | plus: blockSpanColumnsPossible %}
-      {% comment %}Check if block will fit here due to the number of columns available at the currently proposed index (blockIndex){% endcomment %}
-      {% if wouldEndAt > showingColumns %}
-        {% assign doesntFit = true %}
-      {% else %}
-        {% assign doesntFit = false %}
-      {% endif %}
-
-      {% if doesntFit == false %}
-        {% comment %}If the block still fits, check if there's another block in this area{% endcomment %}
-        {% assign blockRow = 0 %}
-        {% for _lvl2WhileEmulation in (0..2000) %}
-          {% if blockRow < block.span_rows %}
-            {% assign blockCol = 0 %}
-            {% for _lvl3WhileEmulation in (0..2000) %}
-              {% if blockCol < blockSpanColumnsPossible %}
-                {% assign startOfThisRowFirstPart = blockRow | times: showingColumns %}
-                {% assign startOfThisRow = startOfThisRowFirstPart | plus: blockIndex %}
-                {% assign indexToCheck = startOfThisRow | plus: blockCol %}
-                {% if occupiedByBlocks[indexToCheck] != "false" %}
-                  {% assign doesntFit = true %}
-                  {% break %}
-                {% endif %}
-                {% assign blockCol = blockCol | plus: 1 %}
-              {% else %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
-            {% assign blockRow = blockRow | plus: 1 %}
-          {% else %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-
-      {% if doesntFit == true %}
-        {% assign blockIndex = blockIndex | plus: 1 %}
-      {% else %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-
-    {% comment %}
-      Calculate if this block would not fit on the page (be below the grid, start in a row where no products are anymore)
-      In this case we will hide the block. JS equivalent: https://github.com/depict-org/depict/blob/bf53dbea760ffa76118d897f24242d82c5f2e3f1/portal/frontend/app/src/lite/views/ContentBlock/positionBlocks.tsx#L54-L58
-    {% endcomment %}
-    {% assign numberOfPositionsTakenByBlocks = 0 %}
-    {% assign iter = 0 %}
-    {% for position in occupiedByBlocks %}
-      {% if position != "false" and iter < blockIndex %}
-        {% assign numberOfPositionsTakenByBlocks = numberOfPositionsTakenByBlocks | plus: 1 %}
-      {% endif %}
-      {% assign iter = iter | plus: 1 %}
-    {% endfor %}
-    {% assign takenStuff = numberOfPositionsTakenByBlocks | plus: numberOfProducts %}
-    {% assign takenStuff = takenStuff | plus: numberOfProductDuplicatesOnPage %}
-
-    {% assign endOfTakenWithOneRowOverhang = takenStuff | plus: showingColumns %}
-    {% if takenStuff <= blockIndex and paginate.pages > 1 %}
-      {% assign doesNotFit = true %}
-    {% else %}
-      {% assign doesNotFit = false %}
-    {% endif %}
-
-    {% liquid
-      assign showingColumnsDecimal = showingColumns | divided_by: 1.0
-      assign startBlockRow = blockIndex | divided_by: showingColumnsDecimal
-      assign startBlockRow = startBlockRow | ceil
-      assign adjustedRows = block.span_rows | minus: 1
-      assign endBlockRow = startBlockRow | plus: adjustedRows
-
-      assign endRow = takenStuff | divided_by: showingColumnsDecimal
-      assign endRow = endRow | ceil
-    %}
-
-    {% comment %}Whether we should we should place the block on an extra row after all the products/content blocks because it didn't fit before (it's hard to know on the next page that we had one that didn't fix on the previous page){% endcomment %}
-    {% if blockIndex < endOfTakenWithOneRowOverhang and doesNotFit and blockIndex != block.index %}
-      {% assign goesOnExtraRow = true %}
-    {% elsif doesNotFit and block.span_columns >= showingColumns and paginate.current_page == paginate.pages %}
-      {% comment %}If a content block does fit and is alone on a row and that is the last row then set goesOnExtraRow {% endcomment %}
-      {% assign goesOnExtraRow = true %}
-    {% elsif doesNotFit == false and endBlockRow > endRow %}
-      {% comment %}If a content block does fit and will be alone in a row set goes on extra row {% endcomment %}
-      {% assign goesOnExtraRow = true %}
-    {% else %}
-      {% assign goesOnExtraRow = false %}
-    {% endif %}
-    {% assign blockRow = 0 %}
-    {% comment %}Fill into occupiedByBlocks array which positions are taken by this block, JS equivalent: https://github.com/depict-org/depict/blob/bf53dbea760ffa76118d897f24242d82c5f2e3f1/portal/frontend/app/src/lite/views/ContentBlock/positionBlocks.tsx#L60-L70{% endcomment %}
-    {% for _whileEmulation in (0..2000) %}
-      {% if blockRow < block.span_rows %}
-        {% assign blockCol = 0 %}
-        {% for _innerWhileEmulation in (0..2000) %}
-          {% if blockCol < blockSpanColumnsPossible %}
-            {% assign startOfThisRowFirstPart = blockRow | times: showingColumns %}
-            {% assign startOfThisRow = startOfThisRowFirstPart | plus: blockIndex %}
-
-            {% comment %}
-              Begin manipulating item in array
-            {% endcomment %}
-            {% assign index_to_modify = startOfThisRow | plus: blockCol %}
-            {% assign new_value = blockIndex | split: "," %}
-            {% assign before_index = occupiedByBlocks | slice: 0, index_to_modify %}
-            {% assign with_new_value = before_index | concat: new_value %}
-            {% assign array_length = occupiedByBlocks | size %}
-            {% assign after_previous = index_to_modify | plus: 1 %}
-            {% comment %}
-              This slice is wrong since the second parameter specifies the number of items to slice, so it should technically be array_length - index_to_modify - 1, but because slice can't give us values that don't exist it's fine
-            {% endcomment %}
-            {% assign after_index = occupiedByBlocks | slice: after_previous, array_length %}
-            {% assign occupiedByBlocks = with_new_value | concat: after_index %}
-            {% comment %}
-              End manipulating item in array
-            {% endcomment %}
-            {% assign blockCol = blockCol | plus: 1 %}
-          {% else %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-        {% assign blockRow = blockRow | plus: 1 %}
-      {% else %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-
-    {% comment %}Calculate css properties to position this block, for the screen size we're currently iterating on{% endcomment %}
-    {% assign gridRowStart = rowStart | plus: 1 %}
-    {% assign gridColumnStart = columnStart | plus: 1 %}
-    {% assign gridRowEnd = rowStart | plus: 1 | plus: block.span_rows %}
-    {% assign gridColumnEnd = columnStart | plus: 1 | plus: blockSpanColumnsPossible %}
-
-    {% comment %}
-      Because we can't create objects, save for each block a string with the data we need to position it separated with a known delimeter
-      We can then use this string for mobile and desktop versions to set the correct css variables further down
-    {% endcomment %}
-    {% assign block_mapping_output = block_mapping_output
-      | append: gridRowStart
-      | append: perBlockDelimiter
-      | append: gridColumnStart
-      | append: perBlockDelimiter
-      | append: gridRowEnd
-      | append: perBlockDelimiter
-      | append: gridColumnEnd
-      | append: perBlockDelimiter
-      | append: spansWholeRow
-      | append: perBlockDelimiter
-      | append: doesNotFit
-      | append: perBlockDelimiter
-      | append: goesOnExtraRow
-    %}
-    {% if forloop.last == false %}
-      {% assign block_mapping_output = block_mapping_output | append: "," %}
-    {% endif %}
-  {% endfor %}
-
-  {% comment %}
-    Create a comma separated string of row-indexes that only have multiple blocks in them, so we can set the correct grid-template-rows css property
-    This is needed for this special case:
-    P P P P
-    C C P P
-    C C C C <- Notice how this row only has content blocks, which don't have a height by default (by default they take surrounding products' height)
-    P P C C
-    P P C C
-    For the indicated row we use grid-template-rows to hardcode the row to a height of 400px
-      Equivalent of https://github.com/depict-org/depict/blob/bf53dbea760ffa76118d897f24242d82c5f2e3f1/portal/frontend/app/src/lite/views/ContentBlock/positionBlocks.tsx#L90-L100
-  {% endcomment %}
-  {% assign rowsWithOnlyBlocks = "" %}
-  {% assign i = 0 %}
-  {% for _whileEmulation in (0..2000) %}
-    {% assign loopUntil = occupiedByBlocks | size %}
-    {% if i >= loopUntil %}
-      {% break %}
-    {% endif %}
-    {% assign row = occupiedByBlocks | slice: i, showingColumns %}
-    {% assign lastSeenItem = "false" %}
-    {% assign onlyOneBlockThisRow = true %}
-    {% for item in row %}
-      {% if item == "false" %}
-        {% assign onlyOneBlockThisRow = false %}
-        {% break %}
-      {% else %}
-        {% if lastSeenItem == "false" %}
-          {% assign lastSeenItem = item %}
-        {% else %}
-          {% if lastSeenItem != item %}
-            {% assign onlyOneBlockThisRow = false %}
-            {% break %}
-          {% endif %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-    {% if onlyOneBlockThisRow == true %}
-      {% continue %}
-    {% endif %}
-    {% assign onlyBlocksInThisRow = true %}
-    {% for item in row %}
-      {% if item == "false" %}
-        {% assign onlyBlocksInThisRow = false %}
-      {% endif %}
-    {% endfor %}
-    {% if onlyBlocksInThisRow %}
-      {% assign unflooredColumn = i | divided_by: showingColumns %}
-      {% assign column = unflooredColumn | floor %}
-      {% assign rowsWithOnlyBlocks = rowsWithOnlyBlocks | append: column | append: "," %}
-    {% endif %}
-    {% assign i = i | plus: showingColumns %}
-  {% endfor %}
-  {% assign rowsWithOnlyBlocks = rowsWithOnlyBlocks | split: "," | compact %}
-  {% assign positionData = block_mapping_output | split: "," %}
-  {% if screensize == 0 %}
-    {% assign desktopRowsWithOnlyBlocks = rowsWithOnlyBlocks %}
-    {% assign desktopPositionData = positionData -%}
-  {% endif %}
-  {% if screensize == 1 %}
-    {% assign mobileRowsWithOnlyBlocks = rowsWithOnlyBlocks %}
-    {% assign mobilePositionData = positionData -%}
-  {% endif %}
-{% endfor %}
-<style>
-  .depict-grid.{{ grid_class }} {
-    --grid-gap: {{ section.settings.gap_desktop }};
-  {% if section.settings.row_gap_desktop %}
-      --row-gap: {{ section.settings.row_gap_desktop }};
-  {% else %}
-      --row-gap: var(--grid-gap);
-  {% endif %}
-    --grid-columns: {{ columns_desktop }};
-
-  {% comment %}Desktop: Generate the grid-template-rows property for the given data (desktopRowsWithOnlyBlocks){% endcomment %}
-  {% assign gridTemplateRows = "" %}
-  {% assign lastRow = 0 %}
-  {% for row in desktopRowsWithOnlyBlocks %}
-  {% assign rowAsNumber = row | plus: 0 %}
-  {% if rowAsNumber > lastRow %}
-  {% assign lastRow = rowAsNumber %}
-  {% endif %}
-  {% endfor %}
-  {% assign i = 0 %}
-  {% assign loopUntil = lastRow | plus: 1 %}
-  {% for _whileEmulation in (0..2000) %}
-  {% if i > loopUntil %}
-  {% break %}
-  {% endif %}
-  {% assign iAsString = i | append: "" %}
-  {% assign haveOnlyBlocks = false %}
-  {% for row in desktopRowsWithOnlyBlocks %}
-  {% if row == iAsString %}
-  {% assign haveOnlyBlocks = true %}
-  {% break %}
-  {% endif %}
-  {% endfor %}
-  {% if haveOnlyBlocks %}
-  {% assign gridTemplateRows = gridTemplateRows | append: 'minmax(400px, auto) ' %}
-  {% else %}
-  {% assign gridTemplateRows = gridTemplateRows | append: 'auto ' %}
-  {% endif %}
-  {% assign i = i | plus: 1 %}
-  {% endfor %}
-    --grid-rows: {{gridTemplateRows}};
-    --mobile-grid-columns: {{ columns_mobile }};
-    --mobile-grid-gap: {{ section.settings.gap_mobile }};
-    {% if section.settings.row_gap_mobile %}
-        --mobile-row-gap: {{ section.settings.row_gap_mobile }};
-    {% else %}
-        --mobile-row-gap: var(--mobile-grid-gap);
-    {% endif %}
-
-    {% comment %}Mobile: Generate the grid-template-rows property for the given data (mobileRowsWithOnlyBlocks){% endcomment %}
-    {% assign gridTemplateRows = "" %}
-    {% assign lastRow = 0 %}
-    {% for row in mobileRowsWithOnlyBlocks %}
-    {% assign rowAsNumber = row | plus: 0 %}
-    {% if rowAsNumber > lastRow %}
-    {% assign lastRow = rowAsNumber %}
-    {% endif %}
-    {% endfor %}
-    {% assign i = 0 %}
-    {% assign loopUntil = lastRow | plus: 1 %}
-    {% for _whileEmulation in (0..2000) %}
-    {% if i > loopUntil %}
-    {% break %}
-    {% endif %}
-    {% assign iAsString = i | append: "" %}
-    {% assign haveOnlyBlocks = false %}
-    {% for row in mobileRowsWithOnlyBlocks %}
-    {% if row == iAsString %}
-    {% assign haveOnlyBlocks = true %}
-    {% break %}
-    {% endif %}
-    {% endfor %}
-    {% if haveOnlyBlocks %}
-    {% assign gridTemplateRows = gridTemplateRows | append: 'minmax(400px, auto) ' %}
-    {% else %}
-    {% assign gridTemplateRows = gridTemplateRows | append: 'auto ' %}
-    {% endif %}
-    {% assign i = i | plus: 1 %}
-    {% endfor %}
-   --mobile-grid-rows: {{gridTemplateRows}};
-  }
-</style>
 
 {% unless extra_grid_classes %}
   {% assign extra_grid_classes = "" %}
@@ -533,6 +132,20 @@
   id="{{ grid_id }}"
   data-id="{{ grid_data_id }}"
   {{ extra_grid_attributes }}
+  style="
+    --grid-gap: {{ section.settings.gap_desktop }};
+    {% if section.settings.row_gap_desktop %}
+      --row-gap: {{ section.settings.row_gap_desktop }};
+    {% else %}
+      --row-gap: var(--grid-gap);
+    {% endif %}
+    --mobile-grid-gap: {{ section.settings.gap_mobile }};
+    {% if section.settings.row_gap_mobile %}
+      --mobile-row-gap: {{ section.settings.row_gap_mobile }};
+    {% else %}
+      --mobile-row-gap: var(--mobile-grid-gap);
+    {% endif %}
+  "
 >
   {% assign current_block_index = 0 %}
   {% liquid
@@ -570,46 +183,11 @@
   {% if uses_default_sorting and has_filters == false %}
     {% comment %}Finally, render the content blocks{% endcomment %}
     {%- for content in content_blocks -%}
-      {% assign desktopData = desktopPositionData[current_block_index] %}
-      {% assign mobileData = mobilePositionData[current_block_index] %}
-      {% assign desktopData = desktopData | split: perBlockDelimiter %}
-      {% assign mobileData = mobileData | split: perBlockDelimiter %}
-      {% assign mobileGoesOnExtraRow = mobileData[6] %}
-      {% assign desktopGoesOnExtraRow = desktopData[6] %}
-      {% if desktopData[5] == "true" %}
-        {% assign show_desktop = false %}
-      {% else %}
-        {% assign show_desktop = true %}
-      {% endif %}
-      {% if mobileData[5] == "true" %}
-        {% assign show_mobile = false %}
-      {% else %}
-        {% assign show_mobile = true %}
-      {% endif %}
-      {% if show_desktop or show_mobile or mobileGoesOnExtraRow == "true" or desktopGoesOnExtraRow == "true" %}
-        {% render "depict-content-block",
-          content: content,
-          card_product: product,
-          media_aspect_ratio: section.settings.image_ratio,
-          show_desktop: show_desktop,
-          show_mobile: show_mobile,
-          grid_row_start: desktopData[0],
-          grid_column_start: desktopData[1],
-          grid_row_end: desktopData[2],
-          grid_column_end: desktopData[3],
-          spans_whole_row: desktopData[4],
-          does_not_fit: desktopData[5],
-          mobile_grid_row_start: mobileData[0],
-          mobile_grid_column_start: mobileData[1],
-          mobile_grid_row_end: mobileData[2],
-          mobile_grid_column_end: mobileData[3],
-          mobile_spans_whole_row: mobileData[4],
-          mobile_does_not_fit: mobileData[5],
-          mobile_goes_on_extra_row: mobileGoesOnExtraRow,
-          desktop_goes_on_extra_row: desktopGoesOnExtraRow
-        %}
-      {% endif %}
-      {% assign current_block_index = current_block_index | plus: 1 %}
+      {% render "depict-content-block",
+        content: content,
+        card_product: product,
+        media_aspect_ratio: section.settings.image_ratio
+      %}
     {% endfor %}
   {% endif %}
 
@@ -647,13 +225,6 @@
       {% endif %}
     {% endfor %}
 
-    {% if alignBlocksToImages %}
-      <div
-        class="depict-card-wrapper"
-        data-default-image="{{ default_image.src }}"
-        data-hover-image="{{ hover_image.src }}"
-      >
-    {% endif %}
     {% render "depict-render-product-card",
       product: product,
       forloop: forloop,
@@ -661,9 +232,6 @@
       hover_image: hover_image,
       paginate: paginate
     %}
-    {% if alignBlocksToImages %}
-      </div>
-    {% endif %}
 
     {%- liquid
       assign show_duplicate = false
@@ -700,22 +268,16 @@
     -%}
 
     {% if show_duplicate %}
-      {% if alignBlocksToImages %}
-        <div
-          class="depict-card-wrapper"
-          data-default-image="{{ default_image.src }}"
-          data-hover-image="{{ hover_image.src }}"
-        >
-      {% endif %}
       {% render "depict-render-product-card",
         product: product,
         forloop: forloop,
         default_image: default_image_duplicate,
         hover_image: hover_image_duplicate
       %}
-      {% if alignBlocksToImages %}
-        </div>
-      {% endif %}
     {% endif %}
   {%- endfor -%}
 </{{ grid_element_name }}>
+{% comment %}
+  DO NOT REMOVE THE FOLLOWING ELEMENT OR INSERT ANY ELEMENTS BETWEEN IT AND THE DEPICT GRID. This custom elements is how the typescript finds the grid element.
+{% endcomment %}
+<depict-grid-beacon></depict-grid-beacon>
