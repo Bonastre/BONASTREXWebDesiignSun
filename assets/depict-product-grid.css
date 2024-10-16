@@ -41,6 +41,10 @@
   grid-template-rows: unset !important;
 }
 
+#depict-grid-rendering-script {
+  display: none;
+}
+
 .depict-content-block {
   grid-column: span var(--span-columns);
   grid-row: span var(--span-rows);
