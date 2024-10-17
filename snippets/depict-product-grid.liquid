@@ -32,63 +32,7 @@
   unless grid_element_name
     assign grid_element_name = "div"
   endunless
-%}
 
-{% assign alignBlocksToImages = false %}
-{% if section.settings.align_depict_blocks == "image" %}
-  {% assign alignBlocksToImages = true %}
-{% endif %}
-{% render "depict-inline-script", paginate: paginate %}
-
-{% comment %}
-  Expected settings:
-    {
-      "label": "Desktop column gap",
-      "info": "Grid column gap on desktop",
-      "type": "text",
-      "id": "gap_desktop",
-      "default": "8px"
-    },
-    {
-      "label": "Desktop row gap",
-      "info": "Grid row gap on desktop",
-      "type": "text",
-      "id": "row_gap_desktop",
-      "default": "8px"
-    },
-        {
-      "label": "Mobile column gap",
-      "info": "Grid column gap on mobile",
-      "type": "text",
-      "id": "gap_mobile",
-      "default": "8px"
-    },
-    {
-      "label": "Mobile row gap",
-      "info": "Grid row gap on mobile",
-      "type": "text",
-      "id": "row_gap_mobile",
-      "default": "8px"
-    },
-    {
-      "type": "select",
-      "id": "align_depict_blocks",
-      "default": "image",
-      "label": "Align depict content blocks",
-      "options": [
-        {
-          "value": "card",
-          "label": "To product card"
-        },
-        {
-          "value": "image",
-          "label": "To product image"
-        }
-      ]
-    }
-{% endcomment %}
-
-{%- liquid
   assign namespace = "app--93504864257--product-duplicate"
   assign key = "product_duplicate"
   assign product_duplicate_metafiled = collection.metafields[namespace][key].value
@@ -106,44 +50,86 @@
       endif
     endfor
   endfor
+
+  assign zero_indexed_current_page = paginate.current_page | minus: 1
+  comment
+    To be able to have a metafield that is storefront accessible in a custom namespace one needs to use `$app:namespace` and this is the way to access it from liquid, see https://shopify.dev/docs/apps/build/custom-data/reserved-prefixes#create-a-metafield-definition-under-a-reserved-namespace
+  endcomment
+  assign namespace = "app--93504864257--content-blocks"
+  assign key = "content_block"
+  assign content_blocks = collection.metafields[namespace][key].value
+
+  unless extra_grid_classes
+    assign extra_grid_classes = ""
+  endunless
+  unless extra_grid_attributes
+    assign extra_grid_attributes = ""
+  endunless
+  unless grid_id
+    assign grid_id = ""
+  endunless
+  unless grid_data_id
+    assign grid_data_id = ""
+  endunless
+
+  assign grid_settings_namespace = "app--93504864257--grid-settings"
+  assign grid_settings_key = "grid_settings"
+  assign grid_settings = shop.metafields[grid_settings_namespace][grid_settings_key].value
+  assign desktop_margin = grid_settings.desktop.margin
+  if desktop_margin and desktop_margin != ""
+    assign desktop_margin_enabled = true
+  else
+    assign desktop_margin_enabled = false
+  endif
+
+  assign mobile_margin = grid_settings.mobile.margin
+  if mobile_margin and mobile_margin != ""
+    assign mobile_margin_enabled = true
+  else
+    assign mobile_margin_enabled = false
+  endif
+
+  render "depict-inline-script", paginate: paginate, grid_settings: grid_settings, content_blocks: content_blocks
 %}
-
-{% assign zero_indexed_current_page = paginate.current_page | minus: 1 %}
-{% comment %}To be able to have a metafield that is storefront accessible in a custom namespace one needs to use `$app:namespace` and this is the way to access it from liquid, see https://shopify.dev/docs/apps/build/custom-data/reserved-prefixes#create-a-metafield-definition-under-a-reserved-namespace{% endcomment %}
-{% assign namespace = "app--93504864257--content-blocks" %}
-{% assign key = "content_block" %}
-{% assign content_blocks = collection.metafields[namespace][key].value %}
-
-{% unless extra_grid_classes %}
-  {% assign extra_grid_classes = "" %}
-{% endunless %}
-{% unless extra_grid_attributes %}
-  {% assign extra_grid_attributes = "" %}
-{% endunless %}
-{% unless grid_id %}
-  {% assign grid_id = "" %}
-{% endunless %}
-{% unless grid_data_id %}
-  {% assign grid_data_id = "" %}
-{% endunless %}
-
 <{{ grid_element_name }}
-  class="depict-grid {{ grid_class }} {{ extra_grid_classes }}"
+  class="
+    depict-grid {{ grid_class }} {{ extra_grid_classes }}{% liquid
+    if desktop_margin_enabled
+      echo " desktop-custom-margin"
+    endif
+    if mobile_margin_enabled
+        echo " mobile-custom-margin"
+    endif
+    %}
+  "
   id="{{ grid_id }}"
   data-id="{{ grid_data_id }}"
   {{ extra_grid_attributes }}
   style="
-    --grid-gap: {{ section.settings.gap_desktop }};
-    {% if section.settings.row_gap_desktop %}
-      --row-gap: {{ section.settings.row_gap_desktop }};
-    {% else %}
-      --row-gap: var(--grid-gap);
+     {% if grid_settings %}
+         --grid-gap: {{ grid_settings.desktop.columnSpacing }};
+         --row-gap: {{ grid_settings.desktop.rowSpacing }};
+         --mobile-grid-gap: {{ grid_settings.mobile.columnSpacing }};
+         --mobile-row-gap: {{ grid_settings.mobile.rowSpacing }};
+     {% else %}
+         --grid-gap: {{ section.settings.gap_desktop }};
+         {% if section.settings.row_gap_desktop %}
+             --row-gap: {{ section.settings.row_gap_desktop }};
+         {% else %}
+           --row-gap: var(--grid-gap);
+         {% endif %}
+         --mobile-grid-gap: {{ section.settings.gap_mobile }};
+         {% if section.settings.row_gap_mobile %}
+           --mobile-row-gap: {{ section.settings.row_gap_mobile }};
+         {% else %}
+           --mobile-row-gap: var(--mobile-grid-gap);
+         {% endif %}
     {% endif %}
-    --mobile-grid-gap: {{ section.settings.gap_mobile }};
-    {% if section.settings.row_gap_mobile %}
-      --mobile-row-gap: {{ section.settings.row_gap_mobile }};
-    {% else %}
-      --mobile-row-gap: var(--mobile-grid-gap);
+    {% if desktop_margin_enabled %}
+      --desktop-custom-margin: {{ desktop_margin }};
+    {% endif %}
+    {% if mobile_margin_enabled %}
+      --mobile-custom-margin: {{ mobile_margin }};
     {% endif %}
   "
 >

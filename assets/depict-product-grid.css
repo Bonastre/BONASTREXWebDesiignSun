@@ -25,6 +25,14 @@
     gap: var(--mobile-grid-gap) !important;
     row-gap: var(--mobile-row-gap, var(--mobile-grid-gap)) !important;
   }
+  .depict-grid.mobile-custom-margin {
+    margin: var(--mobile-custom-margin);
+  }
+}
+@media (min-width: 991px) {
+  .depict-grid.desktop-custom-margin {
+    margin: var(--desktop-custom-margin);
+  }
 }
 .depict-grid::before, .depict-grid::after {
   display: none !important;
