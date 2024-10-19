@@ -48,7 +48,7 @@
         "sidebar_menu": "",
         "show_social_media": true,
         "menu_open_trigger": "hover",
-        "enable_search": false,
+        "enable_search": true,
         "enable_wishlist": false,
         "enable_cart_count": true,
         "sidebar_color_scheme": "scheme-3",
