@@ -12,7 +12,11 @@
       <span style="font-weight: 400; font-size: 15px; margin-top: 0rem;">360</span>
       <img style="height: 2rem; margin-top: -.5rem;" src="{{ 'arrow-circle.png' | asset_url }}">
     </div>
-    <img class="smooth_blink_quick" id="three-sceno-container-placeholder" src="{{ '3D_scene_placeholder.jpg' | asset_url }}">
+    {% comment %} <img class="smooth_blink_quick" id="three-sceno-container-placeholder" src="{{ '3D_scene_placeholder.jpg' | asset_url }}"> {% endcomment %}
+    <video class="smooth_blink_quick" id="three-sceno-container-placeholder" autoplay loop muted playsinline  >
+      <source src="{{ '3D_placeholder_vid.mp4' | asset_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <canvas id="three_canvas"></canvas>
   </div>
 </div>
