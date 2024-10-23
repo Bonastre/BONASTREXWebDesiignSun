@@ -66,11 +66,7 @@ Supported variables
           {%- endif -%}
         {%- endif -%}
     {%- endcase -%}
-    {% if product.template_suffix contains 'pre-order' %}
-       <span class="badge badge--custom badge--pre-order">{{ 'product.general.pre_order_button' | t }}</span>
-    {% endif %}
   {%- endfor -%}
-  
 {%- endcapture -%}
 
 {%- if badges != blank -%}

@@ -1,40 +1,19 @@
 <!-- Three.js Scene Container -->
 <div id="three-sceno-container">
-  {% comment %}
+  
+  <div id="three_canvas_container">
     <div
-      class="smooth_blink"
-      style="position: absolute; left: 2rem; bottom: 2rem; z-index: 4; display: flex; align-items: center; justify-content: center;"
+      id="loading-text"
+      style="position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50vh; color: black; font-size: 1.5em; font-weight: 800; z-index: 4; opacity: 1; transition: opacity 0.5s ease-in-out"
     >
-      <span style="margin-right: 6px; font-weight: 400; font-size: 20px;">360</span>
-      <svg
-        style="height: 20px;"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        class="bi bi-arrows-move"
-        viewBox="0 0 16 16"
-      >
-        <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/>
-      </svg>
+    <img src="http://bonastreparis.myshopify.com/cdn/shop/files/Calque_1.svg?v=1724059163&width=500" style="height: 3rem;">
     </div>
-  {% endcomment %}
-  <div
-    class="smooth_blink"
-    style="position: absolute; left: 50%; top: 20vh; transform: translate(-50%,-50%); z-index: 2; display: flex; align-items: center; justify-content: center; flex-direction: column;"
-  >
-    <span style="font-weight: 400; font-size: 15px; margin-top: 0rem;">360</span>
-    <img style="height: 2rem; margin-top: -.5rem;" src="{{ 'arrow-circle.png' | asset_url }}">
-
-    {% comment %}
-      <svg
-        style="height: 20px;"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        class="bi bi-arrows-move"
-        viewBox="0 0 16 16"
-      >
-        <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/>
-      </svg>
-    {% endcomment %}
+    <div id="drag_helper">
+      <span style="font-weight: 400; font-size: 15px; margin-top: 0rem;">360</span>
+      <img style="height: 2rem; margin-top: -.5rem;" src="{{ 'arrow-circle.png' | asset_url }}">
+    </div>
+    <img class="smooth_blink_quick" id="three-sceno-container-placeholder" src="{{ '3D_scene_placeholder.jpg' | asset_url }}">
+    <canvas id="three_canvas"></canvas>
   </div>
 </div>
 
@@ -85,6 +64,11 @@
       height: 100vh;
     }
 
+    #three_canvas {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
     #three-sceno-title {
       font-family: 'Futura LT';
       letter-spacing: 0.2em;
@@ -105,12 +89,47 @@
       transition: opacity 1s ease;
     }
 
-    #three-sceno-container > canvas {
+    #three_canvas_container {
       {% comment %} border: solid green 1px; {% endcomment %}
       position: absolute;
       top: 0;
       z-index: 1;
       touch-action: auto;
+    }
+
+    #drag_helper {
+      pointer-events: none;
+      position: absolute;
+      left: 50%;
+      top: 20vh;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #three-sceno-container-placeholder {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      height: 90%;
+      left: 50%;
+      top: 50%;
+      filter: blur(8px);
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+      z-index: -1 !important;
+      max-width: unset !important;
+    }
+
+    #three_canvas_container {
+      position: relative;
+      width: 100%;
+      top: 0;
     }
 
     {% comment %} @media (orientation: portrait) { {% endcomment %}
@@ -123,14 +142,23 @@
         height: 250rem;
       }
 
-      #three-sceno-container > canvas {
+      #three_canvas_container {
         position: sticky;
+      }
+
+      #three-sceno-container-placeholder {
+        transform: translate(-50%, -43%);
+
       }
     }
 
     /* blinking */
   .smooth_blink {
     animation: smooth_blinker 2s ease-in-out infinite;
+  }
+
+  .smooth_blink_quick {
+    animation: smooth_blinker 1s ease-in-out infinite;
   }
 
   @keyframes smooth_blinker {
